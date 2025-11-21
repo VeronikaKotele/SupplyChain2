@@ -7,6 +7,8 @@ import {
   HemisphericLight,
   SceneLoader,
   Color4,
+  StandardMaterial,
+  Color3,
 } from '@babylonjs/core';
 import '@babylonjs/loaders/OBJ';
 
@@ -32,25 +34,30 @@ const EarthViewer: React.FC<EarthViewerProps> = ({ modelPath, materialPath }) =>
 
     // Create scene
     const scene = new Scene(engine);
-    scene.clearColor = new Color4(0.2, 0.25, 0.3, 1.0);
+    scene.clearColor = new Color4(0.02, 0.02, 0.08, 1);
     sceneRef.current = scene;
 
-    // Create camera
+    // Camera
     const camera = new ArcRotateCamera(
-      'camera',
-      Math.PI / 2,
-      Math.PI / 2,
-      5,
-      Vector3.Zero(),
-      scene
+        "camera",
+        -Math.PI / 2,
+        Math.PI / 4,
+        5,
+        Vector3.Zero(),
+        scene
     );
     camera.attachControl(canvasRef.current, true);
     camera.lowerRadiusLimit = 2;
     camera.upperRadiusLimit = 10;
     camera.wheelPrecision = 50;
+    camera.panningSensibility = 0;
 
-    // Create bright ambient light
-    const light = new HemisphericLight('light', new Vector3(0, 1, 0), scene);
+    // Single light with high intensity for basic visibility
+    const light = new HemisphericLight(
+        "light",
+        new Vector3(0, 1, 0),
+        scene
+    );
     light.intensity = 1.5;
 
     // Load the model
@@ -83,6 +90,20 @@ const EarthViewer: React.FC<EarthViewerProps> = ({ modelPath, materialPath }) =>
           
           result.meshes.forEach((mesh) => {
             mesh.scaling = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+            
+            // Modify existing material to be unlit
+            if (mesh.material) {
+              const mat = mesh.material as StandardMaterial;
+              mat.disableLighting = true; // Disable lighting calculations
+              mat.backFaceCulling = false; // Two-sided rendering
+              
+              // Boost emissive color to make it bright and visible
+              if (mat.diffuseColor) {
+                mat.emissiveColor = mat.diffuseColor.clone().multiplyByFloats(2, 2, 2);
+              } else {
+                mat.emissiveColor = new Color3(0.5, 0.7, 1.0); // Fallback bright color
+              }
+            }
           });
 
           console.log('Model loaded successfully');
