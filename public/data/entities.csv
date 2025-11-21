@@ -1,0 +1,3012 @@
+id,type,name,country,lat,lon
+0001,Market Affiliate,Market Affiliate Germany,DE,53.550341,10.000654
+0009,Production Center,Production Center Germany 01,DE,52.5173885,13.3951309
+0024,Production Center,Production Center Mexico,MX,20.943727,-101.427043
+0025,Market Affiliate,Market Affiliate Chile,CL,-33.4288379,-70.6113373
+0026,Production Center,Production Center Thailand,TH,13.6531651,100.8182578
+0027,Market Affiliate,Market Affiliate Germany 02,DE,53.550341,10.000654
+0029,Market Affiliate,Market Affiliate China,CN,31.2312707,121.4700152
+0031,Market Affiliate,Market Affiliate Australia,AU,-33.7975472,151.127306
+0032,Market Affiliate,Market Affiliate Belgium,BE,50.8390983,4.3296526
+0033,Market Affiliate,Market Affiliate Brazil,BR,-23.5506507,-46.6333824
+0035,Market Affiliate,Market Affiliate Costa Rica,CR,9.9327707,-84.0796144
+0036,Market Affiliate,Market Affiliate Denmark,DK,55.6867243,12.5700724
+0037,Market Affiliate,Market Affiliate Peru,PE,-12.0459808,-77.0305912
+0038,Market Affiliate,Market Affiliate Finland,FI,60.4515944,22.2669983
+0040,Market Affiliate,Market Affiliate France,FR,48.8588897,2.320041
+0044,Market Affiliate,Market Affiliate Greece,GR,37.9755648,23.7348324
+0045,Market Affiliate,Market Affiliate United Kingdom,GB,52.4796992,-1.9026911
+0046,Market Affiliate,Market Affiliate Guatemala,GT,14.6416142,-90.5132836
+0048,Market Affiliate,Market Affiliate Indonesia,ID,-6.1754049,106.827168
+0049,Market Affiliate,Market Affiliate India,IN,19.054999,72.8692035
+0050,Market Affiliate,Market Affiliate Venezuela,VE,10.5060934,-66.9146008
+0051,Market Affiliate,Market Affiliate Italy,IT,45.4641943,9.1896346
+0052,Market Affiliate,Market Affiliate Japan,JP,35.6768601,139.7638947
+0055,Market Affiliate,Market Affiliate Canada,CA,45.5088774,-73.6875187
+0056,Market Affiliate,Market Affiliate Kenya,KE,-1.3026148,36.828842
+0057,Market Affiliate,Market Affiliate Colombia,CO,4.6533817,-74.0836331
+0058,Market Affiliate,Market Affiliate Malaysia,MY,3.0988792,101.6454202
+0059,Market Affiliate,Market Affiliate Morocco,MA,33.5945144,-7.6200284
+0060,Market Affiliate,Market Affiliate Mexico,MX,19.3207722,-99.1514678
+0061,Market Affiliate,Market Affiliate Netherlands,NL,52.3730796,4.8924534
+0063,Market Affiliate,Market Affiliate Norway,NO,59.9133301,10.7389701
+0064,Market Affiliate,Market Affiliate Austria,AT,48.2083537,16.3725042
+0065,Market Affiliate,Market Affiliate Panama,PA,8.9714493,-79.5341802
+0066,Market Affiliate,Market Affiliate Portugal,PT,38.7565837,-9.2545225
+0067,Market Affiliate,Market Affiliate El Salvador,SV,13.697629,-89.191156
+0068,Market Affiliate,Market Affiliate Sweden,SE,57.7072326,11.9670171
+0070,Market Affiliate,Market Affiliate Switzerland,CH,47.5581077,7.5878261
+0071,Market Affiliate,Market Affiliate Hungary,HU,47.4813896,19.1460941
+0076,Market Affiliate,Market Affiliate South Korea,KR,37.5666791,126.9782914
+0077,Market Affiliate,Market Affiliate Thailand,TH,13.7238221,100.507985
+0079,Market Affiliate,Market Affiliate United States,US,41.0534302,-73.5387341
+0081,Market Affiliate,Market Affiliate Czech Republic,CZ,50.0596288,14.4464593
+0082,Market Affiliate,Market Affiliate Turkey,TR,41.006381,28.9758715
+0087,Market Affiliate,Market Affiliate Argentina,AR,-34.6095579,-58.3887904
+0101,Market Affiliate,Market Affiliate Ecuador,EC,-0.2201641,-78.5123274
+0103,Market Affiliate,Market Affiliate Uruguay,UY,-34.9058916,-56.1913095
+0104,Market Affiliate,Market Affiliate Slovakia,SK,48.1516988,17.1093063
+0105,Market Affiliate,Market Affiliate Hungary 02,HU,47.4813896,19.1460941
+0107,Market Affiliate,Market Affiliate Paraguay,PY,-25.2800459,-57.6343814
+0108,Market Affiliate,Market Affiliate Poland,PL,52.4006632,16.9197326
+0122,Market Affiliate,Market Affiliate Slovenia,SI,46.0500268,14.5069289
+0123,Market Affiliate,Market Affiliate Bolivia,BO,-17.7834217,-63.1820853
+0124,Market Affiliate,Market Affiliate Dominican Republic,DO,18.4713858,-69.8918436
+0126,Market Affiliate,Market Affiliate Russia,RU,55.7505412,37.6174782
+0127,Production Center,Production Center Brazil,BR,-23.0055542,-46.8397726
+0136,Market Affiliate,Market Affiliate Netherlands 02,NL,52.3730796,4.8924534
+0137,Market Affiliate,Market Affiliate France 02,FR,48.8588897,2.320041
+0138,Market Affiliate,Market Affiliate Spain,ES,40.6012354,-3.7038475
+0139,Market Affiliate,Market Affiliate United States 02,US,41.0534302,-73.5387341
+0141,Market Affiliate,Market Affiliate Romania,RO,44.4361414,26.1027202
+0142,Market Affiliate,Market Affiliate Austria 02,AT,48.2083537,16.3725042
+0143,Market Affiliate,Market Affiliate Taiwan,TW,25.0375198,121.5636796
+0145,Market Affiliate,Market Affiliate Croatia,HR,45.8130967,15.9772795
+0147,Market Affiliate,Market Affiliate South Africa,ZA,-31.4642677,27.2136813
+0155,Distribution Center,Distribution Center Australia,AU,-33.8698439,151.2082848
+0160,Distribution Center,Distribution Center Austria,AT,48.2083537,16.3725042
+0168,Market Affiliate,Market Affiliate Bulgaria,BG,42.6977028,23.3217359
+0173,Market Affiliate,Market Affiliate Singapore,SG,1.2899175,103.8519072
+0174,Market Affiliate,Market Affiliate Ukraine,UA,50.4500336,30.5241361
+0201,Market Affiliate,Market Affiliate Sweden 02,SE,57.7072326,11.9670171
+0209,Market Affiliate,Market Affiliate Iceland,IS,64.145981,-21.9422367
+0210,Distribution Center,Distribution Center South Korea,KR,37.5666791,126.9782914
+0211,Market Affiliate,Market Affiliate Serbia,RS,44.8178131,20.4568974
+0212,Market Affiliate,Market Affiliate Mexico 02,MX,19.3207722,-99.1514678
+0213,Market Affiliate,Market Affiliate India 02,IN,19.054999,72.8692035
+0214,Market Affiliate,Market Affiliate United Arab Emirates,AE,25.0742823,55.1885387
+0216,Market Affiliate,Market Affiliate China 02,CN,30.364029,113.4486702
+0217,Production Center,Production Center Germany 02,DE,53.550341,10.000654
+0218,Market Affiliate,Market Affiliate Germany 03,DE,53.550341,10.000654
+0235,Production Center,Production Center Poland,PL,52.4006632,16.9197326
+0236,Market Affiliate,Market Affiliate New Zealand,NZ,-41.2887953,174.7772114
+0237,Market Affiliate,Market Affiliate Kazakhstan,KZ,43.2363924,76.9457275
+0241,Production Center,Production Center Spain 01,ES,40.6012354,-3.7038475
+0242,Production Center,Production Center Spain 02,ES,41.5554326,2.4002787
+0243,Market Affiliate,Market Affiliate Vietnam,VN,10.7755254,106.7021047
+0244,Market Affiliate,Market Affiliate Spain 02,ES,40.6012354,-3.7038475
+0247,Production Center,Production Center Germany 03,DE,51.3406321,12.3747329
+0249,Market Affiliate,Market Affiliate Panama 02,PA,8.9714493,-79.5341802
+0257,Market Affiliate,Market Affiliate Ghana,GH,5.5571096,-0.2012376
+0260,Market Affiliate,Market Affiliate United Arab Emirates 02,AE,25.0742823,55.1885387
+0262,Production Center,Production Center Kenya,KE,-1.3026148,36.828842
+0264,Market Affiliate,Market Affiliate Philippines,PH,14.5506508,121.046822
+0270,Market Affiliate,Market Affiliate Saudi Arabia,SA,21.5504432,39.1742363
+0271,Market Affiliate,Market Affiliate Germany 04,DE,53.550341,10.000654
+0272,Market Affiliate,Market Affiliate Nigeria,NG,6.4550575,3.3941795
+0273,Production Center,Production Center China,CN,31.2312707,121.4700152
+0275,Market Affiliate,Market Affiliate China 03,CN,31.2312707,121.4700152
+0276,Market Affiliate,Market Affiliate Hong Kong,HK,22.2793278,114.1628131
+0277,Production Center,Production Center Indonesia,ID,-6.1754049,106.827168
+0281,Market Affiliate,Market Affiliate Australia 02,AU,-33.7975472,151.127306
+0282,Market Affiliate,Market Affiliate Pakistan,PK,31.5656822,74.3141829
+0283,Market Affiliate,Market Affiliate Egypt,EG,30.0443879,31.2357257
+0284,Market Affiliate,Market Affiliate Israel,IL,32.1688818,34.8266975
+0286,Market Affiliate,Market Affiliate Egypt 02,EG,30.0443879,31.2357257
+0287,Market Affiliate,Market Affiliate New Zealand 02,NZ,-41.2887953,174.7772114
+0289,Market Affiliate,Market Affiliate Myanmar,MM,16.7967129,96.1609916
+0301,Market Affiliate,Market Affiliate Egypt 03,EG,30.0443879,31.2357257
+0306,Distribution Center,Distribution Center Germany,DE,53.550341,10.000654
+0900,Distribution Center,Distribution Center Germany 02,DE,53.550341,10.000654
+0901,Distribution Center,Distribution Center Germany 03,DE,51.5142273,7.4652789
+0902,Distribution Center,Distribution Center Sweden,SE,59.3251172,18.0710935
+0905,Distribution Center,Distribution Center France,FR,48.8588897,2.320041
+0906,Distribution Center,Distribution Center Poland,PL,52.4006632,16.9197326
+0907,Distribution Center,Distribution Center Russia,RU,55.625578,37.6063916
+0908,Distribution Center,Distribution Center South Africa,ZA,-25.7459277,28.1879101
+0909,Distribution Center,Distribution Center Austria 02,AT,48.2083537,16.3725042
+0910,Distribution Center,Distribution Center Italy,IT,45.4641943,9.1896346
+0911,Distribution Center,Distribution Center Slovenia,SI,46.0500268,14.5069289
+0912,Distribution Center,Distribution Center Croatia,HR,45.8130967,15.9772795
+0913,Distribution Center,Distribution Center Romania,RO,44.4361414,26.1027202
+0914,Distribution Center,Distribution Center Bulgaria,BG,42.6977028,23.3217359
+0915,Distribution Center,Distribution Center North Macedonia,MK,41.9961816,21.4319213
+0916,Distribution Center,Distribution Center Serbia,RS,44.8178131,20.4568974
+0917,Distribution Center,Distribution Center United Kingdom,GB,52.4796992,-1.9026911
+0918,Distribution Center,Distribution Center Morocco,MA,33.5945144,-7.6200284
+0919,Distribution Center,Distribution Center Spain,ES,40.416782,-3.703507
+0920,Distribution Center,Distribution Center Greece,GR,38.0120455,23.8560814
+0921,Distribution Center,Distribution Center Ukraine,UA,50.4500336,30.5241361
+0922,Distribution Center,Distribution Center Kenya,KE,-1.3026148,36.828842
+0923,Distribution Center,Distribution Center Ghana,GH,5.5571096,-0.2012376
+0924,Distribution Center,Distribution Center Netherlands,NL,52.3730796,4.8924534
+0926,Distribution Center,Distribution Center Slovakia,SK,48.1516988,17.1093063
+0927,Distribution Center,Distribution Center Kazakhstan,KZ,51.1282205,71.4306682
+0928,Distribution Center,Distribution Center Turkey,TR,41.006381,28.9758715
+0929,Distribution Center,Distribution Center China,CN,31.2312707,121.4700152
+0930,Distribution Center,Distribution Center Philippines,PH,14.5904492,120.9803621
+0937,Distribution Center,Distribution Center Chile,CL,-33.4377756,-70.6504502
+0938,Distribution Center,Distribution Center Peru,PE,-12.0459808,-77.0305912
+0939,Distribution Center,Distribution Center Argentina,AR,-34.6095579,-58.3887904
+0940,Distribution Center,Distribution Center Uruguay,UY,-34.9058916,-56.1913095
+0955,Distribution Center,Distribution Center Paraguay,PY,-25.2800459,-57.6343814
+0956,Distribution Center,Distribution Center Bolivia,BO,-16.4955455,-68.1336229
+0959,Distribution Center,Distribution Center Thailand,TH,13.7238221,100.507985
+0960,Distribution Center,Distribution Center United Arab Emirates,AE,24.4538352,54.3774014
+0962,Distribution Center,Distribution Center Venezuela,VE,10.5060934,-66.9146008
+0963,Distribution Center,Distribution Center Colombia,CO,3.4108435,-76.5812127
+0964,Distribution Center,Distribution Center Mexico,MX,19.4326296,-99.1331785
+0965,Distribution Center,Distribution Center Panama,PA,8.9714493,-79.5341802
+0967,Distribution Center,Distribution Center El Salvador,SV,13.697629,-89.191156
+0968,Distribution Center,Distribution Center Ecuador,EC,-0.2201641,-78.5123274
+0969,Distribution Center,Distribution Center Dominican Republic,DO,18.4713858,-69.8918436
+0977,Distribution Center,Distribution Center Costa Rica,CR,9.9327707,-84.0796144
+0978,Distribution Center,Distribution Center Guatemala,GT,14.6120028,-90.5988777
+0979,Distribution Center,Distribution Center Thailand 02,TH,13.7238221,100.507985
+0980,Distribution Center,Distribution Center China 02,CN,40.190632,116.412144
+0981,Distribution Center,Distribution Center United States,US,38.8950368,-77.0365427
+0982,Distribution Center,Distribution Center Canada,CA,45.4208777,-75.6901106
+0983,Distribution Center,Distribution Center India,IN,19.054999,72.8692035
+0984,Distribution Center,Distribution Center Hong Kong,HK,22.2793278,114.1628131
+0986,Distribution Center,Distribution Center Brazil,BR,-23.0055542,-46.8397726
+0987,Distribution Center,Distribution Center Brazil 02,BR,-23.5506507,-46.6333824
+0988,Distribution Center,Distribution Center South Korea 02,KR,37.5666791,126.9782914
+0989,Distribution Center,Distribution Center Taiwan,TW,25.0375198,121.5636796
+0990,Distribution Center,Distribution Center Australia 02,AU,-35.2975906,149.1012676
+0991,Distribution Center,Distribution Center Australia 03,AU,-35.2975906,149.1012676
+0992,Distribution Center,Distribution Center Indonesia,ID,-6.1754049,106.827168
+0993,Distribution Center,Distribution Center Vietnam,VN,21.0283334,105.854041
+0994,Distribution Center,Distribution Center Malaysia,MY,3.1526589,101.7022205
+0995,Distribution Center,Distribution Center Singapore,SG,1.2899175,103.8519072
+0998,Distribution Center,Distribution Center Egypt,EG,30.0443879,31.2357257
+0999,Distribution Center,Distribution Center Egypt 02,EG,30.0443879,31.2357257
+7800,Distribution Center,Distribution Center Nigeria,NG,6.4550575,3.3941795
+7802,Distribution Center,Distribution Center Chile 02,CL,-33.4377756,-70.6504502
+7803,Distribution Center,Distribution Center Germany 04,DE,53.550341,10.000654
+7804,Distribution Center,Distribution Center Israel,IL,31.7788472,35.2257856
+7806,Distribution Center,Distribution Center Pakistan,PK,33.6938118,73.0651511
+7807,Distribution Center,Distribution Center Myanmar,MM,19.7753289,96.1032552
+7808,Distribution Center,Distribution Center Belgium,BE,50.8465573,4.351697
+0997,Distribution Center,Distribution Center NL/B,NL,52.3730796,4.8924534
+F001002172,Customer,Neon Pulse PEQ,PT,39.3999,-8.2245
+F001004128,Customer,Cosmic Voyager B2Y,AU,-25.2744,133.7751
+F001004132,Customer,Turbo Oracle 302,MX,23.6345,-102.5528
+F001004143,Customer,Mystic Dragon CEU,DK,56.2639,9.5018
+F001004397,Customer,Turbo Dragon J20,KR,35.9078,127.7669
+F001004399,Customer,Turbo Titan 6AC,KR,35.9078,127.7669
+F001004458,Customer,Quantum Pulse MWT,AU,-25.2744,133.7751
+F001004459,Customer,Epic Ranger QF0,AU,-25.2744,133.7751
+F001004460,Customer,Neon Blaze SRH,AU,-25.2744,133.7751
+F001004461,Customer,Quantum Phoenix UHT,AU,-25.2744,133.7751
+F001004463,Customer,Inferno Dragon 0DZ,AU,-25.2744,133.7751
+F001004487,Customer,Hyper Specter KGK,ID,-0.7893,113.9213
+F001004488,Customer,Hyper Blaze 7C0,ID,-0.7893,113.9213
+F001004490,Customer,Mystic Nova YTZ,ID,-0.7893,113.9213
+F001004491,Customer,Galactic Ranger IBE,ID,-0.7893,113.9213
+F001004495,Customer,Inferno Voyager RYO,ID,-0.7893,113.9213
+F001004551,Customer,Quantum Titan 5F4,AU,-25.2744,133.7751
+F001004552,Customer,Crystal Oracle 898,AU,-25.2744,133.7751
+F001004579,Customer,Galactic Oracle QZ7,AU,-25.2744,133.7751
+F001004679,Customer,Quantum Ranger 5MH,AU,-25.2744,133.7751
+F001004680,Customer,Neon Titan H0E,AU,-25.2744,133.7751
+F001004681,Customer,Galactic Nova 84M,AU,-25.2744,133.7751
+F001004683,Customer,Neon Phoenix 2PT,AU,-25.2744,133.7751
+F001004684,Customer,Hyper Voyager PP3,AU,-25.2744,133.7751
+F001004685,Customer,Cosmic Blaze T86,AU,-25.2744,133.7751
+F001004686,Customer,Neon Blaze R2M,AU,-25.2744,133.7751
+F001004729,Customer,Quantum Titan CX0,AU,-25.2744,133.7751
+F001004808,Customer,Epic Blaze 4OG,MA,31.7917,-7.0926
+F001004837,Customer,Neon Specter KD8,GB,55.3781,-3.436
+F001004842,Customer,Galactic Voyager WJK,GB,55.3781,-3.436
+F001005038,Customer,Inferno Blaze TIV,TH,15.87,100.9925
+F001005041,Customer,Galactic Blaze BKI,TH,15.87,100.9925
+F001005042,Customer,Cosmic Nova 8B1,TH,15.87,100.9925
+F001005043,Customer,Mystic Pulse WT8,TH,15.87,100.9925
+F001005044,Customer,Inferno Pulse UKH,TH,15.87,100.9925
+F001005045,Customer,Epic Titan AGT,TH,15.87,100.9925
+F001005047,Customer,Epic Ranger 4Y2,TH,15.87,100.9925
+F001005052,Customer,Hyper Pulse EDO,TH,15.87,100.9925
+F001005053,Customer,Inferno Pulse SPI,TH,15.87,100.9925
+F001005074,Customer,Inferno Oracle CTW,TH,15.87,100.9925
+F001005135,Customer,Turbo Pulse G3R,TR,38.9637,35.2433
+F001005142,Customer,Hyper Voyager DSX,TR,38.9637,35.2433
+F001005143,Customer,Neon Blaze NP6,TR,38.9637,35.2433
+F001005148,Customer,Epic Ranger 9C0,TR,38.9637,35.2433
+F001005149,Customer,Quantum Dragon 1JK,TR,38.9637,35.2433
+F001005150,Customer,Neon Phoenix AM5,TR,38.9637,35.2433
+F001005151,Customer,Epic Nova 0R0,TR,38.9637,35.2433
+F001005152,Customer,Crystal Ranger PFB,TR,38.9637,35.2433
+F001005164,Customer,Quantum Dragon PX2,CN,35.8617,104.1954
+F001005165,Customer,Cosmic Nova 08B,CN,35.8617,104.1954
+F001005170,Customer,Turbo Phoenix R7J,CN,35.8617,104.1954
+F001005171,Customer,Cosmic Titan XO1,CN,35.8617,104.1954
+F001005172,Customer,Turbo Oracle A7O,CN,35.8617,104.1954
+F001005173,Customer,Galactic Ranger FR7,CN,35.8617,104.1954
+F001005174,Customer,Crystal Pulse YK7,CN,35.8617,104.1954
+F001005176,Customer,Cosmic Nova TIW,CN,35.8617,104.1954
+F001005178,Customer,Mystic Specter DXK,CN,35.8617,104.1954
+F001005185,Customer,Neon Phoenix 6RO,ID,-0.7893,113.9213
+F001005186,Customer,Cosmic Specter 56Z,ID,-0.7893,113.9213
+F001005188,Customer,Galactic Ranger MP4,ID,-0.7893,113.9213
+F001005190,Customer,Epic Titan 7EX,ID,-0.7893,113.9213
+F001005191,Customer,Galactic Blaze ELE,ID,-0.7893,113.9213
+F001005192,Customer,Epic Blaze VAZ,ID,-0.7893,113.9213
+F001005216,Customer,Turbo Titan E9E,MA,31.7917,-7.0926
+F001005217,Customer,Quantum Specter SRA,MA,31.7917,-7.0926
+F001005220,Customer,Neon Nova UR9,KR,35.9078,127.7669
+F001005280,Customer,Galactic Voyager 0ZS,CN,35.8617,104.1954
+F001005396,Customer,Turbo Phoenix YWY,AU,-25.2744,133.7751
+F001005461,Customer,Cosmic Dragon IFS,BE,50.5039,4.4699
+F001005464,Customer,Crystal Specter J85,BE,50.5039,4.4699
+F001005475,Customer,Epic Dragon DGB,PT,39.3999,-8.2245
+F001005499,Customer,Mystic Titan TZJ,MA,31.7917,-7.0926
+F001005508,Customer,Cosmic Phoenix 6VP,BR,-14.235,-51.9253
+F001005534,Customer,Mystic Dragon 41K,HU,47.1625,19.5033
+F001005535,Customer,Hyper Pulse 1ZA,HU,47.1625,19.5033
+F001005536,Customer,Cosmic Titan 66H,HU,47.1625,19.5033
+F001005538,Customer,Quantum Ranger RTQ,HU,47.1625,19.5033
+F001005539,Customer,Epic Phoenix 542,HU,47.1625,19.5033
+F001005540,Customer,Galactic Blaze WAV,HU,47.1625,19.5033
+F001005541,Customer,Galactic Blaze 2GF,HU,47.1625,19.5033
+F001005542,Customer,Neon Oracle 29C,HU,47.1625,19.5033
+F001005543,Customer,Hyper Ranger 1LA,HU,47.1625,19.5033
+F001005544,Customer,Galactic Nova 5C6,HU,47.1625,19.5033
+F001005548,Customer,Inferno Pulse RDL,HU,47.1625,19.5033
+F001005549,Customer,Hyper Dragon L8K,HU,47.1625,19.5033
+F001005550,Customer,Neon Titan 105,HU,47.1625,19.5033
+F001005551,Customer,Galactic Nova Q0T,HU,47.1625,19.5033
+F001005553,Customer,Hyper Phoenix 8R8,HU,47.1625,19.5033
+F001005556,Customer,Epic Specter MY8,HU,47.1625,19.5033
+F001005557,Customer,Quantum Specter 3RU,HU,47.1625,19.5033
+F001005558,Customer,Quantum Oracle VE1,HU,47.1625,19.5033
+F001005559,Customer,Cosmic Nova 7DE,NL,52.1326,5.2913
+F001005634,Customer,Hyper Dragon 6VW,NL,52.1326,5.2913
+F001005668,Customer,Hyper Voyager DS0,CL,-35.6751,-71.543
+F001005669,Customer,Mystic Ranger E3O,CL,-35.6751,-71.543
+F001005672,Customer,Galactic Titan 15B,CL,-35.6751,-71.543
+F001005674,Customer,Neon Voyager K8U,CL,-35.6751,-71.543
+F001005680,Customer,Quantum Oracle K12,CL,-35.6751,-71.543
+F001005681,Customer,Cosmic Voyager 3EK,CL,-35.6751,-71.543
+F001005682,Customer,Cosmic Ranger G36,CL,-35.6751,-71.543
+F001005683,Customer,Inferno Pulse WC5,CL,-35.6751,-71.543
+F001005684,Customer,Neon Blaze P7N,CL,-35.6751,-71.543
+F001005685,Customer,Inferno Titan PS4,BR,-14.235,-51.9253
+F001005686,Customer,Turbo Nova ISI,BR,-14.235,-51.9253
+F001005691,Customer,Quantum Voyager SDK,BR,-14.235,-51.9253
+F001005692,Customer,Mystic Specter XQY,BR,-14.235,-51.9253
+F001005694,Customer,Neon Dragon E2W,BR,-14.235,-51.9253
+F001005695,Customer,Inferno Phoenix PDB,BR,-14.235,-51.9253
+F001005704,Customer,Epic Titan KNN,BR,-14.235,-51.9253
+F001005707,Customer,Turbo Pulse GUO,BR,-14.235,-51.9253
+F001005708,Customer,Crystal Nova YIU,BR,-14.235,-51.9253
+F001005709,Customer,Turbo Nova JNI,BR,-14.235,-51.9253
+F001005711,Customer,Cosmic Phoenix P80,BR,-14.235,-51.9253
+F001005712,Customer,Cosmic Nova SYU,BR,-14.235,-51.9253
+F001005715,Customer,Inferno Specter GMR,BR,-14.235,-51.9253
+F001005728,Customer,Cosmic Pulse 73F,CR,9.7489,-83.7534
+F001005729,Customer,Galactic Phoenix 1D2,CR,9.7489,-83.7534
+F001005730,Customer,Inferno Pulse OQQ,CR,9.7489,-83.7534
+F001005731,Customer,Turbo Specter STP,CR,9.7489,-83.7534
+F001005732,Customer,Epic Dragon FSW,CR,9.7489,-83.7534
+F001005733,Customer,Cosmic Oracle TW0,CR,9.7489,-83.7534
+F001005735,Customer,Inferno Phoenix 9C1,CR,9.7489,-83.7534
+F001005736,Customer,Neon Blaze H3C,CR,9.7489,-83.7534
+F001005737,Customer,Neon Oracle KGY,CR,9.7489,-83.7534
+F001005738,Customer,Hyper Ranger PWG,CR,9.7489,-83.7534
+F001005739,Customer,Epic Nova H98,CR,9.7489,-83.7534
+F001005740,Customer,Crystal Specter KB4,PE,-9.189967,-75.015152
+F001005742,Customer,Galactic Nova UBV,PE,-9.189967,-75.015152
+F001005743,Customer,Epic Titan LH6,PE,-9.189967,-75.015152
+F001005745,Customer,Inferno Titan F27,PE,-9.189967,-75.015152
+F001005746,Customer,Quantum Pulse CW9,PE,-9.189967,-75.015152
+F001005747,Customer,Hyper Nova TQP,PE,-9.189967,-75.015152
+F001005748,Customer,Crystal Phoenix IIZ,PE,-9.189967,-75.015152
+F001005749,Customer,Turbo Nova WGL,GT,15.7835,-90.2308
+F001005750,Customer,Neon Specter 3CZ,GT,15.7835,-90.2308
+F001005751,Customer,Mystic Blaze G2H,GT,15.7835,-90.2308
+F001005752,Customer,Epic Blaze NQ2,GT,15.7835,-90.2308
+F001005755,Customer,Cosmic Specter ZJ8,GT,15.7835,-90.2308
+F001005756,Customer,Crystal Phoenix 3M0,HN,15.199999,-86.241905
+F001005757,Customer,Cosmic Blaze C4D,HN,15.199999,-86.241905
+F001005758,Customer,Neon Blaze E7P,NI,12.8654,-85.2072
+F001005759,Customer,Mystic Voyager GTA,NI,12.8654,-85.2072
+F001005760,Customer,Turbo Phoenix 1VC,CU,21.5218,-77.7812
+F001005762,Customer,Mystic Voyager RAT,HT,18.9712,-72.2852
+F001005780,Customer,Quantum Titan 5DL,CA,56.1304,-106.3468
+F001005781,Customer,Quantum Dragon K71,CA,56.1304,-106.3468
+F001005787,Customer,Inferno Ranger F9K,CA,56.1304,-106.3468
+F001005793,Customer,Mystic Pulse NWV,CA,56.1304,-106.3468
+F001005794,Customer,Inferno Dragon DIO,CA,56.1304,-106.3468
+F001005795,Customer,Quantum Blaze FZE,CA,56.1304,-106.3468
+F001005796,Customer,Epic Voyager 38U,CA,56.1304,-106.3468
+F001005798,Customer,Quantum Phoenix 4IL,CA,56.1304,-106.3468
+F001005799,Customer,Cosmic Titan BYM,CA,56.1304,-106.3468
+F001005800,Customer,Inferno Blaze XAW,CO,4.5709,-74.2973
+F001005801,Customer,Epic Nova WCA,CO,4.5709,-74.2973
+F001005802,Customer,Turbo Specter 4E5,CO,4.5709,-74.2973
+F001005803,Customer,Quantum Specter PCV,CO,4.5709,-74.2973
+F001005804,Customer,Quantum Oracle OT7,CO,4.5709,-74.2973
+F001005805,Customer,Inferno Phoenix U2C,CO,4.5709,-74.2973
+F001005807,Customer,Cosmic Blaze X30,CO,4.5709,-74.2973
+F001005808,Customer,Turbo Dragon MMA,CO,4.5709,-74.2973
+F001005810,Customer,Epic Dragon HPG,CO,4.5709,-74.2973
+F001005811,Customer,Cosmic Voyager XR5,CO,4.5709,-74.2973
+F001005812,Customer,Epic Titan QTT,CO,4.5709,-74.2973
+F001005813,Customer,Quantum Voyager 5AD,CO,4.5709,-74.2973
+F001005814,Customer,Cosmic Blaze 8TK,CO,4.5709,-74.2973
+F001005816,Customer,Quantum Pulse EDJ,CO,4.5709,-74.2973
+F001005817,Customer,Quantum Nova IFL,CO,4.5709,-74.2973
+F001005818,Customer,Mystic Pulse OSR,CO,4.5709,-74.2973
+F001005819,Customer,Galactic Oracle C9W,CO,4.5709,-74.2973
+F001005820,Customer,Mystic Blaze H0E,CO,4.5709,-74.2973
+F001005821,Customer,Galactic Titan 7PB,CO,4.5709,-74.2973
+F001005826,Customer,Cosmic Titan ZPZ,CO,4.5709,-74.2973
+F001005835,Customer,Quantum Ranger EOK,CO,4.5709,-74.2973
+F001005838,Customer,Inferno Specter HGR,MX,23.6345,-102.5528
+F001005841,Customer,Galactic Phoenix PML,MX,23.6345,-102.5528
+F001005842,Customer,Hyper Nova GCQ,MX,23.6345,-102.5528
+F001005845,Customer,Neon Dragon A12,MX,23.6345,-102.5528
+F001005846,Customer,Inferno Ranger 9C2,MX,23.6345,-102.5528
+F001005847,Customer,Galactic Pulse EX7,MX,23.6345,-102.5528
+F001005848,Customer,Inferno Blaze 20X,MX,23.6345,-102.5528
+F001005849,Customer,Quantum Voyager JYF,MX,23.6345,-102.5528
+F001005850,Customer,Galactic Nova UQR,MX,23.6345,-102.5528
+F001005851,Customer,Epic Phoenix XNM,MX,23.6345,-102.5528
+F001005853,Customer,Hyper Oracle I34,MX,23.6345,-102.5528
+F001005854,Customer,Turbo Pulse 2MN,MX,23.6345,-102.5528
+F001005855,Customer,Cosmic Dragon VMG,MX,23.6345,-102.5528
+F001005856,Customer,Turbo Blaze J8L,MX,23.6345,-102.5528
+F001005857,Customer,Mystic Nova 2W6,MX,23.6345,-102.5528
+F001005858,Customer,Mystic Oracle G4S,MX,23.6345,-102.5528
+F001005859,Customer,Neon Specter XPC,MX,23.6345,-102.5528
+F001005860,Customer,Inferno Nova POA,MX,23.6345,-102.5528
+F001005861,Customer,Neon Titan N34,MX,23.6345,-102.5528
+F001005862,Customer,Inferno Ranger TK8,MX,23.6345,-102.5528
+F001005863,Customer,Hyper Blaze WBB,MX,23.6345,-102.5528
+F001005865,Customer,Quantum Blaze NGX,MX,23.6345,-102.5528
+F001005866,Customer,Crystal Ranger ZAW,MX,23.6345,-102.5528
+F001005867,Customer,Turbo Oracle 7F6,MX,23.6345,-102.5528
+F001005868,Customer,Inferno Blaze BSY,MX,23.6345,-102.5528
+F001005873,Customer,Galactic Blaze 10F,PA,8.537981,-80.782127
+F001005881,Customer,Hyper Phoenix 2VO,SV,13.7942,-88.8965
+F001005882,Customer,Quantum Nova JJT,SV,13.7942,-88.8965
+F001005883,Customer,Hyper Ranger N4W,SV,13.7942,-88.8965
+F001005884,Customer,Hyper Voyager ZKF,US,37.0902,-95.7129
+F001005886,Customer,Mystic Oracle ZLL,US,37.0902,-95.7129
+F001005888,Customer,Turbo Pulse T7I,US,37.0902,-95.7129
+F001005889,Customer,Galactic Specter X9N,US,37.0902,-95.7129
+F001005890,Customer,Epic Titan 3G0,US,37.0902,-95.7129
+F001005891,Customer,Inferno Voyager J6F,US,37.0902,-95.7129
+F001005892,Customer,Inferno Specter Q6C,US,37.0902,-95.7129
+F001005893,Customer,Crystal Voyager JPO,US,37.0902,-95.7129
+F001005894,Customer,Epic Blaze CIZ,US,37.0902,-95.7129
+F001005895,Customer,Quantum Phoenix OYQ,US,37.0902,-95.7129
+F001005896,Customer,Neon Dragon RB4,US,37.0902,-95.7129
+F001005897,Customer,Crystal Specter 5T6,US,37.0902,-95.7129
+F001005899,Customer,Turbo Pulse H6W,US,37.0902,-95.7129
+F001005900,Customer,Inferno Titan YQU,US,37.0902,-95.7129
+F001005902,Customer,Epic Titan Y7L,MX,23.6345,-102.5528
+F001005903,Customer,Mystic Pulse GZ9,MX,23.6345,-102.5528
+F001005906,Customer,Turbo Oracle QNC,MX,23.6345,-102.5528
+F001005907,Customer,Cosmic Blaze ZH9,MX,23.6345,-102.5528
+F001005908,Customer,Neon Dragon D0M,MX,23.6345,-102.5528
+F001005910,Customer,Neon Blaze UZN,MX,23.6345,-102.5528
+F001005914,Customer,Galactic Dragon LRI,MX,23.6345,-102.5528
+F001005916,Customer,Quantum Nova TJQ,MX,23.6345,-102.5528
+F001005917,Customer,Neon Pulse 4U6,MX,23.6345,-102.5528
+F001005918,Customer,Mystic Phoenix ASA,MX,23.6345,-102.5528
+F001005919,Customer,Quantum Pulse 18K,MX,23.6345,-102.5528
+F001005921,Customer,Mystic Voyager 992,MX,23.6345,-102.5528
+F001005922,Customer,Mystic Blaze 0KH,MX,23.6345,-102.5528
+F001005925,Customer,Cosmic Nova 5NG,MX,23.6345,-102.5528
+F001005928,Customer,Hyper Blaze YWX,MX,23.6345,-102.5528
+F001005929,Customer,Inferno Pulse J83,MX,23.6345,-102.5528
+F001005955,Customer,Neon Pulse 2VV,SE,60.1282,18.6435
+F001005958,Customer,Inferno Titan JQU,NL,52.1326,5.2913
+F001005961,Customer,Cosmic Nova O0Y,BE,50.5039,4.4699
+F001005962,Customer,Galactic Pulse RLI,BE,50.5039,4.4699
+F001005963,Customer,Mystic Nova LGD,BE,50.5039,4.4699
+F001005964,Customer,Mystic Blaze 5TX,BE,50.5039,4.4699
+F001005965,Customer,Cosmic Blaze MKV,BE,50.5039,4.4699
+F001005966,Customer,Neon Nova CDW,BE,50.5039,4.4699
+F001005967,Customer,Quantum Ranger EUK,BE,50.5039,4.4699
+F001005968,Customer,Hyper Voyager 4RT,BE,50.5039,4.4699
+F001005969,Customer,Inferno Phoenix 5R1,BE,50.5039,4.4699
+F001005970,Customer,Galactic Specter D0T,BE,50.5039,4.4699
+F001005971,Customer,Epic Titan DXE,BE,50.5039,4.4699
+F001005972,Customer,Hyper Pulse 0YV,BE,50.5039,4.4699
+F001005973,Customer,Neon Phoenix AV0,BE,50.5039,4.4699
+F001005974,Customer,Turbo Titan HLV,BE,50.5039,4.4699
+F001005976,Customer,Epic Titan OF6,BE,50.5039,4.4699
+F001005977,Customer,Neon Blaze 8HO,BE,50.5039,4.4699
+F001005978,Customer,Galactic Specter 7O4,BE,50.5039,4.4699
+F001005979,Customer,Galactic Nova 9M8,BE,50.5039,4.4699
+F001005980,Customer,Cosmic Titan 8F5,BE,50.5039,4.4699
+F001005981,Customer,Turbo Phoenix VUN,BE,50.5039,4.4699
+F001005982,Customer,Quantum Titan TAE,BE,50.5039,4.4699
+F001005983,Customer,Epic Pulse VCZ,BE,50.5039,4.4699
+F001006015,Customer,Cosmic Ranger OZG,GR,39.0742,21.8243
+F001006016,Customer,Cosmic Nova XVB,GR,39.0742,21.8243
+F001006017,Customer,Quantum Blaze YGS,GR,39.0742,21.8243
+F001006018,Customer,Cosmic Ranger GUD,GR,39.0742,21.8243
+F001006019,Customer,Epic Pulse ST0,GR,39.0742,21.8243
+F001006020,Customer,Cosmic Ranger F9Z,GR,39.0742,21.8243
+F001006021,Customer,Hyper Nova 3A0,GR,39.0742,21.8243
+F001006022,Customer,Neon Nova LK4,GR,39.0742,21.8243
+F001006023,Customer,Crystal Ranger 6C7,GR,39.0742,21.8243
+F001006024,Customer,Inferno Voyager Q86,GR,39.0742,21.8243
+F001006025,Customer,Epic Specter 4SN,GR,39.0742,21.8243
+F001006026,Customer,Hyper Oracle 8A3,GR,39.0742,21.8243
+F001006027,Customer,Crystal Titan P8X,CY,35.1264,33.4299
+F001006098,Customer,Epic Specter SJT,DK,56.2639,9.5018
+F001006099,Customer,Epic Phoenix MLQ,DK,56.2639,9.5018
+F001006100,Customer,Cosmic Specter BZ0,DK,56.2639,9.5018
+F001006101,Customer,Hyper Pulse 2JU,DK,56.2639,9.5018
+F001006102,Customer,Galactic Oracle JWE,DK,56.2639,9.5018
+F001006103,Customer,Quantum Ranger 9EG,DK,56.2639,9.5018
+F001006104,Customer,Quantum Dragon LIA,DK,56.2639,9.5018
+F001006107,Customer,Turbo Phoenix 5TZ,SE,60.1282,18.6435
+F001006109,Customer,Quantum Dragon J4M,SE,60.1282,18.6435
+F001006110,Customer,Quantum Voyager HVG,SE,60.1282,18.6435
+F001006112,Customer,Hyper Oracle NVT,SE,60.1282,18.6435
+F001006113,Customer,Turbo Oracle VA2,SE,60.1282,18.6435
+F001006114,Customer,Crystal Pulse UD2,SE,60.1282,18.6435
+F001006115,Customer,Galactic Titan USD,NO,60.472,8.4689
+F001006117,Customer,Mystic Blaze DK1,SE,60.1282,18.6435
+F001006119,Customer,Galactic Blaze ZUD,SE,60.1282,18.6435
+F001006120,Customer,Mystic Nova A59,SE,60.1282,18.6435
+F001006121,Customer,Quantum Dragon Y5G,SE,60.1282,18.6435
+F001006122,Customer,Hyper Ranger JJZ,SE,60.1282,18.6435
+F001006123,Customer,Mystic Dragon B3T,SE,60.1282,18.6435
+F001006124,Customer,Epic Oracle H1E,SE,60.1282,18.6435
+F001006125,Customer,Hyper Oracle O6B,SE,60.1282,18.6435
+F001006126,Customer,Mystic Dragon S47,SE,60.1282,18.6435
+F001006127,Customer,Inferno Voyager 7BE,SE,60.1282,18.6435
+F001006128,Customer,Galactic Ranger A77,SE,60.1282,18.6435
+F001006129,Customer,Quantum Phoenix 46X,SE,60.1282,18.6435
+F001006132,Customer,Neon Specter 22K,SE,60.1282,18.6435
+F001006135,Customer,Quantum Dragon 01C,NL,52.1326,5.2913
+F001006136,Customer,Neon Dragon FAF,NL,52.1326,5.2913
+F001006137,Customer,Galactic Ranger 13P,NL,52.1326,5.2913
+F001006141,Customer,Hyper Titan N7S,NL,52.1326,5.2913
+F001006143,Customer,Hyper Oracle 7NQ,NL,52.1326,5.2913
+F001006144,Customer,Quantum Voyager C8Q,NL,52.1326,5.2913
+F001006145,Customer,Quantum Oracle 9KM,NL,52.1326,5.2913
+F001006148,Customer,Neon Phoenix 5SD,NL,52.1326,5.2913
+F001006149,Customer,Cosmic Titan 9C1,NL,52.1326,5.2913
+F001006153,Customer,Mystic Titan PJA,NL,52.1326,5.2913
+F001006154,Customer,Turbo Oracle 7RN,NL,52.1326,5.2913
+F001006155,Customer,Mystic Voyager QJ6,NL,52.1326,5.2913
+F001006156,Customer,Mystic Specter 75J,NL,52.1326,5.2913
+F001006157,Customer,Galactic Oracle WNR,NL,52.1326,5.2913
+F001006160,Customer,Epic Oracle GO0,NL,52.1326,5.2913
+F001006161,Customer,Quantum Oracle 6PJ,NL,52.1326,5.2913
+F001006162,Customer,Cosmic Phoenix 0DM,NL,52.1326,5.2913
+F001006163,Customer,Hyper Nova 5PQ,NL,52.1326,5.2913
+F001006164,Customer,Turbo Phoenix TRW,NL,52.1326,5.2913
+F001006165,Customer,Cosmic Nova F0S,NL,52.1326,5.2913
+F001006167,Customer,Hyper Dragon 8V7,NL,52.1326,5.2913
+F001006168,Customer,Epic Ranger MTB,NL,52.1326,5.2913
+F001006170,Customer,Mystic Ranger E8J,NL,52.1326,5.2913
+F001006171,Customer,Inferno Dragon E1M,NL,52.1326,5.2913
+F001006172,Customer,Galactic Dragon MWK,NL,52.1326,5.2913
+F001006173,Customer,Neon Specter SLY,NL,52.1326,5.2913
+F001006174,Customer,Neon Oracle IHT,NL,52.1326,5.2913
+F001006176,Customer,Inferno Specter WBW,CH,46.8182,8.2275
+F001006177,Customer,Cosmic Specter R2T,CH,46.8182,8.2275
+F001006179,Customer,Turbo Ranger 5M1,CH,46.8182,8.2275
+F001006180,Customer,Cosmic Oracle B2U,CH,46.8182,8.2275
+F001006181,Customer,Quantum Pulse IM0,CH,46.8182,8.2275
+F001006182,Customer,Hyper Dragon QQC,CH,46.8182,8.2275
+F001006183,Customer,Turbo Nova Y6L,CH,46.8182,8.2275
+F001006184,Customer,Cosmic Voyager I31,CH,46.8182,8.2275
+F001006186,Customer,Mystic Blaze 8F0,CH,46.8182,8.2275
+F001006187,Customer,Epic Titan CUJ,CH,46.8182,8.2275
+F001006189,Customer,Turbo Pulse 9B8,IT,41.8719,12.5674
+F001006193,Customer,Cosmic Pulse JHY,IT,41.8719,12.5674
+F001006194,Customer,Galactic Titan 4BZ,IT,41.8719,12.5674
+F001006195,Customer,Crystal Ranger 5M0,IT,41.8719,12.5674
+F001006196,Customer,Hyper Dragon DJ8,IT,41.8719,12.5674
+F001006197,Customer,Galactic Blaze IRV,IT,41.8719,12.5674
+F001006198,Customer,Inferno Voyager 7EN,IT,41.8719,12.5674
+F001006199,Customer,Galactic Voyager Y0U,IT,41.8719,12.5674
+F001006200,Customer,Epic Blaze XQ8,IT,41.8719,12.5674
+F001006201,Customer,Cosmic Specter Y5Z,IT,41.8719,12.5674
+F001006202,Customer,Mystic Phoenix A7F,IT,41.8719,12.5674
+F001006203,Customer,Mystic Nova D44,IT,41.8719,12.5674
+F001006204,Customer,Turbo Specter T16,IT,41.8719,12.5674
+F001006205,Customer,Inferno Dragon LVX,IT,41.8719,12.5674
+F001006207,Customer,Neon Oracle X5A,IT,41.8719,12.5674
+F001006208,Customer,Neon Oracle SZE,IT,41.8719,12.5674
+F001006209,Customer,Inferno Oracle RV2,IT,41.8719,12.5674
+F001006211,Customer,Inferno Ranger IRO,IT,41.8719,12.5674
+F001006212,Customer,Mystic Voyager PJF,IT,41.8719,12.5674
+F001006213,Customer,Hyper Voyager 0SQ,IT,41.8719,12.5674
+F001006215,Customer,Crystal Pulse OQY,IT,41.8719,12.5674
+F001006216,Customer,Turbo Pulse 2G0,IT,41.8719,12.5674
+F001006217,Customer,Neon Oracle GNZ,IT,41.8719,12.5674
+F001006218,Customer,Crystal Ranger 75Y,IT,41.8719,12.5674
+F001006219,Customer,Turbo Titan C2I,IT,41.8719,12.5674
+F001006220,Customer,Neon Phoenix ZRC,IT,41.8719,12.5674
+F001006222,Customer,Inferno Ranger TXR,IT,41.8719,12.5674
+F001006223,Customer,Inferno Dragon O0Y,IT,41.8719,12.5674
+F001006224,Customer,Cosmic Oracle 8QJ,MT,35.9375,14.3754
+F001006226,Customer,Epic Dragon 4Q0,IT,41.8719,12.5674
+F001006228,Customer,Galactic Ranger BE5,IT,41.8719,12.5674
+F001006229,Customer,Galactic Nova 592,IT,41.8719,12.5674
+F001006230,Customer,Neon Oracle 6WX,IT,41.8719,12.5674
+F001006231,Customer,Crystal Phoenix JEQ,IT,41.8719,12.5674
+F001006232,Customer,Galactic Blaze XQJ,IT,41.8719,12.5674
+F001006234,Customer,Turbo Specter PMP,IT,41.8719,12.5674
+F001006236,Customer,Crystal Titan EPI,IT,41.8719,12.5674
+F001006237,Customer,Inferno Ranger EOY,IT,41.8719,12.5674
+F001006241,Customer,Galactic Dragon W7K,IT,41.8719,12.5674
+F001006254,Customer,Quantum Oracle 66Y,AT,47.5162,14.5501
+F001006256,Customer,Quantum Voyager 8LN,AT,47.5162,14.5501
+F001006257,Customer,Cosmic Blaze 68K,IT,41.8719,12.5674
+F001006269,Customer,Mystic Oracle GPH,PT,39.3999,-8.2245
+F001006270,Customer,Neon Ranger Q72,PT,39.3999,-8.2245
+F001006271,Customer,Turbo Titan AVL,PT,39.3999,-8.2245
+F001006272,Customer,Epic Voyager YW3,PT,39.3999,-8.2245
+F001006273,Customer,Hyper Blaze NUD,PT,39.3999,-8.2245
+F001006274,Customer,Hyper Blaze HIC,PT,39.3999,-8.2245
+F001006275,Customer,Galactic Titan ZUQ,PT,39.3999,-8.2245
+F001006276,Customer,Epic Phoenix SVE,PT,39.3999,-8.2245
+F001006277,Customer,Neon Phoenix QRT,PT,39.3999,-8.2245
+F001006279,Customer,Hyper Blaze RCN,PT,39.3999,-8.2245
+F001006296,Customer,Quantum Pulse TNV,PT,39.3999,-8.2245
+F001006297,Customer,Hyper Pulse YTF,PT,39.3999,-8.2245
+F001006298,Customer,Epic Blaze W4O,PT,39.3999,-8.2245
+F001006299,Customer,Mystic Specter LUG,PT,39.3999,-8.2245
+F001006313,Customer,Crystal Oracle 0ZG,FR,46.2276,2.2137
+F001006326,Customer,Galactic Nova 7JX,FR,46.2276,2.2137
+F001006327,Customer,Epic Voyager VV0,FR,46.2276,2.2137
+F001006328,Customer,Inferno Blaze QYF,GB,55.3781,-3.436
+F001006329,Customer,Crystal Titan 80S,FR,46.2276,2.2137
+F001006330,Customer,Cosmic Titan 2J2,FR,46.2276,2.2137
+F001006331,Customer,Turbo Ranger NAM,FR,46.2276,2.2137
+F001006332,Customer,Mystic Voyager 55P,FR,46.2276,2.2137
+F001006334,Customer,Neon Oracle T6C,FR,46.2276,2.2137
+F001006335,Customer,Epic Pulse 14V,FR,46.2276,2.2137
+F001006336,Customer,Neon Titan 0DI,FR,46.2276,2.2137
+F001006337,Customer,Crystal Dragon BBS,FR,46.2276,2.2137
+F001006338,Customer,Quantum Titan 0PM,FR,46.2276,2.2137
+F001006339,Customer,Turbo Voyager 5IT,FR,46.2276,2.2137
+F001006340,Customer,Hyper Phoenix STX,FR,46.2276,2.2137
+F001006341,Customer,Mystic Blaze I2Q,FR,46.2276,2.2137
+F001006342,Customer,Turbo Pulse MG0,FR,46.2276,2.2137
+F001006343,Customer,Cosmic Ranger YX2,FR,46.2276,2.2137
+F001006344,Customer,Neon Nova WZ2,FR,46.2276,2.2137
+F001006346,Customer,Mystic Ranger H4O,FR,46.2276,2.2137
+F001006347,Customer,Inferno Blaze QGD,FR,46.2276,2.2137
+F001006350,Customer,Galactic Pulse 43W,IT,41.8719,12.5674
+F001006351,Customer,Galactic Voyager 6ML,AT,47.5162,14.5501
+F001006352,Customer,Quantum Nova 8F7,AT,47.5162,14.5501
+F001006353,Customer,Quantum Specter N82,AT,47.5162,14.5501
+F001006356,Customer,Neon Pulse PLD,AT,47.5162,14.5501
+F001006357,Customer,Mystic Voyager F43,AT,47.5162,14.5501
+F001006358,Customer,Crystal Specter 06B,FI,61.9241,25.7482
+F001006359,Customer,Neon Nova EA0,AT,47.5162,14.5501
+F001006360,Customer,Quantum Pulse 8ZB,AT,47.5162,14.5501
+F001006362,Customer,Turbo Specter C0Z,FI,61.9241,25.7482
+F001006363,Customer,Cosmic Oracle VHL,FI,61.9241,25.7482
+F001006364,Customer,Crystal Ranger B1Q,FI,61.9241,25.7482
+F001006366,Customer,Turbo Phoenix 7JI,FI,61.9241,25.7482
+F001006368,Customer,Crystal Nova 63Q,DE,51.1657,10.4515
+F001006369,Customer,Mystic Specter MWR,CZ,49.8175,15.473
+F001006370,Customer,Mystic Dragon FQQ,DE,51.1657,10.4515
+F001006371,Customer,Neon Dragon HIH,DE,51.1657,10.4515
+F001006372,Customer,Inferno Titan 365,DE,51.1657,10.4515
+F001006373,Customer,Neon Oracle ZLW,DE,51.1657,10.4515
+F001006374,Customer,Cosmic Blaze TFN,CZ,49.8175,15.473
+F001006375,Customer,Hyper Blaze Z0B,CZ,49.8175,15.473
+F001006376,Customer,Epic Titan IK8,MA,31.7917,-7.0926
+F001006377,Customer,Inferno Blaze O2J,CZ,49.8175,15.473
+F001006378,Customer,Mystic Pulse WKD,CZ,49.8175,15.473
+F001006379,Customer,Mystic Titan FVZ,CZ,49.8175,15.473
+F001006380,Customer,Quantum Blaze X3N,CZ,49.8175,15.473
+F001006382,Customer,Hyper Phoenix H7A,CZ,49.8175,15.473
+F001006384,Customer,Mystic Nova Q4P,CZ,49.8175,15.473
+F001006385,Customer,Turbo Voyager JPU,CZ,49.8175,15.473
+F001006386,Customer,Galactic Nova KP0,CZ,49.8175,15.473
+F001006387,Customer,Mystic Ranger W2Q,CZ,49.8175,15.473
+F001006390,Customer,Mystic Oracle 4CE,CZ,49.8175,15.473
+F001006403,Customer,Turbo Blaze 0X5,DE,51.1657,10.4515
+F001006404,Customer,Crystal Dragon CMJ,DE,51.1657,10.4515
+F001006405,Customer,Neon Blaze YI1,DE,51.1657,10.4515
+F001006410,Customer,Neon Titan 767,DE,51.1657,10.4515
+F001006411,Customer,Mystic Specter POK,DE,51.1657,10.4515
+F001006412,Customer,Cosmic Voyager 9TI,DE,51.1657,10.4515
+F001006416,Customer,Turbo Titan SUR,DE,51.1657,10.4515
+F001006418,Customer,Quantum Nova WRC,DE,51.1657,10.4515
+F001006434,Customer,Inferno Ranger UPQ,DE,51.1657,10.4515
+F001006435,Customer,Neon Blaze G17,GB,55.3781,-3.436
+F001006436,Customer,Cosmic Specter 0CU,IE,53.1424,-7.6921
+F001006437,Customer,Epic Ranger 8ZC,GB,55.3781,-3.436
+F001006439,Customer,Turbo Nova 0D7,GB,55.3781,-3.436
+F001006440,Customer,Cosmic Titan RYJ,GB,55.3781,-3.436
+F001006442,Customer,Mystic Specter QF7,GB,55.3781,-3.436
+F001006443,Customer,Inferno Pulse SD3,GB,55.3781,-3.436
+F001006445,Customer,Inferno Voyager FXP,GB,55.3781,-3.436
+F001006447,Customer,Crystal Nova MAZ,GB,55.3781,-3.436
+F001006449,Customer,Neon Phoenix DJT,GB,55.3781,-3.436
+F001006450,Customer,Turbo Ranger MT5,GB,55.3781,-3.436
+F001006451,Customer,Epic Dragon 9NZ,GB,55.3781,-3.436
+F001006452,Customer,Inferno Titan H47,GB,55.3781,-3.436
+F001006453,Customer,Cosmic Titan C84,GB,55.3781,-3.436
+F001006454,Customer,Turbo Dragon 2XG,GB,55.3781,-3.436
+F001006455,Customer,Crystal Specter N3M,GB,55.3781,-3.436
+F001006456,Customer,Mystic Nova R5X,IE,53.1424,-7.6921
+F001006457,Customer,Turbo Specter 11E,GB,55.3781,-3.436
+F001006458,Customer,Turbo Voyager FET,GB,55.3781,-3.436
+F001006459,Customer,Turbo Specter UQ0,GB,55.3781,-3.436
+F001006460,Customer,Galactic Nova Y92,GB,55.3781,-3.436
+F001006461,Customer,Epic Pulse 0ST,GB,55.3781,-3.436
+F001006462,Customer,Cosmic Oracle 4C0,GB,55.3781,-3.436
+F001006463,Customer,Hyper Oracle 6K4,GB,55.3781,-3.436
+F001006464,Customer,Cosmic Dragon P77,GB,55.3781,-3.436
+F001006465,Customer,Turbo Oracle 4V3,GB,55.3781,-3.436
+F001006466,Customer,Neon Phoenix NH3,DE,51.1657,10.4515
+F001006496,Customer,Inferno Pulse ODH,TZ,-6.369,34.8888
+F001006503,Customer,Epic Pulse 5NY,KE,-0.0236,37.9062
+F001006508,Customer,Crystal Pulse TMW,TN,33.8869,9.5375
+F001006512,Customer,Hyper Specter TES,MA,31.7917,-7.0926
+F001006803,Customer,Mystic Voyager IS9,ET,9.145,40.4897
+F001006903,Customer,Turbo Pulse X41,DJ,11.8251,42.5903
+F001006929,Customer,Galactic Specter 8WX,SE,60.1282,18.6435
+F001006930,Customer,Mystic Specter U4C,KE,-0.0236,37.9062
+F001006932,Customer,Epic Pulse E5G,KE,-0.0236,37.9062
+F001006936,Customer,Mystic Dragon 3G6,KE,-0.0236,37.9062
+F001006939,Customer,Quantum Phoenix NIZ,KE,-0.0236,37.9062
+F001006940,Customer,Quantum Voyager AL1,CH,46.8182,8.2275
+F001006946,Customer,Hyper Phoenix 0LR,MT,35.9375,14.3754
+F001006947,Customer,Galactic Specter PK0,GB,55.3781,-3.436
+F001006954,Customer,Neon Dragon Q2H,IT,41.8719,12.5674
+F001006956,Customer,Inferno Specter GNK,VE,6.4238,-66.5897
+F001006979,Customer,Turbo Specter MLJ,GB,55.3781,-3.436
+F001006980,Customer,Neon Nova AD9,GB,55.3781,-3.436
+F001006981,Customer,Crystal Titan BJN,GB,55.3781,-3.436
+F001006984,Customer,Galactic Nova 5KC,GB,55.3781,-3.436
+F001006987,Customer,Inferno Nova Q39,CL,-35.6751,-71.543
+F001006990,Customer,Neon Phoenix 7ZV,GB,55.3781,-3.436
+F001006994,Customer,Galactic Oracle Q5O,GB,55.3781,-3.436
+F001007017,Customer,Neon Dragon HTI,FR,46.2276,2.2137
+F001007018,Customer,Cosmic Blaze A8P,FR,46.2276,2.2137
+F001007033,Customer,Galactic Phoenix DJI,ID,-0.7893,113.9213
+F001007034,Customer,Neon Titan 03N,ID,-0.7893,113.9213
+F001007035,Customer,Turbo Blaze M2W,ID,-0.7893,113.9213
+F001007037,Customer,Hyper Phoenix 73Q,ID,-0.7893,113.9213
+F001007038,Customer,Cosmic Specter TSR,ID,-0.7893,113.9213
+F001007041,Customer,Turbo Titan P18,GB,55.3781,-3.436
+F001007048,Customer,Crystal Oracle UMD,TH,15.87,100.9925
+F001007050,Customer,Turbo Dragon N7E,TH,15.87,100.9925
+F001007053,Customer,Turbo Blaze 5YU,TH,15.87,100.9925
+F001007054,Customer,Crystal Dragon G9D,KR,35.9078,127.7669
+F001007059,Customer,Neon Nova J2H,KR,35.9078,127.7669
+F001007060,Customer,Hyper Blaze BYV,KR,35.9078,127.7669
+F001007061,Customer,Turbo Pulse HOP,KR,35.9078,127.7669
+F001007062,Customer,Galactic Ranger JON,KR,35.9078,127.7669
+F001007063,Customer,Turbo Ranger BW8,KR,35.9078,127.7669
+F001007064,Customer,Epic Nova RL4,KR,35.9078,127.7669
+F001007067,Customer,Quantum Nova JZ3,KR,35.9078,127.7669
+F001007069,Customer,Galactic Pulse 5LU,KR,35.9078,127.7669
+F001007074,Customer,Turbo Ranger RGN,KR,35.9078,127.7669
+F001007076,Customer,Crystal Phoenix 831,KR,35.9078,127.7669
+F001007077,Customer,Inferno Voyager XNK,KR,35.9078,127.7669
+F001007080,Customer,Galactic Pulse G42,KR,35.9078,127.7669
+F001007083,Customer,Quantum Ranger STA,KR,35.9078,127.7669
+F001007085,Customer,Galactic Specter 7Y9,KR,35.9078,127.7669
+F001007088,Customer,Turbo Blaze ZM0,GB,55.3781,-3.436
+F001007096,Customer,Mystic Phoenix A6E,DE,51.1657,10.4515
+F001007099,Customer,Hyper Voyager 163,HU,47.1625,19.5033
+F001007111,Customer,Inferno Blaze OYF,KR,35.9078,127.7669
+F001007119,Customer,Epic Oracle WYH,ID,-0.7893,113.9213
+F001007122,Customer,Cosmic Titan L1J,CN,35.8617,104.1954
+F001007123,Customer,Cosmic Phoenix ELF,CN,35.8617,104.1954
+F001007124,Customer,Galactic Dragon M0L,CN,35.8617,104.1954
+F001007126,Customer,Mystic Titan S7C,CN,35.8617,104.1954
+F001007128,Customer,Inferno Dragon 03D,CN,35.8617,104.1954
+F001007132,Customer,Galactic Voyager 2D9,NL,52.1326,5.2913
+F001007145,Customer,Crystal Nova AJP,AU,-25.2744,133.7751
+F001007151,Customer,Epic Blaze PDR,TH,15.87,100.9925
+F001007152,Customer,Galactic Titan 2H3,TH,15.87,100.9925
+F001007153,Customer,Neon Oracle RC9,TH,15.87,100.9925
+F001007154,Customer,Mystic Nova U43,TH,15.87,100.9925
+F001007156,Customer,Quantum Blaze 2NS,AU,-25.2744,133.7751
+F001007165,Customer,Epic Voyager FU7,PT,39.3999,-8.2245
+F001007206,Customer,Epic Ranger 9MG,NL,52.1326,5.2913
+F001007208,Customer,Inferno Voyager M5L,NL,52.1326,5.2913
+F001007211,Customer,Cosmic Dragon MXS,HU,47.1625,19.5033
+F001007216,Customer,Crystal Pulse EFS,CZ,49.8175,15.473
+F001007217,Customer,Cosmic Phoenix 4QP,IT,41.8719,12.5674
+F001007219,Customer,Neon Nova DQK,IT,41.8719,12.5674
+F001007222,Customer,Crystal Pulse FR7,CZ,49.8175,15.473
+F001007232,Customer,Mystic Nova FX4,ID,-0.7893,113.9213
+F001007280,Customer,Turbo Blaze GQD,FR,46.2276,2.2137
+F001007301,Customer,Hyper Oracle AQW,FR,46.2276,2.2137
+F001007331,Customer,Turbo Specter NBE,GB,55.3781,-3.436
+F001007332,Customer,Crystal Ranger STK,GB,55.3781,-3.436
+F001007334,Customer,Epic Voyager W0F,GB,55.3781,-3.436
+F001007335,Customer,Cosmic Ranger CBV,GB,55.3781,-3.436
+F001007336,Customer,Quantum Voyager 33H,GB,55.3781,-3.436
+F001007339,Customer,Neon Voyager DFW,DE,51.1657,10.4515
+F001007341,Customer,Crystal Voyager BC2,GB,55.3781,-3.436
+F001007343,Customer,Crystal Ranger CG8,GB,55.3781,-3.436
+F001007344,Customer,Crystal Ranger M80,GB,55.3781,-3.436
+F001007346,Customer,Hyper Voyager 5VG,GB,55.3781,-3.436
+F001007347,Customer,Hyper Titan TAH,GB,55.3781,-3.436
+F001007356,Customer,Cosmic Specter 47R,AT,47.5162,14.5501
+F001007360,Customer,Inferno Blaze SA2,AT,47.5162,14.5501
+F001007367,Customer,Inferno Ranger 22Q,CZ,49.8175,15.473
+F001007387,Customer,Epic Titan YXY,HU,47.1625,19.5033
+F001007395,Customer,Epic Titan OTK,FR,46.2276,2.2137
+F001007405,Customer,Crystal Phoenix UVO,FR,46.2276,2.2137
+F001007406,Customer,Crystal Oracle 7IA,FR,46.2276,2.2137
+F001007409,Customer,Epic Oracle PY4,FR,46.2276,2.2137
+F001007416,Customer,Cosmic Pulse 3IB,BE,50.5039,4.4699
+F001007417,Customer,Quantum Specter DG9,NL,52.1326,5.2913
+F001007419,Customer,Crystal Nova A5J,BE,50.5039,4.4699
+F001007421,Customer,Crystal Specter XSY,BE,50.5039,4.4699
+F001007422,Customer,Hyper Nova 685,BE,50.5039,4.4699
+F001007423,Customer,Turbo Voyager RGY,BE,50.5039,4.4699
+F001007424,Customer,Epic Oracle 10W,BE,50.5039,4.4699
+F001007425,Customer,Galactic Blaze Q5Y,LU,49.8153,6.1296
+F001007426,Customer,Epic Specter 966,BE,50.5039,4.4699
+F001007427,Customer,Turbo Voyager 8SY,BE,50.5039,4.4699
+F001007431,Customer,Cosmic Phoenix KVG,BE,50.5039,4.4699
+F001007432,Customer,Crystal Voyager RA9,BE,50.5039,4.4699
+F001007433,Customer,Galactic Specter 5DD,BE,50.5039,4.4699
+F001007434,Customer,Epic Nova GGI,BE,50.5039,4.4699
+F001007435,Customer,Inferno Titan LJ0,PE,-9.189967,-75.015152
+F001007444,Customer,Hyper Ranger VTY,BR,-14.235,-51.9253
+F001007450,Customer,Galactic Phoenix 5HG,BR,-14.235,-51.9253
+F001007465,Customer,Galactic Dragon EH2,BR,-14.235,-51.9253
+F001007466,Customer,Epic Phoenix MGI,BR,-14.235,-51.9253
+F001007467,Customer,Mystic Pulse R2S,BR,-14.235,-51.9253
+F001007468,Customer,Crystal Specter UKA,BR,-14.235,-51.9253
+F001007471,Customer,Cosmic Voyager FI6,BR,-14.235,-51.9253
+F001007472,Customer,Turbo Blaze YBO,BR,-14.235,-51.9253
+F001007477,Customer,Neon Titan 7NI,BR,-14.235,-51.9253
+F001007485,Customer,Epic Dragon LUT,BR,-14.235,-51.9253
+F001007496,Customer,Mystic Specter OB7,BR,-14.235,-51.9253
+F001007518,Customer,Hyper Dragon XUD,BR,-14.235,-51.9253
+F001007533,Customer,Turbo Pulse WJS,BR,-14.235,-51.9253
+F001007558,Customer,Crystal Ranger ZMK,BR,-14.235,-51.9253
+F001007562,Customer,Quantum Nova YX1,BR,-14.235,-51.9253
+F001007563,Customer,Inferno Dragon OHW,BR,-14.235,-51.9253
+F001007567,Customer,Galactic Phoenix 1UP,BR,-14.235,-51.9253
+F001007580,Customer,Inferno Voyager B7X,BR,-14.235,-51.9253
+F001007582,Customer,Crystal Voyager PZD,BR,-14.235,-51.9253
+F001007583,Customer,Hyper Oracle 8GF,BR,-14.235,-51.9253
+F001007587,Customer,Galactic Pulse ZO0,BR,-14.235,-51.9253
+F001007602,Customer,Inferno Pulse 9N5,BR,-14.235,-51.9253
+F001007627,Customer,Crystal Dragon FS8,FR,46.2276,2.2137
+F001007630,Customer,Cosmic Ranger A2K,CO,4.5709,-74.2973
+F001007655,Customer,Galactic Ranger 4ZV,FR,46.2276,2.2137
+F001007656,Customer,Epic Blaze GL2,KR,35.9078,127.7669
+F001007658,Customer,Turbo Dragon UZ2,CZ,49.8175,15.473
+F001007662,Customer,Galactic Blaze 8KU,DE,51.1657,10.4515
+F001007680,Customer,Galactic Titan 5Y7,PT,39.3999,-8.2245
+F001007681,Customer,Quantum Ranger X63,PT,39.3999,-8.2245
+F001007683,Customer,Galactic Ranger FQ4,PT,39.3999,-8.2245
+F001007684,Customer,Mystic Titan 9O7,PT,39.3999,-8.2245
+F001007685,Customer,Turbo Voyager 6FO,PT,39.3999,-8.2245
+F001007686,Customer,Turbo Phoenix DFT,PT,39.3999,-8.2245
+F001007700,Customer,Quantum Pulse L68,FR,46.2276,2.2137
+F001007707,Customer,Neon Voyager BHL,IT,41.8719,12.5674
+F001007712,Customer,Turbo Dragon INC,IT,41.8719,12.5674
+F001007714,Customer,Mystic Nova X9C,IT,41.8719,12.5674
+F001007715,Customer,Hyper Specter FCX,IT,41.8719,12.5674
+F001007717,Customer,Inferno Blaze EOJ,IT,41.8719,12.5674
+F001007718,Customer,Cosmic Nova BXW,IT,41.8719,12.5674
+F001007719,Customer,Cosmic Pulse 9VU,IT,41.8719,12.5674
+F001007722,Customer,Mystic Pulse N99,IT,41.8719,12.5674
+F001007724,Customer,Mystic Specter JVF,IT,41.8719,12.5674
+F001007725,Customer,Galactic Blaze MAX,IT,41.8719,12.5674
+F001007726,Customer,Epic Phoenix ETU,IT,41.8719,12.5674
+F001007727,Customer,Hyper Specter 50J,IT,41.8719,12.5674
+F001007732,Customer,Hyper Blaze B54,IT,41.8719,12.5674
+F001007733,Customer,Epic Nova 8QK,IT,41.8719,12.5674
+F001007750,Customer,Crystal Pulse QCM,CH,46.8182,8.2275
+F001007751,Customer,Inferno Dragon 72I,CH,46.8182,8.2275
+F001007840,Customer,Galactic Oracle KIB,BR,-14.235,-51.9253
+F001007841,Customer,Galactic Phoenix 9YH,BR,-14.235,-51.9253
+F001007842,Customer,Cosmic Pulse GCM,BR,-14.235,-51.9253
+F001007848,Customer,Hyper Dragon ON0,BR,-14.235,-51.9253
+F001007859,Customer,Cosmic Voyager NL0,FR,46.2276,2.2137
+F001007904,Customer,Inferno Pulse SY1,BR,-14.235,-51.9253
+F001007914,Customer,Mystic Nova 0XO,BR,-14.235,-51.9253
+F001007915,Customer,Mystic Nova B6H,BR,-14.235,-51.9253
+F001007916,Customer,Galactic Titan W6K,BR,-14.235,-51.9253
+F001007924,Customer,Inferno Oracle S7Q,NL,52.1326,5.2913
+F001007925,Customer,Epic Voyager HDP,NL,52.1326,5.2913
+F001007933,Customer,Mystic Voyager B2A,CN,35.8617,104.1954
+F001007934,Customer,Cosmic Ranger 6NG,CN,35.8617,104.1954
+F001007935,Customer,Crystal Phoenix QZG,CN,35.8617,104.1954
+F001007936,Customer,Crystal Pulse AIN,CN,35.8617,104.1954
+F001007937,Customer,Galactic Voyager RFL,CN,35.8617,104.1954
+F001007960,Customer,Quantum Phoenix XB4,MX,23.6345,-102.5528
+F001007965,Customer,Mystic Nova XKU,MX,23.6345,-102.5528
+F001007966,Customer,Cosmic Nova 0X0,MX,23.6345,-102.5528
+F001007967,Customer,Turbo Nova VOE,MX,23.6345,-102.5528
+F001007968,Customer,Inferno Nova SWF,MX,23.6345,-102.5528
+F001007970,Customer,Hyper Blaze QON,MX,23.6345,-102.5528
+F001007971,Customer,Turbo Dragon 35A,MX,23.6345,-102.5528
+F001007973,Customer,Galactic Voyager TXN,MX,23.6345,-102.5528
+F001007976,Customer,Turbo Voyager W6T,MX,23.6345,-102.5528
+F001007977,Customer,Inferno Voyager D1T,MX,23.6345,-102.5528
+F001007979,Customer,Hyper Blaze 5UN,MX,23.6345,-102.5528
+F001007980,Customer,Turbo Titan 6Q8,BE,50.5039,4.4699
+F001007981,Customer,Mystic Dragon BT9,GB,55.3781,-3.436
+F001007983,Customer,Quantum Ranger 1CH,GB,55.3781,-3.436
+F001007986,Customer,Mystic Specter A2T,GB,55.3781,-3.436
+F001007987,Customer,Hyper Specter 2I7,GB,55.3781,-3.436
+F001007989,Customer,Turbo Phoenix CHE,GB,55.3781,-3.436
+F001007990,Customer,Neon Titan P9L,GB,55.3781,-3.436
+F001007991,Customer,Cosmic Oracle HS9,CR,9.7489,-83.7534
+F001007993,Customer,Epic Dragon 3AL,CR,9.7489,-83.7534
+F001007994,Customer,Crystal Titan 6EZ,CO,4.5709,-74.2973
+F001007996,Customer,Galactic Pulse IJI,CO,4.5709,-74.2973
+F001008001,Customer,Inferno Pulse 1SL,FI,61.9241,25.7482
+F001008003,Customer,Crystal Pulse 68M,CL,-35.6751,-71.543
+F001008004,Customer,Turbo Pulse COS,CL,-35.6751,-71.543
+F001008005,Customer,Quantum Voyager 9DY,CL,-35.6751,-71.543
+F001008012,Customer,Epic Specter QYP,DK,56.2639,9.5018
+F001008013,Customer,Turbo Pulse 6PB,DK,56.2639,9.5018
+F001008033,Customer,Epic Pulse DDO,KR,35.9078,127.7669
+F001008036,Customer,Crystal Blaze K5Y,FR,46.2276,2.2137
+F001008037,Customer,Hyper Voyager LXU,ID,-0.7893,113.9213
+F001008038,Customer,Hyper Phoenix 3IO,ID,-0.7893,113.9213
+F001008040,Customer,Epic Nova PWO,ID,-0.7893,113.9213
+F001008041,Customer,Mystic Titan QMZ,ID,-0.7893,113.9213
+F001008060,Customer,Cosmic Nova UAE,BR,-14.235,-51.9253
+F001008062,Customer,Turbo Phoenix Q0H,BR,-14.235,-51.9253
+F001008064,Customer,Turbo Nova JN9,BR,-14.235,-51.9253
+F001008066,Customer,Quantum Pulse YPQ,BR,-14.235,-51.9253
+F001008067,Customer,Epic Ranger WSV,BR,-14.235,-51.9253
+F001008068,Customer,Neon Oracle 6S3,BR,-14.235,-51.9253
+F001008069,Customer,Neon Oracle DV6,BR,-14.235,-51.9253
+F001008070,Customer,Mystic Ranger PCC,BR,-14.235,-51.9253
+F001008081,Customer,Mystic Voyager 3Y0,DE,51.1657,10.4515
+F001008082,Customer,Galactic Blaze MFJ,DE,51.1657,10.4515
+F001008083,Customer,Mystic Nova WAQ,KE,-0.0236,37.9062
+F001008087,Customer,Cosmic Dragon M40,CA,56.1304,-106.3468
+F001008240,Customer,Turbo Oracle NPQ,FR,46.2276,2.2137
+F001008265,Customer,Crystal Titan MIN,CR,9.7489,-83.7534
+F001008266,Customer,Crystal Dragon 47R,CR,9.7489,-83.7534
+F001008267,Customer,Cosmic Titan 5RH,GT,15.7835,-90.2308
+F001008268,Customer,Inferno Phoenix Q2K,GT,15.7835,-90.2308
+F001008273,Customer,Inferno Oracle QA5,CO,4.5709,-74.2973
+F001008274,Customer,Inferno Pulse TK8,CO,4.5709,-74.2973
+F001008275,Customer,Neon Dragon 2C6,CO,4.5709,-74.2973
+F001008276,Customer,Neon Specter DZR,CO,4.5709,-74.2973
+F001008280,Customer,Quantum Phoenix XT4,CO,4.5709,-74.2973
+F001008281,Customer,Neon Nova X8T,CO,4.5709,-74.2973
+F001008291,Customer,Epic Dragon XLD,BR,-14.235,-51.9253
+F001008307,Customer,Turbo Phoenix XD6,TH,15.87,100.9925
+F001008316,Customer,Hyper Ranger 1E1,BE,50.5039,4.4699
+F001008332,Customer,Turbo Specter 2AB,CA,56.1304,-106.3468
+F001008338,Customer,Mystic Dragon SRE,SD,12.8628,30.2176
+F001008345,Customer,Epic Nova 853,GT,15.7835,-90.2308
+F001008355,Customer,Quantum Specter FO5,CO,4.5709,-74.2973
+F001008356,Customer,Galactic Voyager 8TT,UG,1.3733,32.2903
+F001008373,Customer,Turbo Pulse 61V,BR,-14.235,-51.9253
+F001008383,Customer,Cosmic Voyager O9I,CL,-35.6751,-71.543
+F001008419,Customer,Epic Oracle IJA,PE,-9.189967,-75.015152
+F001008420,Customer,Turbo Oracle ZGP,PE,-9.189967,-75.015152
+F001008421,Customer,Cosmic Oracle MYX,PE,-9.189967,-75.015152
+F001008422,Customer,Hyper Phoenix 0BK,PE,-9.189967,-75.015152
+F001008423,Customer,Epic Blaze VR5,PE,-9.189967,-75.015152
+F001008424,Customer,Neon Oracle YJ8,PE,-9.189967,-75.015152
+F001008425,Customer,Inferno Phoenix BQI,PE,-9.189967,-75.015152
+F001008426,Customer,Epic Specter ZM7,PE,-9.189967,-75.015152
+F001008427,Customer,Galactic Dragon 5RK,PE,-9.189967,-75.015152
+F001008431,Customer,Quantum Oracle PGA,ID,-0.7893,113.9213
+F001008432,Customer,Quantum Titan MMK,ID,-0.7893,113.9213
+F001008438,Customer,Epic Titan O1C,DK,56.2639,9.5018
+F001008445,Customer,Mystic Oracle GD4,MA,31.7917,-7.0926
+F001008450,Customer,Neon Voyager CC3,NL,52.1326,5.2913
+F001008455,Customer,Galactic Pulse XML,CZ,49.8175,15.473
+F001008463,Customer,Epic Voyager OIY,BR,-14.235,-51.9253
+F001008465,Customer,Cosmic Titan 7LT,CL,-35.6751,-71.543
+F001008476,Customer,Turbo Specter 7SY,PE,-9.189967,-75.015152
+F001008477,Customer,Galactic Oracle HB3,PE,-9.189967,-75.015152
+F001008486,Customer,Galactic Dragon JEW,MX,23.6345,-102.5528
+F001008487,Customer,Quantum Pulse QRS,SE,60.1282,18.6435
+F001008493,Customer,Quantum Dragon VH2,IT,41.8719,12.5674
+F001008494,Customer,Epic Phoenix 6N1,IT,41.8719,12.5674
+F001008499,Customer,Inferno Titan 7HM,IT,41.8719,12.5674
+F001008500,Customer,Quantum Pulse V35,GR,39.0742,21.8243
+F001008501,Customer,Inferno Specter B7L,GR,39.0742,21.8243
+F001008502,Customer,Cosmic Voyager VVE,GR,39.0742,21.8243
+F001008503,Customer,Neon Nova K6D,GR,39.0742,21.8243
+F001008504,Customer,Epic Nova FAT,GR,39.0742,21.8243
+F001008505,Customer,Crystal Specter 1OS,GR,39.0742,21.8243
+F001008506,Customer,Epic Ranger YSV,GR,39.0742,21.8243
+F001008510,Customer,Mystic Phoenix SEZ,MX,23.6345,-102.5528
+F001008511,Customer,Turbo Ranger NA5,MX,23.6345,-102.5528
+F001008512,Customer,Galactic Nova RDL,GT,15.7835,-90.2308
+F001008513,Customer,Hyper Voyager LSD,PE,-9.189967,-75.015152
+F001008522,Customer,Mystic Titan 3BB,BR,-14.235,-51.9253
+F001008524,Customer,Neon Oracle UHY,BE,50.5039,4.4699
+F001008569,Customer,Neon Specter PCB,CR,9.7489,-83.7534
+F001008570,Customer,Hyper Voyager TRU,CR,9.7489,-83.7534
+F001008575,Customer,Inferno Voyager 6Z0,KR,35.9078,127.7669
+F001008577,Customer,Inferno Voyager BAY,TH,15.87,100.9925
+F001008578,Customer,Quantum Blaze FRP,IT,41.8719,12.5674
+F001008579,Customer,Hyper Voyager FV0,IT,41.8719,12.5674
+F001008580,Customer,Neon Titan FS9,IT,41.8719,12.5674
+F001008581,Customer,Epic Oracle 3J7,IT,41.8719,12.5674
+F001008582,Customer,Neon Pulse V23,IT,41.8719,12.5674
+F001008583,Customer,Galactic Voyager UVU,IT,41.8719,12.5674
+F001008584,Customer,Quantum Voyager 5AZ,IT,41.8719,12.5674
+F001008585,Customer,Crystal Pulse 8FV,IT,41.8719,12.5674
+F001008587,Customer,Turbo Specter ST4,IT,41.8719,12.5674
+F001008588,Customer,Galactic Oracle V86,IT,41.8719,12.5674
+F001008589,Customer,Mystic Blaze IW4,IT,41.8719,12.5674
+F001008590,Customer,Inferno Voyager R1J,IT,41.8719,12.5674
+F001008591,Customer,Quantum Voyager TGR,IT,41.8719,12.5674
+F001008592,Customer,Hyper Nova OEQ,IT,41.8719,12.5674
+F001008595,Customer,Hyper Blaze JR1,IT,41.8719,12.5674
+F001008596,Customer,Crystal Phoenix NWT,IT,41.8719,12.5674
+F001008597,Customer,Cosmic Pulse U83,IT,41.8719,12.5674
+F001008598,Customer,Turbo Ranger I9C,IT,41.8719,12.5674
+F001008599,Customer,Hyper Dragon 6SI,IT,41.8719,12.5674
+F001008600,Customer,Mystic Ranger YVU,IT,41.8719,12.5674
+F001008601,Customer,Neon Nova C94,IT,41.8719,12.5674
+F001008602,Customer,Galactic Titan QVB,IT,41.8719,12.5674
+F001008603,Customer,Inferno Blaze 0GI,IT,41.8719,12.5674
+F001008613,Customer,Inferno Nova 3R1,SE,60.1282,18.6435
+F001008617,Customer,Turbo Specter E2P,DK,56.2639,9.5018
+F001008640,Customer,Cosmic Phoenix P5V,CN,35.8617,104.1954
+F001008641,Customer,Crystal Phoenix QBD,CN,35.8617,104.1954
+F001008643,Customer,Inferno Blaze P59,KE,-0.0236,37.9062
+F001008644,Customer,Epic Specter 24H,BR,-14.235,-51.9253
+F001008645,Customer,Crystal Voyager P4O,BR,-14.235,-51.9253
+F001008647,Customer,Galactic Blaze A7E,BR,-14.235,-51.9253
+F001008649,Customer,Galactic Phoenix 873,BR,-14.235,-51.9253
+F001008650,Customer,Inferno Oracle T2E,BR,-14.235,-51.9253
+F001008651,Customer,Neon Titan 2Q2,BR,-14.235,-51.9253
+F001008652,Customer,Quantum Voyager H15,BR,-14.235,-51.9253
+F001008653,Customer,Turbo Dragon VEW,BR,-14.235,-51.9253
+F001008655,Customer,Hyper Specter 2N2,BR,-14.235,-51.9253
+F001008657,Customer,Turbo Specter OWK,FR,46.2276,2.2137
+F001008658,Customer,Epic Specter H6A,FR,46.2276,2.2137
+F001008659,Customer,Cosmic Titan 2S1,FR,46.2276,2.2137
+F001008668,Customer,Epic Titan BEY,SE,60.1282,18.6435
+F001008669,Customer,Mystic Voyager UQS,SE,60.1282,18.6435
+F001008670,Customer,Neon Specter JC0,SE,60.1282,18.6435
+F001008672,Customer,Quantum Titan KZK,SO,5.1521,46.1996
+F001008684,Customer,Turbo Specter 1MP,CL,-35.6751,-71.543
+F001008693,Customer,Turbo Voyager E2A,ID,-0.7893,113.9213
+F001008714,Customer,Quantum Phoenix WB9,PE,-9.189967,-75.015152
+F001008715,Customer,Epic Phoenix PSY,PE,-9.189967,-75.015152
+F001008716,Customer,Quantum Phoenix 1NE,PE,-9.189967,-75.015152
+F001008717,Customer,Turbo Voyager ZPZ,PE,-9.189967,-75.015152
+F001008718,Customer,Cosmic Blaze F4H,PE,-9.189967,-75.015152
+F001008719,Customer,Epic Dragon 3A4,PE,-9.189967,-75.015152
+F001008720,Customer,Crystal Pulse Z9H,US,37.0902,-95.7129
+F001008726,Customer,Hyper Titan WM2,AT,47.5162,14.5501
+F001008738,Customer,Turbo Titan L0A,DE,51.1657,10.4515
+F001008739,Customer,Galactic Specter AGX,DE,51.1657,10.4515
+F001008750,Customer,Galactic Blaze IGA,NL,52.1326,5.2913
+F001008772,Customer,Mystic Pulse 4PE,CA,56.1304,-106.3468
+F001008773,Customer,Inferno Voyager P3L,PE,-9.189967,-75.015152
+F001008780,Customer,Neon Nova BHP,GB,55.3781,-3.436
+F001008788,Customer,Neon Pulse CMA,CZ,49.8175,15.473
+F001008789,Customer,Crystal Pulse TAS,CN,35.8617,104.1954
+F001008791,Customer,Inferno Pulse ZND,NL,52.1326,5.2913
+F001008792,Customer,Epic Specter PNQ,NL,52.1326,5.2913
+F001008793,Customer,Quantum Ranger PUH,CO,4.5709,-74.2973
+F001008795,Customer,Cosmic Dragon S96,NL,52.1326,5.2913
+F001008796,Customer,Galactic Nova ZJT,CO,4.5709,-74.2973
+F001008797,Customer,Inferno Titan MGZ,CO,4.5709,-74.2973
+F001008798,Customer,Epic Ranger W61,CO,4.5709,-74.2973
+F001008799,Customer,Crystal Dragon VB3,CO,4.5709,-74.2973
+F001008800,Customer,Hyper Voyager KVC,CO,4.5709,-74.2973
+F001008801,Customer,Turbo Blaze C9K,MX,23.6345,-102.5528
+F001008802,Customer,Quantum Specter FM9,MX,23.6345,-102.5528
+F001008811,Customer,Inferno Blaze UZ4,BR,-14.235,-51.9253
+1,Supplier,Supplier C,DE,53.550341,10.000654
+100218,Supplier,Supplier D,PL,52.8395492,15.8306725
+100518,Supplier,Supplier E,PL,51.9194,19.1451
+100785,Supplier,Supplier F,FR,47.1308239,-0.1554622
+101051,Supplier,Supplier G,DE,51.1657,10.4515
+101126,Supplier,Supplier H,ES,40.416782,-3.703507
+101289,Supplier,Supplier I,ES,41.5328106,2.1823309
+101520,Supplier,Supplier J,ES,41.3667951,2.0570346
+101610,Supplier,Supplier K,ES,40.282476,-3.7923422
+101620,Supplier,Supplier L,ES,40.4637,-3.7492
+101667,Supplier,Supplier M,ES,41.2872251,2.0675782
+101714,Supplier,Supplier N,ES,40.3536054,-3.5310879
+101916,Supplier,Supplier O,ES,40.416782,-3.703507
+101939,Supplier,Supplier P,ES,41.6521342,-0.8809428
+102166,Supplier,Supplier Q,NL,51.9244424,4.47775
+102205,Supplier,Supplier R,PL,51.4171606,21.1609448
+102569,Supplier,Supplier S,DE,53.550341,10.000654
+102645,Supplier,Supplier T,DE,53.550341,10.000654
+102730,Supplier,Supplier U,DE,53.7278939,9.6979598
+102838,Supplier,Supplier V,DE,51.2136798,7.8745627
+102998,Supplier,Supplier W,ES,40.4637,-3.7492
+103725,Supplier,Supplier X,DE,52.6882194,13.1775867
+104300,Supplier,Supplier Y,ES,41.3812851,2.0446381
+104326,Supplier,Supplier Z,ES,41.5398348,2.4448926
+104337,Supplier,Supplier A1,ES,41.4994081,2.3205426
+104353,Supplier,Supplier B1,DE,48.0615171,12.220026
+104374,Supplier,Supplier C1,ES,41.5398348,2.4448926
+104402,Supplier,Supplier D1,ES,41.3825802,2.177073
+104432,Supplier,Supplier E1,DE,51.1657,10.4515
+104527,Supplier,Supplier F1,ES,41.3459033,2.0413673
+104529,Supplier,Supplier G1,FR,45.2384678,5.8882101
+104543,Supplier,Supplier H1,DE,52.9207291,9.6564253
+105372,Supplier,Supplier I1,MX,19.3207722,-99.1514678
+105377,Supplier,Supplier J1,MX,19.3207722,-99.1514678
+105389,Supplier,Supplier K1,MX,23.6345,-102.5528
+105401,Supplier,Supplier L1,MX,19.4326296,-99.1331785
+105403,Supplier,Supplier M1,MX,23.6345,-102.5528
+105426,Supplier,Supplier N1,MX,19.3207722,-99.1514678
+105438,Supplier,Supplier O1,MX,19.3207722,-99.1514678
+105441,Supplier,Supplier P1,US,40.9230477,-74.3433955
+105443,Supplier,Supplier Q1,MX,19.3207722,-99.1514678
+105448,Supplier,Supplier R1,MX,23.6345,-102.5528
+105454,Supplier,Supplier S1,MX,19.4326296,-99.1331785
+105459,Supplier,Supplier T1,MX,20.5196964,-103.1813141
+105469,Supplier,Supplier U1,MX,19.3263632,-99.460052
+105472,Supplier,Supplier V1,MX,19.3207722,-99.1514678
+105473,Supplier,Supplier W1,MX,19.3207722,-99.1514678
+105511,Supplier,Supplier X1,MX,23.6345,-102.5528
+105520,Supplier,Supplier Y1,MX,23.6345,-102.5528
+105568,Supplier,Supplier Z1,MX,21.121965,-101.6829766
+105761,Supplier,Supplier A2,US,37.970495,-87.5715641
+105767,Supplier,Supplier B2,MX,21.121965,-101.6829766
+105817,Supplier,Supplier C2,MX,19.4326296,-99.1331785
+105843,Supplier,Supplier D2,MX,20.6720375,-103.338396
+105855,Supplier,Supplier E2,US,40.7584793,-74.9794987
+105952,Supplier,Supplier F2,MX,19.4305493,-99.0594067
+106103,Supplier,Supplier G2,ES,41.3825802,2.177073
+106109,Supplier,Supplier H2,MX,23.6345,-102.5528
+106140,Supplier,Supplier I2,MX,20.5922997,-100.3917424
+106287,Supplier,Supplier J2,MX,19.4326296,-99.1331785
+106340,Supplier,Supplier K2,MX,21.121965,-101.6829766
+106437,Supplier,Supplier L2,MX,23.6345,-102.5528
+106461,Supplier,Supplier M2,US,37.3859982,-77.578509
+106471,Supplier,Supplier N2,ES,41.7484044,2.5613326
+106493,Supplier,Supplier O2,US,40.898988,-74.0926418
+106636,Supplier,Supplier P2,MX,19.4788356,-99.2327986
+106744,Supplier,Supplier Q2,US,40.6362878,-74.9116603
+106775,Supplier,Supplier R2,DE,48.1270117,7.8101648
+106879,Supplier,Supplier S2,ES,41.4535893,1.7017388
+106974,Supplier,Supplier T2,MX,19.3207722,-99.1514678
+106984,Supplier,Supplier U2,US,35.3636563,-101.3353895
+107002,Supplier,Supplier V2,MX,23.6345,-102.5528
+107005,Supplier,Supplier W2,CZ,49.9389004,17.9024174
+107012,Supplier,Supplier X2,US,35.3227597,-83.8069988
+107338,Supplier,Supplier Y2,MX,23.6345,-102.5528
+107603,Supplier,Supplier Z2,MX,19.8159191,-99.8681193
+107845,Supplier,Supplier A3,MX,23.6345,-102.5528
+107943,Supplier,Supplier B3,MX,23.6585116,-102.0077097
+108180,Supplier,Supplier C3,FR,45.7561,5.06785
+108195,Supplier,Supplier D3,IT,45.780222,8.7937693
+108208,Supplier,Supplier E3,PL,52.2333742,21.0711489
+108334,Supplier,Supplier F3,ES,40.416782,-3.703507
+108344,Supplier,Supplier G3,PL,51.9194,19.1451
+109373,Supplier,Supplier H3,ES,43.2183411,-2.0199432
+109393,Supplier,Supplier I3,IT,44.7383497,10.9247932
+109599,Supplier,Supplier J3,US,31.83688,-102.0103767
+109613,Supplier,Supplier K3,DE,50.815728,8.1043638
+109764,Supplier,Supplier L3,MX,19.4788356,-99.2327986
+109803,Supplier,Supplier M3,MX,19.4326296,-99.1331785
+109821,Supplier,Supplier N3,MX,21.0742627,-86.9265622
+109822,Supplier,Supplier O3,FR,50.7396668,2.7349286
+109878,Supplier,Supplier P3,ES,41.5176392,1.8911835
+109971,Supplier,Supplier Q3,ES,40.4637,-3.7492
+110142,Supplier,Supplier R3,CH,46.7985624,8.2319736
+110145,Supplier,Supplier S3,BR,-23.6866428,-46.6246935
+110159,Supplier,Supplier T3,BR,-22.9110137,-43.2093727
+110160,Supplier,Supplier U3,BR,-23.603889,-46.918889
+110167,Supplier,Supplier V3,BR,-22.9110137,-43.2093727
+110174,Supplier,Supplier W3,BR,-22.9056391,-47.059564
+110177,Supplier,Supplier X3,BR,-23.5506507,-46.6333824
+110197,Supplier,Supplier Y3,BR,-23.5427842,-46.3108391
+110233,Supplier,Supplier Z3,BR,-14.235,-51.9253
+110236,Supplier,Supplier A4,BR,-23.5506507,-46.6333824
+110277,Supplier,Supplier B4,BR,-23.5506507,-46.6333824
+110281,Supplier,Supplier C4,BR,-21.9562015,-48.0007848
+110285,Supplier,Supplier D4,BR,-23.0298535,-46.9749847
+110319,Supplier,Supplier E4,BR,-23.0055542,-46.8397726
+110404,Supplier,Supplier F4,BR,-26.9046787,-48.6552979
+110416,Supplier,Supplier G4,BR,-23.5506507,-46.6333824
+110484,Supplier,Supplier H4,BR,-23.3050682,-45.9723075
+110508,Supplier,Supplier I4,BR,-23.4684836,-47.4424129
+110512,Supplier,Supplier J4,BR,-26.9022824,-48.8284968
+110538,Supplier,Supplier K4,BR,-25.4944375,-49.284271
+110558,Supplier,Supplier L4,BR,-22.7367652,-45.1070876
+110576,Supplier,Supplier M4,BR,-14.235,-51.9253
+110601,Supplier,Supplier N4,BR,-23.5506507,-46.6333824
+110612,Supplier,Supplier O4,BR,-14.235,-51.9253
+110689,Supplier,Supplier P4,BR,-23.0298535,-46.9749847
+110711,Supplier,Supplier Q4,BR,-23.1867782,-45.8854538
+110717,Supplier,Supplier R4,BR,-23.0416538,-47.3718002
+110726,Supplier,Supplier S4,BR,-23.6866428,-46.6246935
+110879,Supplier,Supplier T4,BR,-26.9285537,-51.2810182
+110925,Supplier,Supplier U4,BR,-23.5506507,-46.6333824
+111043,Supplier,Supplier V4,MX,20.7350778,-100.2835765
+111181,Supplier,Supplier W4,MX,21.0742627,-86.9265622
+111254,Supplier,Supplier X4,BR,-23.603889,-46.918889
+111271,Supplier,Supplier Y4,BR,-23.1531055,-47.0580347
+111454,Supplier,Supplier Z4,US,41.8755616,-87.6244212
+111529,Supplier,Supplier A5,CL,-33.4377756,-70.6504502
+111976,Supplier,Supplier B5,BR,-23.1177393,-46.5547861
+112000,Supplier,Supplier C5,BR,-26.3044898,-48.8486726
+112238,Supplier,Supplier D5,BR,-23.6669527,-46.4616922
+112371,Supplier,Supplier E5,BR,-23.6866428,-46.6246935
+112427,Supplier,Supplier F5,BR,-22.786384,-50.2198965
+112704,Supplier,Supplier G5,BR,-22.9110137,-43.2093727
+112988,Supplier,Supplier H5,PL,52.2333742,21.0711489
+113060,Supplier,Supplier I5,US,40.1856597,-75.451571
+113148,Supplier,Supplier J5,BR,-22.5615068,-47.401766
+113163,Supplier,Supplier K5,ES,41.355724,2.0706225
+113172,Supplier,Supplier L5,MX,19.4326296,-99.1331785
+113210,Supplier,Supplier M5,GB,52.2928116,-3.73893
+113287,Supplier,Supplier N5,BR,-23.0298535,-46.9749847
+113356,Supplier,Supplier O5,BR,-26.9285537,-51.2810182
+113375,Supplier,Supplier P5,BR,-22.9056391,-47.059564
+113448,Supplier,Supplier Q5,ES,40.4637,-3.7492
+113450,Supplier,Supplier R5,PL,52.2333742,21.0711489
+113821,Supplier,Supplier S5,MX,19.4326296,-99.1331785
+113825,Supplier,Supplier T5,BR,-23.6669527,-46.4616922
+113846,Supplier,Supplier U5,DE,48.4333967,11.6001317
+113847,Supplier,Supplier V5,BR,-23.5112184,-46.8764612
+113943,Supplier,Supplier W5,US,33.9566391,-83.9890066
+113963,Supplier,Supplier X5,MX,19.4326296,-99.1331785
+113986,Supplier,Supplier Y5,US,39.7886111,-82.6418883
+113996,Supplier,Supplier Z5,US,40.5464326,-74.4660542
+114111,Supplier,Supplier A6,DE,50.776351,6.083862
+114120,Supplier,Supplier B6,ES,41.5739524,2.4828158
+114135,Supplier,Supplier C6,BR,-23.0298535,-46.9749847
+114150,Supplier,Supplier D6,BR,-22.725165,-47.6493269
+114222,Supplier,Supplier E6,PT,41.1909794,-8.4980511
+114266,Supplier,Supplier F6,BR,-28.241827,-48.6643444
+114308,Supplier,Supplier G6,CA,45.3990409,-72.721834
+114310,Supplier,Supplier H6,MX,19.4788356,-99.2327986
+114338,Supplier,Supplier I6,US,41.2464824,-75.8817316
+114372,Supplier,Supplier J6,US,30.6204939,-86.1912678
+114424,Supplier,Supplier K6,BR,-23.3561111,-46.8769444
+114448,Supplier,Supplier L6,BR,-23.1531055,-47.0580347
+114472,Supplier,Supplier M6,MX,23.6585116,-102.0077097
+114523,Supplier,Supplier N6,MX,19.4326296,-99.1331785
+114549,Supplier,Supplier O6,MX,19.4326296,-99.1331785
+114594,Supplier,Supplier P6,ES,41.5629623,2.0100492
+114629,Supplier,Supplier Q6,ES,41.5216923,1.7526335
+114633,Supplier,Supplier R6,BR,-21.8529134,-47.4794943
+114657,Supplier,Supplier S6,BR,-21.8529134,-47.4794943
+114761,Supplier,Supplier T6,BR,-22.8057839,-45.1908926
+114830,Supplier,Supplier U6,US,34.7373045,-82.255371
+114865,Supplier,Supplier V6,ES,41.3825802,2.177073
+114907,Supplier,Supplier W6,US,36.0959715,-79.2669619
+115025,Supplier,Supplier X6,BR,-23.5506507,-46.6333824
+115042,Supplier,Supplier Y6,MX,19.4326296,-99.1331785
+115073,Supplier,Supplier Z6,ES,41.5393249,1.8694549
+115259,Supplier,Supplier A7,BR,-23.6669527,-46.4616922
+115318,Supplier,Supplier B7,BR,-23.0298535,-46.9749847
+115339,Supplier,Supplier C7,BR,-23.0949649,-46.7148565
+115442,Supplier,Supplier D7,BR,-22.7392463,-47.3306032
+127,Supplier,Supplier E7,BR,-23.0055542,-46.8397726
+148,Supplier,Supplier F7,DE,53.7089898,9.9891914
+213,Supplier,Supplier G7,IN,19.054999,72.8692035
+217,Supplier,Supplier H7,DE,53.550341,10.000654
+235,Supplier,Supplier I7,PL,52.4006632,16.9197326
+24,Supplier,Supplier J7,MX,20.9448338,-101.4171338
+241,Supplier,Supplier K7,ES,40.416782,-3.703507
+242,Supplier,Supplier L7,ES,41.5554326,2.4002787
+244,Supplier,Supplier M7,ES,40.5917794,-3.7081404
+247,Supplier,Supplier N7,DE,51.0770643,13.0157798
+26,Supplier,Supplier O7,TH,15.87,100.9925
+262,Supplier,Supplier P7,KE,-1.3026148,36.828842
+267,Supplier,Supplier Q7,IN,22.3850051,71.745261
+272,Supplier,Supplier R7,NG,6.4550575,3.3941795
+29,Supplier,Supplier S7,CN,31.2312707,121.4700152
+331,Supplier,Supplier T7,US,41.4996574,-81.6936772
+42000004,Supplier,Supplier U7,US,40.2559375,-75.3601755
+42001046,Supplier,Supplier V7,CH,47.525113,7.6477401
+42001056,Supplier,Supplier W7,GB,52.0640034,-0.4111138
+42001057,Supplier,Supplier X7,DE,48.6967865,9.7037748
+42001060,Supplier,Supplier Y7,TH,15.87,100.9925
+42001062,Supplier,Supplier Z7,DE,51.8322137,6.2428283
+42001064,Supplier,Supplier A8,DE,53.550341,10.000654
+42001069,Supplier,Supplier B8,GB,53.2789347,-2.9022507
+42001070,Supplier,Supplier C8,DE,52.3744779,9.7385532
+42001073,Supplier,Supplier D8,FR,46.2276,2.2137
+42001078,Supplier,Supplier E8,TH,13.7238221,100.507985
+42001081,Supplier,Supplier F8,DE,51.1657,10.4515
+42001082,Supplier,Supplier G8,IT,45.0677551,7.6824892
+42001084,Supplier,Supplier H8,PL,51.9194,19.1451
+42001092,Supplier,Supplier I8,DE,51.1657,10.4515
+42001096,Supplier,Supplier J8,BE,51.1793505,3.7471789
+42001099,Supplier,Supplier K8,DE,53.550341,10.000654
+42001101,Supplier,Supplier L8,IN,19.054999,72.8692035
+42001110,Supplier,Supplier M8,MX,19.6543203,-99.2085941
+42001113,Supplier,Supplier N8,DE,50.4695139,11.2588086
+42001117,Supplier,Supplier O8,DE,49.9770848,11.0343944
+42001123,Supplier,Supplier P8,DE,53.7089898,9.9891914
+42001124,Supplier,Supplier Q8,DE,49.2361584,9.3293362
+42001126,Supplier,Supplier R8,DE,49.0199639,10.0301733
+42001127,Supplier,Supplier S8,CH,46.2157703,6.0330885
+42001128,Supplier,Supplier T8,DE,51.1657,10.4515
+42001130,Supplier,Supplier U8,DE,51.1657,10.4515
+42001135,Supplier,Supplier V8,CH,46.8399962,7.6192848
+42001142,Supplier,Supplier W8,NL,52.6631484,4.8326672
+42001147,Supplier,Supplier X8,IN,13.1672275,80.2598107
+42001149,Supplier,Supplier Y8,FR,43.7012408,6.988256
+42001150,Supplier,Supplier Z8,CH,47.5581077,7.5878261
+42001160,Supplier,Supplier A9,SK,47.8557806,17.7693671
+42001169,Supplier,Supplier B9,DE,51.1657,10.4515
+42001179,Supplier,Supplier C9,TH,13.690419,101.077957
+42001187,Supplier,Supplier D9,FR,46.2276,2.2137
+42001188,Supplier,Supplier E9,KE,-1.3026148,36.828842
+42001191,Supplier,Supplier F9,DE,49.872775,8.651177
+42001193,Supplier,Supplier G9,PL,52.2333742,21.0711489
+42001198,Supplier,Supplier H9,PL,52.4657445,16.6664446
+42001201,Supplier,Supplier I9,MX,20.6511359,-101.166767
+42001202,Supplier,Supplier J9,NL,51.9244424,4.47775
+42001203,Supplier,Supplier K9,IN,17.9375095,78.211745
+42001207,Supplier,Supplier L9,ES,41.3825802,2.177073
+42001209,Supplier,Supplier M9,TH,13.7238221,100.507985
+42001212,Supplier,Supplier N9,BE,50.6365628,4.6127019
+42001214,Supplier,Supplier O9,US,41.0167299,-79.7175492
+42001216,Supplier,Supplier P9,DE,53.550341,10.000654
+42001219,Supplier,Supplier Q9,MX,23.6345,-102.5528
+42001225,Supplier,Supplier R9,FR,45.7578137,4.8320114
+42001243,Supplier,Supplier S9,IT,45.7853256,8.9677744
+42001244,Supplier,Supplier T9,FR,48.8956767,2.2296581
+42001258,Supplier,Supplier U9,US,41.3275971,-72.7673198
+42001262,Supplier,Supplier V9,DE,53.550341,10.000654
+42001266,Supplier,Supplier W9,CH,46.2131843,6.0815756
+42001271,Supplier,Supplier X9,DE,49.1358512,9.3712445
+42001273,Supplier,Supplier Y9,MX,19.3207722,-99.1514678
+42001274,Supplier,Supplier Z9,PL,51.9194,19.1451
+42001278,Supplier,Supplier A10,KR,37.5666791,126.9782914
+42001289,Supplier,Supplier B10,DE,48.8574209,8.2088088
+42001290,Supplier,Supplier C10,IT,45.5669538,8.086912
+42001291,Supplier,Supplier D10,PL,52.4006632,16.9197326
+42001292,Supplier,Supplier E10,MX,19.3701838,-99.3581568
+42001304,Supplier,Supplier F10,DE,49.5497,8.843
+42001308,Supplier,Supplier G10,DE,51.0478493,8.3917759
+42001322,Supplier,Supplier H10,BE,50.665153,5.502732
+42001324,Supplier,Supplier I10,DE,49.5445912,11.9464314
+42001330,Supplier,Supplier J10,DE,14.6124732,103.3106407
+42001343,Supplier,Supplier K10,CN,31.311123,120.6212881
+42001351,Supplier,Supplier L10,AT,47.3639973,9.689271
+42001361,Supplier,Supplier M10,CH,47.1975084,8.4860144
+42001364,Supplier,Supplier N10,PL,52.2333742,21.0711489
+42001374,Supplier,Supplier O10,TH,13.6531651,100.8182578
+42001375,Supplier,Supplier P10,DE,48.0939396,7.9610142
+42001378,Supplier,Supplier Q10,CH,47.2984412,8.4489755
+42001380,Supplier,Supplier R10,CN,23.1301964,113.2592945
+42001390,Supplier,Supplier S10,CZ,50.0596547,15.1071108
+42001398,Supplier,Supplier T10,CN,31.2312707,121.4700152
+42001399,Supplier,Supplier U10,IT,44.3497559,9.3456502
+42001400,Supplier,Supplier V10,DE,50.0275681,7.1813233
+42001410,Supplier,Supplier W10,IT,45.631067,8.388627
+42001414,Supplier,Supplier X10,BR,-23.08639,-46.95056
+42001416,Supplier,Supplier Y10,FR,49.6902106,1.399492
+42001425,Supplier,Supplier Z10,IN,19.0308262,73.0198537
+42001426,Supplier,Supplier A11,FR,48.6972419,-3.1629787
+42001427,Supplier,Supplier B11,IN,20.5937,78.9629
+42001438,Supplier,Supplier C11,JP,35.6768601,139.7638947
+42001452,Supplier,Supplier D11,FR,48.8588897,2.320041
+42001454,Supplier,Supplier E11,PL,52.5103217,16.7421238
+42001455,Supplier,Supplier F11,US,28.0785034,-80.6077908
+42001462,Supplier,Supplier G11,IT,45.7566557,9.7542192
+42001465,Supplier,Supplier H11,DE,14.6124732,103.3106407
+42001466,Supplier,Supplier I11,PL,52.2333742,21.0711489
+42001474,Supplier,Supplier J11,PL,52.4006632,16.9197326
+42001476,Supplier,Supplier K11,IT,44.40726,8.9338624
+42001486,Supplier,Supplier L11,CH,46.4601563,6.3380469
+42001490,Supplier,Supplier M11,FR,49.6902106,1.399492
+42001510,Supplier,Supplier N11,DE,53.550341,10.000654
+42001519,Supplier,Supplier O11,CH,47.3029125,7.8826232
+42001524,Supplier,Supplier P11,TH,13.1857117,101.1210777
+42001525,Supplier,Supplier Q11,DE,48.2975862,11.6221618
+42001529,Supplier,Supplier R11,DE,53.6959113,9.7114755
+42001532,Supplier,Supplier S11,ES,40.416782,-3.703507
+42001538,Supplier,Supplier T11,PL,51.7855261,21.6024691
+42001546,Supplier,Supplier U11,CN,31.2312707,121.4700152
+42001569,Supplier,Supplier V11,DE,51.0909476,6.8812387
+42001582,Supplier,Supplier W11,FR,46.2276,2.2137
+42001590,Supplier,Supplier X11,DE,51.2990263,7.6734841
+42001596,Supplier,Supplier Y11,BR,-12.6998188,-38.3260762
+42001604,Supplier,Supplier Z11,MX,20.6511359,-101.166767
+42001609,Supplier,Supplier A12,TH,14.1542055,101.5547823
+42001612,Supplier,Supplier B12,ES,37.2776479,-5.9319966
+42001616,Supplier,Supplier C12,ES,41.5729887,2.2329289
+42001617,Supplier,Supplier D12,DE,50.7026664,10.2163793
+42001618,Supplier,Supplier E12,DE,52.5462731,12.9404114
+42001623,Supplier,Supplier F12,MX,19.292545,-99.6569007
+42001624,Supplier,Supplier G12,ES,42.0478304,2.2643391
+42001627,Supplier,Supplier H12,NL,52.6008538,4.8170994
+42001636,Supplier,Supplier I12,ES,41.5515189,2.2480812
+42001637,Supplier,Supplier J12,DE,50.056,8.4819
+42001640,Supplier,Supplier K12,ES,40.4637,-3.7492
+42001641,Supplier,Supplier L12,IN,23.0215374,72.5800568
+42001647,Supplier,Supplier M12,NL,52.2477301,5.5782739
+42001655,Supplier,Supplier N12,NL,52.3705038,5.2185859
+42001657,Supplier,Supplier O12,FR,49.0265888,2.2234971
+42001658,Supplier,Supplier P12,DE,51.3854116,7.7661798
+42001659,Supplier,Supplier Q12,DE,50.5117697,8.2767601
+42001664,Supplier,Supplier R12,DE,49.4892913,8.4673098
+42001665,Supplier,Supplier S12,DE,51.1657,10.4515
+42001669,Supplier,Supplier T12,PL,52.2492751,17.0901242
+42001671,Supplier,Supplier U12,KR,37.5666791,126.9782914
+42001695,Supplier,Supplier V12,PL,51.9049944,21.5559577
+42001697,Supplier,Supplier W12,DE,51.0324743,6.9881194
+42001702,Supplier,Supplier X12,DE,53.3965903,10.0176952
+42001705,Supplier,Supplier Y12,US,40.6834349,-74.442653
+42001712,Supplier,Supplier Z12,IT,38.0613929,15.0622475
+42001714,Supplier,Supplier A13,MX,23.6345,-102.5528
+42001721,Supplier,Supplier B13,DE,14.0790716,98.1938728
+42001725,Supplier,Supplier C13,TH,13.7238221,100.507985
+42001730,Supplier,Supplier D13,BE,50.8074825,4.9371775
+42001741,Supplier,Supplier E13,DE,53.550341,10.000654
+42001743,Supplier,Supplier F13,DE,50.1055002,8.7610698
+42001749,Supplier,Supplier G13,DE,51.3331205,6.5623343
+42001754,Supplier,Supplier H13,DE,50.0820384,8.2416556
+42001755,Supplier,Supplier I13,DE,53.550341,10.000654
+42001760,Supplier,Supplier J13,IT,45.503662,8.119023
+42001765,Supplier,Supplier K13,SG,1.2899175,103.8519072
+42001766,Supplier,Supplier L13,ES,40.3381881,-3.3813911
+42001767,Supplier,Supplier M13,CN,31.4654682,120.1179438
+42001771,Supplier,Supplier N13,ES,41.6475034,2.3066306
+42001776,Supplier,Supplier O13,DE,52.1887731,7.8508691
+42001778,Supplier,Supplier P13,IN,19.054999,72.8692035
+42001783,Supplier,Supplier Q13,DE,53.550341,10.000654
+42001789,Supplier,Supplier R13,MY,3.3189044,101.5750187
+42001793,Supplier,Supplier S13,DE,51.1657,10.4515
+42001797,Supplier,Supplier T13,US,39.9527237,-75.1635262
+42001800,Supplier,Supplier U13,IN,13.0836939,80.270186
+42001804,Supplier,Supplier V13,DE,53.550341,10.000654
+42001807,Supplier,Supplier W13,CN,22.5445741,114.0545429
+42001808,Supplier,Supplier X13,US,40.704371,-73.3501301
+42001812,Supplier,Supplier Y13,PL,54.0869532,18.8000293
+42001818,Supplier,Supplier Z13,BE,50.6131234,5.5986637
+42001820,Supplier,Supplier A14,NL,52.3563585,6.6636219
+42001822,Supplier,Supplier B14,ES,40.1888604,-3.67143
+42001827,Supplier,Supplier C14,DE,51.2973261,6.8493503
+42001829,Supplier,Supplier D14,ES,41.7774422,2.7309252
+42001830,Supplier,Supplier E14,KE,-1.3026148,36.828842
+42001833,Supplier,Supplier F14,TH,13.7238221,100.507985
+42001834,Supplier,Supplier G14,IE,52.661252,-8.6301239
+42001837,Supplier,Supplier H14,CN,32.1684583,120.0165362
+42001839,Supplier,Supplier I14,FR,50.6861944,3.0521806
+42001845,Supplier,Supplier J14,MX,20.7350778,-100.2835765
+42001846,Supplier,Supplier K14,DE,51.0493286,13.7381437
+42001850,Supplier,Supplier L14,DE,49.2805135,10.6836351
+42001851,Supplier,Supplier M14,TH,12.7943716,101.3705344
+42001857,Supplier,Supplier N14,DE,51.1657,10.4515
+42001863,Supplier,Supplier O14,DE,53.7847143,9.683364
+42001872,Supplier,Supplier P14,DE,51.1657,10.4515
+42001877,Supplier,Supplier Q14,ES,42.4661196,-2.4396676
+42001884,Supplier,Supplier R14,NL,51.5759371,4.6432216
+42001888,Supplier,Supplier S14,DE,47.8965316,10.4144412
+42001895,Supplier,Supplier T14,DE,48.6767637,10.152923
+42001899,Supplier,Supplier U14,NL,51.3712108,5.2346306
+42001902,Supplier,Supplier V14,NL,51.8296133,4.9738743
+42001906,Supplier,Supplier W14,DE,51.0909476,6.8812387
+42001908,Supplier,Supplier X14,BE,50.8806207,4.4730008
+42001912,Supplier,Supplier Y14,DE,50.0820384,8.2416556
+42001916,Supplier,Supplier Z14,US,42.0894728,-87.7149295
+42001917,Supplier,Supplier A15,DE,51.1657,10.4515
+42001918,Supplier,Supplier B15,ID,-6.2349858,106.9945444
+42001919,Supplier,Supplier C15,CH,47.260692,8.5976831
+42001938,Supplier,Supplier D15,FR,48.5958681,2.5798953
+42001939,Supplier,Supplier E15,DE,51.191939,7.9762755
+42001952,Supplier,Supplier F15,DE,53.5667927,10.333532
+42001953,Supplier,Supplier G15,DE,51.1278531,7.6006513
+42001954,Supplier,Supplier H15,BR,-21.6741873,-49.7518932
+42001959,Supplier,Supplier I15,IT,45.4641943,9.1896346
+42001960,Supplier,Supplier J15,PL,50.0469432,19.9971534
+42001962,Supplier,Supplier K15,DE,50.2251998,7.8313545
+42001967,Supplier,Supplier L15,MX,23.6345,-102.5528
+42001969,Supplier,Supplier M15,DE,53.550341,10.000654
+42001970,Supplier,Supplier N15,MX,21.0012598,-100.384479
+42001975,Supplier,Supplier O15,DE,53.550341,10.000654
+42001980,Supplier,Supplier P15,DE,49.5353466,8.3541391
+42001984,Supplier,Supplier Q15,DE,53.6117462,10.4043947
+42001994,Supplier,Supplier R15,GB,51.5074456,-0.1277653
+42001995,Supplier,Supplier S15,KE,-1.3026148,36.828842
+42001998,Supplier,Supplier T15,KE,-1.3026148,36.828842
+42002002,Supplier,Supplier U15,KE,-0.1272987,35.0796519
+42002008,Supplier,Supplier V15,DE,51.936284,8.8791526
+42002019,Supplier,Supplier W15,NL,53.1091111,6.0948102
+42002029,Supplier,Supplier X15,DE,53.550341,10.000654
+42002033,Supplier,Supplier Y15,DE,48.063152,8.4929618
+42002035,Supplier,Supplier Z15,ES,40.4637,-3.7492
+42002038,Supplier,Supplier A16,TH,13.7238221,100.507985
+42002045,Supplier,Supplier B16,MY,1.4581986,103.7649059
+42002053,Supplier,Supplier C16,DE,49.1358512,9.3712445
+42002056,Supplier,Supplier D16,CH,47.1910321,8.3946059
+42002060,Supplier,Supplier E16,TH,13.7238221,100.507985
+42002067,Supplier,Supplier F16,ID,3.5894617,98.6741623
+42002069,Supplier,Supplier G16,US,33.7544657,-84.3898151
+42002070,Supplier,Supplier H16,DE,53.5098898,10.2511001
+42002072,Supplier,Supplier I16,IN,12.9767936,77.590082
+42002073,Supplier,Supplier J16,DE,51.1657,10.4515
+42002105,Supplier,Supplier K16,TH,13.7238221,100.507985
+42002126,Supplier,Supplier L16,TH,15.87,100.9925
+42002133,Supplier,Supplier M16,TH,13.6751102,101.0363292
+42002145,Supplier,Supplier N16,TH,13.7238221,100.507985
+42002150,Supplier,Supplier O16,TH,15.87,100.9925
+42002151,Supplier,Supplier P16,IN,19.054999,72.8692035
+42002152,Supplier,Supplier Q16,TH,13.690419,101.077957
+42002157,Supplier,Supplier R16,US,37.0902,-95.7129
+42002165,Supplier,Supplier S16,TH,12.7943716,101.3705344
+42002172,Supplier,Supplier T16,IN,19.0308262,73.0198537
+42002177,Supplier,Supplier U16,IN,20.4169701,72.833173
+42002217,Supplier,Supplier V16,TH,13.7238221,100.507985
+42002230,Supplier,Supplier W16,TH,13.7238221,100.507985
+42002254,Supplier,Supplier X16,TH,13.7238221,100.507985
+42002262,Supplier,Supplier Y16,TH,13.7238221,100.507985
+42002268,Supplier,Supplier Z16,TH,13.7238221,100.507985
+42002280,Supplier,Supplier A17,ID,3.5894617,98.6741623
+42002316,Supplier,Supplier B17,TH,15.87,100.9925
+42002330,Supplier,Supplier C17,TH,13.7238221,100.507985
+42002350,Supplier,Supplier D17,TH,15.87,100.9925
+42002356,Supplier,Supplier E17,TH,13.7343508,100.5711996
+42002379,Supplier,Supplier F17,TH,13.7238221,100.507985
+42002397,Supplier,Supplier G17,HU,47.531399,21.6259782
+42002443,Supplier,Supplier H17,IN,22.3850051,71.745261
+42002444,Supplier,Supplier I17,DE,53.2931879,10.3906505
+42002447,Supplier,Supplier J17,DE,51.1657,10.4515
+42002463,Supplier,Supplier K17,TH,13.7238221,100.507985
+42002479,Supplier,Supplier L17,CZ,49.0389132,17.8148347
+42002486,Supplier,Supplier M17,IT,44.9214271,10.4375689
+42002534,Supplier,Supplier N17,IN,19.054999,72.8692035
+42002574,Supplier,Supplier O17,US,40.5792701,-74.4115401
+42002589,Supplier,Supplier P17,IN,23.0215374,72.5800568
+42002599,Supplier,Supplier Q17,KE,-1.3026148,36.828842
+42002603,Supplier,Supplier R17,IN,20.2736768,73.0045787
+42002614,Supplier,Supplier S17,PL,51.7728245,19.4784857
+42002629,Supplier,Supplier T17,NL,52.3730796,4.8924534
+42002718,Supplier,Supplier U17,IN,19.1943294,72.9701779
+42002724,Supplier,Supplier V17,IN,20.4321957,73.1409893
+42002790,Supplier,Supplier W17,TH,13.5992568,100.2695305
+42002794,Supplier,Supplier X17,TH,13.7238221,100.507985
+42002814,Supplier,Supplier Y17,TH,15.87,100.9925
+42002851,Supplier,Supplier Z17,TH,13.7238221,100.507985
+42002896,Supplier,Supplier A18,TH,13.7785797,100.5745983
+42002910,Supplier,Supplier B18,TH,13.7238221,100.507985
+42002940,Supplier,Supplier C18,DE,48.0615171,12.220026
+42002959,Supplier,Supplier D18,AT,47.5269086,14.2633436
+42002961,Supplier,Supplier E18,IT,44.8861753,8.6829041
+42002980,Supplier,Supplier F18,BR,-23.1531055,-47.0580347
+42002991,Supplier,Supplier G18,DE,53.550341,10.000654
+42003007,Supplier,Supplier H18,US,40.5373275,-74.1945884
+42003011,Supplier,Supplier I18,BR,-23.5506507,-46.6333824
+42003017,Supplier,Supplier J18,IN,20.4169701,72.833173
+42003022,Supplier,Supplier K18,DE,48.8012983,9.0150026
+42003025,Supplier,Supplier L18,IN,20.4169701,72.833173
+42003027,Supplier,Supplier M18,IN,19.054999,72.8692035
+42003042,Supplier,Supplier N18,IN,19.054999,72.8692035
+42003046,Supplier,Supplier O18,EG,29.9870753,31.2118063
+42003048,Supplier,Supplier P18,IN,20.2736768,73.0045787
+42003064,Supplier,Supplier Q18,MX,21.880487,-102.2967195
+42003103,Supplier,Supplier R18,AT,48.3314101,16.0568345
+42003114,Supplier,Supplier S18,BE,50.6152381,5.5089437
+42003139,Supplier,Supplier T18,DE,51.1721629,7.0845893
+42003140,Supplier,Supplier U18,IN,19.757249,73.0931199
+42003147,Supplier,Supplier V18,PL,52.2222131,19.3874589
+42003161,Supplier,Supplier W18,IN,21.7157199,73.1497026
+42003182,Supplier,Supplier X18,BE,51.0676205,5.0878638
+42003200,Supplier,Supplier Y18,IN,29.0,76.0
+42003204,Supplier,Supplier Z18,DE,50.0820384,8.2416556
+42003218,Supplier,Supplier A19,PL,49.822118,19.0448936
+42003230,Supplier,Supplier B19,IN,20.4169701,72.833173
+42003231,Supplier,Supplier C19,CN,56.3264816,44.0051395
+42003237,Supplier,Supplier D19,NG,6.5247655,3.3516348
+42003238,Supplier,Supplier E19,KE,-1.3026148,36.828842
+42003240,Supplier,Supplier F19,FR,48.9069349,2.2465748
+42003242,Supplier,Supplier G19,DE,53.550341,10.000654
+42003259,Supplier,Supplier H19,DE,51.1657,10.4515
+42003269,Supplier,Supplier I19,CN,32.0438284,118.7788631
+42003314,Supplier,Supplier J19,IN,30.9763026,76.7674001
+42003323,Supplier,Supplier K19,DE,49.4892913,8.4673098
+42003328,Supplier,Supplier L19,IT,42.4105412,14.2010296
+42003335,Supplier,Supplier M19,NG,6.5974727,3.3432815
+42003359,Supplier,Supplier N19,PL,52.1041197,21.2681092
+42003369,Supplier,Supplier O19,DE,52.0191005,8.531007
+42003373,Supplier,Supplier P19,CN,32.1684583,120.0165362
+42003387,Supplier,Supplier Q19,DE,14.6124732,103.3106407
+42003448,Supplier,Supplier R19,DE,51.5090755,10.552433
+42003483,Supplier,Supplier S19,DE,52.6882194,13.1775867
+42003487,Supplier,Supplier T19,DE,53.7089898,9.9891914
+42003492,Supplier,Supplier U19,ES,41.3825802,2.177073
+42003497,Supplier,Supplier V19,PL,52.6455252,16.8099756
+42003502,Supplier,Supplier W19,IN,23.2969449,72.3306381
+42003507,Supplier,Supplier X19,DE,49.5353466,8.3541391
+42003509,Supplier,Supplier Y19,PL,51.9194,19.1451
+42003536,Supplier,Supplier Z19,DE,14.6124732,103.3106407
+42003564,Supplier,Supplier A20,NG,6.5398493,3.312384
+42003580,Supplier,Supplier B20,CN,23.1474563,-82.3562691
+42003605,Supplier,Supplier C20,ID,-6.1754049,106.827168
+42003609,Supplier,Supplier D20,TH,13.1857117,101.1210777
+42003615,Supplier,Supplier E20,DE,53.550341,10.000654
+42003629,Supplier,Supplier F20,NL,51.5759371,4.6432216
+42003723,Supplier,Supplier G20,TH,15.87,100.9925
+42003759,Supplier,Supplier H20,TH,13.7238221,100.507985
+42003825,Supplier,Supplier I20,TH,13.9206972,100.4050149
+42003842,Supplier,Supplier J20,TH,13.7238221,100.507985
+42003843,Supplier,Supplier K20,TH,15.87,100.9925
+42003847,Supplier,Supplier L20,TH,13.7238221,100.507985
+42003868,Supplier,Supplier M20,ID,-6.1754049,106.827168
+42003874,Supplier,Supplier N20,CN,33.6256921,90.213464
+42003876,Supplier,Supplier O20,TH,13.7238221,100.507985
+42003881,Supplier,Supplier P20,TH,13.7238221,100.507985
+42003903,Supplier,Supplier Q20,TH,13.7238221,100.507985
+42003907,Supplier,Supplier R20,TH,13.7238221,100.507985
+42003912,Supplier,Supplier S20,CN,23.1474563,-82.3562691
+42003917,Supplier,Supplier T20,TH,13.1857117,101.1210777
+42003921,Supplier,Supplier U20,AR,-31.4166867,-64.1834193
+42003929,Supplier,Supplier V20,KE,-1.3026148,36.828842
+42003931,Supplier,Supplier W20,CN,35.9897899,90.1022249
+42003941,Supplier,Supplier X20,ES,40.4637,-3.7492
+42003978,Supplier,Supplier Y20,TH,13.7238221,100.507985
+42004010,Supplier,Supplier Z20,TH,15.87,100.9925
+42004011,Supplier,Supplier A21,CN,12.7219635,102.1316717
+42004025,Supplier,Supplier B21,DE,51.1657,10.4515
+42004058,Supplier,Supplier C21,IN,19.1943294,72.9701779
+42004060,Supplier,Supplier D21,FR,48.7698937,2.0381228
+42004072,Supplier,Supplier E21,CN,35.2477266,115.4464761
+42004086,Supplier,Supplier F21,SG,1.2899175,103.8519072
+42004099,Supplier,Supplier G21,IN,19.0308262,73.0198537
+42004122,Supplier,Supplier H21,ID,-6.9903988,110.4229104
+42004215,Supplier,Supplier I21,IN,19.054999,72.8692035
+42004216,Supplier,Supplier J21,PL,53.2406366,20.1846865
+42004218,Supplier,Supplier K21,BR,-23.5506507,-46.6333824
+42004263,Supplier,Supplier L21,JP,34.9751974,138.3831697
+42004284,Supplier,Supplier M21,FR,43.5164896,5.4480536
+42004329,Supplier,Supplier N21,CN,22.1526454,113.568041
+42004354,Supplier,Supplier O21,MX,19.3207722,-99.1514678
+42004369,Supplier,Supplier P21,HK,22.2793278,114.1628131
+42004384,Supplier,Supplier Q21,BR,-29.614306,-52.193159
+42004389,Supplier,Supplier R21,DE,49.4704113,8.4381568
+42004396,Supplier,Supplier S21,IN,19.054999,72.8692035
+42004397,Supplier,Supplier T21,AE,25.0742823,55.1885387
+42004478,Supplier,Supplier U21,ES,41.6521342,-0.8809428
+42004480,Supplier,Supplier V21,CH,47.5305551,7.6849603
+42004513,Supplier,Supplier W21,BR,-14.235,-51.9253
+42004667,Supplier,Supplier X21,CN,30.0351362,101.0139231
+42004676,Supplier,Supplier Y21,MX,19.4838908,-99.1843937
+42004691,Supplier,Supplier Z21,GB,52.4583779,1.5622924
+42004702,Supplier,Supplier A22,GB,53.2789347,-2.9022507
+42004718,Supplier,Supplier B22,PL,52.2333742,21.0711489
+42004726,Supplier,Supplier C22,TH,13.7238221,100.507985
+42004728,Supplier,Supplier D22,DE,46.1736551,-123.6768207
+42004773,Supplier,Supplier E22,BR,-23.4820987,-51.795788
+42004775,Supplier,Supplier F22,DE,51.1657,10.4515
+42004785,Supplier,Supplier G22,DE,51.1657,10.4515
+42004844,Supplier,Supplier H22,AR,-34.6037,-58.3816
+42004859,Supplier,Supplier I22,IN,12.9767936,77.590082
+42004862,Supplier,Supplier J22,NG,6.4855737,3.3539907
+42004877,Supplier,Supplier K22,DE,53.550341,10.000654
+42004890,Supplier,Supplier L22,DE,49.142291,9.218655
+42004935,Supplier,Supplier M22,DE,50.8031684,6.4820806
+42004997,Supplier,Supplier N22,CN,35.8617,104.1954
+42005022,Supplier,Supplier O22,US,37.970495,-87.5715641
+42005033,Supplier,Supplier P22,CN,35.8617,104.1954
+42005036,Supplier,Supplier Q22,CN,35.8617,104.1954
+42005045,Supplier,Supplier R22,TH,15.87,100.9925
+42005048,Supplier,Supplier S22,ID,-7.2462836,112.7377674
+42005059,Supplier,Supplier T22,CN,36.0461488,101.4296692
+42005063,Supplier,Supplier U22,CN,35.8617,104.1954
+42005065,Supplier,Supplier V22,CN,55.9430491,-3.1797975
+42005069,Supplier,Supplier W22,CN,55.9430491,-3.1797975
+42005070,Supplier,Supplier X22,CN,35.8617,104.1954
+42005073,Supplier,Supplier Y22,DE,51.3406321,12.3747329
+42005085,Supplier,Supplier Z22,CN,31.8202125,95.1029703
+42005096,Supplier,Supplier A23,CH,47.5399823,7.7230178
+42005125,Supplier,Supplier B23,CN,25.0363006,102.7086139
+42005127,Supplier,Supplier C23,CN,35.8617,104.1954
+42005129,Supplier,Supplier D23,ID,-7.4539769,112.6593869
+42005130,Supplier,Supplier E23,CN,31.2312707,121.4700152
+42005133,Supplier,Supplier F23,NG,6.4550575,3.3941795
+42005137,Supplier,Supplier G23,AR,-34.6095579,-58.3887904
+42005143,Supplier,Supplier H23,TH,13.7238221,100.507985
+42005144,Supplier,Supplier I23,PL,52.2333742,21.0711489
+42005185,Supplier,Supplier J23,BE,51.0281381,4.4803453
+42005193,Supplier,Supplier K23,ES,41.3825802,2.177073
+42005206,Supplier,Supplier L23,IN,20.2736768,73.0045787
+42005222,Supplier,Supplier M23,IE,53.3524881,-6.2566457
+42005239,Supplier,Supplier N23,SG,1.2899175,103.8519072
+42005248,Supplier,Supplier O23,TH,13.5992568,100.2695305
+42005256,Supplier,Supplier P23,IN,20.2736768,73.0045787
+42005264,Supplier,Supplier Q23,CN,23.1474563,-82.3562691
+42005268,Supplier,Supplier R23,CN,32.5468947,96.1372987
+42005276,Supplier,Supplier S23,CN,55.9430491,-3.1797975
+42005279,Supplier,Supplier T23,CN,35.8617,104.1954
+42005283,Supplier,Supplier U23,CN,35.8617,104.1954
+42005292,Supplier,Supplier V23,CN,35.8617,104.1954
+42005301,Supplier,Supplier W23,CN,35.8617,104.1954
+42005307,Supplier,Supplier X23,CN,28.9611448,93.0687529
+42005337,Supplier,Supplier Y23,CN,35.8617,104.1954
+42005341,Supplier,Supplier Z23,CN,35.8617,104.1954
+42005345,Supplier,Supplier A24,NL,51.5856184,5.0660616
+42005354,Supplier,Supplier B24,CH,47.5581077,7.5878261
+42005367,Supplier,Supplier C24,MX,19.4326296,-99.1331785
+42005369,Supplier,Supplier D24,PL,51.9194,19.1451
+42005390,Supplier,Supplier E24,ES,41.4493539,2.248254
+42005397,Supplier,Supplier F24,CN,28.9611448,93.0687529
+42005400,Supplier,Supplier G24,CN,28.9611448,93.0687529
+42005403,Supplier,Supplier H24,US,35.7803977,-78.6390989
+42005404,Supplier,Supplier I24,CN,35.8617,104.1954
+42005419,Supplier,Supplier J24,CN,35.8617,104.1954
+42005423,Supplier,Supplier K24,CN,35.8617,104.1954
+42005435,Supplier,Supplier L24,CN,35.9897899,90.1022249
+42005439,Supplier,Supplier M24,CN,28.6636117,97.465733
+42005447,Supplier,Supplier N24,DE,53.550341,10.000654
+42005457,Supplier,Supplier O24,TH,13.7238221,100.507985
+42005467,Supplier,Supplier P24,DE,47.6556421,7.565174
+42005491,Supplier,Supplier Q24,IN,29.6481048,77.0778435
+42005492,Supplier,Supplier R24,US,40.518157,-74.4113926
+42005500,Supplier,Supplier S24,ID,-6.2553138,107.1450733
+42005534,Supplier,Supplier T24,DE,53.0758196,8.8071646
+42005561,Supplier,Supplier U24,IN,34.0747444,74.8204443
+42005569,Supplier,Supplier V24,PL,51.7472867,18.079532
+42005576,Supplier,Supplier W24,CN,22.5900106,114.2800981
+42005591,Supplier,Supplier X24,NG,9.082,8.6753
+42005599,Supplier,Supplier Y24,DE,51.4582235,7.0158171
+42005610,Supplier,Supplier Z24,CN,31.311123,120.6212881
+42005617,Supplier,Supplier A25,DE,53.550341,10.000654
+42005659,Supplier,Supplier B25,IN,23.0215374,72.5800568
+42005663,Supplier,Supplier C25,TH,13.7238221,100.507985
+42005666,Supplier,Supplier D25,DE,49.8105138,7.1229799
+42005683,Supplier,Supplier E25,NG,6.709,3.237
+42005703,Supplier,Supplier F25,CN,35.8617,104.1954
+42005708,Supplier,Supplier G25,ID,-6.2349858,106.9945444
+42005710,Supplier,Supplier H25,NL,52.3730796,4.8924534
+42005747,Supplier,Supplier I25,MY,3.0448394,101.4447363
+42005772,Supplier,Supplier J25,IN,20.4169701,72.833173
+42005773,Supplier,Supplier K25,IN,23.6012628,72.3741516
+42005776,Supplier,Supplier L25,CN,35.8617,104.1954
+42005843,Supplier,Supplier M25,CZ,49.8175,15.473
+42005902,Supplier,Supplier N25,CN,42.4660173,-6.6043803
+42005909,Supplier,Supplier O25,CN,35.8617,104.1954
+42005921,Supplier,Supplier P25,IN,19.054999,72.8692035
+42005966,Supplier,Supplier Q25,SG,1.2899175,103.8519072
+42006065,Supplier,Supplier R25,PL,52.4006632,16.9197326
+42006073,Supplier,Supplier S25,CH,47.6960491,8.634513
+42006076,Supplier,Supplier T25,DE,51.2973261,6.8493503
+42006102,Supplier,Supplier U25,AE,25.0742823,55.1885387
+42006108,Supplier,Supplier V25,IN,12.9767936,77.590082
+42006150,Supplier,Supplier W25,BR,-23.5506507,-46.6333824
+42006177,Supplier,Supplier X25,DE,52.4063738,12.1561742
+42006181,Supplier,Supplier Y25,CN,35.9897899,90.1022249
+42006186,Supplier,Supplier Z25,ES,41.3825802,2.177073
+42006199,Supplier,Supplier A26,CN,31.2312707,121.4700152
+42006203,Supplier,Supplier B26,CN,31.2312707,121.4700152
+42006216,Supplier,Supplier C26,FR,50.2993922,2.8016229
+42006230,Supplier,Supplier D26,ZA,-29.861825,31.009909
+42006244,Supplier,Supplier E26,CN,33.0000001,119.9999999
+42006249,Supplier,Supplier F26,CN,31.2312707,121.4700152
+42006250,Supplier,Supplier G26,NL,51.3924489,6.1511724
+42006254,Supplier,Supplier H26,CN,35.8617,104.1954
+42006279,Supplier,Supplier I26,PL,52.2333742,21.0711489
+42006302,Supplier,Supplier J26,DE,51.1657,10.4515
+42006333,Supplier,Supplier K26,CN,12.7219635,102.1316717
+42006356,Supplier,Supplier L26,CN,55.9430491,-3.1797975
+42006359,Supplier,Supplier M26,GB,53.0465084,-2.9937869
+42006363,Supplier,Supplier N26,IN,19.1943294,72.9701779
+42006365,Supplier,Supplier O26,DE,49.2800542,11.4585353
+42006394,Supplier,Supplier P26,DE,51.5255661,12.342857
+42006397,Supplier,Supplier Q26,HU,46.8415803,16.8456316
+42006406,Supplier,Supplier R26,CN,41.9492642,-80.5483506
+42006417,Supplier,Supplier S26,CN,35.8617,104.1954
+42006451,Supplier,Supplier T26,CN,35.8617,104.1954
+42006499,Supplier,Supplier U26,TH,13.1857117,101.1210777
+42006521,Supplier,Supplier V26,IT,45.4641943,9.1896346
+42006541,Supplier,Supplier W26,DE,51.0478493,8.3917759
+42006546,Supplier,Supplier X26,CZ,50.6678922,14.0407852
+42006560,Supplier,Supplier Y26,IN,12.9767936,77.590082
+42006567,Supplier,Supplier Z26,ID,-6.1761924,106.6382161
+42006574,Supplier,Supplier A27,DE,52.3744779,9.7385532
+42006575,Supplier,Supplier B27,KR,37.456,126.7052
+42006576,Supplier,Supplier C27,FR,48.8356649,2.240206
+42006577,Supplier,Supplier D27,SG,1.2899175,103.8519072
+42006582,Supplier,Supplier E27,DE,51.1657,10.4515
+42006604,Supplier,Supplier F27,DE,48.0321101,12.5654359
+42006615,Supplier,Supplier G27,IN,23.2969449,72.3306381
+42006628,Supplier,Supplier H27,FR,46.2276,2.2137
+42006640,Supplier,Supplier I27,NG,6.5974727,3.3432815
+42006649,Supplier,Supplier J27,DE,53.550341,10.000654
+42006679,Supplier,Supplier K27,US,32.7174202,-117.162772
+42006682,Supplier,Supplier L27,CN,35.8617,104.1954
+42006748,Supplier,Supplier M27,DE,51.8989989,9.5741099
+42006749,Supplier,Supplier N27,NG,6.4550575,3.3941795
+42006756,Supplier,Supplier O27,IT,45.698679,9.411648
+42006758,Supplier,Supplier P27,NG,6.9788582,3.4389293
+42006766,Supplier,Supplier Q27,DE,49.5829885,7.606534
+42006816,Supplier,Supplier R27,FR,45.7578137,4.8320114
+42006861,Supplier,Supplier S27,CH,47.3898617,8.690503
+42007037,Supplier,Supplier T27,BR,-22.8620175,-47.2164219
+42007082,Supplier,Supplier U27,US,41.083064,-81.518485
+42007095,Supplier,Supplier V27,BR,-26.9195567,-49.0658025
+42007099,Supplier,Supplier W27,DE,51.5142273,7.4652789
+42007107,Supplier,Supplier X27,DE,51.1657,10.4515
+42007112,Supplier,Supplier Y27,DE,53.550341,10.000654
+42007165,Supplier,Supplier Z27,BR,-23.0908356,-47.2180677
+42007171,Supplier,Supplier A28,BR,-14.235,-51.9253
+42007232,Supplier,Supplier B28,CH,49.1868398,13.7172021
+42007245,Supplier,Supplier C28,DE,53.4807708,9.3208188
+42007257,Supplier,Supplier D28,BE,50.0088658,4.2140423
+42007270,Supplier,Supplier E28,ZA,-26.205,28.049722
+42007284,Supplier,Supplier F28,DE,52.665257,8.2363523
+42007304,Supplier,Supplier G28,DE,48.6278878,9.2412617
+42007305,Supplier,Supplier H28,NL,51.5856184,5.0660616
+42007307,Supplier,Supplier I28,FR,46.2276,2.2137
+42007313,Supplier,Supplier J28,DE,49.3539802,8.1350021
+42007322,Supplier,Supplier K28,DE,51.0862467,6.5848937
+42007330,Supplier,Supplier L28,BE,51.2519515,4.27803
+42007341,Supplier,Supplier M28,DE,53.550341,10.000654
+42007396,Supplier,Supplier N28,BR,-23.08639,-46.95056
+42007413,Supplier,Supplier O28,DE,51.3155092,6.2714171
+42007442,Supplier,Supplier P28,MX,23.6345,-102.5528
+42007506,Supplier,Supplier Q28,DE,50.9220931,6.3611015
+42007507,Supplier,Supplier R28,DE,53.550341,10.000654
+42007508,Supplier,Supplier S28,ES,41.3825802,2.177073
+42007555,Supplier,Supplier T28,BR,-23.5112184,-46.8764612
+42007585,Supplier,Supplier U28,TH,13.7238221,100.507985
+42007615,Supplier,Supplier V28,CN,12.7219635,102.1316717
+42007642,Supplier,Supplier W28,CN,55.9430491,-3.1797975
+42007643,Supplier,Supplier X28,PL,51.2691744,16.7083805
+42007665,Supplier,Supplier Y28,CN,31.4461687,84.0517568
+42007670,Supplier,Supplier Z28,CN,55.9430491,-3.1797975
+42007698,Supplier,Supplier A29,BR,-23.5506507,-46.6333824
+42007709,Supplier,Supplier B29,BR,-23.5506507,-46.6333824
+42007716,Supplier,Supplier C29,CN,31.2312707,121.4700152
+42007743,Supplier,Supplier D29,NG,6.709,3.237
+42007751,Supplier,Supplier E29,MX,20.7211203,-103.3913671
+42007774,Supplier,Supplier F29,DE,53.550341,10.000654
+42007792,Supplier,Supplier G29,NG,6.6244986,3.0822509
+42007810,Supplier,Supplier H29,CN,12.7219635,102.1316717
+42007821,Supplier,Supplier I29,CN,31.2312707,121.4700152
+42007830,Supplier,Supplier J29,CN,35.8617,104.1954
+42007858,Supplier,Supplier K29,CN,31.4590371,121.1264772
+42007889,Supplier,Supplier L29,BR,-26.9195567,-49.0658025
+42007918,Supplier,Supplier M29,NG,6.6244986,3.0822509
+42007954,Supplier,Supplier N29,BR,-21.8529134,-47.4794943
+42007955,Supplier,Supplier O29,MX,23.6345,-102.5528
+42007984,Supplier,Supplier P29,BG,49.0563595,-0.2169256
+42007987,Supplier,Supplier Q29,DE,51.2254018,6.7763137
+42008018,Supplier,Supplier R29,NG,7.3786064,3.8969928
+42008019,Supplier,Supplier S29,DE,53.550341,10.000654
+42008031,Supplier,Supplier T29,EG,29.9144511,32.3982337
+42008053,Supplier,Supplier U29,DE,53.550341,10.000654
+42008086,Supplier,Supplier V29,IN,21.7080427,72.9956936
+42008091,Supplier,Supplier W29,BR,-26.9046787,-48.6552979
+42008117,Supplier,Supplier X29,FR,43.7084065,-1.0518771
+42008120,Supplier,Supplier Y29,GB,52.0640034,-0.4111138
+42008187,Supplier,Supplier Z29,ID,-6.2628908,106.8822289
+42008274,Supplier,Supplier A30,NL,51.6339484,4.3680313
+42008355,Supplier,Supplier B30,CN,23.1474563,-82.3562691
+42008389,Supplier,Supplier C30,BE,51.127824,4.9499755
+42008391,Supplier,Supplier D30,DE,47.7320433,8.8403886
+42008392,Supplier,Supplier E30,MX,23.6345,-102.5528
+42008425,Supplier,Supplier F30,IN,19.054999,72.8692035
+42008493,Supplier,Supplier G30,DE,50.7928332,7.2070774
+42008502,Supplier,Supplier H30,DE,49.872775,8.651177
+42008505,Supplier,Supplier I30,DE,50.9110365,13.0331023
+42008545,Supplier,Supplier J30,CN,28.6636117,97.465733
+42008556,Supplier,Supplier K30,CN,35.8617,104.1954
+42008577,Supplier,Supplier L30,CN,30.2762431,119.9746471
+42008603,Supplier,Supplier M30,CN,31.2312707,121.4700152
+42008693,Supplier,Supplier N30,TH,12.7943716,101.3705344
+42008717,Supplier,Supplier O30,ID,-6.2628908,106.8822289
+42008778,Supplier,Supplier P30,TH,13.7238221,100.507985
+42008827,Supplier,Supplier Q30,NL,52.3730796,4.8924534
+42008829,Supplier,Supplier R30,DE,48.8081923,13.54737
+42008830,Supplier,Supplier S30,DE,51.5142273,7.4652789
+42008831,Supplier,Supplier T30,DE,51.0909476,6.8812387
+42008832,Supplier,Supplier U30,CH,47.521079,8.3301378
+42008843,Supplier,Supplier V30,US,39.100105,-94.5781416
+42008844,Supplier,Supplier W30,TH,13.7238221,100.507985
+42008855,Supplier,Supplier X30,IT,41.8719,12.5674
+42008859,Supplier,Supplier Y30,CN,35.8617,104.1954
+42008860,Supplier,Supplier Z30,DE,52.5055795,13.5590615
+42008861,Supplier,Supplier A31,DE,50.5542328,9.6770448
+42008865,Supplier,Supplier B31,DE,49.5462349,8.6717458
+42008868,Supplier,Supplier C31,DE,50.3090305,7.6044602
+42008869,Supplier,Supplier D31,DE,50.0275681,7.1813233
+42008873,Supplier,Supplier E31,DE,49.7816986,9.6796728
+42008883,Supplier,Supplier F31,DE,53.1608729,7.3707149
+42008886,Supplier,Supplier G31,ID,-7.2462836,112.7377674
+42008890,Supplier,Supplier H31,FR,48.9146078,2.3821895
+42008892,Supplier,Supplier I31,ID,-6.1761924,106.6382161
+42008902,Supplier,Supplier J31,DE,52.5173885,13.3951309
+42008908,Supplier,Supplier K31,DE,51.3331205,6.5623343
+42008939,Supplier,Supplier L31,DE,51.1657,10.4515
+42008942,Supplier,Supplier M31,DE,50.1106444,8.6820917
+42008953,Supplier,Supplier N31,ID,-6.1754049,106.827168
+42008956,Supplier,Supplier O31,ID,-7.4539769,112.6593869
+42008974,Supplier,Supplier P31,DE,50.0820384,8.2416556
+42008979,Supplier,Supplier Q31,DE,14.6124732,103.3106407
+42008985,Supplier,Supplier R31,ID,-7.9771308,112.6340265
+42008986,Supplier,Supplier S31,DE,51.3331205,6.5623343
+42009000,Supplier,Supplier T31,US,40.1856597,-75.451571
+42009068,Supplier,Supplier U31,ID,-7.9771308,112.6340265
+42009069,Supplier,Supplier V31,IN,20.1537655,72.7905804
+42009080,Supplier,Supplier W31,ID,-7.7508114,112.818483
+42009089,Supplier,Supplier X31,ID,-7.2462836,112.7377674
+42009092,Supplier,Supplier Y31,ID,-7.6532322,112.6872932
+42009103,Supplier,Supplier Z31,MY,2.895242,101.4686241
+42009105,Supplier,Supplier A32,ID,-7.7508114,112.818483
+42009118,Supplier,Supplier B32,ID,-6.2349858,106.9945444
+42009123,Supplier,Supplier C32,ID,-6.2838694,106.8048297
+42009127,Supplier,Supplier D32,ID,-7.4539769,112.6593869
+42009138,Supplier,Supplier E32,DE,51.434999,6.759562
+42009163,Supplier,Supplier F32,ID,-7.4539769,112.6593869
+42009168,Supplier,Supplier G32,DE,53.550341,10.000654
+42009259,Supplier,Supplier H32,BR,-23.08639,-46.95056
+42009281,Supplier,Supplier I32,DE,51.1657,10.4515
+42009291,Supplier,Supplier J32,DE,51.4582235,7.0158171
+42009304,Supplier,Supplier K32,AT,48.2083537,16.3725042
+42009308,Supplier,Supplier L32,KE,-1.3026148,36.828842
+42009311,Supplier,Supplier M32,DE,50.471845,11.2814285
+42009314,Supplier,Supplier N32,DE,48.3789351,8.8877867
+42009351,Supplier,Supplier O32,CN,28.9611448,93.0687529
+42009371,Supplier,Supplier P32,DE,51.4582235,7.0158171
+42009390,Supplier,Supplier Q32,NG,6.5974727,3.3432815
+42009400,Supplier,Supplier R32,DE,51.3155092,6.2714171
+42009670,Supplier,Supplier S32,ID,-6.2553138,107.1450733
+42009682,Supplier,Supplier T32,ID,-7.2462836,112.7377674
+42009684,Supplier,Supplier U32,ID,-7.9771308,112.6340265
+42009686,Supplier,Supplier V32,ID,-7.9778384,110.3672257
+42009687,Supplier,Supplier W32,ID,-6.40719,106.8158371
+42009689,Supplier,Supplier X32,ID,-7.9771308,112.6340265
+42009693,Supplier,Supplier Y32,ID,-6.1754049,106.827168
+42009696,Supplier,Supplier Z32,ID,-7.5413378,112.5094975
+42009697,Supplier,Supplier A33,ID,-7.9771308,112.6340265
+42009698,Supplier,Supplier B33,ID,-6.1754049,106.827168
+42009700,Supplier,Supplier C33,ID,-6.1754049,106.827168
+42009769,Supplier,Supplier D33,BR,-23.1531055,-47.0580347
+42009794,Supplier,Supplier E33,DE,53.2679983,11.0873274
+42009795,Supplier,Supplier F33,DE,52.3744779,9.7385532
+42009805,Supplier,Supplier G33,DE,52.4063738,12.1561742
+42009830,Supplier,Supplier H33,DE,50.1106444,8.6820917
+42009833,Supplier,Supplier I33,ES,41.530143,2.0820052
+42009836,Supplier,Supplier J33,ES,41.3825802,2.177073
+42009859,Supplier,Supplier K33,US,35.7803977,-78.6390989
+42009862,Supplier,Supplier L33,DE,47.7617515,8.8348709
+42009864,Supplier,Supplier M33,DE,48.3939085,8.9722782
+42009866,Supplier,Supplier N33,DE,51.9869477,9.8253376
+42009869,Supplier,Supplier O33,DE,50.5542328,9.6770448
+42009885,Supplier,Supplier P33,DE,50.6880109,7.6477412
+42009901,Supplier,Supplier Q33,PL,52.2333742,21.0711489
+42009902,Supplier,Supplier R33,ES,40.416782,-3.703507
+42009917,Supplier,Supplier S33,ES,40.416782,-3.703507
+42009950,Supplier,Supplier T33,ES,43.3487303,-4.0515082
+42009952,Supplier,Supplier U33,NL,53.1752103,5.4141998
+42009954,Supplier,Supplier V33,IT,44.8476352,9.6665313
+42009958,Supplier,Supplier W33,ES,40.5400082,-3.6358494
+42009964,Supplier,Supplier X33,CH,47.1725301,8.1067781
+42009973,Supplier,Supplier Y33,GB,53.7480234,-0.7316099
+42009986,Supplier,Supplier Z33,DE,48.6986798,9.7065009
+42009987,Supplier,Supplier A34,ES,41.3825802,2.177073
+42009993,Supplier,Supplier B34,PL,52.2333742,21.0711489
+42009994,Supplier,Supplier C34,ES,41.3825802,2.177073
+42009996,Supplier,Supplier D34,ES,40.481954,-3.363981
+42009997,Supplier,Supplier E34,ES,41.3825802,2.177073
+42009999,Supplier,Supplier F34,ES,41.3825802,2.177073
+42010162,Supplier,Supplier G34,US,41.8755616,-87.6244212
+42010170,Supplier,Supplier H34,ES,40.416782,-3.703507
+42010185,Supplier,Supplier I34,ES,39.151212,-0.4346556
+42010195,Supplier,Supplier J34,MX,20.7211203,-103.3913671
+42010196,Supplier,Supplier K34,US,40.8922694,-74.4774255
+42010203,Supplier,Supplier L34,PL,51.9194,19.1451
+42010215,Supplier,Supplier M34,MX,23.6345,-102.5528
+42010222,Supplier,Supplier N34,US,40.8509333,-73.9701382
+42010279,Supplier,Supplier O34,BR,-24.008979,-46.4144939
+42010298,Supplier,Supplier P34,DE,48.4865898,8.4961204
+42010306,Supplier,Supplier Q34,US,40.5464326,-74.4660542
+42010310,Supplier,Supplier R34,US,41.8755616,-87.6244212
+42010375,Supplier,Supplier S34,CZ,50.3247878,12.7332967
+42010383,Supplier,Supplier T34,DE,52.3744779,9.7385532
+42010388,Supplier,Supplier U34,DE,50.5203849,7.7337742
+42010403,Supplier,Supplier V34,PL,51.9194,19.1451
+42010407,Supplier,Supplier W34,PL,50.3448836,18.2109594
+42010413,Supplier,Supplier X34,PL,52.2333742,21.0711489
+42014095,Supplier,Supplier Y34,CZ,49.9411471,17.8995183
+42021952,Supplier,Supplier Z34,US,40.7127281,-74.0060152
+42040713,Supplier,Supplier A35,US,40.8578772,-74.4259866
+42050922,Supplier,Supplier B35,CN,21.2737079,110.3548318
+42051258,Supplier,Supplier C35,DE,51.2136798,7.8745627
+42051293,Supplier,Supplier D35,ES,41.3667951,2.0570346
+42051394,Supplier,Supplier E35,ES,40.4637,-3.7492
+42051431,Supplier,Supplier F35,NL,51.9244424,4.47775
+42051507,Supplier,Supplier G35,PL,51.4171606,21.1609448
+42051695,Supplier,Supplier H35,PL,52.8395492,15.8306725
+42051784,Supplier,Supplier I35,FR,47.1308239,-0.1554622
+42051842,Supplier,Supplier J35,ES,40.416782,-3.703507
+42051857,Supplier,Supplier K35,ES,41.5328106,2.1823309
+42051865,Supplier,Supplier L35,ES,40.4637,-3.7492
+42051990,Supplier,Supplier M35,DE,53.550341,10.000654
+42052004,Supplier,Supplier N35,ES,40.3536054,-3.5310879
+42052079,Supplier,Supplier O35,ES,41.2872251,2.0675782
+42052105,Supplier,Supplier P35,ES,41.6521342,-0.8809428
+42052134,Supplier,Supplier Q35,ES,40.416782,-3.703507
+42052263,Supplier,Supplier R35,DE,48.0615171,12.220026
+42052319,Supplier,Supplier S35,MX,21.121965,-101.6829766
+42052343,Supplier,Supplier T35,ES,41.5398348,2.4448926
+42052362,Supplier,Supplier U35,ES,41.4994081,2.3205426
+42052372,Supplier,Supplier V35,MX,20.5196964,-103.1813141
+42052488,Supplier,Supplier W35,MX,19.3263632,-99.460052
+42052507,Supplier,Supplier X35,MX,19.3207722,-99.1514678
+42052522,Supplier,Supplier Y35,MX,19.3207722,-99.1514678
+42052525,Supplier,Supplier Z35,MX,21.121965,-101.6829766
+42052529,Supplier,Supplier A36,ES,43.2332639,-2.8453385
+42052534,Supplier,Supplier B36,US,40.9230477,-74.3433955
+42052536,Supplier,Supplier C36,MX,19.4305493,-99.0594067
+42052554,Supplier,Supplier D36,MX,19.4326296,-99.1331785
+42052573,Supplier,Supplier E36,MX,19.3207722,-99.1514678
+42052625,Supplier,Supplier F36,MX,20.6720375,-103.338396
+42052664,Supplier,Supplier G36,MX,19.564017,-99.2795356
+42052710,Supplier,Supplier H36,DE,52.6882194,13.1775867
+42052715,Supplier,Supplier I36,DE,51.434999,6.759562
+42052772,Supplier,Supplier J36,MX,23.6345,-102.5528
+42052809,Supplier,Supplier K36,DE,52.9207291,9.6564253
+42052865,Supplier,Supplier L36,MX,19.4326296,-99.1331785
+42052874,Supplier,Supplier M36,MX,23.6345,-102.5528
+42052878,Supplier,Supplier N36,ES,41.5398348,2.4448926
+42052882,Supplier,Supplier O36,MX,23.6345,-102.5528
+42052912,Supplier,Supplier P36,US,40.6362878,-74.9116603
+42052924,Supplier,Supplier Q36,MX,19.4326296,-99.1331785
+42052936,Supplier,Supplier R36,ES,41.3812851,2.0446381
+42052960,Supplier,Supplier S36,ES,41.3825802,2.177073
+42052978,Supplier,Supplier T36,US,40.898988,-74.0926418
+42053004,Supplier,Supplier U36,MX,23.6345,-102.5528
+42053044,Supplier,Supplier V36,DE,51.1657,10.4515
+42053056,Supplier,Supplier W36,MX,20.5922997,-100.3917424
+42053071,Supplier,Supplier X36,ES,41.3825802,2.177073
+42053075,Supplier,Supplier Y36,US,37.970495,-87.5715641
+42053092,Supplier,Supplier Z36,MX,19.4326296,-99.1331785
+42053123,Supplier,Supplier A37,MX,19.4326296,-99.1331785
+42053175,Supplier,Supplier B37,MX,23.6345,-102.5528
+42053181,Supplier,Supplier C37,US,37.3859982,-77.578509
+42053194,Supplier,Supplier D37,MX,23.6345,-102.5528
+42053197,Supplier,Supplier E37,MX,21.121965,-101.6829766
+42053212,Supplier,Supplier F37,MX,23.6345,-102.5528
+42053230,Supplier,Supplier G37,ES,41.3459033,2.0413673
+42053234,Supplier,Supplier H37,FR,45.2384678,5.8882101
+42053239,Supplier,Supplier I37,MX,19.3207722,-99.1514678
+42053241,Supplier,Supplier J37,MX,19.3207722,-99.1514678
+42053260,Supplier,Supplier K37,BR,-23.5506507,-46.6333824
+42053262,Supplier,Supplier L37,BR,-23.5506507,-46.6333824
+42053278,Supplier,Supplier M37,CH,46.7985624,8.2319736
+42053304,Supplier,Supplier N37,BR,-23.0055542,-46.8397726
+42053342,Supplier,Supplier O37,BR,-22.9110137,-43.2093727
+42053348,Supplier,Supplier P37,BR,-23.603889,-46.918889
+42053367,Supplier,Supplier Q37,IT,44.7383497,10.9247932
+42053373,Supplier,Supplier R37,BR,-22.9110137,-43.2093727
+42053380,Supplier,Supplier S37,BR,-22.9056391,-47.059564
+42053409,Supplier,Supplier T37,BR,-26.9046787,-48.6552979
+42053436,Supplier,Supplier U37,MX,21.0742627,-86.9265622
+42053444,Supplier,Supplier V37,FR,50.7396668,2.7349286
+42053466,Supplier,Supplier W37,MX,23.6345,-102.5528
+42053585,Supplier,Supplier X37,BR,-23.5506507,-46.6333824
+42053619,Supplier,Supplier Y37,US,31.83688,-102.0103767
+42053633,Supplier,Supplier Z37,BR,-23.6866428,-46.6246935
+42053635,Supplier,Supplier A38,PL,52.2333742,21.0711489
+42053672,Supplier,Supplier B38,ES,41.5176392,1.8911835
+42053679,Supplier,Supplier C38,MX,23.6345,-102.5528
+42053702,Supplier,Supplier D38,MX,23.6585116,-102.0077097
+42053714,Supplier,Supplier E38,IT,45.780222,8.7937693
+42053724,Supplier,Supplier F38,ES,43.2183411,-2.0199432
+42053829,Supplier,Supplier G38,ES,40.416782,-3.703507
+42053864,Supplier,Supplier H38,PL,51.9194,19.1451
+42053896,Supplier,Supplier I38,MX,19.4326296,-99.1331785
+42053921,Supplier,Supplier J38,FR,45.7561,5.06785
+42053945,Supplier,Supplier K38,BR,-14.235,-51.9253
+42053961,Supplier,Supplier L38,BR,-23.3050682,-45.9723075
+42053963,Supplier,Supplier M38,BR,-23.5427842,-46.3108391
+42053999,Supplier,Supplier N38,BR,-23.0298535,-46.9749847
+42054006,Supplier,Supplier O38,BR,-25.4944375,-49.284271
+42054039,Supplier,Supplier P38,BR,-23.4684836,-47.4424129
+42054074,Supplier,Supplier Q38,MX,19.8159191,-99.8681193
+42054080,Supplier,Supplier R38,ES,40.4637,-3.7492
+42054132,Supplier,Supplier S38,US,35.3636563,-101.3353895
+42054163,Supplier,Supplier T38,CZ,49.9389004,17.9024174
+42054164,Supplier,Supplier U38,US,35.3227597,-83.8069988
+42054180,Supplier,Supplier V38,DE,48.1270117,7.8101648
+42054192,Supplier,Supplier W38,ES,41.4535893,1.7017388
+42054200,Supplier,Supplier X38,MX,23.6345,-102.5528
+42054458,Supplier,Supplier Y38,BR,-23.6866428,-46.6246935
+42054496,Supplier,Supplier Z38,BR,-22.786384,-50.2198965
+42054520,Supplier,Supplier A39,MX,19.5994083,-99.0487281
+42054557,Supplier,Supplier B39,BR,-23.1177393,-46.5547861
+42054586,Supplier,Supplier C39,BR,-23.1531055,-47.0580347
+42054625,Supplier,Supplier D39,PL,52.2333742,21.0711489
+42054653,Supplier,Supplier E39,BR,-26.3044898,-48.8486726
+42054908,Supplier,Supplier F39,BR,-23.6669527,-46.4616922
+42055001,Supplier,Supplier G39,MX,21.0742627,-86.9265622
+42055168,Supplier,Supplier H39,BR,-23.5506507,-46.6333824
+42055177,Supplier,Supplier I39,BR,-23.6866428,-46.6246935
+42055215,Supplier,Supplier J39,BR,-23.1867782,-45.8854538
+42055228,Supplier,Supplier K39,BR,-26.9285537,-51.2810182
+42055238,Supplier,Supplier L39,BR,-23.0416538,-47.3718002
+42055262,Supplier,Supplier M39,US,39.7886111,-82.6418883
+42055490,Supplier,Supplier N39,PT,41.1909794,-8.4980511
+42055511,Supplier,Supplier O39,US,30.6204939,-86.1912678
+42055580,Supplier,Supplier P39,US,40.5464326,-74.4660542
+42055627,Supplier,Supplier Q39,BR,-23.0298535,-46.9749847
+42055649,Supplier,Supplier R39,BR,-23.5112184,-46.8764612
+42055665,Supplier,Supplier S39,US,33.9566391,-83.9890066
+42055739,Supplier,Supplier T39,ES,41.5739524,2.4828158
+42055796,Supplier,Supplier U39,PL,52.2333742,21.0711489
+42055856,Supplier,Supplier V39,CA,45.3990409,-72.721834
+42055863,Supplier,Supplier W39,MX,19.4788356,-99.2327986
+42055900,Supplier,Supplier X39,US,41.2464824,-75.8817316
+42055941,Supplier,Supplier Y39,DE,50.776351,6.083862
+42055974,Supplier,Supplier Z39,BR,-22.725165,-47.6493269
+42056068,Supplier,Supplier A40,BR,-26.9285537,-51.2810182
+42056071,Supplier,Supplier B40,BR,-23.3561111,-46.8769444
+42056075,Supplier,Supplier C40,BR,-23.0298535,-46.9749847
+42056156,Supplier,Supplier D40,ES,41.355724,2.0706225
+42056162,Supplier,Supplier E40,MX,19.4326296,-99.1331785
+42056194,Supplier,Supplier F40,BR,-22.5615068,-47.401766
+42056302,Supplier,Supplier G40,MX,23.6345,-102.5528
+42056316,Supplier,Supplier H40,BR,-22.7392463,-47.3306032
+42056395,Supplier,Supplier I40,US,34.7373045,-82.255371
+42056427,Supplier,Supplier J40,BR,-23.0949649,-46.7148565
+42056438,Supplier,Supplier K40,BR,-23.0298535,-46.9749847
+42056460,Supplier,Supplier L40,ES,41.5393249,1.8694549
+42056570,Supplier,Supplier M40,BR,-23.6669527,-46.4616922
+42056892,Supplier,Supplier N40,ES,41.5216923,1.7526335
+42056928,Supplier,Supplier O40,US,36.0959715,-79.2669619
+42057080,Supplier,Supplier P40,BR,-23.1531055,-47.0580347
+42057089,Supplier,Supplier Q40,MX,19.4326296,-99.1331785
+42057123,Supplier,Supplier R40,MX,19.4326296,-99.1331785
+42057713,Supplier,Supplier S40,SE,56.25,14.866667
+42057716,Supplier,Supplier T40,NL,52.0522872,5.2834752
+42057727,Supplier,Supplier U40,NG,6.5974727,3.3432815
+42057730,Supplier,Supplier V40,DE,53.550341,10.000654
+42057734,Supplier,Supplier W40,NL,51.1703398,5.8228256
+42057737,Supplier,Supplier X40,AR,-32.9625195,-69.255288
+42057738,Supplier,Supplier Y40,SE,60.1282,18.6435
+42200340,Supplier,Supplier Z40,ES,41.3825802,2.177073
+42201157,Supplier,Supplier A41,TH,12.7943716,101.3705344
+42201271,Supplier,Supplier B41,CN,31.2312707,121.4700152
+42201308,Supplier,Supplier C41,DE,51.2254018,6.7763137
+42201332,Supplier,Supplier D41,HK,22.3736827,114.3608955
+42201405,Supplier,Supplier E41,DE,51.4582235,7.0158171
+42201490,Supplier,Supplier F41,US,40.8578772,-74.4259866
+42201501,Supplier,Supplier G41,MX,19.4326296,-99.1331785
+42201706,Supplier,Supplier H41,US,36.0726355,-79.7919754
+42201990,Supplier,Supplier I41,BR,-22.4418699,-44.4204847
+42202052,Supplier,Supplier J41,TH,13.7238221,100.507985
+42202184,Supplier,Supplier K41,US,41.1253903,-87.848682
+42202237,Supplier,Supplier L41,CN,22.350627,114.1849161
+42203253,Supplier,Supplier M41,CN,31.2407769,121.5919696
+42203271,Supplier,Supplier N41,CN,31.2312707,121.4700152
+42203342,Supplier,Supplier O41,CN,35.8617,104.1954
+42203426,Supplier,Supplier P41,ID,-6.2349858,106.9945444
+42203477,Supplier,Supplier Q41,MX,19.4326296,-99.1331785
+42203547,Supplier,Supplier R41,IT,45.8887601,12.3983645
+42203808,Supplier,Supplier S41,DE,50.2582226,10.964561
+42204087,Supplier,Supplier T41,ID,-6.1754049,106.827168
+42204315,Supplier,Supplier U41,DE,51.6485843,7.0829054
+42204860,Supplier,Supplier V41,DE,50.1106444,8.6820917
+42205027,Supplier,Supplier W41,ID,-6.3227016,106.7085737
+42205417,Supplier,Supplier X41,BR,-23.08639,-46.95056
+42206044,Supplier,Supplier Y41,IT,45.625179,9.624154
+42206529,Supplier,Supplier Z41,IT,45.6229111,9.6631272
+42206749,Supplier,Supplier A42,CN,31.5776626,120.2952752
+42206782,Supplier,Supplier B42,MX,19.4326296,-99.1331785
+42206952,Supplier,Supplier C42,CN,31.3854546,120.9728408
+42207241,Supplier,Supplier D42,BR,-12.6998188,-38.3260762
+42207473,Supplier,Supplier E42,CN,35.6604241,139.4079938
+42207555,Supplier,Supplier F42,DE,50.132881,8.9169797
+42208034,Supplier,Supplier G42,MX,19.4326296,-99.1331785
+42208995,Supplier,Supplier H42,ES,41.5398348,2.4448926
+42209187,Supplier,Supplier I42,CN,30.2489634,120.2052342
+42209212,Supplier,Supplier J42,MX,19.4071156,-99.1906167
+42209562,Supplier,Supplier K42,ES,39.9603798,-4.8311717
+42209852,Supplier,Supplier L42,MX,19.6531356,-99.2145002
+42209854,Supplier,Supplier M42,PL,52.2333742,21.0711489
+42209969,Supplier,Supplier N42,CN,29.2390869,91.7705692
+42210401,Supplier,Supplier O42,BR,-23.7080345,-46.5506747
+42211002,Supplier,Supplier P42,CN,29.8673986,121.5363952
+42211532,Supplier,Supplier Q42,IN,19.054999,72.8692035
+42211557,Supplier,Supplier R42,CN,31.2312707,121.4700152
+42212218,Supplier,Supplier S42,FI,61.0460137,22.3430918
+42212988,Supplier,Supplier T42,SG,1.2899175,103.8519072
+42213872,Supplier,Supplier U42,CN,22.280188,114.1724022
+42214039,Supplier,Supplier V42,MX,23.6345,-102.5528
+42214999,Supplier,Supplier W42,MX,19.0297838,-98.9858196
+42215299,Supplier,Supplier X42,BR,-23.5112184,-46.8764612
+42215583,Supplier,Supplier Y42,CN,30.7474425,120.7510971
+42215754,Supplier,Supplier Z42,MX,19.248746,-99.759686
+42217065,Supplier,Supplier A43,HR,45.4323587,13.5224098
+42217378,Supplier,Supplier B43,PT,38.3729735,-8.5122705
+42217545,Supplier,Supplier C43,US,40.8578772,-74.4259866
+42218719,Supplier,Supplier D43,CN,34.261004,108.9423363
+42218765,Supplier,Supplier E43,MX,19.248746,-99.759686
+42219931,Supplier,Supplier F43,MY,3.0448394,101.4447363
+42220111,Supplier,Supplier G43,CN,35.8617,104.1954
+42220503,Supplier,Supplier H43,CN,31.2312707,121.4700152
+42220604,Supplier,Supplier I43,US,39.7683331,-86.1583502
+42221473,Supplier,Supplier J43,ID,-6.5453255,107.0017425
+42222118,Supplier,Supplier K43,MX,23.6345,-102.5528
+42223588,Supplier,Supplier L43,DE,52.5173885,13.3951309
+42224565,Supplier,Supplier M43,BR,-3.1316333,-59.9825041
+42225585,Supplier,Supplier N43,FR,49.293805,2.5716274
+42226366,Supplier,Supplier O43,CN,31.2312707,121.4700152
+42226469,Supplier,Supplier P43,ES,41.5172534,2.1265942
+42227945,Supplier,Supplier Q43,BR,-14.235,-51.9253
+42228558,Supplier,Supplier R43,US,35.6709727,-80.4742261
+42229073,Supplier,Supplier S43,BR,-22.5615068,-47.401766
+42229572,Supplier,Supplier T43,ES,40.4637,-3.7492
+42229678,Supplier,Supplier U43,CN,35.8617,104.1954
+42229687,Supplier,Supplier V43,SG,1.2899175,103.8519072
+42230155,Supplier,Supplier W43,BR,-23.1867782,-45.8854538
+42231118,Supplier,Supplier X43,IT,46.004241,11.242883
+42231546,Supplier,Supplier Y43,ES,40.481954,-3.363981
+42232689,Supplier,Supplier Z43,IN,19.1943294,72.9701779
+42233317,Supplier,Supplier A44,PL,52.2333742,21.0711489
+56,Supplier,Supplier B44,KE,-1.3026148,36.828842
+60,Supplier,Supplier C44,MX,23.6345,-102.5528
+61,Supplier,Supplier D44,NL,52.3730796,4.8924534
+77,Supplier,Supplier E44,TH,13.7238221,100.507985
+79,Supplier,Supplier F44,US,41.0534302,-73.5387341
+87,Supplier,Supplier G44,AR,-34.6095579,-58.3887904
+9,Supplier,Supplier H44,DE,52.5173885,13.3951309
+9000100,Supplier,Supplier I44,DE,53.550341,10.000654
+9000900,Supplier,Supplier J44,DE,52.5173885,13.3951309
+9002400,Supplier,Supplier K44,MX,20.943727,-101.427043
+9002960,Supplier,Supplier L44,CN,31.2312707,121.4700152
+9005600,Supplier,Supplier M44,KE,-1.3026148,36.828842
+9007700,Supplier,Supplier N44,TH,13.7238221,100.507985
+9007710,Supplier,Supplier O44,TH,15.87,100.9925
+9007730,Supplier,Supplier P44,TH,15.87,100.9925
+9008700,Supplier,Supplier Q44,AR,-34.6095579,-58.3887904
+9012700,Supplier,Supplier R44,BR,-23.0055542,-46.8397726
+9014800,Supplier,Supplier S44,DE,53.7089898,9.9891914
+9021300,Supplier,Supplier T44,IN,19.054999,72.8692035
+9021700,Supplier,Supplier U44,DE,53.550341,10.000654
+9023500,Supplier,Supplier V44,PL,52.4006632,16.9197326
+9024100,Supplier,Supplier W44,ES,40.416782,-3.703507
+9024200,Supplier,Supplier X44,ES,41.5554326,2.4002787
+9027200,Supplier,Supplier Y44,NG,6.4550575,3.3941795
+9027210,Supplier,Supplier Z44,NG,9.082,8.6753
+V0091,Supplier,Supplier A45,DE,52.5173885,13.3951309
+V0240,Supplier,Supplier B45,MX,20.9448338,-101.4171338
+V0771,Supplier,Supplier C45,TH,15.87,100.9925
+V2170,Supplier,Supplier D45,DE,53.550341,10.000654
+V2350,Supplier,Supplier E45,PL,52.4006632,16.9197326
+V2410,Supplier,Supplier G45,ES,40.6012354,-3.7038475
+V2470,Supplier,Supplier H45,DE,51.0770643,13.0157798
+V2471,Supplier,Supplier I45,DE,51.3406321,12.3747329
+Z10002,Supplier,Supplier K45,DE,53.5667927,10.333532
+Z10009,Supplier,Supplier L45,IT,45.4641943,9.1896346
+Z10019,Supplier,Supplier M45,DE,51.1657,10.4515
+Z10024,Supplier,Supplier N45,SE,56.25,14.866667
+Z10025,Supplier,Supplier O45,DE,49.872775,8.651177
+Z10026,Supplier,Supplier P45,SE,60.1282,18.6435
+Z10027,Supplier,Supplier Q45,DE,53.550341,10.000654
+Z10030,Supplier,Supplier R45,DE,53.550341,10.000654
+Z10031,Supplier,Supplier S45,DE,53.550341,10.000654
+Z10033,Supplier,Supplier T45,GB,51.148555,0.8722566
+Z10034,Supplier,Supplier U45,DE,53.6117462,10.4043947
+Z10035,Supplier,Supplier V45,NL,51.3712108,5.2346306
+Z10037,Supplier,Supplier W45,DE,50.1106444,8.6820917
+Z10041,Supplier,Supplier X45,IT,38.0613929,15.0622475
+Z10049,Supplier,Supplier Y45,NL,51.8296133,4.9738743
+Z10055,Supplier,Supplier Z45,DE,49.5497,8.843
+Z10056,Supplier,Supplier A46,US,28.0785034,-80.6077908
+Z10060,Supplier,Supplier B46,DE,14.6124732,103.3106407
+Z10061,Supplier,Supplier C46,DE,51.1657,10.4515
+Z10071,Supplier,Supplier D46,FR,49.6902106,1.399492
+Z10076,Supplier,Supplier E46,IT,44.40726,8.9338624
+Z10080,Supplier,Supplier F46,CH,47.3029125,7.8826232
+Z10084,Supplier,Supplier G46,DE,53.550341,10.000654
+Z10086,Supplier,Supplier H46,DE,50.0820384,8.2416556
+Z10089,Supplier,Supplier I46,US,42.0894728,-87.7149295
+Z10092,Supplier,Supplier J46,CH,47.260692,8.5976831
+Z10093,Supplier,Supplier K46,BR,-12.6998188,-38.3260762
+Z10094,Supplier,Supplier L46,MX,20.6511359,-101.166767
+Z10097,Supplier,Supplier M46,DE,52.3744779,9.7385532
+Z101,Supplier,Supplier N46,BE,50.6740673,4.6138095
+Z10100,Supplier,Supplier O46,AR,-32.9625195,-69.255288
+Z10103,Supplier,Supplier P46,BE,50.8806207,4.4730008
+Z10104,Supplier,Supplier Q46,FR,48.6972419,-3.1629787
+Z10110,Supplier,Supplier R46,DE,49.5497,8.843
+Z10115,Supplier,Supplier S46,FR,46.2276,2.2137
+Z10125,Supplier,Supplier T46,DE,53.550341,10.000654
+Z10131,Supplier,Supplier U46,BE,50.6131234,5.5986637
+Z10134,Supplier,Supplier V46,NL,52.3563585,6.6636219
+Z10140,Supplier,Supplier W46,DE,51.6485843,7.0829054
+Z10142,Supplier,Supplier X46,DE,53.550341,10.000654
+Z10143,Supplier,Supplier Y46,DE,51.0909476,6.8812387
+Z10145,Supplier,Supplier Z46,DE,51.2973261,6.8493503
+Z10151,Supplier,Supplier A47,DE,50.1055002,8.7610698
+Z10154,Supplier,Supplier B47,KR,37.5666791,126.9782914
+Z10158,Supplier,Supplier C47,FR,50.6861944,3.0521806
+Z10160,Supplier,Supplier D47,CZ,50.3247878,12.7332967
+Z10165,Supplier,Supplier E47,GB,51.5074456,-0.1277653
+Z10166,Supplier,Supplier F47,DE,48.8574209,8.2088088
+Z10167,Supplier,Supplier G47,DE,51.0478493,8.3917759
+Z10169,Supplier,Supplier H47,DE,51.4824354,11.9712985
+Z10170,Supplier,Supplier I47,AT,47.3639973,9.689271
+Z10179,Supplier,Supplier J47,IT,44.3497559,9.3456502
+Z10180,Supplier,Supplier K47,PL,51.7855261,21.6024691
+Z10197,Supplier,Supplier L47,NL,52.6008538,4.8170994
+Z10198,Supplier,Supplier M47,ES,41.6475034,2.3066306
+Z10202,Supplier,Supplier N47,DE,53.6959113,9.7114755
+Z10204,Supplier,Supplier O47,DE,50.056,8.4819
+Z10209,Supplier,Supplier P47,NL,51.5759371,4.6432216
+Z10210,Supplier,Supplier Q47,DE,47.8965316,10.4144412
+Z10214,Supplier,Supplier R47,DE,51.3854116,7.7661798
+Z10217,Supplier,Supplier S47,DE,53.550341,10.000654
+Z10221,Supplier,Supplier T47,DE,52.5462731,12.9404114
+Z10225,Supplier,Supplier U47,DE,48.6767637,10.152923
+Z10236,Supplier,Supplier V47,FR,48.5958681,2.5798953
+Z10239,Supplier,Supplier W47,DE,14.6124732,103.3106407
+Z10240,Supplier,Supplier X47,DE,48.6600109,9.1194586
+Z10241,Supplier,Supplier Y47,US,41.0167299,-79.7175492
+Z10242,Supplier,Supplier Z47,MX,23.6345,-102.5528
+Z10243,Supplier,Supplier A48,FR,45.7578137,4.8320114
+Z10245,Supplier,Supplier B48,FR,46.2276,2.2137
+Z10248,Supplier,Supplier C48,DE,51.1657,10.4515
+Z10251,Supplier,Supplier D48,CN,31.2312707,121.4700152
+Z10258,Supplier,Supplier E48,IN,19.054999,72.8692035
+Z10259,Supplier,Supplier F48,GB,51.2715316,-0.3414524
+Z10260,Supplier,Supplier G48,DE,47.8395072,11.1416355
+Z10262,Supplier,Supplier H48,IT,45.631067,8.388627
+Z10263,Supplier,Supplier I48,CH,47.1286095,8.7500299
+Z10268,Supplier,Supplier J48,PL,51.9194,19.1451
+Z10269,Supplier,Supplier K48,DE,51.3331205,6.5623343
+Z10273,Supplier,Supplier L48,BE,50.8074825,4.9371775
+Z10274,Supplier,Supplier M48,DE,48.51089,11.1551672
+Z10275,Supplier,Supplier N48,DE,14.0790716,98.1938728
+Z10289,Supplier,Supplier O48,DE,51.0493286,13.7381437
+Z10290,Supplier,Supplier P48,DE,49.2805135,10.6836351
+Z10305,Supplier,Supplier Q48,DE,53.7089898,9.9891914
+Z10307,Supplier,Supplier R48,DE,53.550341,10.000654
+Z10332,Supplier,Supplier S48,DE,48.2975862,11.6221618
+Z10341,Supplier,Supplier T48,DE,51.0909476,6.8812387
+Z10343,Supplier,Supplier U48,DE,51.2990263,7.6734841
+Z10364,Supplier,Supplier V48,DE,50.5117697,8.2767601
+Z10380,Supplier,Supplier W48,DE,53.3965903,10.0176952
+Z10394,Supplier,Supplier X48,DE,51.1657,10.4515
+Z10398,Supplier,Supplier Y48,DE,49.3390745,10.7919753
+Z10402,Supplier,Supplier Z48,DE,53.550341,10.000654
+Z10410,Supplier,Supplier A49,DE,50.0820384,8.2416556
+Z10417,Supplier,Supplier B49,NL,51.1703398,5.8228256
+Z10429,Supplier,Supplier C49,DE,14.6124732,103.3106407
+Z10437,Supplier,Supplier D49,DE,50.7026664,10.2163793
+Z10458,Supplier,Supplier E49,DE,51.936284,8.8791526
+Z10485,Supplier,Supplier F49,DE,51.1278531,7.6006513
+Z10487,Supplier,Supplier G49,DE,53.2679983,11.0873274
+Z10490,Supplier,Supplier H49,DE,50.3079768,11.2824829
+Z10492,Supplier,Supplier I49,DE,52.1887731,7.8508691
+Z10493,Supplier,Supplier J49,DE,51.191939,7.9762755
+Z10498,Supplier,Supplier K49,NL,52.3705038,5.2185859
+Z10502,Supplier,Supplier L49,KR,37.5666791,126.9782914
+Z10507,Supplier,Supplier M49,NL,52.2477301,5.5782739
+Z10524,Supplier,Supplier N49,ES,40.4637,-3.7492
+Z10531,Supplier,Supplier O49,TH,13.7238221,100.507985
+Z10540,Supplier,Supplier P49,DE,48.063152,8.4929618
+Z10545,Supplier,Supplier Q49,NL,53.1091111,6.0948102
+Z10554,Supplier,Supplier R49,DE,52.3744779,9.7385532
+Z10560,Supplier,Supplier S49,DE,50.5203849,7.7337742
+Z10561,Supplier,Supplier T49,PL,52.4006632,16.9197326
+Z10574,Supplier,Supplier U49,DE,53.550341,10.000654
+Z10591,Supplier,Supplier V49,DE,53.550341,10.000654
+Z10612,Supplier,Supplier W49,CH,46.2131843,6.0815756
+Z10679,Supplier,Supplier X49,TH,13.690419,101.077957
+Z10685,Supplier,Supplier Y49,DE,50.4695139,11.2588086
+Z10712,Supplier,Supplier Z49,TH,14.1542055,101.5547823
+Z10713,Supplier,Supplier A50,MX,19.292545,-99.6569007
+Z10714,Supplier,Supplier B50,BR,-23.08639,-46.95056
+Z10719,Supplier,Supplier C50,TH,13.7238221,100.507985
+Z10723,Supplier,Supplier D50,ES,41.7774422,2.7309252
+Z10727,Supplier,Supplier E50,ID,-6.2349858,106.9945444
+Z10728,Supplier,Supplier F50,DE,49.5445912,11.9464314
+Z10752,Supplier,Supplier G50,IN,20.5937,78.9629
+Z10757,Supplier,Supplier H50,DE,53.7847143,9.683364
+Z10759,Supplier,Supplier I50,DE,51.1657,10.4515
+Z10767,Supplier,Supplier J50,IT,45.5669538,8.086912
+Z10768,Supplier,Supplier K50,FR,46.2276,2.2137
+Z10776,Supplier,Supplier L50,US,39.9527237,-75.1635262
+Z10782,Supplier,Supplier M50,US,40.2559375,-75.3601755
+Z10784,Supplier,Supplier N50,US,40.704371,-73.3501301
+Z10844,Supplier,Supplier O50,CZ,50.0596547,15.1071108
+Z10846,Supplier,Supplier P50,FR,49.6902106,1.399492
+Z10852,Supplier,Supplier Q50,IN,19.0308262,73.0198537
+Z10889,Supplier,Supplier R50,GB,52.0640034,-0.4111138
+Z10891,Supplier,Supplier S50,DE,51.8322137,6.2428283
+Z10892,Supplier,Supplier T50,KR,35.9078,127.7669
+Z10896,Supplier,Supplier U50,IT,45.0677551,7.6824892
+Z10901,Supplier,Supplier V50,DE,51.1657,10.4515
+Z10903,Supplier,Supplier W50,DE,53.550341,10.000654
+Z10907,Supplier,Supplier X50,DE,51.1657,10.4515
+Z10937,Supplier,Supplier Y50,PL,52.2333742,21.0711489
+Z10953,Supplier,Supplier Z50,CH,46.4601563,6.3380469
+Z10970,Supplier,Supplier A51,PL,50.3448836,18.2109594
+Z10975,Supplier,Supplier B51,PL,52.5103217,16.7421238
+Z10976,Supplier,Supplier C51,PL,54.0869532,18.8000293
+Z10977,Supplier,Supplier D51,CH,47.525113,7.6477401
+Z10982,Supplier,Supplier E51,PL,51.9194,19.1451
+Z10993,Supplier,Supplier F51,PL,52.4006632,16.9197326
+Z1101,Supplier,Supplier G51,DE,48.0939396,7.9610142
+Z11030,Supplier,Supplier H51,PL,52.4006632,16.9197326
+Z11059,Supplier,Supplier I51,PL,52.2333742,21.0711489
+Z11065,Supplier,Supplier J51,PL,52.2333742,21.0711489
+Z11077,Supplier,Supplier K51,PL,52.4657445,16.6664446
+Z11081,Supplier,Supplier L51,PL,52.2492751,17.0901242
+Z11115,Supplier,Supplier M51,PL,52.2333742,21.0711489
+Z11152,Supplier,Supplier N51,DE,49.2361584,9.3293362
+Z11156,Supplier,Supplier O51,CH,46.2157703,6.0330885
+Z11158,Supplier,Supplier P51,CH,46.8399962,7.6192848
+Z11160,Supplier,Supplier Q51,FR,46.2276,2.2137
+Z11161,Supplier,Supplier R51,PL,52.2333742,21.0711489
+Z11162,Supplier,Supplier S51,NL,52.6631484,4.8326672
+Z11164,Supplier,Supplier T51,FR,43.7012408,6.988256
+Z11169,Supplier,Supplier U51,ES,41.3825802,2.177073
+Z11175,Supplier,Supplier V51,DE,48.6967865,9.7037748
+Z11177,Supplier,Supplier W51,DE,52.3744779,9.7385532
+Z11178,Supplier,Supplier X51,FR,46.2276,2.2137
+Z11180,Supplier,Supplier Y51,DE,51.1657,10.4515
+Z11293,Supplier,Supplier Z51,DE,49.0800743,12.8862723
+Z11306,Supplier,Supplier A52,ES,41.530143,2.0820052
+Z1131,Supplier,Supplier B52,CH,47.2984412,8.4489755
+Z11317,Supplier,Supplier C52,IT,45.7566557,9.7542192
+Z11319,Supplier,Supplier D52,CN,31.311123,120.6212881
+Z11320,Supplier,Supplier E52,ES,43.3487303,-4.0515082
+Z11321,Supplier,Supplier F52,ES,41.3825802,2.177073
+Z11326,Supplier,Supplier G52,ES,37.2776479,-5.9319966
+Z11328,Supplier,Supplier H52,ES,41.3825802,2.177073
+Z11334,Supplier,Supplier I52,ES,41.5729887,2.2329289
+Z11335,Supplier,Supplier J52,ES,41.3825802,2.177073
+Z11337,Supplier,Supplier K52,ES,40.481954,-3.363981
+Z11342,Supplier,Supplier L52,ES,42.0478304,2.2643391
+Z11344,Supplier,Supplier M52,ES,41.3825802,2.177073
+Z11346,Supplier,Supplier N52,IT,44.8476352,9.6665313
+Z11350,Supplier,Supplier O52,DE,51.0770643,13.0157798
+Z11353,Supplier,Supplier P52,ES,41.3825802,2.177073
+Z11354,Supplier,Supplier Q52,ES,41.5515189,2.2480812
+Z11359,Supplier,Supplier R52,ES,40.4637,-3.7492
+Z11369,Supplier,Supplier S52,CN,23.1301964,113.2592945
+Z11378,Supplier,Supplier T52,ES,40.1888604,-3.67143
+Z11379,Supplier,Supplier U52,ES,40.416782,-3.703507
+Z11400,Supplier,Supplier V52,DE,50.6880109,7.6477412
+Z11415,Supplier,Supplier W52,NL,53.1752103,5.4141998
+Z11442,Supplier,Supplier X52,ES,40.481954,-3.363981
+Z11444,Supplier,Supplier Y52,TH,12.7943716,101.3705344
+Z11446,Supplier,Supplier Z52,FR,48.8956767,2.2296581
+Z11457,Supplier,Supplier A53,ES,42.4661196,-2.4396676
+Z11473,Supplier,Supplier B53,DE,53.7089898,9.9891914
+Z11477,Supplier,Supplier C53,DE,49.1358512,9.3712445
+Z11478,Supplier,Supplier D53,IN,13.1672275,80.2598107
+Z11480,Supplier,Supplier E53,SK,47.8557806,17.7693671
+Z11485,Supplier,Supplier F53,NL,51.9244424,4.47775
+Z11491,Supplier,Supplier G53,MX,23.6345,-102.5528
+Z11492,Supplier,Supplier H53,TH,13.7238221,100.507985
+Z11494,Supplier,Supplier I53,DE,53.550341,10.000654
+Z11497,Supplier,Supplier J53,IT,45.503662,8.119023
+Z11498,Supplier,Supplier K53,ES,40.3381881,-3.3813911
+Z11505,Supplier,Supplier L53,TH,13.1857117,101.1210777
+Z11514,Supplier,Supplier M53,MX,19.6543203,-99.2085941
+Z11515,Supplier,Supplier N53,HU,47.4813896,19.1460941
+Z11516,Supplier,Supplier O53,US,39.6296809,-79.9559437
+Z11517,Supplier,Supplier P53,TH,12.7943716,101.3705344
+Z11519,Supplier,Supplier Q53,KE,-1.3026148,36.828842
+Z11520,Supplier,Supplier R53,KE,-1.3026148,36.828842
+Z11521,Supplier,Supplier S53,IE,52.661252,-8.6301239
+Z11522,Supplier,Supplier T53,MX,20.7350778,-100.2835765
+Z11525,Supplier,Supplier U53,GB,53.2789347,-2.9022507
+Z11526,Supplier,Supplier V53,PL,51.9049944,21.5559577
+Z11527,Supplier,Supplier W53,US,40.6834349,-74.442653
+Z11532,Supplier,Supplier X53,TH,13.7238221,100.507985
+Z11535,Supplier,Supplier Y53,PL,51.9194,19.1451
+Z11538,Supplier,Supplier Z53,JP,35.6768601,139.7638947
+Z11540,Supplier,Supplier A54,BE,51.1793505,3.7471789
+Z11626,Supplier,Supplier B54,CN,31.2312707,121.4700152
+Z11658,Supplier,Supplier C54,FR,48.8588897,2.320041
+Z11716,Supplier,Supplier D54,CN,31.4654682,120.1179438
+Z11728,Supplier,Supplier E54,DE,50.0275681,7.1813233
+Z11733,Supplier,Supplier F54,DE,53.550341,10.000654
+Z11734,Supplier,Supplier G54,PL,52.2333742,21.0711489
+Z11744,Supplier,Supplier H54,ES,40.5400082,-3.6358494
+Z11780,Supplier,Supplier I54,TH,15.87,100.9925
+Z11782,Supplier,Supplier J54,DE,53.550341,10.000654
+Z11795,Supplier,Supplier K54,DE,49.9770848,11.0343944
+Z11799,Supplier,Supplier L54,ES,40.416782,-3.703507
+Z11806,Supplier,Supplier M54,MX,20.6511359,-101.166767
+Z11809,Supplier,Supplier N54,DE,51.1657,10.4515
+Z1181,Supplier,Supplier O54,DE,48.0204773,11.4865462
+Z11810,Supplier,Supplier P54,PL,52.2333742,21.0711489
+Z11812,Supplier,Supplier Q54,DE,53.550341,10.000654
+Z11825,Supplier,Supplier R54,DE,50.2251998,7.8313545
+Z11829,Supplier,Supplier S54,PL,50.0469432,19.9971534
+Z11844,Supplier,Supplier T54,MX,23.6345,-102.5528
+Z11845,Supplier,Supplier U54,MX,21.0012598,-100.384479
+Z11846,Supplier,Supplier V54,ES,41.3825802,2.177073
+Z11851,Supplier,Supplier W54,IT,45.337572,9.64336
+Z11855,Supplier,Supplier X54,FR,48.9863555,2.4500537
+Z11859,Supplier,Supplier Y54,CN,32.1684583,120.0165362
+Z11865,Supplier,Supplier Z54,KE,-1.3026148,36.828842
+Z11869,Supplier,Supplier A55,KE,-1.3026148,36.828842
+Z11876,Supplier,Supplier B55,KE,-1.3026148,36.828842
+Z11877,Supplier,Supplier C55,KE,-0.1272987,35.0796519
+Z11893,Supplier,Supplier D55,KE,-1.3026148,36.828842
+Z11897,Supplier,Supplier E55,IT,45.7853256,8.9677744
+Z11900,Supplier,Supplier F55,US,41.3275971,-72.7673198
+Z11904,Supplier,Supplier G55,MX,19.3207722,-99.1514678
+Z11918,Supplier,Supplier H55,DE,49.5353466,8.3541391
+Z11921,Supplier,Supplier I55,BE,50.665153,5.502732
+Z11935,Supplier,Supplier J55,CH,47.1975084,8.4860144
+Z11957,Supplier,Supplier K55,KE,-1.3026148,36.828842
+Z11967,Supplier,Supplier L55,ES,40.416782,-3.703507
+Z12021,Supplier,Supplier M55,MX,19.3701838,-99.3581568
+Z12023,Supplier,Supplier N55,DE,49.0199639,10.0301733
+Z12058,Supplier,Supplier O55,FR,49.0265888,2.2234971
+Z12063,Supplier,Supplier P55,IN,23.0215374,72.5800568
+Z12072,Supplier,Supplier Q55,CH,47.5581077,7.5878261
+Z12075,Supplier,Supplier R55,IN,19.0308262,73.0198537
+Z12077,Supplier,Supplier S55,SG,1.2899175,103.8519072
+Z12079,Supplier,Supplier T55,IN,19.054999,72.8692035
+Z12081,Supplier,Supplier U55,MY,3.3189044,101.5750187
+Z12082,Supplier,Supplier V55,IN,13.0836939,80.270186
+Z12083,Supplier,Supplier W55,CN,22.5445741,114.0545429
+Z12097,Supplier,Supplier X55,IN,17.9375095,78.211745
+Z12100,Supplier,Supplier Y55,TH,14.8971921,100.83273
+Z12101,Supplier,Supplier Z55,TH,13.8610918,100.3456772
+Z12104,Supplier,Supplier A56,TH,13.6531651,100.8182578
+Z12483,Supplier,Supplier B56,ID,3.5894617,98.6741623
+Z12504,Supplier,Supplier C56,FR,48.8841522,2.2368863
+Z12512,Supplier,Supplier D56,MX,21.880487,-102.2967195
+Z12517,Supplier,Supplier E56,GB,51.4538022,-2.5972985
+Z12521,Supplier,Supplier F56,IN,20.2736768,73.0045787
+Z12525,Supplier,Supplier G56,IN,19.054999,72.8692035
+Z12529,Supplier,Supplier H56,IN,20.4169701,72.833173
+Z12530,Supplier,Supplier I56,IN,19.054999,72.8692035
+Z12545,Supplier,Supplier J56,GB,52.4130189,-1.7768935
+Z125450,Supplier,Supplier K56,IN,20.4169701,72.833173
+Z12565,Supplier,Supplier L56,US,40.5373275,-74.1945884
+Z1261,Supplier,Supplier M56,DE,53.550341,10.000654
+Z12618,Supplier,Supplier N56,IN,29.0,76.0
+Z12625,Supplier,Supplier O56,IN,19.757249,73.0931199
+Z12638,Supplier,Supplier P56,PL,49.822118,19.0448936
+Z12642,Supplier,Supplier Q56,IN,20.4169701,72.833173
+Z1271,Supplier,Supplier R56,NL,52.3730796,4.8924534
+Z12742,Supplier,Supplier S56,KE,-1.3026148,36.828842
+Z12746,Supplier,Supplier T56,IN,20.2736768,73.0045787
+Z12752,Supplier,Supplier U56,US,31.83688,-102.0103767
+Z12777,Supplier,Supplier V56,IN,23.0215374,72.5800568
+Z12781,Supplier,Supplier W56,IN,18.5213738,73.8545071
+Z12802,Supplier,Supplier X56,DE,51.1657,10.4515
+Z12809,Supplier,Supplier Y56,PL,51.7728245,19.4784857
+Z12811,Supplier,Supplier Z56,IT,44.9214271,10.4375689
+Z12821,Supplier,Supplier A57,CZ,49.0389132,17.8148347
+Z12828,Supplier,Supplier B57,IN,19.054999,72.8692035
+Z12860,Supplier,Supplier C57,IN,19.054999,72.8692035
+Z12872,Supplier,Supplier D57,IN,19.1172592,72.9355194
+Z12906,Supplier,Supplier E57,CH,47.6246349,9.1944314
+Z12913,Supplier,Supplier F57,HU,47.531399,21.6259782
+Z12923,Supplier,Supplier G57,US,40.5792701,-74.4115401
+Z12975,Supplier,Supplier H57,TH,12.7943716,101.3705344
+Z12978,Supplier,Supplier I57,IN,19.0308262,73.0198537
+Z12982,Supplier,Supplier J57,IN,19.054999,72.8692035
+Z13165,Supplier,Supplier K57,DE,51.1657,10.4515
+Z13168,Supplier,Supplier L57,IN,20.4169701,72.833173
+Z13169,Supplier,Supplier M57,BE,51.0759905,4.7286753
+Z13201,Supplier,Supplier N57,DE,53.2931879,10.3906505
+Z13401,Supplier,Supplier O57,DE,53.5098898,10.2511001
+Z1345,Supplier,Supplier P57,US,37.0902,-95.7129
+Z13469,Supplier,Supplier Q57,CH,47.1910321,8.3946059
+Z136,Supplier,Supplier R57,DE,51.1657,10.4515
+Z13623,Supplier,Supplier S57,US,35.7803977,-78.6390989
+Z13647,Supplier,Supplier T57,IN,20.4321957,73.1409893
+Z13654,Supplier,Supplier U57,CN,22.350627,114.1849161
+Z13693,Supplier,Supplier V57,MY,1.4581986,103.7649059
+Z13746,Supplier,Supplier W57,DE,51.1638175,10.4478313
+Z13767,Supplier,Supplier X57,ID,3.5894617,98.6741623
+Z13768,Supplier,Supplier Y57,IN,12.9767936,77.590082
+Z13779,Supplier,Supplier Z57,US,33.7544657,-84.3898151
+Z13810,Supplier,Supplier A58,TH,13.6751102,101.0363292
+Z13824,Supplier,Supplier B58,TH,15.87,100.9925
+Z13827,Supplier,Supplier C58,TH,13.7238221,100.507985
+Z13829,Supplier,Supplier D58,TH,14.8971921,100.83273
+Z13841,Supplier,Supplier E58,TH,13.7238221,100.507985
+Z13871,Supplier,Supplier F58,TH,13.7238221,100.507985
+Z13875,Supplier,Supplier G58,TH,13.7238221,100.507985
+Z13877,Supplier,Supplier H58,TH,15.87,100.9925
+Z13892,Supplier,Supplier I58,TH,13.7238221,100.507985
+Z13908,Supplier,Supplier J58,TH,13.7238221,100.507985
+Z1391,Supplier,Supplier K58,DE,50.5542328,9.6770448
+Z13932,Supplier,Supplier L58,TH,13.7238221,100.507985
+Z13952,Supplier,Supplier M58,TH,13.7238221,100.507985
+Z13957,Supplier,Supplier N58,TH,13.690419,101.077957
+Z13965,Supplier,Supplier O58,TH,13.7238221,100.507985
+Z14038,Supplier,Supplier P58,IN,19.054999,72.8692035
+Z14062,Supplier,Supplier Q58,TH,59.9842812,23.0275311
+Z14080,Supplier,Supplier R58,TH,13.7238221,100.507985
+Z14088,Supplier,Supplier S58,TH,13.5992568,100.2695305
+Z14101,Supplier,Supplier T58,TH,13.7785797,100.5745983
+Z14141,Supplier,Supplier U58,TH,13.7238221,100.507985
+Z14170,Supplier,Supplier V58,DE,53.550341,10.000654
+Z14182,Supplier,Supplier W58,TH,13.7238221,100.507985
+Z14184,Supplier,Supplier X58,TH,13.7238221,100.507985
+Z14226,Supplier,Supplier Y58,TH,15.87,100.9925
+Z14266,Supplier,Supplier Z58,TH,15.87,100.9925
+Z14292,Supplier,Supplier A59,TH,13.7238221,100.507985
+Z14301,Supplier,Supplier B59,TH,13.7343508,100.5711996
+Z14309,Supplier,Supplier C59,TH,13.5992568,100.2695305
+Z14328,Supplier,Supplier D59,TH,15.87,100.9925
+Z14340,Supplier,Supplier E59,TH,14.8971921,100.83273
+Z14360,Supplier,Supplier F59,TH,15.87,100.9925
+Z14391,Supplier,Supplier G59,TH,13.7238221,100.507985
+Z14403,Supplier,Supplier H59,TH,15.87,100.9925
+Z14553,Supplier,Supplier I59,TH,13.9206972,100.4050149
+Z14583,Supplier,Supplier J59,TH,13.7238221,100.507985
+Z14602,Supplier,Supplier K59,TH,13.1857117,101.1210777
+Z14632,Supplier,Supplier L59,TH,15.87,100.9925
+Z14638,Supplier,Supplier M59,TH,13.7238221,100.507985
+Z14660,Supplier,Supplier N59,TH,13.7238221,100.507985
+Z14689,Supplier,Supplier O59,TH,15.87,100.9925
+Z14690,Supplier,Supplier P59,TH,13.7238221,100.507985
+Z14695,Supplier,Supplier Q59,TH,13.7238221,100.507985
+Z14736,Supplier,Supplier R59,TH,13.7238221,100.507985
+Z14747,Supplier,Supplier S59,TH,13.7238221,100.507985
+Z14750,Supplier,Supplier T59,TH,13.7238221,100.507985
+Z14780,Supplier,Supplier U59,TH,15.87,100.9925
+Z14829,Supplier,Supplier V59,IN,19.054999,72.8692035
+Z14860,Supplier,Supplier W59,TH,13.7524938,100.4935089
+Z1491,Supplier,Supplier X59,DE,50.372395,7.003036
+Z14925,Supplier,Supplier Y59,TH,13.7238221,100.507985
+Z14961,Supplier,Supplier Z59,CH,47.1725301,8.1067781
+Z14977,Supplier,Supplier A60,IN,23.2969449,72.3306381
+Z15005,Supplier,Supplier B60,IN,19.054999,72.8692035
+Z15070,Supplier,Supplier C60,DE,49.4704113,8.4381568
+Z15071,Supplier,Supplier D60,IN,19.054999,72.8692035
+Z15112,Supplier,Supplier E60,HK,22.350627,114.1849161
+Z15172,Supplier,Supplier F60,MX,19.3207722,-99.1514678
+Z15228,Supplier,Supplier G60,GB,52.4583779,1.5622924
+Z15233,Supplier,Supplier H60,KE,-1.3026148,36.828842
+Z15246,Supplier,Supplier I60,CN,32.0438284,118.7788631
+Z15285,Supplier,Supplier J60,DE,51.5090755,10.552433
+Z15299,Supplier,Supplier K60,DE,50.8402243,7.2127276
+Z1531,Supplier,Supplier L60,DE,14.6124732,103.3106407
+Z15314,Supplier,Supplier M60,ID,-6.1754049,106.827168
+Z15316,Supplier,Supplier N60,TH,14.8971921,100.83273
+Z15334,Supplier,Supplier O60,IT,42.4105412,14.2010296
+Z15341,Supplier,Supplier P60,NL,51.5759371,4.6432216
+Z15348,Supplier,Supplier Q60,DE,49.5353466,8.3541391
+Z15351,Supplier,Supplier R60,IN,30.4977583,77.2109116
+Z15495,Supplier,Supplier S60,ES,41.3825802,2.177073
+Z15496,Supplier,Supplier T60,PL,52.2333742,21.0711489
+Z15497,Supplier,Supplier U60,CH,47.2682923,8.8191613
+Z15498,Supplier,Supplier V60,PL,52.6455252,16.8099756
+Z15499,Supplier,Supplier W60,DE,48.3939085,8.9722782
+Z15500,Supplier,Supplier X60,DE,48.6986798,9.7065009
+Z15544,Supplier,Supplier Y60,DE,47.7617515,8.8348709
+Z15587,Supplier,Supplier Z60,DE,14.6124732,103.3106407
+Z15610,Supplier,Supplier A61,DE,51.1657,10.4515
+Z15672,Supplier,Supplier B61,DE,51.9869477,9.8253376
+Z15673,Supplier,Supplier C61,CN,32.1684583,120.0165362
+Z15674,Supplier,Supplier D61,DE,53.550341,10.000654
+Z15768,Supplier,Supplier E61,AT,48.3314101,16.0568345
+Z15788,Supplier,Supplier F61,PL,52.1041197,21.2681092
+Z1581,Supplier,Supplier G61,DE,52.0191005,8.531007
+Z15830,Supplier,Supplier H61,NG,6.5974727,3.3432815
+Z15835,Supplier,Supplier I61,DE,53.550341,10.000654
+Z15860,Supplier,Supplier J61,KR,37.2020663,126.8392643
+Z15865,Supplier,Supplier K61,PL,52.2222131,19.3874589
+Z15873,Supplier,Supplier L61,IN,21.7157199,73.1497026
+Z15885,Supplier,Supplier M61,NG,6.5247655,3.3516348
+Z15887,Supplier,Supplier N61,BE,51.0676205,5.0878638
+Z15892,Supplier,Supplier O61,IN,30.9763026,76.7674001
+Z15897,Supplier,Supplier P61,BE,50.6152381,5.5089437
+Z15927,Supplier,Supplier Q61,DE,50.0820384,8.2416556
+Z15932,Supplier,Supplier R61,DE,53.7089898,9.9891914
+Z15960,Supplier,Supplier S61,PL,51.9194,19.1451
+Z16013,Supplier,Supplier T61,NG,6.5398493,3.312384
+Z16021,Supplier,Supplier U61,HK,22.2820777,114.1891587
+Z16032,Supplier,Supplier V61,CN,23.1474563,-82.3562691
+Z16084,Supplier,Supplier W61,IT,45.483715,9.4685402
+Z16195,Supplier,Supplier X61,DE,48.5728929,7.8109768
+Z16197,Supplier,Supplier Y61,DE,51.1721629,7.0845893
+Z16211,Supplier,Supplier Z61,AE,25.0742823,55.1885387
+Z16231,Supplier,Supplier A62,IN,19.054999,72.8692035
+Z16237,Supplier,Supplier B62,DE,51.1657,10.4515
+Z16241,Supplier,Supplier C62,CN,56.3264816,44.0051395
+Z16242,Supplier,Supplier D62,KE,-1.3026148,36.828842
+Z16317,Supplier,Supplier E62,BR,-23.1531055,-47.0580347
+Z16358,Supplier,Supplier F62,MX,25.8810158,-97.5064866
+Z16383,Supplier,Supplier G62,DE,52.4063738,12.1561742
+Z16435,Supplier,Supplier H62,IT,44.8861753,8.6829041
+Z16450,Supplier,Supplier I62,BR,-23.1531055,-47.0580347
+Z16453,Supplier,Supplier J62,AT,47.5269086,14.2633436
+Z16487,Supplier,Supplier K62,EG,29.9870753,31.2118063
+Z1651,Supplier,Supplier L62,DE,48.8012983,9.0150026
+Z16537,Supplier,Supplier M62,BR,-23.5506507,-46.6333824
+Z16567,Supplier,Supplier N62,DE,48.0615171,12.220026
+Z16571,Supplier,Supplier O62,GB,51.5074456,-0.1277653
+Z16609,Supplier,Supplier P62,IN,12.9767936,77.590082
+Z16616,Supplier,Supplier Q62,DE,50.8031684,6.4820806
+Z16630,Supplier,Supplier R62,CN,35.8617,104.1954
+Z16656,Supplier,Supplier S62,NG,6.4855737,3.3539907
+Z16718,Supplier,Supplier T62,DE,49.142291,9.218655
+Z16740,Supplier,Supplier U62,CN,12.7219635,102.1316717
+Z16741,Supplier,Supplier V62,CH,47.4935369,7.5910891
+Z16764,Supplier,Supplier W62,CN,44.4580704,7.5581367
+Z168300,Supplier,Supplier X62,DE,51.1657,10.4515
+Z16879,Supplier,Supplier Y62,BR,-23.4820987,-51.795788
+Z16898,Supplier,Supplier Z62,CN,35.8617,104.1954
+Z16909,Supplier,Supplier A63,IN,20.4169701,72.833173
+Z16925,Supplier,Supplier B63,CZ,49.8175,15.473
+Z16936,Supplier,Supplier C63,IN,23.6012628,72.3741516
+Z16969,Supplier,Supplier D63,NG,6.4516268,3.4117815
+Z17043,Supplier,Supplier E63,JP,34.9751974,138.3831697
+Z17047,Supplier,Supplier F63,BR,-29.614306,-52.193159
+Z17062,Supplier,Supplier G63,PL,52.2333742,21.0711489
+Z17092,Supplier,Supplier H63,CN,35.8617,104.1954
+Z17102,Supplier,Supplier I63,ES,41.6521342,-0.8809428
+Z17120,Supplier,Supplier J63,BR,-14.235,-51.9253
+Z17126,Supplier,Supplier K63,DE,52.5173885,13.3951309
+Z17215,Supplier,Supplier L63,DE,51.1657,10.4515
+Z17217,Supplier,Supplier M63,DE,46.1736551,-123.6768207
+Z17229,Supplier,Supplier N63,GB,53.2789347,-2.9022507
+Z17272,Supplier,Supplier O63,IN,19.0308262,73.0198537
+Z17279,Supplier,Supplier P63,ID,-6.9903988,110.4229104
+Z17292,Supplier,Supplier Q63,CN,12.7219635,102.1316717
+Z17304,Supplier,Supplier R63,IN,19.054999,72.8692035
+Z17325,Supplier,Supplier S63,CN,22.1526454,113.568041
+Z17354,Supplier,Supplier T63,SG,1.2899175,103.8519072
+Z17402,Supplier,Supplier U63,AE,25.0742823,55.1885387
+Z17407,Supplier,Supplier V63,MX,23.6345,-102.5528
+Z17412,Supplier,Supplier W63,ID,-6.1761924,106.6382161
+Z17582,Supplier,Supplier X63,FR,43.5164896,5.4480536
+Z17599,Supplier,Supplier Y63,DE,51.1657,10.4515
+Z17601,Supplier,Supplier Z63,ES,39.151212,-0.4346556
+Z17618,Supplier,Supplier A64,CN,35.2477266,115.4464761
+Z17630,Supplier,Supplier B64,IN,19.1943294,72.9701779
+Z17661,Supplier,Supplier C64,HK,22.3193,114.1694
+Z17703,Supplier,Supplier D64,MX,19.4838908,-99.1843937
+Z17736,Supplier,Supplier E64,PL,53.2406366,20.1846865
+Z17749,Supplier,Supplier F64,DE,47.8736185,7.6580337
+Z17761,Supplier,Supplier G64,ES,40.3007913,-3.4381627
+Z17778,Supplier,Supplier H64,CO,6.2697325,-75.6025597
+Z17779,Supplier,Supplier I64,CN,23.1474563,-82.3562691
+Z17785,Supplier,Supplier J64,AR,-31.4166867,-64.1834193
+Z17786,Supplier,Supplier K64,KE,-1.3026148,36.828842
+Z17795,Supplier,Supplier L64,CN,35.9897899,90.1022249
+Z17806,Supplier,Supplier M64,CN,33.6256921,90.213464
+Z17822,Supplier,Supplier N64,ID,-6.1754049,106.827168
+Z17828,Supplier,Supplier O64,FR,48.7698937,2.0381228
+Z17834,Supplier,Supplier P64,BR,-23.5506507,-46.6333824
+Z17841,Supplier,Supplier Q64,IN,17.360589,78.4740613
+Z17868,Supplier,Supplier R64,ES,40.4637,-3.7492
+Z17905,Supplier,Supplier S64,SG,1.2899175,103.8519072
+Z17919,Supplier,Supplier T64,CN,35.8617,104.1954
+Z17947,Supplier,Supplier U64,CN,42.4660173,-6.6043803
+Z18006,Supplier,Supplier V64,IN,19.054999,72.8692035
+Z1801,Supplier,Supplier W64,DE,53.550341,10.000654
+Z18021,Supplier,Supplier X64,CN,31.311123,120.6212881
+Z18105,Supplier,Supplier Y64,IN,23.0215374,72.5800568
+Z18113,Supplier,Supplier Z64,ID,-6.2553138,107.1450733
+Z18278,Supplier,Supplier A65,IT,45.698679,9.411648
+Z18309,Supplier,Supplier B65,ID,-7.2462836,112.7377674
+Z18319,Supplier,Supplier C65,US,32.7174202,-117.162772
+Z18334,Supplier,Supplier D65,DE,53.550341,10.000654
+Z18344,Supplier,Supplier E65,CN,35.8617,104.1954
+Z18347,Supplier,Supplier F65,TH,13.7238221,100.507985
+Z18358,Supplier,Supplier G65,DE,51.264018,7.1780374
+Z1881,Supplier,Supplier H65,DE,53.0758196,8.8071646
+Z19021,Supplier,Supplier I65,FR,45.2643422,1.8216343
+Z19048,Supplier,Supplier J65,ES,41.4493539,2.248254
+Z19052,Supplier,Supplier K65,CH,47.5581077,7.5878261
+Z19056,Supplier,Supplier L65,ID,-6.2349858,106.9945444
+Z19059,Supplier,Supplier M65,ES,40.416782,-3.703507
+Z19060,Supplier,Supplier N65,NG,9.082,8.6753
+Z19062,Supplier,Supplier O65,DE,51.4582235,7.0158171
+Z19063,Supplier,Supplier P65,NL,52.3730796,4.8924534
+Z19076,Supplier,Supplier Q65,MY,3.0448394,101.4447363
+Z19092,Supplier,Supplier R65,IN,34.0747444,74.8204443
+Z19168,Supplier,Supplier S65,IN,30.9763026,76.7674001
+Z19177,Supplier,Supplier T65,PL,51.7472867,18.079532
+Z19202,Supplier,Supplier U65,DE,49.8105138,7.1229799
+Z1921,Supplier,Supplier V65,DE,51.1657,10.4515
+Z19213,Supplier,Supplier W65,DE,51.3406321,12.3747329
+Z19219,Supplier,Supplier X65,PL,52.2333742,21.0711489
+Z19230,Supplier,Supplier Y65,IE,53.2698337,-6.2245713
+Z19254,Supplier,Supplier Z65,IN,19.054999,72.8692035
+Z19279,Supplier,Supplier A66,TH,13.5992568,100.2695305
+Z19282,Supplier,Supplier B66,IN,20.2736768,73.0045787
+Z19294,Supplier,Supplier C66,CN,25.0363006,102.7086139
+Z19295,Supplier,Supplier D66,ID,-7.4539769,112.6593869
+Z19345,Supplier,Supplier E66,BE,51.0281381,4.4803453
+Z19348,Supplier,Supplier F66,MX,23.6345,-102.5528
+Z19393,Supplier,Supplier G66,MX,20.8052225,-99.8837376
+Z19410,Supplier,Supplier H66,CN,23.0501661,112.4603629
+Z19421,Supplier,Supplier I66,MX,20.7211203,-103.3913671
+Z19424,Supplier,Supplier J66,NG,6.4550575,3.3941795
+Z19431,Supplier,Supplier K66,US,40.8922694,-74.4774255
+Z19437,Supplier,Supplier L66,US,40.518157,-74.4113926
+Z19453,Supplier,Supplier M66,SG,1.2899175,103.8519072
+Z19491,Supplier,Supplier N66,US,35.7803977,-78.6390989
+Z19503,Supplier,Supplier O66,CN,22.5197073,113.3872302
+Z19506,Supplier,Supplier P66,ES,41.3825802,2.177073
+Z19517,Supplier,Supplier Q66,ID,-7.2462836,112.7377674
+Z19519,Supplier,Supplier R66,US,37.970495,-87.5715641
+Z19522,Supplier,Supplier S66,TH,13.9727068,100.5197693
+Z19524,Supplier,Supplier T66,TH,13.7238221,100.507985
+Z19533,Supplier,Supplier U66,TH,15.87,100.9925
+Z19543,Supplier,Supplier V66,US,41.8755616,-87.6244212
+Z19549,Supplier,Supplier W66,IN,20.2736768,73.0045787
+Z19557,Supplier,Supplier X66,IN,19.054999,72.8692035
+Z19569,Supplier,Supplier Y66,US,40.8509333,-73.9701382
+Z19588,Supplier,Supplier Z66,CN,36.0461488,101.4296692
+Z1961,Supplier,Supplier A67,CH,47.5399823,7.7230178
+Z19628,Supplier,Supplier B67,IN,29.6481048,77.0778435
+Z19641,Supplier,Supplier C67,DE,47.6556421,7.565174
+Z19645,Supplier,Supplier D67,MX,19.4326296,-99.1331785
+Z19647,Supplier,Supplier E67,TH,13.7238221,100.507985
+Z19669,Supplier,Supplier F67,KE,-1.3026148,36.828842
+Z19673,Supplier,Supplier G67,BR,-23.1887668,-46.884506
+Z19682,Supplier,Supplier H67,PL,51.9194,19.1451
+Z20015,Supplier,Supplier I67,CN,32.5468947,96.1372987
+Z20016,Supplier,Supplier J67,CN,23.1474563,-82.3562691
+Z20017,Supplier,Supplier K67,CN,28.9611448,93.0687529
+Z20023,Supplier,Supplier L67,CN,35.8617,104.1954
+Z20029,Supplier,Supplier M67,CN,35.8617,104.1954
+Z20036,Supplier,Supplier N67,CN,28.9611448,93.0687529
+Z20037,Supplier,Supplier O67,CN,35.8617,104.1954
+Z20043,Supplier,Supplier P67,CN,35.8617,104.1954
+Z20044,Supplier,Supplier Q67,CN,35.8617,104.1954
+Z20048,Supplier,Supplier R67,CN,28.6636117,97.465733
+Z20049,Supplier,Supplier S67,CN,28.9611448,93.0687529
+Z20053,Supplier,Supplier T67,CN,55.9430491,-3.1797975
+Z20054,Supplier,Supplier U67,CN,35.8617,104.1954
+Z20055,Supplier,Supplier V67,CN,35.8617,104.1954
+Z20058,Supplier,Supplier W67,CN,35.8617,104.1954
+Z2011,Supplier,Supplier X67,NL,51.5856184,5.0660616
+Z20138,Supplier,Supplier Y67,CN,35.8617,104.1954
+Z20139,Supplier,Supplier Z67,CN,22.5900106,114.2800981
+Z20227,Supplier,Supplier A68,CN,35.8617,104.1954
+Z20228,Supplier,Supplier B68,CN,35.8617,104.1954
+Z20345,Supplier,Supplier C68,CN,35.8617,104.1954
+Z20346,Supplier,Supplier D68,CN,35.8617,104.1954
+Z20347,Supplier,Supplier E68,CN,31.8202125,95.1029703
+Z20348,Supplier,Supplier F68,CN,35.8617,104.1954
+Z20349,Supplier,Supplier G68,CN,55.9430491,-3.1797975
+Z20353,Supplier,Supplier H68,CN,35.8617,104.1954
+Z20354,Supplier,Supplier I68,CN,55.9430491,-3.1797975
+Z20391,Supplier,Supplier J68,CN,28.2014304,120.9363512
+Z20639,Supplier,Supplier K68,CN,55.9430491,-3.1797975
+Z20642,Supplier,Supplier L68,CN,35.8617,104.1954
+Z20681,Supplier,Supplier M68,CN,12.7219635,102.1316717
+Z20715,Supplier,Supplier N68,PL,51.9194,19.1451
+Z20717,Supplier,Supplier O68,BR,-23.0908356,-47.2180677
+Z20721,Supplier,Supplier P68,HU,46.8415803,16.8456316
+Z20723,Supplier,Supplier Q68,FR,50.2993922,2.8016229
+Z20726,Supplier,Supplier R68,CN,55.9430491,-3.1797975
+Z21002,Supplier,Supplier S68,CN,31.2312707,121.4700152
+Z21004,Supplier,Supplier T68,CN,31.2312707,121.4700152
+Z21006,Supplier,Supplier U68,CN,33.0000001,119.9999999
+Z21007,Supplier,Supplier V68,CN,31.2312707,121.4700152
+Z21008,Supplier,Supplier W68,CN,31.2312707,121.4700152
+Z21009,Supplier,Supplier X68,CN,35.8617,104.1954
+Z21035,Supplier,Supplier Y68,CN,31.2312707,121.4700152
+Z21044,Supplier,Supplier Z68,CN,36.737748,119.1081403
+Z21047,Supplier,Supplier A69,CN,35.000074,104.999927
+Z21079,Supplier,Supplier B69,CN,31.2312707,121.4700152
+Z21083,Supplier,Supplier C69,CN,35.8617,104.1954
+Z21089,Supplier,Supplier D69,CN,31.4590371,121.1264772
+Z21117,Supplier,Supplier E69,CN,31.4461687,84.0517568
+Z21118,Supplier,Supplier F69,CN,35.000074,104.999927
+Z21125,Supplier,Supplier G69,CN,55.9430491,-3.1797975
+Z21153,Supplier,Supplier H69,CN,12.7219635,102.1316717
+Z21207,Supplier,Supplier I69,CN,55.9430491,-3.1797975
+Z21242,Supplier,Supplier J69,NG,6.6244986,3.0822509
+Z21247,Supplier,Supplier K69,NG,6.709,3.237
+Z21264,Supplier,Supplier L69,NG,6.6244986,3.0822509
+Z21272,Supplier,Supplier M69,NG,6.5974727,3.3432815
+Z21287,Supplier,Supplier N69,CZ,50.6678922,14.0407852
+Z21291,Supplier,Supplier O69,SG,1.2899175,103.8519072
+Z21292,Supplier,Supplier P69,DE,48.0321101,12.5654359
+Z21299,Supplier,Supplier Q69,FR,46.2276,2.2137
+Z2211,Supplier,Supplier R69,DE,49.5829885,7.606534
+Z2223,Supplier,Supplier S69,DE,51.8989989,9.5741099
+Z2381,Supplier,Supplier T69,DE,53.550341,10.000654
+Z2391,Supplier,Supplier U69,DE,52.3744779,9.7385532
+Z2426,Supplier,Supplier V69,DE,51.1657,10.4515
+Z251017,Supplier,Supplier W69,CN,35.8617,104.1954
+Z251027,Supplier,Supplier X69,IN,22.2973142,73.1942567
+Z251037,Supplier,Supplier Y69,NG,6.9788582,3.4389293
+Z251050,Supplier,Supplier Z69,IN,23.2969449,72.3306381
+Z251059,Supplier,Supplier A70,NG,6.4550575,3.3941795
+Z251062,Supplier,Supplier B70,NG,9.0230527,7.4864077
+Z25115,Supplier,Supplier C70,FR,45.7578137,4.8320114
+Z25134,Supplier,Supplier D70,IN,12.9767936,77.590082
+Z25154,Supplier,Supplier E70,AE,25.0742823,55.1885387
+Z25174,Supplier,Supplier F70,CN,23.0004201,102.6207559
+Z25202,Supplier,Supplier G70,PL,52.4006632,16.9197326
+Z25248,Supplier,Supplier H70,BR,-24.008979,-46.4144939
+Z25260,Supplier,Supplier I70,NL,51.3924489,6.1511724
+Z25303,Supplier,Supplier J70,DE,48.7784485,9.1800132
+Z25333,Supplier,Supplier K70,NL,52.0522872,5.2834752
+Z25343,Supplier,Supplier L70,DE,49.2800542,11.4585353
+Z25391,Supplier,Supplier M70,CH,47.6960491,8.634513
+Z25397,Supplier,Supplier N70,NG,6.4550575,3.3941795
+Z25410,Supplier,Supplier O70,BR,-23.5506507,-46.6333824
+Z25421,Supplier,Supplier P70,ES,41.3825802,2.177073
+Z25442,Supplier,Supplier Q70,DE,51.2973261,6.8493503
+Z25444,Supplier,Supplier R70,DE,52.4063738,12.1561742
+Z25488,Supplier,Supplier S70,DE,51.1657,10.4515
+Z25492,Supplier,Supplier T70,DE,51.1657,10.4515
+Z25493,Supplier,Supplier U70,IT,45.4641943,9.1896346
+Z25503,Supplier,Supplier V70,CN,35.8617,104.1954
+Z25516,Supplier,Supplier W70,ID,-6.1761924,106.6382161
+Z25520,Supplier,Supplier X70,IN,18.5213738,73.8545071
+Z25524,Supplier,Supplier Y70,KR,37.456,126.7052
+Z25525,Supplier,Supplier Z70,FR,48.8356649,2.240206
+Z25528,Supplier,Supplier A71,DE,51.5255661,12.342857
+Z25541,Supplier,Supplier B71,ZA,-29.861825,31.009909
+Z25554,Supplier,Supplier C71,IN,19.1943294,72.9701779
+Z25573,Supplier,Supplier D71,TH,13.1857117,101.1210777
+Z25581,Supplier,Supplier E71,GB,53.0465084,-2.9937869
+Z25585,Supplier,Supplier F71,PL,52.2333742,21.0711489
+Z25713,Supplier,Supplier G71,MY,3.0988792,101.6454202
+Z25736,Supplier,Supplier H71,TH,13.7238221,100.507985
+Z25774,Supplier,Supplier I71,CN,12.7219635,102.1316717
+Z25789,Supplier,Supplier J71,SE,55.4815088,13.554477
+Z25796,Supplier,Supplier K71,PL,51.2691744,16.7083805
+Z25805,Supplier,Supplier L71,US,41.083064,-81.518485
+Z25874,Supplier,Supplier M71,CN,31.8665676,117.281428
+Z25936,Supplier,Supplier N71,TH,13.7238221,100.507985
+Z25937,Supplier,Supplier O71,CN,28.6636117,97.465733
+Z25989,Supplier,Supplier P71,ID,-6.2628908,106.8822289
+Z26007,Supplier,Supplier Q71,MX,23.6345,-102.5528
+Z26045,Supplier,Supplier R71,US,41.8755616,-87.6244212
+Z2841,Supplier,Supplier S71,DE,53.550341,10.000654
+Z2871,Supplier,Supplier T71,DE,53.550341,10.000654
+Z30113,Supplier,Supplier U71,BR,-23.3644621,-46.7484765
+Z30153,Supplier,Supplier V71,BR,-26.9195567,-49.0658025
+Z30215,Supplier,Supplier W71,BR,-23.5506507,-46.6333824
+Z30219,Supplier,Supplier X71,BR,-23.5112184,-46.8764612
+Z30247,Supplier,Supplier Y71,BR,-26.9195567,-49.0658025
+Z30253,Supplier,Supplier Z71,BR,-23.5506507,-46.6333824
+Z30261,Supplier,Supplier A72,BR,-22.8620175,-47.2164219
+Z30280,Supplier,Supplier B72,BR,-23.08639,-46.95056
+Z30314,Supplier,Supplier C72,BR,-14.235,-51.9253
+Z30320,Supplier,Supplier D72,BR,-14.235,-51.9253
+Z30365,Supplier,Supplier E72,BR,-23.0908356,-47.2180677
+Z30377,Supplier,Supplier F72,MX,23.6345,-102.5528
+Z30380,Supplier,Supplier G72,US,40.7970382,-74.4809868
+Z30413,Supplier,Supplier H72,BE,51.2519515,4.27803
+Z3171,Supplier,Supplier I72,DE,51.1657,10.4515
+Z3321,Supplier,Supplier J72,DE,51.5142273,7.4652789
+Z3381,Supplier,Supplier K72,CH,49.1868398,13.7172021
+Z3421,Supplier,Supplier L72,DE,53.550341,10.000654
+Z3461,Supplier,Supplier M72,DE,51.0862467,6.5848937
+Z3551,Supplier,Supplier N72,DE,52.665257,8.2363523
+Z3561,Supplier,Supplier O72,DE,53.4807708,9.3208188
+Z3591,Supplier,Supplier P72,BE,50.0088658,4.2140423
+Z3631,Supplier,Supplier Q72,DE,49.3539802,8.1350021
+Z3671,Supplier,Supplier R72,DE,50.9220931,6.3611015
+Z3711,Supplier,Supplier S72,DE,53.550341,10.000654
+Z3721,Supplier,Supplier T72,DE,53.550341,10.000654
+Z3751,Supplier,Supplier U72,ES,41.3825802,2.177073
+Z3791,Supplier,Supplier V72,DE,48.4865898,8.4961204
+Z3961,Supplier,Supplier W72,FR,46.2276,2.2137
+Z4041,Supplier,Supplier X72,NL,51.5856184,5.0660616
+Z4081,Supplier,Supplier Y72,DE,51.4582235,7.0158171
+Z4141,Supplier,Supplier Z72,DE,51.4582235,7.0158171
+Z4161,Supplier,Supplier A73,DE,48.3789351,8.8877867
+Z4171,Supplier,Supplier B73,AT,48.2083537,16.3725042
+Z4331,Supplier,Supplier C73,DE,50.5542328,9.6770448
+Z4401,Supplier,Supplier D73,DE,52.5055795,13.5590615
+Z4551,Supplier,Supplier E73,DE,50.0275681,7.1813233
+Z4581,Supplier,Supplier F73,DE,50.3090305,7.6044602
+Z4591,Supplier,Supplier G73,DE,49.7816986,9.6796728
+Z4601,Supplier,Supplier H73,CH,47.521079,8.3301378
+Z4621,Supplier,Supplier I73,DE,53.1608729,7.3707149
+Z4687,Supplier,Supplier J73,FR,48.9146078,2.3821895
+Z4769,Supplier,Supplier K73,DE,49.5462349,8.6717458
+Z4779,Supplier,Supplier L73,DE,48.8423558,10.8562708
+Z4831,Supplier,Supplier M73,DE,51.3331205,6.5623343
+Z4842,Supplier,Supplier N73,DE,14.6124732,103.3106407
+Z4852,Supplier,Supplier O73,DE,50.0820384,8.2416556
+Z4877,Supplier,Supplier P73,DE,51.5142273,7.4652789
+Z4878,Supplier,Supplier Q73,DE,48.8081923,13.54737
+Z4898,Supplier,Supplier R73,NL,52.3730796,4.8924534
+Z4901,Supplier,Supplier S73,TH,13.7238221,100.507985
+Z4923,Supplier,Supplier T73,DE,52.5173885,13.3951309
+Z4977,Supplier,Supplier U73,IT,41.8719,12.5674
+Z4980,Supplier,Supplier V73,US,39.100105,-94.5781416
+Z50008,Supplier,Supplier W73,CN,35.8617,104.1954
+Z50057,Supplier,Supplier X73,TH,12.7943716,101.3705344
+Z50063,Supplier,Supplier Y73,CH,46.8182,8.2275
+Z50072,Supplier,Supplier Z73,CN,30.2762431,119.9746471
+Z50088,Supplier,Supplier A74,CN,31.2312707,121.4700152
+Z50117,Supplier,Supplier B74,DE,49.872775,8.651177
+Z50143,Supplier,Supplier C74,DE,50.7928332,7.2070774
+Z50149,Supplier,Supplier D74,US,40.5464326,-74.4660542
+Z50165,Supplier,Supplier E74,SG,1.2899175,103.8519072
+Z50186,Supplier,Supplier F74,DE,50.9110365,13.0331023
+Z5019,Supplier,Supplier G74,BE,51.127824,4.9499755
+Z50205,Supplier,Supplier H74,MX,23.6345,-102.5528
+Z50207,Supplier,Supplier I74,CN,23.1474563,-82.3562691
+Z50209,Supplier,Supplier J74,BR,-23.5506507,-46.6333824
+Z50215,Supplier,Supplier K74,CN,35.8617,104.1954
+Z5062,Supplier,Supplier L74,DE,47.7320433,8.8403886
+Z5157,Supplier,Supplier M74,IN,19.054999,72.8692035
+Z5158,Supplier,Supplier N74,SG,1.2899175,103.8519072
+Z5168,Supplier,Supplier O74,MX,19.4326296,-99.1331785
+Z5183,Supplier,Supplier P74,DE,49.872775,8.651177
+Z52143,Supplier,Supplier Q74,FR,43.7084065,-1.0518771
+Z52158,Supplier,Supplier R74,US,41.1253903,-87.848682
+Z52185,Supplier,Supplier S74,IN,21.7080427,72.9956936
+Z52218,Supplier,Supplier T74,DE,51.2254018,6.7763137
+Z52219,Supplier,Supplier U74,BG,49.0563595,-0.2169256
+Z52227,Supplier,Supplier V74,NL,51.6339484,4.3680313
+Z52267,Supplier,Supplier W74,ID,-6.2628908,106.8822289
+Z52297,Supplier,Supplier X74,ES,41.3825802,2.177073
+Z52502,Supplier,Supplier Y74,CN,31.2312707,121.4700152
+Z52511,Supplier,Supplier Z74,EG,29.9144511,32.3982337
+Z52517,Supplier,Supplier A75,NG,9.6000359,7.9999721
+Z525276,Supplier,Supplier B75,DE,53.550341,10.000654
+Z52642,Supplier,Supplier C75,NG,6.5974727,3.3432815
+Z52653,Supplier,Supplier D75,KE,-1.3026148,36.828842
+Z52657,Supplier,Supplier E75,CN,28.9611448,93.0687529
+Z541,Supplier,Supplier F75,DE,51.4582235,7.0158171
+Z581,Supplier,Supplier G75,DE,50.471845,11.2814285
+Z661,Supplier,Supplier H75,DE,51.3331205,6.5623343
+Z691,Supplier,Supplier I75,DE,50.1106444,8.6820917
+Z75,Supplier,Supplier J75,DE,51.1657,10.4515
+Z761,Supplier,Supplier K75,DE,50.1106444,8.6820917
+Z80006,Supplier,Supplier L75,ID,-7.4539769,112.6593869
+Z80007,Supplier,Supplier M75,ID,-6.1754049,106.827168
+Z80008,Supplier,Supplier N75,ID,-6.2349858,106.9945444
+Z80009,Supplier,Supplier O75,ID,-7.4539769,112.6593869
+Z80011,Supplier,Supplier P75,ID,-6.2838694,106.8048297
+Z80012,Supplier,Supplier Q75,ID,-6.2349858,106.9945444
+Z80013,Supplier,Supplier R75,ID,-6.1754049,106.827168
+Z80015,Supplier,Supplier S75,ID,-7.2462836,112.7377674
+Z80018,Supplier,Supplier T75,ID,-7.7508114,112.818483
+Z80024,Supplier,Supplier U75,ID,-7.6532322,112.6872932
+Z80025,Supplier,Supplier V75,ID,-7.2462836,112.7377674
+Z80029,Supplier,Supplier W75,ID,-7.7508114,112.818483
+Z80087,Supplier,Supplier X75,ID,-6.1761924,106.6382161
+Z801,Supplier,Supplier Y75,NL,52.0259814,5.5539239
+Z80141,Supplier,Supplier Z75,ID,-7.2462836,112.7377674
+Z80144,Supplier,Supplier A76,ID,-6.9218457,107.6070833
+Z80150,Supplier,Supplier B76,ID,-7.9771308,112.6340265
+Z80156,Supplier,Supplier C76,ID,-6.8891904,107.6404716
+Z80158,Supplier,Supplier D76,ID,-7.9778384,110.3672257
+Z80162,Supplier,Supplier E76,ID,-7.9771308,112.6340265
+Z80168,Supplier,Supplier F76,ID,-7.2462836,112.7377674
+Z80174,Supplier,Supplier G76,ID,-6.1754049,106.827168
+Z80180,Supplier,Supplier H76,ID,-6.1754049,106.827168
+Z80181,Supplier,Supplier I76,ID,-7.9771308,112.6340265
+Z80186,Supplier,Supplier J76,ID,-7.5413378,112.5094975
+Z80210,Supplier,Supplier K76,ID,-6.2349858,106.9945444
+Z80225,Supplier,Supplier L76,ID,-6.2553138,107.1450733
+Z80262,Supplier,Supplier M76,ID,-6.1754049,106.827168
+Z80690,Supplier,Supplier N76,US,40.1856597,-75.451571
+Z80735,Supplier,Supplier O76,ID,-7.4539769,112.6593869
+Z80750,Supplier,Supplier P76,ID,-7.9771308,112.6340265
+Z80862,Supplier,Supplier Q76,MY,2.895242,101.4686241
+Z841,Supplier,Supplier R76,DE,53.550341,10.000654
+Z861,Supplier,Supplier S76,DE,51.434999,6.759562
+Z93011,Supplier,Supplier T76,BR,-23.08639,-46.95056
+Z941,Supplier,Supplier U76,DE,51.3155092,6.2714171

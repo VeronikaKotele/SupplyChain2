@@ -1,8 +1,8 @@
 import { Color3 } from '@babylonjs/core';
-import type { LocationMarker } from '../components/LocationMarker';
+import type { EntityMarker } from '../components/EntityMarker';
 import { loadRowsFromCSV } from './scvLoader';
 
-interface LocationCSVRow {
+interface entityCSVRow {
   id: string;
   type: string;
   latitude: string;
@@ -15,9 +15,9 @@ interface LocationCSVRow {
 }
 
 /**
- * Converts CSV row to LocationMarker object
+ * Converts CSV row to EntityMarker object
  */
-function csvRowToLocationMarker(row: LocationCSVRow): LocationMarker {
+function csvRowToEntityMarker(row: entityCSVRow): EntityMarker {
   return {
     id: row.id,
     type: row.type as 'marker',
@@ -34,16 +34,16 @@ function csvRowToLocationMarker(row: LocationCSVRow): LocationMarker {
 }
 
 /**
- * Loads location markers from a CSV file
+ * Loads entity markers from a CSV file
  * @param csvPath - Path to the CSV file (relative to public folder)
- * @returns Promise that resolves to an array of LocationMarker objects
+ * @returns Promise that resolves to an array of EntityMarker objects
  */
-export async function loadLocationsFromCSV(csvPath: string): Promise<LocationMarker[]> {
+export async function loadEntitiesFromCSV(csvPath: string): Promise<EntityMarker[]> {
   try {
     const rows = await loadRowsFromCSV(csvPath);
-    return rows.map(csvRowToLocationMarker);
+    return rows.map(csvRowToEntityMarker);
   } catch (error) {
-    console.error('Error loading locations from CSV:', error);
+    console.error('Error loading entities from CSV:', error);
     return [];
   }
 }

@@ -30,7 +30,7 @@ export async function loadRowsFromCSV(csvPath: string): Promise<any[]> {
     
     return rows;
   } catch (error) {
-    console.error('Error loading locations from CSV:', error);
+    console.error('Error loading data from CSV:', error);
     return [];
   }
 }

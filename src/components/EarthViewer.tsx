@@ -15,14 +15,14 @@ import {
 } from '@babylonjs/core';
 import '@babylonjs/loaders/OBJ';
 import { latLonToVector3 } from './3dMathUtils';
-import type { LocationMarker } from './LocationMarker';
+import type { EntityMarker } from './EntityMarker';
 import type { ConnectionMarker } from './ConnectionMarker';
 
 interface EarthViewerProps {
   modelPath: string;
   materialPath?: string;
   scale?: number;
-  locations?: LocationMarker[];
+  entities?: EntityMarker[];
   connections?: ConnectionMarker[];
   earthRadius?: number;
   maxConnectionAmount?: number; // Max amount for scaling line thickness
@@ -32,7 +32,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   modelPath, 
   materialPath,
   scale = 1.0,
-  locations = [],
+  entities = [],
   connections = [],
   earthRadius = 1.0,
   maxConnectionAmount = 100
@@ -40,10 +40,10 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const engineRef = useRef<Engine | null>(null);
   const sceneRef = useRef<Scene | null>(null);
-  const locationMarkersRef = useRef<Mesh[]>([]);
+  const entityMarkersRef = useRef<Mesh[]>([]);
   const connectionLinesRef = useRef<Mesh[]>([]);
 
-  console.log('EarthViewer props:', {locations, connections });
+  console.log('EarthViewer props:', {entities, connections });
 
   // create the earth mesh and scene
   useEffect(() => {
@@ -163,56 +163,56 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
-      locationMarkersRef.current.forEach(marker => marker.dispose());
+      entityMarkersRef.current.forEach(marker => marker.dispose());
       connectionLinesRef.current.forEach(line => line.dispose());
       scene.dispose();
       engine.dispose();
     };
-  }, [modelPath, materialPath, scale, locations, connections, earthRadius, maxConnectionAmount]);
+  }, [modelPath, materialPath, scale, entities, connections, earthRadius, maxConnectionAmount]);
 
-  // Update location markers when locations prop changes
+  // Update entity markers when entities prop changes
   useEffect(() => {
     if (!sceneRef.current) return;
-    if (locations.length === 0) return; // Don't process empty locations array
+    if (entities.length === 0) return; // Don't process empty entities array
 
     const scene = sceneRef.current;
 
     // Clear existing markers
-    locationMarkersRef.current.forEach(marker => marker.dispose());
-    locationMarkersRef.current = [];
+    entityMarkersRef.current.forEach(marker => marker.dispose());
+    entityMarkersRef.current = [];
 
     // Create new markers
-    locations.forEach((location) => {
+    entities.forEach((entity) => {
       const sphere = MeshBuilder.CreateSphere(
-        `location-${location.id}`,
-        { diameter: location.size || 0.05 },
+        `entity-${entity.id}`,
+        { diameter: entity.size || 0.05 },
         scene
       );
 
       const position = latLonToVector3(
-        location.latitude,
-        location.longitude,
+        entity.latitude,
+        entity.longitude,
         earthRadius * 1.05 // Slightly above earth surface
       );
       sphere.position = position;
 
-      const markerMat = new StandardMaterial(`mat-${location.id}`, scene);
-      markerMat.diffuseColor = location.color || new Color3(1, 0, 0);
-      markerMat.emissiveColor = location.color?.scale(0.3) || new Color3(0.3, 0, 0);
+      const markerMat = new StandardMaterial(`mat-${entity.id}`, scene);
+      markerMat.diffuseColor = entity.color || new Color3(1, 0, 0);
+      markerMat.emissiveColor = entity.color?.scale(0.3) || new Color3(0.3, 0, 0);
       markerMat.specularColor = new Color3(0, 0, 0);
       sphere.material = markerMat;
 
-      locationMarkersRef.current.push(sphere);
+      entityMarkersRef.current.push(sphere);
     });
 
-    console.log('Created', locationMarkersRef.current.length, 'location markers');
-  }, [locations, earthRadius]);
+    console.log('Created', entityMarkersRef.current.length, 'entity markers');
+  }, [entities, earthRadius]);
 
   // Update connection lines when connections prop changes
   useEffect(() => {
     if (!sceneRef.current) return;
     if (connections.length === 0) return;
-    if (locations.length === 0) return; // Need locations to draw connections
+    if (entities.length === 0) return; // Need entities to draw connections
 
     const scene = sceneRef.current;
 
@@ -220,24 +220,24 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     connectionLinesRef.current.forEach(line => line.dispose());
     connectionLinesRef.current = [];
 
-    // Create a map of location IDs to their positions
-    const locationMap = new Map<string, Vector3>();
-    locations.forEach(location => {
+    // Create a map of entity IDs to their positions
+    const entityMap = new Map<string, Vector3>();
+    entities.forEach(entity => {
       const position = latLonToVector3(
-        location.latitude,
-        location.longitude,
+        entity.latitude,
+        entity.longitude,
         earthRadius * 1.05
       );
-      locationMap.set(location.id, position);
+      entityMap.set(entity.id, position);
     });
 
     // Create connection lines
     connections.forEach((connection) => {
-      const fromPos = locationMap.get(connection.id_from);
-      const toPos = locationMap.get(connection.id_to);
+      const fromPos = entityMap.get(connection.id_from);
+      const toPos = entityMap.get(connection.id_to);
 
       if (!fromPos || !toPos) {
-        console.warn(`Connection ${connection.order_id}: Missing location ${connection.id_from} or ${connection.id_to}`);
+        console.warn(`Connection ${connection.order_id}: Missing entity ${connection.id_from} or ${connection.id_to}`);
         return;
       }
 
@@ -288,7 +288,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     });
 
     console.log('Created', connectionLinesRef.current.length, 'connection lines');
-  }, [connections, locations, earthRadius, maxConnectionAmount]);
+  }, [connections, entities, earthRadius, maxConnectionAmount]);
 
   return (
     <canvas

@@ -2,19 +2,20 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import EarthViewer from './components/EarthViewer'
 import PowerBIDashboard from './components/PowerBIDashboard'
-import type { LocationMarker } from './components/LocationMarker'
+import ErrorBoundary from './components/ErrorBoundary'
+import type { EntityMarker } from './components/EntityMarker'
 import type { ConnectionMarker } from './components/ConnectionMarker'
-import { loadLocationsFromCSV } from './utils/locationLoader'
+import { loadEntitiesFromCSV } from './utils/entitiesLoader'
 import { loadConnectionsFromCSV } from './utils/connectionLoader'
 
 function App() {
-  const [locations, setLocations] = useState<LocationMarker[]>([]);
+  const [entities, setEntities] = useState<EntityMarker[]>([]);
   const [connections, setConnections] = useState<ConnectionMarker[]>([]);
   const [maxAmount, setMaxAmount] = useState<number>(100);
 
   useEffect(() => {
-    // Load locations and connections from CSV files
-    loadLocationsFromCSV('/data/locations.csv').then(setLocations);
+    // Load entities and connections from CSV files
+    loadEntitiesFromCSV('/data/entities.csv').then(setEntities);
     loadConnectionsFromCSV('/data/connections.csv').then((conns) => {
       setConnections(conns);
       // Calculate max amount for scaling
@@ -32,9 +33,18 @@ function App() {
       </header>
       <div className="content-container">
         <div className="dashboard-container">
-          <PowerBIDashboard
-            embedUrl={import.meta.env.VITE_POWERBI_EMBED_URL}
-          />
+          <ErrorBoundary
+            fallback={
+              <div style={{ padding: '20px', color: '#ff6b6b' }}>
+                <h2>Failed to load Power BI Dashboard</h2>
+                <p>Please check your embed URL configuration in the .env file.</p>
+              </div>
+            }
+          >
+            <PowerBIDashboard
+              embedUrl={import.meta.env.VITE_POWERBI_EMBED_URL}
+            />
+          </ErrorBoundary>
         </div>
         <div className="viewer-container">
           <h2>Interactive 3D Earth Viewer</h2>
@@ -43,7 +53,7 @@ function App() {
             modelPath="/models/earth/Earth.obj" 
             materialPath="/models/earth/Earth.mtl"
             scale={0.00016}
-            locations={locations}
+            entities={entities}
             connections={connections}
             maxConnectionAmount={maxAmount}
             earthRadius={1} // Adjust if markers don't align with model surface

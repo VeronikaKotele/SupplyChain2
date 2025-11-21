@@ -1,6 +1,6 @@
 import {Color3} from '@babylonjs/core';
 
-export interface LocationMarker {
+export interface EntityMarker {
   id: string;
   type?: string;
   name?: string;
