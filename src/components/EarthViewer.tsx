@@ -14,19 +14,9 @@ import {
   DirectionalLight,
 } from '@babylonjs/core';
 import '@babylonjs/loaders/OBJ';
-import {latLonToVector3} from './3dMathUtils';
-
-export interface LocationMarker {
-  id: string;
-  type?: string;
-  name?: string;
-  location_county?: string;
-  location_city?: string;
-  latitude: number;
-  longitude: number;
-  color?: Color3;
-  size?: number;
-}
+import { latLonToVector3 } from './3dMathUtils';
+import type { LocationMarker } from './LocationMarker';
+import type { ConnectionMarker } from './ConnectionMarker';
 
 interface EarthViewerProps {
   modelPath: string;
