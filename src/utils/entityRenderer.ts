@@ -4,6 +4,7 @@ import {
   MeshBuilder,
   StandardMaterial,
   Color3,
+  TransformNode,
 } from '@babylonjs/core';
 import { latLonToVector3 } from '../components/3dMathUtils';
 import type { EntityMarker } from '../components/EntityMarker';
@@ -13,6 +14,7 @@ import type { EntityMarker } from '../components/EntityMarker';
  * @param entities - Array of entity markers to render
  * @param scene - Babylon.js scene
  * @param earthRadius - Radius of the Earth mesh
+ * @param parentNode - Optional parent node to attach markers to
  * @param onProgress - Optional callback for progress updates
  * @returns Cleanup function to cancel rendering
  */
@@ -20,6 +22,7 @@ export const createEntityMarkers = (
   entities: EntityMarker[],
   scene: Scene,
   earthRadius: number,
+  parentNode?: TransformNode | Mesh,
   onProgress?: (current: number, total: number) => void
 ): { meshes: Mesh[]; cancel: () => void } => {
   if (entities.length === 0) {
@@ -44,6 +47,11 @@ export const createEntityMarkers = (
         { diameter: entity.size || 0.05 },
         scene
       );
+
+      // Parent the sphere if parent node is provided
+      if (parentNode) {
+        sphere.parent = parentNode;
+      }
 
       const position = latLonToVector3(
         entity.latitude,

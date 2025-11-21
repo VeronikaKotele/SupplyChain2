@@ -5,6 +5,7 @@ import {
   StandardMaterial,
   Color3,
   Mesh,
+  TransformNode,
 } from '@babylonjs/core';
 import '@babylonjs/loaders/OBJ';
 
@@ -13,11 +14,13 @@ import '@babylonjs/loaders/OBJ';
  * @param modelPath - Path to the OBJ model file
  * @param scene - Babylon.js scene
  * @param scale - Scale factor for the model (default: 1.0)
+ * @param parentNode - Optional parent node to attach the loaded meshes to
  */
 export const loadEarthModel = async (
   modelPath: string,
   scene: Scene,
-  scale: number = 1.0
+  scale: number = 1.0,
+  parentNode?: TransformNode | Mesh
 ): Promise<void> => {
   try {
     const result = await SceneLoader.ImportMeshAsync(
@@ -33,6 +36,11 @@ export const loadEarthModel = async (
       result.meshes.forEach((mesh) => {
         if (mesh instanceof Mesh) {
           mesh.flipFaces(true); // Actually invert the geometry normals
+        }
+
+        // Parent the mesh if parent node is provided
+        if (parentNode) {
+          mesh.parent = parentNode;
         }
 
         // Apply scale to the mesh

@@ -8,6 +8,8 @@ import {
   Color4,
   Mesh,
   DirectionalLight,
+  TransformNode,
+  Animation,
 } from '@babylonjs/core';
 import type { EntityMarker } from './EntityMarker';
 import type { ConnectionMarker } from './ConnectionMarker';
@@ -37,6 +39,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const engineRef = useRef<Engine | null>(null);
   const sceneRef = useRef<Scene | null>(null);
+  const earthParentRef = useRef<TransformNode | null>(null);
   const entityMarkersRef = useRef<Mesh[]>([]);
   const connectionLinesRef = useRef<Mesh[]>([]);
 
@@ -85,8 +88,34 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     );
     light2.intensity = 1.5;
 
-    // Load the Earth model
-    loadEarthModel(modelPath, scene, scale);
+    // Create parent node for Earth and all its children (entities, connections)
+    const earthParent = new TransformNode('earthParent', scene);
+    earthParentRef.current = earthParent;
+
+    // Set up rotation animation for the Earth
+    const animFrameRate = 30; // frames per second
+    
+    const rotationAnimation = new Animation(
+      'earthRotation',
+      'rotation.y',
+      animFrameRate,
+      Animation.ANIMATIONTYPE_FLOAT,
+      Animation.ANIMATIONLOOPMODE_CYCLE
+    );
+
+    const rotationKeys = [
+      { frame: 0, value: 0 },
+      { frame: animFrameRate * 60, value: Math.PI * 2 } // Full rotation in 60 seconds
+    ];
+
+    rotationAnimation.setKeys(rotationKeys);
+    earthParent.animations = [rotationAnimation];
+
+    // Start the animation
+    scene.beginAnimation(earthParent, 0, animFrameRate * 60, true);
+
+    // Load the Earth model and parent it to earthParent
+    loadEarthModel(modelPath, scene, scale, earthParent);
 
     // Render loop
     engine.runRenderLoop(() => {
@@ -118,6 +147,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     if (entities.length === 0) return; // Don't process empty entities array
 
     const scene = sceneRef.current;
+    const earthParent = earthParentRef.current;
 
     // Clear existing markers
     disposeEntityMarkers(entityMarkersRef.current);
@@ -127,7 +157,8 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     const { meshes, cancel } = createEntityMarkers(
       entities,
       scene,
-      earthRadius
+      earthRadius,
+      earthParent || undefined
     );
     
     entityMarkersRef.current = meshes;
@@ -145,6 +176,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     if (entities.length === 0) return; // Need entities to draw connections
 
     const scene = sceneRef.current;
+    const earthParent = earthParentRef.current;
 
     // Clear existing connection lines
     disposeConnectionLines(connectionLinesRef.current);
@@ -156,7 +188,8 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
       entities,
       scene,
       earthRadius,
-      maxConnectionAmount
+      maxConnectionAmount,
+      earthParent || undefined
     );
     
     connectionLinesRef.current = meshes;

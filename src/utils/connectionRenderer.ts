@@ -5,6 +5,7 @@ import {
   StandardMaterial,
   Color3,
   Vector3,
+  TransformNode,
 } from '@babylonjs/core';
 import { latLonToVector3 } from '../components/3dMathUtils';
 import type { EntityMarker } from '../components/EntityMarker';
@@ -17,6 +18,7 @@ import type { ConnectionMarker } from '../components/ConnectionMarker';
  * @param scene - Babylon.js scene
  * @param earthRadius - Radius of the Earth mesh
  * @param maxConnectionAmount - Maximum connection amount for thickness scaling
+ * @param parentNode - Optional parent node to attach connection lines to
  * @param onProgress - Optional callback for progress updates
  * @returns Cleanup function to cancel rendering
  */
@@ -26,6 +28,7 @@ export const createConnectionLines = (
   scene: Scene,
   earthRadius: number,
   maxConnectionAmount: number,
+  parentNode?: TransformNode | Mesh,
   onProgress?: (current: number, total: number) => void
 ): { meshes: Mesh[]; cancel: () => void } => {
   if (connections.length === 0 || entities.length === 0) {
@@ -98,6 +101,11 @@ export const createConnectionLines = (
         },
         scene
       );
+
+      // Parent the tube if parent node is provided
+      if (parentNode) {
+        tube.parent = parentNode;
+      }
 
       // Create material for the connection line
       const lineMat = new StandardMaterial(`mat-connection-${connection.flow_id}`, scene);
