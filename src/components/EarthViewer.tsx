@@ -42,6 +42,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   const sceneRef = useRef<Scene | null>(null);
   const earthParentRef = useRef<TransformNode | null>(null);
   const entityMarkersRef = useRef<Mesh[]>([]);
+  const entityPositionsRef = useRef<Map<string, Vector3>>(new Map());
   const connectionLinesRef = useRef<LinesMesh[]>([]);
 
   // create the earth mesh and scene
@@ -155,7 +156,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     entityMarkersRef.current = [];
 
     // Create new markers using the utility
-    const { meshes, cancel } = createEntityMarkers(
+    const { meshes, positionsMap, cancel } = createEntityMarkers(
       entities,
       scene,
       earthRadius,
@@ -163,6 +164,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     );
     
     entityMarkersRef.current = meshes;
+    entityPositionsRef.current = positionsMap;
 
     // Cleanup function to cancel processing if component unmounts or dependencies change
     return () => {
@@ -187,6 +189,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     const { meshes, cancel } = createConnectionLines(
       connections,
       entities,
+      entityPositionsRef.current,
       scene,
       earthRadius,
       maxConnectionAmount,

@@ -25,6 +25,7 @@ import type { ConnectionMarker } from '../components/ConnectionMarker';
 export const createConnectionLines = (
   connections: ConnectionMarker[],
   entities: EntityMarker[],
+  positionsMap: Map<string, Vector3>,
   scene: Scene,
   earthRadius: number,
   maxConnectionAmount: number,
@@ -36,20 +37,6 @@ export const createConnectionLines = (
   }
 
   const meshes: LinesMesh[] = [];
-
-  // Create a map of entity IDs to their positions (center) and sizes
-  const entityMap = new Map<string, { center: Vector3; size: number }>();
-  entities.forEach(entity => {
-    const center = latLonToVector3(
-      entity.latitude,
-      entity.longitude,
-      earthRadius * 1.05
-    );
-    entityMap.set(entity.id, { 
-      center, 
-      size: entity.size || 0.05 
-    });
-  });
 
   const BATCH_SIZE = 50;
   let currentIndex = 0;
@@ -63,24 +50,16 @@ export const createConnectionLines = (
 
     // Create connection lines for this batch
     batch.forEach((connection) => {
-      const fromEntity = entityMap.get(connection.id_from);
-      const toEntity = entityMap.get(connection.id_to);
+      const fromPos = positionsMap.get(connection.id_from);
+      const toPos = positionsMap.get(connection.id_to);
 
-      if (!fromEntity || !toEntity) {
+      if (!fromPos || !toPos) {
         return;
       }
 
-      // Calculate peak positions (top of the sphere markers)
-      // Peak is at sphere center + radius in the outward direction (away from Earth center)
-      const fromRadius = fromEntity.size / 2; // diameter to radius
-      const toRadius = toEntity.size / 2;
-      
-      // Direction from Earth center to entity (normalized), then scale by radius and add to center
-      const fromDirection = fromEntity.center.normalizeToNew();
-      const toDirection = toEntity.center.normalizeToNew();
-      
-      const fromPeak = fromEntity.center.add(fromDirection.scale(fromRadius));
-      const toPeak = toEntity.center.add(toDirection.scale(toRadius));
+      // Start from entity positions directly (points have no physical size)
+      const fromPeak = fromPos;
+      const toPeak = toPos;
 
       // Create a curved arc path that follows the sphere's surface
       // Use great circle interpolation with extra height for visibility

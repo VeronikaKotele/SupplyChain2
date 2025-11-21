@@ -1,97 +1,77 @@
 import {
   Scene,
   Mesh,
-  MeshBuilder,
-  StandardMaterial,
-  Color3,
   TransformNode,
+  PointsCloudSystem,
+  Color3,
+  Color4,
+  Vector3,
+  CloudPoint,
 } from '@babylonjs/core';
 import { latLonToVector3 } from '../components/3dMathUtils';
 import type { EntityMarker } from '../components/EntityMarker';
 
 /**
- * Creates entity sphere markers with progressive rendering for better performance
+ * Creates entity point markers with constant pixel size (zoom-independent)
  * @param entities - Array of entity markers to render
  * @param scene - Babylon.js scene
  * @param earthRadius - Radius of the Earth mesh
  * @param parentNode - Optional parent node to attach markers to
- * @param onProgress - Optional callback for progress updates
  * @returns Cleanup function to cancel rendering
  */
 export const createEntityMarkers = (
   entities: EntityMarker[],
   scene: Scene,
   earthRadius: number,
-  parentNode?: TransformNode | Mesh,
-  onProgress?: (current: number, total: number) => void
-): { meshes: Mesh[]; cancel: () => void } => {
+  parentNode?: TransformNode | Mesh
+): { meshes: Mesh[]; positionsMap: Map<string, Vector3>; cancel: () => void } => {
   if (entities.length === 0) {
-    return { meshes: [], cancel: () => {} };
+    return { meshes: [], positionsMap: new Map(), cancel: () => {} };
   }
 
   const meshes: Mesh[] = [];
-  const BATCH_SIZE = 50; // Process 50 entities at a time
-  let currentIndex = 0;
-  let cancelled = false;
+  const positionsMap: Map<string, Vector3> = new Map();
 
-  const processBatch = () => {
-    if (cancelled) return;
+  // Create a point cloud system for all entities
+  const pcs = new PointsCloudSystem('entityPoints', 5, scene); // 5 is point size in pixels
+  
+  const positions: Vector3[] = [];
+  const colors: Color3[] = [];
 
-    const endIndex = Math.min(currentIndex + BATCH_SIZE, entities.length);
-    const batch = entities.slice(currentIndex, endIndex);
+  // Prepare all entity positions and colors
+  entities.forEach((entity) => {
+    const position = latLonToVector3(
+      entity.latitude,
+      entity.longitude,
+      earthRadius * 1.1 // Slightly above earth surface
+    );
+    positions.push(position);
+    colors.push(entity.color || new Color3(1, 0, 0));
+  });
 
-    // Create markers for this batch
-    batch.forEach((entity) => {
-      const sphere = MeshBuilder.CreateSphere(
-        `entity-${entity.id}`,
-        { diameter: entity.size || 0.05 },
-        scene
-      );
+  // Add points to the system
+  pcs.addPoints(positions.length, (particle: CloudPoint, i: number) => {
+    particle.position = positions[i];
+    particle.color = new Color4(colors[i].r, colors[i].g, colors[i].b, 1.0);
+  });
 
-      // Parent the sphere if parent node is provided
-      if (parentNode) {
-        sphere.parent = parentNode;
-      }
-
-      const position = latLonToVector3(
-        entity.latitude,
-        entity.longitude,
-        earthRadius * 1.05 // Slightly above earth surface
-      );
-      sphere.position = position;
-
-      const markerMat = new StandardMaterial(`mat-${entity.id}`, scene);
-      markerMat.diffuseColor = entity.color || new Color3(1, 0, 0);
-      markerMat.emissiveColor = entity.color?.scale(0.3) || new Color3(0.3, 0, 0);
-      markerMat.specularColor = new Color3(0, 0, 0);
-      sphere.material = markerMat;
-
-      meshes.push(sphere);
-    });
-
-    currentIndex = endIndex;
-
-    // Report progress
-    if (onProgress) {
-      onProgress(currentIndex, entities.length);
+  // Build the mesh asynchronously
+  pcs.buildMeshAsync().then((mesh) => {
+    // Parent the points mesh if parent node is provided
+    if (parentNode) {
+      mesh.parent = parentNode;
     }
+    meshes.push(mesh);
+    positionsMap.set(mesh.id, mesh.position.clone());
+    console.log('Created', entities.length, 'entity point markers');
+  });
 
-    // Continue processing if there are more entities
-    if (currentIndex < entities.length) {
-      requestAnimationFrame(processBatch);
-    } else {
-      console.log('Created', meshes.length, 'entity markers');
-    }
-  };
-
-  // Start processing batches
-  processBatch();
-
-  // Return cancel function
+  // Return immediately - points will be created asynchronously
   return {
     meshes,
+    positionsMap: positionsMap,
     cancel: () => {
-      cancelled = true;
+      // Cancel is not applicable for point cloud system
     },
   };
 };
