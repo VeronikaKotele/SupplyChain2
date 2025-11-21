@@ -23,7 +23,9 @@ interface EarthViewerProps {
   materialPath?: string;
   scale?: number;
   locations?: LocationMarker[];
+  connections?: ConnectionMarker[];
   earthRadius?: number;
+  maxConnectionAmount?: number; // Max amount for scaling line thickness
 }
 
 const EarthViewer: React.FC<EarthViewerProps> = ({ 
@@ -31,14 +33,17 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   materialPath,
   scale = 1.0,
   locations = [],
-  earthRadius = 1.0
+  connections = [],
+  earthRadius = 1.0,
+  maxConnectionAmount = 100
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const engineRef = useRef<Engine | null>(null);
   const sceneRef = useRef<Scene | null>(null);
   const locationMarkersRef = useRef<Mesh[]>([]);
+  const connectionLinesRef = useRef<Mesh[]>([]);
 
-  console.log('EarthViewer props:', {locations });
+  console.log('EarthViewer props:', {locations, connections });
 
   // create the earth mesh and scene
   useEffect(() => {
@@ -125,6 +130,9 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
               
               mat.cullBackFaces = false; // Disable back-face culling
               
+              mat.transparencyMode = StandardMaterial.MATERIAL_ALPHABLEND;
+              mat.alpha = 0.8; // Set transparency level
+
               console.log('material configured:', mat.name, 'diffuse:', mat.diffuseColor, 'diffuseTexture:', mat.diffuseTexture);
             }
           });
@@ -156,10 +164,11 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     return () => {
       window.removeEventListener('resize', handleResize);
       locationMarkersRef.current.forEach(marker => marker.dispose());
+      connectionLinesRef.current.forEach(line => line.dispose());
       scene.dispose();
       engine.dispose();
     };
-  }, [modelPath, materialPath, scale, locations, earthRadius]);
+  }, [modelPath, materialPath, scale, locations, connections, earthRadius, maxConnectionAmount]);
 
   // Update location markers when locations prop changes
   useEffect(() => {
@@ -198,6 +207,88 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     console.log('Created', locationMarkersRef.current.length, 'location markers');
   }, [locations, earthRadius]);
+
+  // Update connection lines when connections prop changes
+  useEffect(() => {
+    if (!sceneRef.current) return;
+    if (connections.length === 0) return;
+    if (locations.length === 0) return; // Need locations to draw connections
+
+    const scene = sceneRef.current;
+
+    // Clear existing connection lines
+    connectionLinesRef.current.forEach(line => line.dispose());
+    connectionLinesRef.current = [];
+
+    // Create a map of location IDs to their positions
+    const locationMap = new Map<string, Vector3>();
+    locations.forEach(location => {
+      const position = latLonToVector3(
+        location.latitude,
+        location.longitude,
+        earthRadius * 1.05
+      );
+      locationMap.set(location.id, position);
+    });
+
+    // Create connection lines
+    connections.forEach((connection) => {
+      const fromPos = locationMap.get(connection.id_from);
+      const toPos = locationMap.get(connection.id_to);
+
+      if (!fromPos || !toPos) {
+        console.warn(`Connection ${connection.order_id}: Missing location ${connection.id_from} or ${connection.id_to}`);
+        return;
+      }
+
+      // Calculate line thickness based on amount (normalized to 0.001 - 0.02 range)
+      const normalizedAmount = connection.amount / maxConnectionAmount;
+      const thickness = 0.001 + (normalizedAmount * 0.019); // Min 0.001, max 0.02
+
+      // Create a tube connecting the two points with a curved arc
+      // Calculate midpoint and add height for arc effect
+      const midPoint = Vector3.Lerp(fromPos, toPos, 0.5);
+      const distance = Vector3.Distance(fromPos, toPos);
+      const arcHeight = distance * 0.35; // Arc height is 35% of distance (increased for more curve)
+      const arcPoint = midPoint.add(midPoint.normalize().scale(arcHeight));
+
+      // Create path for the tube (bezier curve approximation)
+      const path: Vector3[] = [];
+      const segments = 40; // More segments for smoother curve
+      for (let i = 0; i <= segments; i++) {
+        const t = i / segments;
+        // Quadratic bezier: (1-t)²P0 + 2(1-t)tP1 + t²P2
+        const pos = fromPos.scale((1 - t) * (1 - t))
+          .add(arcPoint.scale(2 * (1 - t) * t))
+          .add(toPos.scale(t * t));
+        path.push(pos);
+      }
+
+      // Create tube mesh
+      const tube = MeshBuilder.CreateTube(
+        `connection-${connection.order_id}`,
+        {
+          path: path,
+          radius: thickness,
+          cap: Mesh.CAP_ALL,
+          updatable: false
+        },
+        scene
+      );
+
+      // Create material for the connection line
+      const lineMat = new StandardMaterial(`mat-connection-${connection.order_id}`, scene);
+      lineMat.diffuseColor = connection.color || new Color3(0, 1, 1); // Cyan by default
+      lineMat.emissiveColor = connection.color?.scale(0.5) || new Color3(0, 0.5, 0.5);
+      lineMat.specularColor = new Color3(0, 0, 0);
+      lineMat.alpha = 0.7; // Slightly transparent
+      tube.material = lineMat;
+
+      connectionLinesRef.current.push(tube);
+    });
+
+    console.log('Created', connectionLinesRef.current.length, 'connection lines');
+  }, [connections, locations, earthRadius, maxConnectionAmount]);
 
   return (
     <canvas

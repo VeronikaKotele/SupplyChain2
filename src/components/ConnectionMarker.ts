@@ -5,6 +5,6 @@ export interface ConnectionMarker {
   id_to: string;
   order_id: string;
   product: string;
-  amount: string;
+  amount: number;
   color?: Color3;
 }

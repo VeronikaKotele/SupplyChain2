@@ -1,0 +1,8 @@
+id_from,id_to,order_id,product,amount,colorR,colorG,colorB
+new-york,london,ORD001,Electronics,85,0,1,1
+london,tokyo,ORD002,Machinery,60,1,0.5,0
+tokyo,sydney,ORD003,Automobiles,95,1,0,1
+sydney,sao-paulo,ORD004,Raw Materials,40,0,1,0
+sao-paulo,new-york,ORD005,Food Products,70,1,1,0
+new-york,tokyo,ORD006,Technology,100,0,0.5,1
+london,sydney,ORD007,Textiles,50,1,0.5,0.5
