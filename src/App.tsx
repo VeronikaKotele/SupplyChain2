@@ -113,7 +113,7 @@ function App() {
         <EarthViewer 
           modelPath="/models/earth/Earth.obj" 
           materialPath="/models/earth/Earth.mtl"
-          scale={0.1}
+          scale={0.00016}
           locations={locations}
           earthRadius={1} // Adjust if markers don't align with model surface
         />
