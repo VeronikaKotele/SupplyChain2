@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import EarthViewer from './components/EarthViewer'
+import PowerBIDashboard from './components/PowerBIDashboard'
+import PowerBIPublicEmbed from './components/PowerBIPublicEmbed'
 import type { LocationMarker } from './components/LocationMarker'
 import type { ConnectionMarker } from './components/ConnectionMarker'
 import { loadLocationsFromCSV } from './utils/locationLoader'
@@ -10,6 +12,8 @@ function App() {
   const [locations, setLocations] = useState<LocationMarker[]>([]);
   const [connections, setConnections] = useState<ConnectionMarker[]>([]);
   const [maxAmount, setMaxAmount] = useState<number>(100);
+
+  const usePublicEmbed = import.meta.env.VITE_USE_PUBLIC_EMBED === 'true';
 
   useEffect(() => {
     // Load locations and connections from CSV files
@@ -27,19 +31,36 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>Interactive 3D Earth Viewer</h1>
-        <p>Use mouse to rotate, scroll to zoom</p>
+        <h1>Supply Chain Visualization</h1>
       </header>
-      <div className="viewer-container">
-        <EarthViewer 
-          modelPath="/models/earth/Earth.obj" 
-          materialPath="/models/earth/Earth.mtl"
-          scale={0.00016}
-          locations={locations}
-          connections={connections}
-          maxConnectionAmount={maxAmount}
-          earthRadius={1} // Adjust if markers don't align with model surface
-        />
+      <div className="content-container">
+        <div className="dashboard-container">
+          {usePublicEmbed ? (
+            <PowerBIPublicEmbed
+              embedUrl={import.meta.env.VITE_POWERBI_PUBLIC_EMBED_URL}
+            />
+          ) : (
+            <PowerBIDashboard
+              embedUrl={import.meta.env.VITE_POWERBI_EMBED_URL}
+              accessToken={import.meta.env.VITE_POWERBI_ACCESS_TOKEN}
+              embedId={import.meta.env.VITE_POWERBI_REPORT_ID}
+              embedType={import.meta.env.VITE_POWERBI_EMBED_TYPE as 'report' | 'dashboard'}
+            />
+          )}
+        </div>
+        <div className="viewer-container">
+          <h2>Interactive 3D Earth Viewer</h2>
+          <p>Use mouse to rotate, scroll to zoom</p>
+          <EarthViewer 
+            modelPath="/models/earth/Earth.obj" 
+            materialPath="/models/earth/Earth.mtl"
+            scale={0.00016}
+            locations={locations}
+            connections={connections}
+            maxConnectionAmount={maxAmount}
+            earthRadius={1} // Adjust if markers don't align with model surface
+          />
+        </div>
       </div>
     </div>
   )

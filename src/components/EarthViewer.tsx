@@ -130,8 +130,8 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
               
               mat.cullBackFaces = false; // Disable back-face culling
               
-              mat.transparencyMode = StandardMaterial.MATERIAL_ALPHABLEND;
-              mat.alpha = 0.8; // Set transparency level
+              // mat.transparencyMode = StandardMaterial.MATERIAL_ALPHABLEND;
+              // mat.alpha = 0.8; // Set transparency level
 
               console.log('material configured:', mat.name, 'diffuse:', mat.diffuseColor, 'diffuseTexture:', mat.diffuseTexture);
             }
