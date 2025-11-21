@@ -10,6 +10,7 @@ import {
   DirectionalLight,
   TransformNode,
   Animation,
+  LinesMesh,
 } from '@babylonjs/core';
 import type { EntityMarker } from './EntityMarker';
 import type { ConnectionMarker } from './ConnectionMarker';
@@ -24,7 +25,7 @@ interface EarthViewerProps {
   entities?: EntityMarker[];
   connections?: ConnectionMarker[];
   earthRadius?: number;
-  maxConnectionAmount?: number; // Max amount for scaling line thickness
+  maxConnectionAmount?: number; // Max amount for scaling line alpha
 }
 
 const EarthViewer: React.FC<EarthViewerProps> = ({ 
@@ -41,7 +42,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   const sceneRef = useRef<Scene | null>(null);
   const earthParentRef = useRef<TransformNode | null>(null);
   const entityMarkersRef = useRef<Mesh[]>([]);
-  const connectionLinesRef = useRef<Mesh[]>([]);
+  const connectionLinesRef = useRef<LinesMesh[]>([]);
 
   // create the earth mesh and scene
   useEffect(() => {

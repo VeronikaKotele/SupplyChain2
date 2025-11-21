@@ -2,10 +2,10 @@ import {
   Scene,
   Mesh,
   MeshBuilder,
-  StandardMaterial,
   Color3,
   Vector3,
   TransformNode,
+  LinesMesh,
 } from '@babylonjs/core';
 import { latLonToVector3 } from '../components/3dMathUtils';
 import type { EntityMarker } from '../components/EntityMarker';
@@ -30,12 +30,12 @@ export const createConnectionLines = (
   maxConnectionAmount: number,
   parentNode?: TransformNode | Mesh,
   onProgress?: (current: number, total: number) => void
-): { meshes: Mesh[]; cancel: () => void } => {
+): { meshes: LinesMesh[]; cancel: () => void } => {
   if (connections.length === 0 || entities.length === 0) {
     return { meshes: [], cancel: () => {} };
   }
 
-  const meshes: Mesh[] = [];
+  const meshes: LinesMesh[] = [];
 
   // Create a map of entity IDs to their positions
   const entityMap = new Map<string, Vector3>();
@@ -48,7 +48,7 @@ export const createConnectionLines = (
     entityMap.set(entity.id, position);
   });
 
-  const BATCH_SIZE = 20; // Process 20 connections at a time (connections are more complex than entities)
+  const BATCH_SIZE = 50; // Lines are simpler than tubes, can process more at once
   let currentIndex = 0;
   let cancelled = false;
 
@@ -67,20 +67,16 @@ export const createConnectionLines = (
         return;
       }
 
-      // Calculate line thickness based on amount (normalized to 0.001 - 0.02 range)
-      const normalizedAmount = connection.amount / maxConnectionAmount;
-      const thickness = 0.001 + (normalizedAmount * 0.019); // Min 0.001, max 0.02
-
-      // Create a tube connecting the two points with a curved arc
+      // Create a curved arc path
       // Calculate midpoint and add height for arc effect
       const midPoint = Vector3.Lerp(fromPos, toPos, 0.5);
       const distance = Vector3.Distance(fromPos, toPos);
       const arcHeight = distance * 0.35; // Arc height is 35% of distance
       const arcPoint = midPoint.add(midPoint.normalize().scale(arcHeight));
 
-      // Create path for the tube (bezier curve approximation)
+      // Create path for the line (bezier curve approximation)
       const path: Vector3[] = [];
-      const segments = 40; // More segments for smoother curve
+      const segments = 30; // Segments for smooth curve
       for (let i = 0; i <= segments; i++) {
         const t = i / segments;
         // Quadratic bezier: (1-t)²P0 + 2(1-t)tP1 + t²P2
@@ -90,32 +86,30 @@ export const createConnectionLines = (
         path.push(pos);
       }
 
-      // Create tube mesh
-      const tube = MeshBuilder.CreateTube(
+      // Create line mesh using CreateLines
+      const line = MeshBuilder.CreateLines(
         `connection-${connection.flow_id}`,
         {
-          path: path,
-          radius: thickness,
-          cap: Mesh.CAP_ALL,
+          points: path,
           updatable: false
         },
         scene
       );
 
-      // Parent the tube if parent node is provided
+      // Parent the line if parent node is provided
       if (parentNode) {
-        tube.parent = parentNode;
+        line.parent = parentNode;
       }
 
-      // Create material for the connection line
-      const lineMat = new StandardMaterial(`mat-connection-${connection.flow_id}`, scene);
-      lineMat.diffuseColor = connection.color || new Color3(0, 1, 1); // Cyan by default
-      lineMat.emissiveColor = connection.color?.scale(0.5) || new Color3(0, 0.5, 0.5);
-      lineMat.specularColor = new Color3(0, 0, 0);
-      lineMat.alpha = 0.7; // Slightly transparent
-      tube.material = lineMat;
+      // Set line color and alpha based on connection amount
+      const lineColor = connection.color || new Color3(0, 1, 1); // Cyan by default
+      line.color = lineColor;
+      
+      // Vary alpha based on connection amount (0.3 to 0.9 range)
+      const normalizedAmount = connection.amount / maxConnectionAmount;
+      line.alpha = 0.3 + (normalizedAmount * 0.6); // More prominent for higher amounts
 
-      meshes.push(tube);
+      meshes.push(line);
     });
 
     currentIndex = endIndex;
@@ -147,8 +141,8 @@ export const createConnectionLines = (
 
 /**
  * Disposes all connection line meshes
- * @param meshes - Array of meshes to dispose
+ * @param meshes - Array of line meshes to dispose
  */
-export const disposeConnectionLines = (meshes: Mesh[]): void => {
+export const disposeConnectionLines = (meshes: LinesMesh[]): void => {
   meshes.forEach(line => line.dispose());
 };
