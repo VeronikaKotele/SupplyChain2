@@ -26,13 +26,15 @@ export interface LocationMarker {
 interface EarthViewerProps {
   modelPath: string;
   materialPath?: string;
+  scale?: number;
   locations?: LocationMarker[];
   earthRadius?: number;
 }
 
 const EarthViewer: React.FC<EarthViewerProps> = ({ 
   modelPath, 
-  materialPath, 
+  materialPath,
+  scale = 1.0,
   locations = [],
   earthRadius = 1.0
 }) => {
@@ -67,7 +69,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     );
     camera.attachControl(canvasRef.current, true);
     //camera.lowerRadiusLimit = 2;
-    camera.upperRadiusLimit = 10;
+    //camera.upperRadiusLimit = 10;
     camera.wheelPrecision = 50;
     camera.panningSensibility = 0;
 
@@ -87,7 +89,6 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     // Load the model
     const loadModel = async () => {
-      let modelSize;
       try {
         const result = await SceneLoader.ImportMeshAsync(
           '',
@@ -100,32 +101,19 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
         if (result.meshes.length > 0) {
           result.meshes.forEach((mesh) => {
-            console.log('mesh:', mesh.name);
+            console.log('mesh:', mesh.name, mesh.scaling.toString(), mesh.getWorldMatrix());
 
-            // Modify material to reduce specular highlights (make it matte/opaque)
+            // Apply scale to the mesh
+            if (!mesh.scaling)
+                mesh.scaling = new Vector3(scale, scale, scale);
+            else
+                mesh.scaling = mesh.scaling.scale(scale);
+            console.log('after scaling:', mesh.scaling.toString());
+
             if (mesh.material) {
               const mat = mesh.material as StandardMaterial;
 
-              // Remove specular highlights (shiny reflections)
-              mat.specularColor = new Color3(0, 0, 0); // No specular reflection
-              mat.specularPower = 0; // No shininess
-              
-              // Remove reflections
-              mat.reflectionTexture = null;
-              
-              // Increase ambient to brighten without reflections
-              if (mat.diffuseColor) {
-                mat.ambientColor = mat.diffuseColor.clone();
-              }
-
-              // Flip normals for specific mesh with wrong orientation
-              if (mesh.name !== "Icosphere" && mesh instanceof Mesh) {
-                mesh.scaling = new Vector3(0.99, 0.99, 0.99);
-                mesh.flipFaces(true); // Actually invert the geometry normals
-              }
-              if (mesh.name === "mesh_mm1" && mesh instanceof Mesh) {
-                mat.diffuseColor = mat.diffuseColor.multiplyByFloats(0.3, 0.3, 0.3); // Make this mesh darker
-              }
+              mat.cullBackFaces = false; // Disable back-face culling
             }
           });
 
@@ -134,8 +122,6 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
       } catch (error) {
         console.error('Error loading model:', error);
       }
-
-      return modelSize;
     };
 
     loadModel();

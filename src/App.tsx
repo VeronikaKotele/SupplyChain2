@@ -111,10 +111,11 @@ function App() {
       </header>
       <div className="viewer-container">
         <EarthViewer 
-          modelPath="/models/LowPolyEarth2.obj" 
-          materialPath="/models/LowPolyEarth2.mtl"
+          modelPath="/models/earth/Earth.obj" 
+          materialPath="/models/earth/Earth.mtl"
+          scale={0.1}
           locations={locations}
-          earthRadius={0.99} // Adjust if markers don't align with model surface
+          earthRadius={1} // Adjust if markers don't align with model surface
         />
       </div>
     </div>
