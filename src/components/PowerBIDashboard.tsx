@@ -81,28 +81,6 @@ function PowerBIDashboard({ embedUrl, onFiltersChange }: PowerBIDashboardProps) 
 
   return (
     <div className="powerbi-container">
-      {/* Test controls */}
-      <div style={{ 
-        position: 'absolute', 
-        top: '10px', 
-        right: '10px', 
-        zIndex: 1000,
-        background: 'rgba(0,0,0,0.8)',
-        padding: '10px',
-        borderRadius: '5px'
-      }}>
-        <input 
-          type="text" 
-          placeholder="Test filter value"
-          value={testFilterValue}
-          onChange={(e) => setTestFilterValue(e.target.value)}
-          style={{ marginRight: '5px', padding: '5px' }}
-        />
-        <button onClick={testApplyFilter} style={{ padding: '5px 10px' }}>
-          Test Apply Filter
-        </button>
-      </div>
-
       <PowerBIEmbed
         embedConfig={{
           type: 'report',
@@ -141,8 +119,6 @@ function PowerBIDashboard({ embedUrl, onFiltersChange }: PowerBIDashboardProps) 
           reportRef.current = embeddedReport;
           
           if (embeddedReport) {
-            console.log('📋 Allowed events:', embeddedReport.allowedEvents);
-            
             // Try to register the filtersApplied event
             embeddedReport.on('filtersApplied', (event: any) => {
               console.log('🔍 *** FILTERS APPLIED EVENT ***:', event);
