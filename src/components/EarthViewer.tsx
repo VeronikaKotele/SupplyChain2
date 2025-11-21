@@ -11,6 +11,7 @@ import {
   Color3,
   Mesh,
   MeshBuilder,
+  DirectionalLight,
 } from '@babylonjs/core';
 import '@babylonjs/loaders/OBJ';
 import {latLonToVector3} from './3dMathUtils';
@@ -80,11 +81,11 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
         new Vector3(5, 0, -5),
         scene
     );
-    light1.intensity = 1.5;
+    light1.intensity = 2;
 
-    const light2 = new HemisphericLight(
+    const light2 = new DirectionalLight(
         "light2",
-        new Vector3(0, 5, 0),
+        new Vector3(-1, -2, -1),
         scene
     );
     light2.intensity = 1.5;
@@ -103,7 +104,6 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
         if (result.meshes.length > 0) {
           result.meshes.forEach((mesh) => {
-            console.log('mesh:', mesh.name, mesh.scaling.toString(), mesh.getWorldMatrix());
 
             if (mesh instanceof Mesh) {
                 mesh.flipFaces(true); // Actually invert the geometry normals
@@ -114,12 +114,23 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
                 mesh.scaling = new Vector3(scale, scale, scale);
             else
                 mesh.scaling = mesh.scaling.scale(scale);
-            console.log('after scaling:', mesh.scaling.toString());
 
             if (mesh.material) {
               const mat = mesh.material as StandardMaterial;
-
+              
+              // Remove emissive color - this makes material ignore lighting!
+              mat.emissiveColor = new Color3(0, 0, 0);
+              
+              // Set specular to low/zero for matte appearance
+              mat.specularColor = new Color3(0.1, 0.1, 0.1);
+              mat.specularPower = 2;
+              
+              // Ambient should be subtle - too high will wash out lighting
+              mat.ambientColor = new Color3(0.2, 0.2, 0.2);
+              
               mat.cullBackFaces = false; // Disable back-face culling
+              
+              console.log('material configured:', mat.name, 'diffuse:', mat.diffuseColor, 'diffuseTexture:', mat.diffuseTexture);
             }
           });
 
@@ -168,6 +179,9 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     // Render loop
     engine.runRenderLoop(() => {
+      // Update light direction to point FROM camera TO target (toward Earth)
+      const cameraDirection = camera.target.subtract(camera.position).normalize();
+      light1.direction = cameraDirection;
       scene.render();
     });
 
