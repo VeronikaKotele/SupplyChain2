@@ -9,6 +9,7 @@ import {
   Color4,
   StandardMaterial,
   Color3,
+  Mesh,
 } from '@babylonjs/core';
 import '@babylonjs/loaders/OBJ';
 
@@ -34,7 +35,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({ modelPath, materialPath }) =>
 
     // Create scene
     const scene = new Scene(engine);
-    scene.clearColor = new Color4(0.02, 0.02, 0.08, 1);
+    scene.clearColor = new Color4(0.2, 0.2, 0.2, 1);
     sceneRef.current = scene;
 
     // Camera
@@ -47,18 +48,24 @@ const EarthViewer: React.FC<EarthViewerProps> = ({ modelPath, materialPath }) =>
         scene
     );
     camera.attachControl(canvasRef.current, true);
-    camera.lowerRadiusLimit = 2;
+    //camera.lowerRadiusLimit = 2;
     camera.upperRadiusLimit = 10;
     camera.wheelPrecision = 50;
     camera.panningSensibility = 0;
 
-    // Single light with high intensity for basic visibility
-    const light = new HemisphericLight(
-        "light",
-        new Vector3(0, 1, 0),
+    const light1 = new HemisphericLight(
+        "light1",
+        new Vector3(5, 0, 5),
         scene
     );
-    light.intensity = 1.5;
+    light1.intensity = 1.5;
+
+    const light2 = new HemisphericLight(
+        "light2",
+        new Vector3(0, 5, 0),
+        scene
+    );
+    light2.intensity = 1.5;
 
     // Load the model
     const loadModel = async () => {
@@ -83,25 +90,31 @@ const EarthViewer: React.FC<EarthViewerProps> = ({ modelPath, materialPath }) =>
             mesh.position.subtractInPlace(center);
           });
 
-          // Scale the model to fit the view
-          const size = boundingInfo.max.subtract(boundingInfo.min);
-          const maxDimension = Math.max(size.x, size.y, size.z);
-          const scaleFactor = 2 / maxDimension;
-          
           result.meshes.forEach((mesh) => {
-            mesh.scaling = new Vector3(scaleFactor, scaleFactor, scaleFactor);
-            
-            // Modify existing material to be unlit
+            console.log('mesh:', mesh.name);
+
+            // Modify material to reduce specular highlights (make it matte/opaque)
             if (mesh.material) {
               const mat = mesh.material as StandardMaterial;
-              mat.disableLighting = true; // Disable lighting calculations
-              mat.backFaceCulling = false; // Two-sided rendering
+
+              // Remove specular highlights (shiny reflections)
+              mat.specularColor = new Color3(0, 0, 0); // No specular reflection
+              mat.specularPower = 0; // No shininess
               
-              // Boost emissive color to make it bright and visible
+              // Remove reflections
+              mat.reflectionTexture = null;
+              
+              // Increase ambient to brighten without reflections
               if (mat.diffuseColor) {
-                mat.emissiveColor = mat.diffuseColor.clone().multiplyByFloats(2, 2, 2);
-              } else {
-                mat.emissiveColor = new Color3(0.5, 0.7, 1.0); // Fallback bright color
+                mat.ambientColor = mat.diffuseColor.clone();
+              }
+
+              // Flip normals for specific mesh with wrong orientation
+              if (mesh.name !== "Icosphere" && mesh instanceof Mesh) {
+                mesh.flipFaces(true); // Actually invert the geometry normals
+              }
+              if (mesh.name === "mesh_mm1" && mesh instanceof Mesh) {
+                mat.diffuseColor = mat.diffuseColor.multiplyByFloats(0.3, 0.3, 0.3); // Make this mesh darker
               }
             }
           });
