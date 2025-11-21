@@ -6,3 +6,23 @@ sydney,sao-paulo,ORD004,Raw Materials,40,0,1,0
 sao-paulo,new-york,ORD005,Food Products,70,1,1,0
 new-york,tokyo,ORD006,Technology,100,0,0.5,1
 london,sydney,ORD007,Textiles,50,1,0.5,0.5
+paris,berlin,ORD008,Pharmaceuticals,75,0.8,0.2,0.8
+berlin,rome,ORD009,Automotive Parts,65,1,0.8,0
+rome,madrid,ORD010,Fashion Goods,55,0.2,0.8,0.2
+madrid,amsterdam,ORD011,Agricultural Products,45,1,0.4,0.4
+amsterdam,vienna,ORD012,Chemicals,80,0.4,0.6,1
+vienna,copenhagen,ORD013,Medical Equipment,70,0.9,0.5,0.3
+copenhagen,stockholm,ORD014,Furniture,60,0.3,0.9,0.9
+stockholm,warsaw,ORD015,Electronics,90,0.6,0.3,0.9
+warsaw,prague,ORD016,Steel Products,85,0.8,0.8,0.3
+prague,paris,ORD017,Glass Products,50,0.5,0.7,0.5
+london,paris,ORD018,Luxury Goods,95,0,1,1
+berlin,amsterdam,ORD019,Industrial Equipment,75,1,0.5,0
+rome,vienna,ORD020,Wine & Spirits,60,1,0,0.5
+madrid,london,ORD021,Olive Oil,40,0.8,0.5,0
+stockholm,copenhagen,ORD022,Tech Components,85,0.5,0.8,1
+prague,berlin,ORD023,Beer Products,55,1,0.8,0.2
+vienna,rome,ORD024,Musical Instruments,45,0.9,0.4,0.6
+amsterdam,london,ORD025,Flowers,35,1,0.3,0.7
+warsaw,stockholm,ORD026,Software,100,0.7,0.2,0.9
+paris,madrid,ORD027,Cosmetics,65,1,0.5,0.8
