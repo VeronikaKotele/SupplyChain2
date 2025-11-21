@@ -3,10 +3,11 @@ import './App.css'
 import EarthViewer from './components/EarthViewer'
 import PowerBIDashboard from './components/PowerBIDashboard'
 import ErrorBoundary from './components/ErrorBoundary'
+import Legend from './components/Legend'
 import type { EntityMarker } from './components/EntityMarker'
 import type { ConnectionMarker } from './components/ConnectionMarker'
-import { loadEntitiesFromCSV } from './utils/entitiesLoader'
-import { loadConnectionsFromCSV } from './utils/connectionLoader'
+import { loadEntitiesFromCSV, getEntityLegendItems } from './utils/entitiesLoader'
+import { loadConnectionsFromCSV, getConnectionLegendItems } from './utils/connectionLoader'
 
 function App() {
   const [entities, setEntities] = useState<EntityMarker[]>([]);
@@ -49,15 +50,21 @@ function App() {
         <div className="viewer-container">
           <h2>Interactive 3D Earth Viewer</h2>
           <p>Use mouse to rotate, scroll to zoom</p>
-          <EarthViewer 
-            modelPath="/models/earth/Earth.obj" 
-            materialPath="/models/earth/Earth.mtl"
-            scale={0.00016}
-            entities={entities}
-            connections={connections}
-            maxConnectionAmount={maxAmount}
-            earthRadius={1} // Adjust if markers don't align with model surface
-          />
+          <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+            <EarthViewer 
+              modelPath="/models/earth/Earth.obj" 
+              materialPath="/models/earth/Earth.mtl"
+              scale={0.00016}
+              entities={entities}
+              connections={connections}
+              maxConnectionAmount={maxAmount}
+              earthRadius={1} // Adjust if markers don't align with model surface
+            />
+            <div style={{ position: 'absolute', top: '20px', right: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <Legend title="Entities" items={getEntityLegendItems()} />
+              <Legend title="Connections" items={getConnectionLegendItems()} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -23,6 +23,26 @@ const defaultColor = new Color3(0.1, 0.1, 0.1);
 const defaultAmount = 1.0;
 
 /**
+ * Converts Color3 to CSS hex color string
+ */
+function color3ToHex(color: Color3): string {
+  const r = Math.round(color.r * 255).toString(16).padStart(2, '0');
+  const g = Math.round(color.g * 255).toString(16).padStart(2, '0');
+  const b = Math.round(color.b * 255).toString(16).padStart(2, '0');
+  return `#${r}${g}${b}`;
+}
+
+/**
+ * Gets connection color legend items for UI display
+ */
+export function getConnectionLegendItems(): Array<{ label: string; color: string }> {
+  return Array.from(colors.entries()).map(([label, color]) => ({
+    label: label.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    color: color3ToHex(color)
+  }));
+}
+
+/**
  * Converts CSV row to ConnectionMarker object
  */
 function csvRowToConnectionMarker(row: ConnectionCSVRow): ConnectionMarker {

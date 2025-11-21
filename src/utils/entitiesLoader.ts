@@ -22,6 +22,26 @@ const colors = new Map<string, Color3>([
 const defaultSize = 0.05;
 
 /**
+ * Converts Color3 to CSS hex color string
+ */
+function color3ToHex(color: Color3): string {
+  const r = Math.round(color.r * 255).toString(16).padStart(2, '0');
+  const g = Math.round(color.g * 255).toString(16).padStart(2, '0');
+  const b = Math.round(color.b * 255).toString(16).padStart(2, '0');
+  return `#${r}${g}${b}`;
+}
+
+/**
+ * Gets entity color legend items for UI display
+ */
+export function getEntityLegendItems(): Array<{ label: string; color: string }> {
+  return Array.from(colors.entries()).map(([label, color]) => ({
+    label,
+    color: color3ToHex(color)
+  }));
+}
+
+/**
  * Converts CSV row to EntityMarker object
  */
 function csvRowToEntityMarker(row: entityCSVRow): EntityMarker {

@@ -43,7 +43,7 @@ export const createEntityMarkers = (
     const position = latLonToVector3(
       entity.latitude,
       entity.longitude,
-      earthRadius * 1.1 // Slightly above earth surface
+      earthRadius * 1.07 // Slightly above earth surface
     );
     positions.push(position);
     colors.push(entity.color || new Color3(0.1, 0.1, 0.1));
