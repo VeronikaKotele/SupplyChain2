@@ -4,26 +4,16 @@ import './PowerBIDashboard.css';
 
 interface PowerBIDashboardProps {
   embedUrl: string;
-  accessToken: string;
-  embedId: string;
-  embedType?: 'report' | 'dashboard';
 }
 
-function PowerBIDashboard({ 
-  embedUrl, 
-  accessToken, 
-  embedId,
-  embedType = 'report' 
-}: PowerBIDashboardProps) {
+function PowerBIDashboard({ embedUrl }: PowerBIDashboardProps) {
   return (
     <div className="powerbi-container">
       <PowerBIEmbed
         embedConfig={{
-          type: embedType,
-          id: embedId,
+          type: 'report',
           embedUrl: embedUrl,
-          accessToken: accessToken,
-          tokenType: models.TokenType.Embed,
+          tokenType: models.TokenType.Aad,
           settings: {
             panes: {
               filters: {
@@ -38,7 +28,12 @@ function PowerBIDashboard({
           new Map([
             ['loaded', function () { console.log('Report loaded'); }],
             ['rendered', function () { console.log('Report rendered'); }],
-            ['error', function (event) { console.log('Error:', event?.detail); }]
+            ['error', function (event) { console.log('Error:', event?.detail); }],
+            ['dataSelected', function (event) { console.log('Data selected:', event?.detail); }],
+            ['filtersApplied', function (event) { 
+              console.log('Filters changed!', event?.detail);
+              // You can react here, e.g. reload data, highlight UI, send analytics, etc.
+            }]
           ])
         }
         cssClassName="powerbi-embed"
