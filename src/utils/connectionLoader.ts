@@ -19,7 +19,7 @@ const colors = new Map<string, Color3>([
   ['internal_4', new Color3(0.0, 0.251, 0.239)],       // Dark Teal #00403D
 ]);
 
-const defaultColor = new Color3(1, 1, 1);
+const defaultColor = new Color3(0.1, 0.1, 0.1);
 const defaultAmount = 1.0;
 
 /**

@@ -27,7 +27,6 @@ export const createConnectionLines = (
   entities: EntityMarker[],
   positionsMap: Map<string, Vector3>,
   scene: Scene,
-  earthRadius: number,
   maxConnectionAmount: number,
   parentNode?: TransformNode | Mesh,
   onProgress?: (current: number, total: number) => void
@@ -41,6 +40,7 @@ export const createConnectionLines = (
   const BATCH_SIZE = 50;
   let currentIndex = 0;
   let cancelled = false;
+  const extensionPercent = 0.02; // default 2% of distance as extra height
 
   const processBatch = () => {
     if (cancelled) return;
@@ -86,7 +86,7 @@ export const createConnectionLines = (
         
         // Add extra height for visibility (slightly above the natural curve)
         const distance = Vector3.Distance(fromPeak, toPeak);
-        const heightBoost = distance * 0.08; // 8% of distance as extra height
+        const heightBoost = distance * extensionPercent;
         const heightFactor = Math.sin(t * Math.PI); // Peaks at middle (t=0.5)
         pos = pos.normalizeToNew().scale(pos.length() + heightBoost * heightFactor);
         

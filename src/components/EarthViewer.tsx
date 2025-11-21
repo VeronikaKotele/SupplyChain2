@@ -71,7 +71,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
         scene
     );
     camera.attachControl(canvasRef.current, true);
-    camera.lowerRadiusLimit = 0.1;
+    camera.lowerRadiusLimit = 2.1;
     camera.upperRadiusLimit = 5;
     camera.wheelPrecision = 50;
     camera.panningSensibility = 0;
@@ -191,7 +191,6 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
       entities,
       entityPositionsRef.current,
       scene,
-      earthRadius,
       maxConnectionAmount,
       earthParent || undefined
     );

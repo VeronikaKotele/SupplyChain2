@@ -46,7 +46,8 @@ export const createEntityMarkers = (
       earthRadius * 1.1 // Slightly above earth surface
     );
     positions.push(position);
-    colors.push(entity.color || new Color3(1, 0, 0));
+    colors.push(entity.color || new Color3(0.1, 0.1, 0.1));
+    positionsMap.set(entity.id, position);
   });
 
   // Add points to the system
@@ -62,7 +63,6 @@ export const createEntityMarkers = (
       mesh.parent = parentNode;
     }
     meshes.push(mesh);
-    positionsMap.set(mesh.id, mesh.position.clone());
     console.log('Created', entities.length, 'entity point markers');
   });
 
