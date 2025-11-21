@@ -70,7 +70,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
         scene
     );
     camera.attachControl(canvasRef.current, true);
-    camera.lowerRadiusLimit = 2.1;
+    camera.lowerRadiusLimit = 0.1;
     camera.upperRadiusLimit = 5;
     camera.wheelPrecision = 50;
     camera.panningSensibility = 0;
@@ -121,7 +121,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     // Render loop
     engine.runRenderLoop(() => {
       // Update light direction to point FROM camera TO target (toward Earth)
-      const cameraDirection = camera.target.subtract(camera.position).normalize();
+      const cameraDirection = camera.target.subtract(camera.position).normalizeToNew();
       light1.direction = cameraDirection;
       scene.render();
     });

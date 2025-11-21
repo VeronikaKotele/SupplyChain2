@@ -37,18 +37,21 @@ export const createConnectionLines = (
 
   const meshes: LinesMesh[] = [];
 
-  // Create a map of entity IDs to their positions
-  const entityMap = new Map<string, Vector3>();
+  // Create a map of entity IDs to their positions (center) and sizes
+  const entityMap = new Map<string, { center: Vector3; size: number }>();
   entities.forEach(entity => {
-    const position = latLonToVector3(
+    const center = latLonToVector3(
       entity.latitude,
       entity.longitude,
       earthRadius * 1.05
     );
-    entityMap.set(entity.id, position);
+    entityMap.set(entity.id, { 
+      center, 
+      size: entity.size || 0.05 
+    });
   });
 
-  const BATCH_SIZE = 50; // Lines are simpler than tubes, can process more at once
+  const BATCH_SIZE = 50;
   let currentIndex = 0;
   let cancelled = false;
 
@@ -60,29 +63,54 @@ export const createConnectionLines = (
 
     // Create connection lines for this batch
     batch.forEach((connection) => {
-      const fromPos = entityMap.get(connection.id_from);
-      const toPos = entityMap.get(connection.id_to);
+      const fromEntity = entityMap.get(connection.id_from);
+      const toEntity = entityMap.get(connection.id_to);
 
-      if (!fromPos || !toPos) {
+      if (!fromEntity || !toEntity) {
         return;
       }
 
-      // Create a curved arc path
-      // Calculate midpoint and add height for arc effect
-      const midPoint = Vector3.Lerp(fromPos, toPos, 0.5);
-      const distance = Vector3.Distance(fromPos, toPos);
-      const arcHeight = distance * 0.35; // Arc height is 35% of distance
-      const arcPoint = midPoint.add(midPoint.normalize().scale(arcHeight));
+      // Calculate peak positions (top of the sphere markers)
+      // Peak is at sphere center + radius in the outward direction (away from Earth center)
+      const fromRadius = fromEntity.size / 2; // diameter to radius
+      const toRadius = toEntity.size / 2;
+      
+      // Direction from Earth center to entity (normalized), then scale by radius and add to center
+      const fromDirection = fromEntity.center.normalizeToNew();
+      const toDirection = toEntity.center.normalizeToNew();
+      
+      const fromPeak = fromEntity.center.add(fromDirection.scale(fromRadius));
+      const toPeak = toEntity.center.add(toDirection.scale(toRadius));
 
-      // Create path for the line (bezier curve approximation)
+      // Create a curved arc path that follows the sphere's surface
+      // Use great circle interpolation with extra height for visibility
       const path: Vector3[] = [];
       const segments = 30; // Segments for smooth curve
       for (let i = 0; i <= segments; i++) {
         const t = i / segments;
-        // Quadratic bezier: (1-t)²P0 + 2(1-t)tP1 + t²P2
-        const pos = fromPos.scale((1 - t) * (1 - t))
-          .add(arcPoint.scale(2 * (1 - t) * t))
-          .add(toPos.scale(t * t));
+        
+        // Spherical linear interpolation (slerp) for points on sphere surface
+        // This naturally follows the Earth's curvature
+        const angle = Math.acos(Vector3.Dot(fromPeak.normalizeToNew(), toPeak.normalizeToNew()));
+        const sinAngle = Math.sin(angle);
+        
+        let pos: Vector3;
+        if (sinAngle > 0.001) {
+          // Use slerp for proper spherical interpolation
+          const ratioA = Math.sin((1 - t) * angle) / sinAngle;
+          const ratioB = Math.sin(t * angle) / sinAngle;
+          pos = fromPeak.scale(ratioA).add(toPeak.scale(ratioB));
+        } else {
+          // Points are very close or opposite, use linear interpolation
+          pos = Vector3.Lerp(fromPeak, toPeak, t);
+        }
+        
+        // Add extra height for visibility (slightly above the natural curve)
+        const distance = Vector3.Distance(fromPeak, toPeak);
+        const heightBoost = distance * 0.08; // 8% of distance as extra height
+        const heightFactor = Math.sin(t * Math.PI); // Peaks at middle (t=0.5)
+        pos = pos.normalizeToNew().scale(pos.length() + heightBoost * heightFactor);
+        
         path.push(pos);
       }
 
