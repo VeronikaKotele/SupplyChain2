@@ -1,0 +1,10 @@
+id,type,latitude,longitude,name,colorR,colorG,colorB,size
+north-pole,marker,90,0,North Pole (Should be at top),1,1,1,0.08
+south-pole,marker,-90,0,South Pole (Should be at bottom),0.5,0.5,0.5,0.08
+null-island,marker,0,0,Null Island (0°N 0°E - Gulf of Guinea West Africa),1,1,0,0.06
+equator-180,marker,0,180,Equator at 180° (Pacific Ocean opposite side),0,1,1,0.06
+new-york,marker,40.7128,-74.0060,New York (Should be in Eastern USA),1,0,0,0.05
+london,marker,51.5074,-0.1278,London (Should be near 0° longitude),0,1,0,0.05
+tokyo,marker,35.6762,139.6503,Tokyo (Should be in Eastern Asia),0,0,1,0.05
+sydney,marker,-33.8688,151.2093,Sydney (Should be in Australia Southern Hemisphere),1,0.5,0,0.05
+sao-paulo,marker,-23.5505,-46.6333,São Paulo (Should be in South America),1,0,1,0.05

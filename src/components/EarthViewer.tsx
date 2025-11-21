@@ -18,9 +18,12 @@ import {latLonToVector3} from './3dMathUtils';
 
 export interface LocationMarker {
   id: string;
+  type?: string;
+  name?: string;
+  location_county?: string;
+  location_city?: string;
   latitude: number;
   longitude: number;
-  name?: string;
   color?: Color3;
   size?: number;
 }
@@ -44,6 +47,8 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   const engineRef = useRef<Engine | null>(null);
   const sceneRef = useRef<Scene | null>(null);
   const locationMarkersRef = useRef<Mesh[]>([]);
+
+  console.log('EarthViewer props:', {locations });
 
   // create the earth mesh and scene
   useEffect(() => {
@@ -143,40 +148,6 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     loadModel();
 
-    // Create location markers
-    const createLocationMarkers = () => {
-      // Clear existing markers
-      locationMarkersRef.current.forEach(marker => marker.dispose());
-      locationMarkersRef.current = [];
-
-      locations.forEach((location) => {
-        const sphere = MeshBuilder.CreateSphere(
-          `location-${location.id}`,
-          { diameter: location.size || 0.05 },
-          scene
-        );
-
-        const position = latLonToVector3(
-          location.latitude,
-          location.longitude,
-          earthRadius * 1.05 // Slightly above earth surface
-        );
-        sphere.position = position;
-
-        // Create material for the marker
-        const markerMat = new StandardMaterial(`mat-${location.id}`, scene);
-        markerMat.diffuseColor = location.color || new Color3(1, 0, 0);
-        markerMat.emissiveColor = location.color?.scale(0.3) || new Color3(0.3, 0, 0);
-        markerMat.specularColor = new Color3(0, 0, 0);
-        sphere.material = markerMat;
-
-        locationMarkersRef.current.push(sphere);
-      });
-    };
-
-    // Create markers after a short delay to ensure earth is loaded
-    setTimeout(createLocationMarkers, 500);
-
     // Render loop
     engine.runRenderLoop(() => {
       // Update light direction to point FROM camera TO target (toward Earth)
@@ -198,11 +169,12 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
       scene.dispose();
       engine.dispose();
     };
-  }, [modelPath, materialPath]);
+  }, [modelPath, materialPath, scale, locations, earthRadius]);
 
   // Update location markers when locations prop changes
   useEffect(() => {
     if (!sceneRef.current) return;
+    if (locations.length === 0) return; // Don't process empty locations array
 
     const scene = sceneRef.current;
 
@@ -221,7 +193,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
       const position = latLonToVector3(
         location.latitude,
         location.longitude,
-        earthRadius * 1.02 // Slightly above earth surface
+        earthRadius * 1.05 // Slightly above earth surface
       );
       sphere.position = position;
 
@@ -233,6 +205,8 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
       locationMarkersRef.current.push(sphere);
     });
+
+    console.log('Created', locationMarkersRef.current.length, 'location markers');
   }, [locations, earthRadius]);
 
   return (
