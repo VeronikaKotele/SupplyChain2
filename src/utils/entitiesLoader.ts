@@ -5,14 +5,21 @@ import { loadRowsFromCSV } from './scvLoader';
 interface entityCSVRow {
   id: string;
   type: string;
-  latitude: string;
-  longitude: string;
   name: string;
-  colorR: string;
-  colorG: string;
-  colorB: string;
-  size: string;
+  country: string;
+  lat: string;
+  lon: string;
 }
+
+const colors = new Map<string, Color3>([
+  ['Market Affiliate', new Color3(0.0, 0.318, 0.612)],      // Beiersdorf Blue #005199
+  ['Customer', new Color3(0.0, 0.667, 0.784)],              // Light Blue #00AAC8
+  ['Supplier', new Color3(0.4, 0.6, 0.8)],                  // Sky Blue
+  ['Production Center', new Color3(0.937, 0.608, 0.0)],     // Orange #EF9B00
+  ['Distribution Center', new Color3(0.0, 0.502, 0.478)],   // Teal #00807A
+]);
+
+const defaultSize = 0.05;
 
 /**
  * Converts CSV row to EntityMarker object
@@ -21,15 +28,11 @@ function csvRowToEntityMarker(row: entityCSVRow): EntityMarker {
   return {
     id: row.id,
     type: row.type as 'marker',
-    latitude: parseFloat(row.latitude),
-    longitude: parseFloat(row.longitude),
+    latitude: parseFloat(row.lat),
+    longitude: parseFloat(row.lon),
     name: row.name,
-    color: new Color3(
-      parseFloat(row.colorR),
-      parseFloat(row.colorG),
-      parseFloat(row.colorB)
-    ),
-    size: parseFloat(row.size)
+    color: colors.get(row.type) || new Color3(1, 1, 1),
+    size: defaultSize
   };
 }
 

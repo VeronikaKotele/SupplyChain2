@@ -20,7 +20,7 @@ function App() {
       setConnections(conns);
       // Calculate max amount for scaling
       if (conns.length > 0) {
-        const max = Math.max(...conns.map(c => c.amount));
+        const max = Math.max(...conns.map(c => c.amount ?? 1));
         setMaxAmount(max);
       }
     });

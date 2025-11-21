@@ -3,31 +3,37 @@ import type { ConnectionMarker } from '../components/ConnectionMarker';
 import { loadRowsFromCSV } from './scvLoader';
 
 interface ConnectionCSVRow {
-  id_from: string;
-  id_to: string;
-  order_id: string;
-  product: string;
-  amount: string;
-  colorR: string;
-  colorG: string;
-  colorB: string;
+  Flow_Id: string;
+  Id_From: string;
+  Id_To: string;
+  step_type: string;
+  // product: string;
+  // amount: string;
 }
+
+const colors = new Map<string, Color3>([
+  ['supplier', new Color3(0.0, 0.159, 0.306)],      // Dark Beiersdorf Blue #002850
+  ['internal_1', new Color3(0.0, 0.333, 0.392)],    // Dark Light Blue #005564
+  ['internal_2', new Color3(0.2, 0.3, 0.4)],        // Dark Sky Blue
+  ['internal_3', new Color3(0.468, 0.304, 0.0)],    // Dark Orange #774D00
+  ['internal_4', new Color3(0.0, 0.251, 0.239)],       // Dark Teal #00403D
+]);
+
+const defaultColor = new Color3(1, 1, 1);
+const defaultAmount = 1.0;
 
 /**
  * Converts CSV row to ConnectionMarker object
  */
 function csvRowToConnectionMarker(row: ConnectionCSVRow): ConnectionMarker {
   return {
-    id_from: row.id_from,
-    id_to: row.id_to,
-    order_id: row.order_id,
-    product: row.product,
-    amount: parseFloat(row.amount),
-    color: new Color3(
-      parseFloat(row.colorR),
-      parseFloat(row.colorG),
-      parseFloat(row.colorB)
-    ),
+    flow_id: row.Flow_Id,
+    id_from: row.Id_From,
+    id_to: row.Id_To,
+    step_type: row.step_type,
+    // product: row.product,
+    amount: defaultAmount,
+    color: colors.get(row.step_type) || defaultColor
   };
 }
 

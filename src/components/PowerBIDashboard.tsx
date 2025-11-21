@@ -152,10 +152,10 @@ function PowerBIDashboard({ embedUrl, onFiltersChange }: PowerBIDashboardProps) 
             });
             
             // After 2 seconds, test the API capabilities
-            setTimeout(() => {
-              console.log('🧪 Running API capability test...');
-              testApplyFilter();
-            }, 2000);
+            // setTimeout(() => {
+            //   console.log('🧪 Running API capability test...');
+            //   testApplyFilter();
+            // }, 2000);
           }
         }}
       />

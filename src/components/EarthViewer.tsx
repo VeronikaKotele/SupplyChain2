@@ -132,8 +132,6 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
               
               // mat.transparencyMode = StandardMaterial.MATERIAL_ALPHABLEND;
               // mat.alpha = 0.8; // Set transparency level
-
-              console.log('material configured:', mat.name, 'diffuse:', mat.diffuseColor, 'diffuseTexture:', mat.diffuseTexture);
             }
           });
 
@@ -237,7 +235,12 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
       const toPos = entityMap.get(connection.id_to);
 
       if (!fromPos || !toPos) {
-        console.warn(`Connection ${connection.order_id}: Missing entity ${connection.id_from} or ${connection.id_to}`);
+        if (!fromPos) {
+          //console.warn(`Connection ${connection.flow_id}: Missing entity 'id_from': ${connection.id_from}`);
+        }
+        if (!toPos) {
+          //console.warn(`Connection ${connection.flow_id}: Missing entity 'id_to': ${connection.id_to}`);
+        }
         return;
       }
 
@@ -266,7 +269,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
       // Create tube mesh
       const tube = MeshBuilder.CreateTube(
-        `connection-${connection.order_id}`,
+        `connection-${connection.flow_id}`,
         {
           path: path,
           radius: thickness,
@@ -277,7 +280,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
       );
 
       // Create material for the connection line
-      const lineMat = new StandardMaterial(`mat-connection-${connection.order_id}`, scene);
+      const lineMat = new StandardMaterial(`mat-connection-${connection.flow_id}`, scene);
       lineMat.diffuseColor = connection.color || new Color3(0, 1, 1); // Cyan by default
       lineMat.emissiveColor = connection.color?.scale(0.5) || new Color3(0, 0.5, 0.5);
       lineMat.specularColor = new Color3(0, 0, 0);
