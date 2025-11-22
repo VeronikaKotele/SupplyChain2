@@ -17,12 +17,14 @@ import type { ConnectionMarker } from './ConnectionMarker';
 import { loadEarthModel } from '../utils/meshLoader';
 import { createEntityMarkers, disposeEntityMarkers } from '../utils/entityRenderer';
 import { createConnectionLines, disposeConnectionLines } from '../utils/connectionRenderer';
+import { latLonToVector3 } from './3dMathUtils';
 
 interface EarthViewerProps {
   modelPath: string;
   materialPath?: string;
   scale?: number;
   entities?: EntityMarker[];
+  allEntities?: EntityMarker[]; // All entities for building complete positions map
   connections?: ConnectionMarker[];
   earthRadius?: number;
   maxConnectionAmount?: number; // Max amount for scaling line alpha
@@ -33,6 +35,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   materialPath,
   scale = 1.0,
   entities = [],
+  allEntities = [],
   connections = [],
   earthRadius = 1.0,
   maxConnectionAmount = 100
@@ -43,6 +46,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   const earthParentRef = useRef<TransformNode | null>(null);
   const entityMarkersRef = useRef<Mesh[]>([]);
   const entityPositionsRef = useRef<Map<string, Vector3>>(new Map());
+  const allEntityPositionsRef = useRef<Map<string, Vector3>>(new Map()); // Complete positions map
   const connectionLinesRef = useRef<LinesMesh[]>([]);
   const animationRef = useRef<any>(null);
   const pauseTimeoutRef = useRef<number | null>(null);
@@ -64,7 +68,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     // Create scene
     const scene = new Scene(engine);
-    scene.clearColor = new Color4(0.2, 0.2, 0.2, 1);
+    scene.clearColor = new Color4(0.6, 0.6, 0.8, 1);
     sceneRef.current = scene;
 
     // Camera
@@ -236,6 +240,23 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     };
   }, [modelPath, materialPath, scale]);
 
+  // Build complete positions map from all entities (not just visible ones)
+  useEffect(() => {
+    if (allEntities.length === 0) return;
+    
+    // Build positions map for ALL entities
+    const completePositionsMap = new Map<string, Vector3>();
+    allEntities.forEach((entity) => {
+      const position = latLonToVector3(
+        entity.latitude,
+        entity.longitude,
+        earthRadius * 1.07
+      );
+      completePositionsMap.set(entity.id, position);
+    });
+    allEntityPositionsRef.current = completePositionsMap;
+  }, [allEntities, earthRadius]);
+
   // Update entity markers when entities prop changes - with progressive rendering
   useEffect(() => {
     if (!sceneRef.current) return;
@@ -281,11 +302,11 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     disposeConnectionLines(connectionLinesRef.current);
     connectionLinesRef.current = [];
 
-    // Create new connection lines using the utility
+    // Create new connection lines using the utility with complete positions map
     const { meshes, cancel } = createConnectionLines(
       connections,
       entities,
-      entityPositionsRef.current,
+      allEntityPositionsRef.current,
       scene,
       maxConnectionAmount,
       earthParent || undefined

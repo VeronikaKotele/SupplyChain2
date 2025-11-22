@@ -133,17 +133,11 @@ function App() {
     // Get IDs of filtered entities for connection filtering
     const filteredEntityIds = new Set(filteredEntities.map(e => e.id));
 
-    // Filter connections based on:
-    // 1. Connection type filters
-    // 2. Category filters
-    // 3. Show connections where at least one entity is in the filtered entity set
+    // Filter connections: show connections where at least one entity is visible
     const filteredConnections = allConnections.filter(conn => {
-      const typeEnabled = connectionFilters.get(conn.step_type) !== false;
-      // If category filter is active, check if connection's flow_id is in allowed flow IDs
-      const categoryEnabled = !allowedFlowIds || allowedFlowIds.has(conn.flow_id);
       // Show connection if at least one connected entity is visible
       const atLeastOneEntityVisible = filteredEntityIds.has(conn.id_from) || filteredEntityIds.has(conn.id_to);
-      return typeEnabled && categoryEnabled && atLeastOneEntityVisible;
+      return atLeastOneEntityVisible;
     });
     setConnections(filteredConnections);
   }, [entityFilters, connectionFilters, categoryFilters, selectedEntityNames, allEntityNames, allEntities, allConnections, transactions]);
@@ -315,6 +309,7 @@ function App() {
               materialPath="/models/earth/Earth.mtl"
               scale={0.00016}
               entities={entities}
+              allEntities={allEntities}
               connections={connections}
               maxConnectionAmount={maxAmount}
               earthRadius={1} // Adjust if markers don't align with model surface
