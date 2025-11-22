@@ -147,7 +147,17 @@ function App() {
     
     setEntityFilters(prev => {
       const newFilters = new Map(prev);
-      newFilters.set(originalType || '', !prev.get(originalType || ''));
+      // Check if all are currently enabled
+      const allEnabled = Array.from(prev.values()).every(enabled => enabled);
+      
+      if (allEnabled) {
+        // If all enabled, make only this one enabled
+        newFilters.forEach((_, key) => newFilters.set(key, false));
+        newFilters.set(originalType || '', true);
+      } else {
+        // Otherwise, toggle this one
+        newFilters.set(originalType || '', !prev.get(originalType || ''));
+      }
       return newFilters;
     });
   };
@@ -175,7 +185,17 @@ function App() {
     
     setConnectionFilters(prev => {
       const newFilters = new Map(prev);
-      newFilters.set(originalType, !prev.get(originalType));
+      // Check if all are currently enabled
+      const allEnabled = Array.from(prev.values()).every(enabled => enabled);
+      
+      if (allEnabled) {
+        // If all enabled, make only this one enabled
+        newFilters.forEach((_, key) => newFilters.set(key, false));
+        newFilters.set(originalType, true);
+      } else {
+        // Otherwise, toggle this one
+        newFilters.set(originalType, !prev.get(originalType));
+      }
       return newFilters;
     });
   };
@@ -219,7 +239,17 @@ function App() {
     
     setCategoryFilters(prev => {
       const newFilters = new Map(prev);
-      newFilters.set(category, !prev.get(category));
+      // Check if all are currently enabled
+      const allEnabled = Array.from(prev.values()).every(enabled => enabled);
+      
+      if (allEnabled) {
+        // If all enabled, make only this one enabled
+        newFilters.forEach((_, key) => newFilters.set(key, false));
+        newFilters.set(category, true);
+      } else {
+        // Otherwise, toggle this one
+        newFilters.set(category, !prev.get(category));
+      }
       return newFilters;
     });
   };
@@ -289,12 +319,21 @@ function App() {
                 onToggle={(name) => {
                   setSelectedEntityNames(prev => {
                     const newSet = new Set(prev);
-                    if (newSet.has(name)) {
-                      newSet.delete(name);
+                    // Check if all are currently selected
+                    const allSelected = prev.size === allEntityNames.length;
+                    
+                    if (allSelected) {
+                      // If all selected, make only this one selected
+                      return new Set([name]);
                     } else {
-                      newSet.add(name);
+                      // Otherwise, toggle this one
+                      if (newSet.has(name)) {
+                        newSet.delete(name);
+                      } else {
+                        newSet.add(name);
+                      }
+                      return newSet;
                     }
-                    return newSet;
                   });
                 }}
                 onEnableAll={() => setSelectedEntityNames(new Set(allEntityNames))}
