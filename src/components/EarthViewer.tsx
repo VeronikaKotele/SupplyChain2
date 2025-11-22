@@ -44,6 +44,8 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   const entityMarkersRef = useRef<Mesh[]>([]);
   const entityPositionsRef = useRef<Map<string, Vector3>>(new Map());
   const connectionLinesRef = useRef<LinesMesh[]>([]);
+  const animationRef = useRef<any>(null);
+  const pauseTimeoutRef = useRef<number | null>(null);
 
   // create the earth mesh and scene
   useEffect(() => {
@@ -114,7 +116,29 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     earthParent.animations = [rotationAnimation];
 
     // Start the animation
-    scene.beginAnimation(earthParent, 0, animFrameRate * 60, true);
+    const animatable = scene.beginAnimation(earthParent, 0, animFrameRate * 60, true);
+    animationRef.current = animatable;
+
+    // Pause animation on camera interaction
+    const handleCameraInput = () => {
+      if (animationRef.current) {
+        animationRef.current.pause();
+        
+        // Clear any existing timeout
+        if (pauseTimeoutRef.current) {
+          clearTimeout(pauseTimeoutRef.current);
+        }
+        
+        // Resume animation after 5 seconds
+        pauseTimeoutRef.current = window.setTimeout(() => {
+          if (animationRef.current) {
+            animationRef.current.restart();
+          }
+        }, 5000);
+      }
+    };
+
+    camera.onViewMatrixChangedObservable.add(handleCameraInput);
 
     // Load the Earth model and parent it to earthParent
     loadEarthModel(modelPath, scene, scale, earthParent);
@@ -135,6 +159,9 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     // Cleanup
     return () => {
+      if (pauseTimeoutRef.current) {
+        clearTimeout(pauseTimeoutRef.current);
+      }
       window.removeEventListener('resize', handleResize);
       disposeEntityMarkers(entityMarkersRef.current);
       disposeConnectionLines(connectionLinesRef.current);
