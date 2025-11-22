@@ -8,6 +8,7 @@ import type { EntityMarker } from './components/EntityMarker'
 import type { ConnectionMarker } from './components/ConnectionMarker'
 import { loadEntitiesFromCSV, getEntityLegendItems } from './utils/entitiesLoader'
 import { loadConnectionsFromCSV, getConnectionLegendItems } from './utils/connectionLoader'
+import { loadTransactionsFromCSV, getTransactionStats, getTransactionCategories, getFlowIdsForCategories, type Transaction } from './utils/transactionsLoader'
 
 function App() {
   const [entities, setEntities] = useState<EntityMarker[]>([]);
@@ -19,6 +20,10 @@ function App() {
   
   const [entityFilters, setEntityFilters] = useState<Map<string, boolean>>(new Map());
   const [connectionFilters, setConnectionFilters] = useState<Map<string, boolean>>(new Map());
+
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [categoryFilters, setCategoryFilters] = useState<Map<string, boolean>>(new Map());
+  const [transactionCategories, setTransactionCategories] = useState<string[]>([]);
 
   useEffect(() => {
     // Load entities and connections from CSV files
@@ -49,14 +54,42 @@ function App() {
       stepTypes.forEach(type => filters.set(type, true));
       setConnectionFilters(filters);
     });
+
+    // Load transactions
+    loadTransactionsFromCSV('/data/transactions.csv').then((loadedTransactions) => {
+      setTransactions(loadedTransactions);
+      console.log('Transactions loaded:', loadedTransactions.length);
+      console.log('Transaction stats:', getTransactionStats(loadedTransactions));
+      
+      // Initialize category filters
+      const categories = getTransactionCategories(loadedTransactions);
+      setTransactionCategories(categories);
+      const filters = new Map<string, boolean>();
+      categories.forEach(category => filters.set(category, true));
+      setCategoryFilters(filters);
+    });
   }, []);
 
   // Filter entities and connections when filters change
   useEffect(() => {
-    // First, filter connections based on connection filters
-    const filteredConnections = allConnections.filter(conn => 
-      connectionFilters.get(conn.step_type) !== false
-    );
+    // Get enabled categories
+    const enabledCategories = new Set<string>();
+    categoryFilters.forEach((enabled, category) => {
+      if (enabled) enabledCategories.add(category);
+    });
+
+    // Get flow IDs for enabled categories
+    const allowedFlowIds = enabledCategories.size === transactionCategories.length || enabledCategories.size === 0
+      ? null // If all categories enabled or none loaded yet, don't filter by flow ID
+      : getFlowIdsForCategories(transactions, enabledCategories);
+
+    // First, filter connections based on connection filters and category filters
+    const filteredConnections = allConnections.filter(conn => {
+      const typeEnabled = connectionFilters.get(conn.step_type) !== false;
+      // If category filter is active, check if connection's flow_id is in allowed flow IDs
+      const categoryEnabled = !allowedFlowIds || allowedFlowIds.has(conn.flow_id);
+      return typeEnabled && categoryEnabled;
+    });
     setConnections(filteredConnections);
 
     // Get all entity IDs that are used by enabled connections
@@ -73,7 +106,7 @@ function App() {
       return typeEnabled && (usedByConnection || filteredConnections.length === allConnections.length);
     });
     setEntities(filteredEntities);
-  }, [entityFilters, connectionFilters, allEntities, allConnections]);
+  }, [entityFilters, connectionFilters, categoryFilters, allEntities, allConnections, transactions, transactionCategories]);
 
   const handleEntityToggle = (index: number) => {
     // Find the original type name from the loader
@@ -87,6 +120,22 @@ function App() {
     });
   };
 
+  const handleEntityEnableAll = () => {
+    setEntityFilters(prev => {
+      const newFilters = new Map(prev);
+      newFilters.forEach((_, key) => newFilters.set(key, true));
+      return newFilters;
+    });
+  };
+
+  const handleEntityDisableAll = () => {
+    setEntityFilters(prev => {
+      const newFilters = new Map(prev);
+      newFilters.forEach((_, key) => newFilters.set(key, false));
+      return newFilters;
+    });
+  };
+
   const handleConnectionToggle = (index: number) => {
     // Find the original step_type from connections
     const stepTypes = Array.from(new Set(allConnections.map(c => c.step_type)));
@@ -95,6 +144,22 @@ function App() {
     setConnectionFilters(prev => {
       const newFilters = new Map(prev);
       newFilters.set(originalType, !prev.get(originalType));
+      return newFilters;
+    });
+  };
+
+  const handleConnectionEnableAll = () => {
+    setConnectionFilters(prev => {
+      const newFilters = new Map(prev);
+      newFilters.forEach((_, key) => newFilters.set(key, true));
+      return newFilters;
+    });
+  };
+
+  const handleConnectionDisableAll = () => {
+    setConnectionFilters(prev => {
+      const newFilters = new Map(prev);
+      newFilters.forEach((_, key) => newFilters.set(key, false));
       return newFilters;
     });
   };
@@ -114,6 +179,40 @@ function App() {
     return items.map((item, index) => ({
       ...item,
       enabled: connectionFilters.get(stepTypes[index]) !== false
+    }));
+  };
+
+  const handleCategoryToggle = (index: number) => {
+    const category = transactionCategories[index];
+    
+    setCategoryFilters(prev => {
+      const newFilters = new Map(prev);
+      newFilters.set(category, !prev.get(category));
+      return newFilters;
+    });
+  };
+
+  const handleCategoryEnableAll = () => {
+    setCategoryFilters(prev => {
+      const newFilters = new Map(prev);
+      newFilters.forEach((_, key) => newFilters.set(key, true));
+      return newFilters;
+    });
+  };
+
+  const handleCategoryDisableAll = () => {
+    setCategoryFilters(prev => {
+      const newFilters = new Map(prev);
+      newFilters.forEach((_, key) => newFilters.set(key, false));
+      return newFilters;
+    });
+  };
+
+  const getCategoryLegendItemsWithState = () => {
+    return transactionCategories.map(category => ({
+      label: category,
+      color: '#999999', // Gray color for categories
+      enabled: categoryFilters.get(category) !== false
     }));
   };
 
@@ -155,11 +254,22 @@ function App() {
                 title="Entities" 
                 items={getEntityLegendItemsWithState()} 
                 onToggle={handleEntityToggle}
+                onEnableAll={handleEntityEnableAll}
+                onDisableAll={handleEntityDisableAll}
               />
               <LegendFilter 
                 title="Connections" 
                 items={getConnectionLegendItemsWithState()} 
                 onToggle={handleConnectionToggle}
+                onEnableAll={handleConnectionEnableAll}
+                onDisableAll={handleConnectionDisableAll}
+              />
+              <LegendFilter 
+                title="Categories" 
+                items={getCategoryLegendItemsWithState()} 
+                onToggle={handleCategoryToggle}
+                onEnableAll={handleCategoryEnableAll}
+                onDisableAll={handleCategoryDisableAll}
               />
             </div>
           </div>
