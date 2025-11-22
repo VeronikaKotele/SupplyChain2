@@ -47,6 +47,9 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   const animationRef = useRef<any>(null);
   const pauseTimeoutRef = useRef<number | null>(null);
   const [selectedEntity, setSelectedEntity] = useState<EntityMarker | null>(null);
+  const visibleEntitiesRef = useRef<EntityMarker[]>([]);
+  const pointerDownRef = useRef<{ x: number; y: number; time: number } | null>(null);
+  const hasDraggedRef = useRef(false);
 
   // create the earth mesh and scene
   useEffect(() => {
@@ -74,10 +77,18 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
         scene
     );
     camera.attachControl(canvasRef.current, true);
-    camera.lowerRadiusLimit = 2.1;
+    camera.lowerRadiusLimit = 1.1;
     camera.upperRadiusLimit = 5;
     camera.wheelPrecision = 50;
     camera.panningSensibility = 0;
+    
+    // Adjust near clipping plane to allow closer zoom without clipping
+    camera.minZ = 0.01; // Default is 0.1, reducing allows closer view
+    camera.zoomOnFactor = 0.2;
+    
+    // Disable camera inertia for zoom
+    camera.inertialRadiusOffset = 0;
+    camera.useInputToRestoreState = false; // Disable animation when restoring camera state
 
     const light1 = new HemisphericLight(
         "light1",
@@ -122,53 +133,76 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     // Pause animation on camera interaction
     const handleCameraInput = () => {
-      if (animationRef.current) {
-        animationRef.current.pause();
-        
-        // Clear any existing timeout
-        if (pauseTimeoutRef.current) {
-          clearTimeout(pauseTimeoutRef.current);
-        }
-        
-        // Resume animation after 5 seconds
-        pauseTimeoutRef.current = window.setTimeout(() => {
-          if (animationRef.current) {
-            animationRef.current.restart();
+        if (animationRef.current) {
+          animationRef.current.pause();
+          
+          // Clear any existing timeout
+          if (pauseTimeoutRef.current) {
+            clearTimeout(pauseTimeoutRef.current);
           }
-        }, 5000);
-      }
+          
+          // Resume animation after 5 seconds
+          pauseTimeoutRef.current = window.setTimeout(() => {
+            if (animationRef.current) {
+              animationRef.current.restart();
+            }
+          }, 5000);
+        }
     };
 
     camera.onViewMatrixChangedObservable.add(handleCameraInput);
 
     // Handle clicks on the Earth to select entities
+    // Track pointer down/move/up to distinguish clicks from drags
     scene.onPointerObservable.add((pointerInfo) => {
-      if (pointerInfo.type === 2) { // POINTERDOWN
-        const pickResult = scene.pick(scene.pointerX, scene.pointerY);
-        
-        if (pickResult?.hit && pickResult.pickedPoint) {
-          // Find the closest entity to the clicked point
-          let closestEntity: EntityMarker | null = null;
-          let minDistance = Infinity;
-          
-          entities.forEach((entity) => {
-            const entityPos = entityPositionsRef.current.get(entity.id);
-            if (entityPos) {
-              const distance = Vector3.Distance(pickResult.pickedPoint!, entityPos);
-              if (distance < minDistance) {
-                minDistance = distance;
-                closestEntity = entity;
-              }
-            }
-          });
-          
-          // Only select if entity is reasonably close (within 0.3 units)
-          if (closestEntity && minDistance < 0.3) {
-            setSelectedEntity(closestEntity);
-          } else {
-            setSelectedEntity(null);
+      if (pointerInfo.type === 1) { // POINTERDOWN
+        pointerDownRef.current = {
+          x: scene.pointerX,
+          y: scene.pointerY,
+          time: Date.now()
+        };
+        hasDraggedRef.current = false;
+      } else if (pointerInfo.type === 4) { // POINTERMOVE
+        if (pointerDownRef.current) {
+          const dx = scene.pointerX - pointerDownRef.current.x;
+          const dy = scene.pointerY - pointerDownRef.current.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          // If moved more than 5 pixels, consider it a drag
+          if (distance > 5) {
+            hasDraggedRef.current = true;
           }
         }
+      } else if (pointerInfo.type === 2) { // POINTERUP
+        // Only process click if there was no drag
+        if (pointerDownRef.current && !hasDraggedRef.current) {
+          const pickResult = scene.pick(scene.pointerX, scene.pointerY);
+          
+          if (pickResult?.hit && pickResult.pickedPoint) {
+            // Find the closest entity to the clicked point (only from visible entities)
+            let closestEntity: EntityMarker | null = null;
+            let minDistance = Infinity;
+            
+            visibleEntitiesRef.current.forEach((entity) => {
+              const entityPos = entityPositionsRef.current.get(entity.id);
+              if (entityPos) {
+                const distance = Vector3.Distance(pickResult.pickedPoint!, entityPos);
+                if (distance < minDistance) {
+                  minDistance = distance;
+                  closestEntity = entity;
+                }
+              }
+            });
+            
+            // Only select if entity is reasonably close (within 0.3 units)
+            if (closestEntity && minDistance < 0.3) {
+              setSelectedEntity(closestEntity);
+            } else {
+              setSelectedEntity(null);
+            }
+          }
+        }
+        pointerDownRef.current = null;
+        hasDraggedRef.current = false;
       }
     });
 
@@ -209,6 +243,9 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     const scene = sceneRef.current;
     const earthParent = earthParentRef.current;
+
+    // Update visible entities ref for click handling
+    visibleEntitiesRef.current = entities;
 
     // Clear existing markers
     disposeEntityMarkers(entityMarkersRef.current);
@@ -277,16 +314,16 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
         <div
           style={{
             position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
+            top: '20px',
+            left: '20px',
             background: 'rgba(0, 0, 0, 0.85)',
             color: 'white',
-            padding: '20px',
+            padding: '16px',
             borderRadius: '8px',
             boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
             zIndex: 1000,
             minWidth: '250px',
+            maxWidth: '350px',
           }}
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>

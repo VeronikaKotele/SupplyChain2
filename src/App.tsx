@@ -24,6 +24,7 @@ function App() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [categoryFilters, setCategoryFilters] = useState<Map<string, boolean>>(new Map());
   const [transactionCategories, setTransactionCategories] = useState<string[]>([]);
+  const [transactionCategoriesJustLoaded, setTransactionCategoriesJustLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     // Load entities and connections from CSV files
@@ -64,6 +65,7 @@ function App() {
       // Initialize category filters
       const categories = getTransactionCategories(loadedTransactions);
       setTransactionCategories(categories);
+      setTransactionCategoriesJustLoaded(true);
       const filters = new Map<string, boolean>();
       categories.forEach(category => filters.set(category, true));
       setCategoryFilters(filters);
@@ -72,6 +74,15 @@ function App() {
 
   // Filter entities and connections when filters change
   useEffect(() => {
+    // Skip if we don't have all the base data loaded yet
+    if (allEntities.length === 0 || allConnections.length === 0) return;
+
+    if (transactionCategoriesJustLoaded) {
+      // Just initialized category filters, skip filtering this time
+      setTransactionCategoriesJustLoaded(false);
+      return;
+    }
+
     // Get enabled categories
     const enabledCategories = new Set<string>();
     categoryFilters.forEach((enabled, category) => {
@@ -79,11 +90,11 @@ function App() {
     });
 
     // Get flow IDs for enabled categories
-    const allowedFlowIds = enabledCategories.size === transactionCategories.length || enabledCategories.size === 0
+    const allowedFlowIds = enabledCategories.size === categoryFilters.size || enabledCategories.size === 0
       ? null // If all categories enabled or none loaded yet, don't filter by flow ID
       : getFlowIdsForCategories(transactions, enabledCategories);
 
-    // First, filter connections based on connection filters and category filters
+    // Filter connections based on connection type filters and category filters
     const filteredConnections = allConnections.filter(conn => {
       const typeEnabled = connectionFilters.get(conn.step_type) !== false;
       // If category filter is active, check if connection's flow_id is in allowed flow IDs
@@ -92,21 +103,27 @@ function App() {
     });
     setConnections(filteredConnections);
 
-    // Get all entity IDs that are used by enabled connections
-    const usedEntityIds = new Set<string>();
-    filteredConnections.forEach(conn => {
-      usedEntityIds.add(conn.id_from);
-      usedEntityIds.add(conn.id_to);
-    });
+    // Get all entity IDs that are used in transactions for enabled categories
+    const categoryFilteredEntityIds = new Set<string>();
+    if (allowedFlowIds) {
+      // If category filter is active, find entities connected to allowed flow IDs
+      allConnections.forEach(conn => {
+        if (allowedFlowIds.has(conn.flow_id)) {
+          categoryFilteredEntityIds.add(conn.id_from);
+          categoryFilteredEntityIds.add(conn.id_to);
+        }
+      });
+    }
 
-    // Filter entities: show if entity type is enabled OR if entity is used by enabled connections
+    // Filter entities based on entity type filters and category filters (independent of connections)
     const filteredEntities = allEntities.filter(entity => {
       const typeEnabled = entityFilters.get(entity.type || '') !== false;
-      const usedByConnection = usedEntityIds.has(entity.id);
-      return typeEnabled && (usedByConnection || filteredConnections.length === allConnections.length);
+      // If category filter is active, entity must be in category-filtered set
+      const categoryEnabled = !allowedFlowIds || categoryFilteredEntityIds.has(entity.id);
+      return typeEnabled && categoryEnabled;
     });
     setEntities(filteredEntities);
-  }, [entityFilters, connectionFilters, categoryFilters, allEntities, allConnections, transactions, transactionCategories]);
+  }, [entityFilters, connectionFilters, categoryFilters, allEntities, allConnections, transactions]);
 
   const handleEntityToggle = (index: number) => {
     // Find the original type name from the loader
