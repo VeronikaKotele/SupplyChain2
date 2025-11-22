@@ -107,15 +107,6 @@ function App() {
     // Check if entity name filter is active (not all selected)
     const entityNameFilterActive = selectedEntityNames.size > 0 && selectedEntityNames.size < allEntityNames.length;
 
-    // Filter connections based on connection type filters and category filters
-    const filteredConnections = allConnections.filter(conn => {
-      const typeEnabled = connectionFilters.get(conn.step_type) !== false;
-      // If category filter is active, check if connection's flow_id is in allowed flow IDs
-      const categoryEnabled = !allowedFlowIds || allowedFlowIds.has(conn.flow_id);
-      return typeEnabled && categoryEnabled;
-    });
-    setConnections(filteredConnections);
-
     // Get all entity IDs that are used in transactions for enabled categories
     const categoryFilteredEntityIds = new Set<string>();
     if (allowedFlowIds) {
@@ -138,6 +129,23 @@ function App() {
       return typeEnabled && categoryEnabled && nameEnabled;
     });
     setEntities(filteredEntities);
+
+    // Get IDs of filtered entities for connection filtering
+    const filteredEntityIds = new Set(filteredEntities.map(e => e.id));
+
+    // Filter connections based on:
+    // 1. Connection type filters
+    // 2. Category filters
+    // 3. Show connections where at least one entity is in the filtered entity set
+    const filteredConnections = allConnections.filter(conn => {
+      const typeEnabled = connectionFilters.get(conn.step_type) !== false;
+      // If category filter is active, check if connection's flow_id is in allowed flow IDs
+      const categoryEnabled = !allowedFlowIds || allowedFlowIds.has(conn.flow_id);
+      // Show connection if at least one connected entity is visible
+      const atLeastOneEntityVisible = filteredEntityIds.has(conn.id_from) || filteredEntityIds.has(conn.id_to);
+      return typeEnabled && categoryEnabled && atLeastOneEntityVisible;
+    });
+    setConnections(filteredConnections);
   }, [entityFilters, connectionFilters, categoryFilters, selectedEntityNames, allEntityNames, allEntities, allConnections, transactions]);
 
   const handleEntityToggle = (index: number) => {

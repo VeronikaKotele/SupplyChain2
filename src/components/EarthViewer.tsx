@@ -234,7 +234,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
       scene.dispose();
       engine.dispose();
     };
-  }, [modelPath, materialPath, scale, entities, connections, earthRadius, maxConnectionAmount]);
+  }, [modelPath, materialPath, scale]);
 
   // Update entity markers when entities prop changes - with progressive rendering
   useEffect(() => {
