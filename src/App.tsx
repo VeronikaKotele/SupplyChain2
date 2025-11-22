@@ -4,6 +4,7 @@ import EarthViewer from './components/EarthViewer'
 import PowerBIDashboard from './components/PowerBIDashboard'
 import ErrorBoundary from './components/ErrorBoundary'
 import LegendFilter from './components/LegendFilter'
+import DropdownFilter from './components/DropdownFilter'
 import type { EntityMarker } from './components/EntityMarker'
 import type { ConnectionMarker } from './components/ConnectionMarker'
 import { loadEntitiesFromCSV, getEntityLegendItems } from './utils/entitiesLoader'
@@ -25,8 +26,10 @@ function App() {
   const [categoryFilters, setCategoryFilters] = useState<Map<string, boolean>>(new Map());
   const [transactionCategories, setTransactionCategories] = useState<string[]>([]);
   const [transactionCategoriesJustLoaded, setTransactionCategoriesJustLoaded] = useState<boolean>(false);
-  const [flowIdFilter, setFlowIdFilter] = useState<string>('');
-  const [entityNameFilter, setEntityNameFilter] = useState<string>('');
+  
+  // Dropdown filter for Entity Names
+  const [allEntityNames, setAllEntityNames] = useState<string[]>([]);
+  const [selectedEntityNames, setSelectedEntityNames] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     // Load entities and connections from CSV files
@@ -39,6 +42,11 @@ function App() {
       const filters = new Map<string, boolean>();
       types.forEach(type => filters.set(type || '', true));
       setEntityFilters(filters);
+      
+      // Extract unique entity names and initialize all as selected
+      const entityNames = Array.from(new Set(loadedEntities.map(e => e.name).filter((name): name is string => !!name && name.trim() !== ''))).sort();
+      setAllEntityNames(entityNames);
+      setSelectedEntityNames(new Set(entityNames));
     });
     
     loadConnectionsFromCSV('/data/connections.csv').then((conns) => {
@@ -96,18 +104,15 @@ function App() {
       ? null // If all categories enabled or none loaded yet, don't filter by flow ID
       : getFlowIdsForCategories(transactions, enabledCategories);
 
-    // Check if flow ID filter is active
-    const flowIdFilterActive = flowIdFilter.trim().length > 0;
-    const entityNameFilterActive = entityNameFilter.trim().length > 0;
+    // Check if entity name filter is active (not all selected)
+    const entityNameFilterActive = selectedEntityNames.size > 0 && selectedEntityNames.size < allEntityNames.length;
 
-    // Filter connections based on connection type filters, category filters, and flow ID filter
+    // Filter connections based on connection type filters and category filters
     const filteredConnections = allConnections.filter(conn => {
       const typeEnabled = connectionFilters.get(conn.step_type) !== false;
       // If category filter is active, check if connection's flow_id is in allowed flow IDs
       const categoryEnabled = !allowedFlowIds || allowedFlowIds.has(conn.flow_id);
-      // If flow ID filter is active, check if connection's flow_id contains the filter text
-      const flowIdEnabled = !flowIdFilterActive || conn.flow_id.toLowerCase().includes(flowIdFilter.toLowerCase());
-      return typeEnabled && categoryEnabled && flowIdEnabled;
+      return typeEnabled && categoryEnabled;
     });
     setConnections(filteredConnections);
 
@@ -123,28 +128,17 @@ function App() {
       });
     }
 
-    // Get all entity IDs that are used by flow ID filtered connections
-    const flowIdFilteredEntityIds = new Set<string>();
-    if (flowIdFilterActive) {
-      filteredConnections.forEach(conn => {
-        flowIdFilteredEntityIds.add(conn.id_from);
-        flowIdFilteredEntityIds.add(conn.id_to);
-      });
-    }
-
-    // Filter entities based on entity type filters, category filters, flow ID filter, and name filter
+    // Filter entities based on entity type filters, category filters, and name filter
     const filteredEntities = allEntities.filter(entity => {
       const typeEnabled = entityFilters.get(entity.type || '') !== false;
       // If category filter is active, entity must be in category-filtered set
       const categoryEnabled = !allowedFlowIds || categoryFilteredEntityIds.has(entity.id);
-      // If flow ID filter is active, entity must be in flow ID filtered set
-      const flowIdEnabled = !flowIdFilterActive || flowIdFilteredEntityIds.has(entity.id);
-      // If entity name filter is active, check if entity name contains the filter text
-      const nameEnabled = !entityNameFilterActive || (entity.name && entity.name.toLowerCase().includes(entityNameFilter.toLowerCase()));
-      return typeEnabled && categoryEnabled && flowIdEnabled && nameEnabled;
+      // If entity name filter is active, check if entity name is in selected set
+      const nameEnabled = !entityNameFilterActive || (entity.name && selectedEntityNames.has(entity.name));
+      return typeEnabled && categoryEnabled && nameEnabled;
     });
     setEntities(filteredEntities);
-  }, [entityFilters, connectionFilters, categoryFilters, flowIdFilter, entityNameFilter, allEntities, allConnections, transactions]);
+  }, [entityFilters, connectionFilters, categoryFilters, selectedEntityNames, allEntityNames, allEntities, allConnections, transactions]);
 
   const handleEntityToggle = (index: number) => {
     // Find the original type name from the loader
@@ -288,68 +282,25 @@ function App() {
               earthRadius={1} // Adjust if markers don't align with model surface
             />
             <div style={{ position: 'absolute', top: '20px', left: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <div
-                style={{
-                  background: 'rgba(0, 0, 0, 0.75)',
-                  backdropFilter: 'blur(10px)',
-                  borderRadius: '8px',
-                  padding: '16px',
-                  color: 'white',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
-                  minWidth: '200px',
+              <DropdownFilter
+                title="Entity Names"
+                items={allEntityNames}
+                selectedItems={selectedEntityNames}
+                onToggle={(name) => {
+                  setSelectedEntityNames(prev => {
+                    const newSet = new Set(prev);
+                    if (newSet.has(name)) {
+                      newSet.delete(name);
+                    } else {
+                      newSet.add(name);
+                    }
+                    return newSet;
+                  });
                 }}
-              >
-                <h3 style={{ margin: '0 0 12px 0', fontSize: '14px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                  Entity Name Filter
-                </h3>
-                <input
-                  type="text"
-                  value={entityNameFilter}
-                  onChange={(e) => setEntityNameFilter(e.target.value)}
-                  placeholder="Enter Entity Name..."
-                  style={{
-                    width: '100%',
-                    padding: '8px',
-                    borderRadius: '4px',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'white',
-                    fontSize: '13px',
-                    outline: 'none',
-                  }}
-                />
-              </div>
-              <div
-                style={{
-                  background: 'rgba(0, 0, 0, 0.75)',
-                  backdropFilter: 'blur(10px)',
-                  borderRadius: '8px',
-                  padding: '16px',
-                  color: 'white',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
-                  minWidth: '200px',
-                }}
-              >
-                <h3 style={{ margin: '0 0 12px 0', fontSize: '14px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                  Flow ID Filter
-                </h3>
-                <input
-                  type="text"
-                  value={flowIdFilter}
-                  onChange={(e) => setFlowIdFilter(e.target.value)}
-                  placeholder="Enter Flow ID..."
-                  style={{
-                    width: '100%',
-                    padding: '8px',
-                    borderRadius: '4px',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'white',
-                    fontSize: '13px',
-                    outline: 'none',
-                  }}
-                />
-              </div>
+                onEnableAll={() => setSelectedEntityNames(new Set(allEntityNames))}
+                onDisableAll={() => setSelectedEntityNames(new Set())}
+                placeholder="Search entity names..."
+              />
             </div>
             <div style={{ position: 'absolute', top: '20px', right: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <LegendFilter 
