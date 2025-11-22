@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   Engine,
   Scene,
@@ -46,6 +46,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   const connectionLinesRef = useRef<LinesMesh[]>([]);
   const animationRef = useRef<any>(null);
   const pauseTimeoutRef = useRef<number | null>(null);
+  const [selectedEntity, setSelectedEntity] = useState<EntityMarker | null>(null);
 
   // create the earth mesh and scene
   useEffect(() => {
@@ -140,6 +141,37 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     camera.onViewMatrixChangedObservable.add(handleCameraInput);
 
+    // Handle clicks on the Earth to select entities
+    scene.onPointerObservable.add((pointerInfo) => {
+      if (pointerInfo.type === 2) { // POINTERDOWN
+        const pickResult = scene.pick(scene.pointerX, scene.pointerY);
+        
+        if (pickResult?.hit && pickResult.pickedPoint) {
+          // Find the closest entity to the clicked point
+          let closestEntity: EntityMarker | null = null;
+          let minDistance = Infinity;
+          
+          entities.forEach((entity) => {
+            const entityPos = entityPositionsRef.current.get(entity.id);
+            if (entityPos) {
+              const distance = Vector3.Distance(pickResult.pickedPoint!, entityPos);
+              if (distance < minDistance) {
+                minDistance = distance;
+                closestEntity = entity;
+              }
+            }
+          });
+          
+          // Only select if entity is reasonably close (within 0.3 units)
+          if (closestEntity && minDistance < 0.3) {
+            setSelectedEntity(closestEntity);
+          } else {
+            setSelectedEntity(null);
+          }
+        }
+      }
+    });
+
     // Load the Earth model and parent it to earthParent
     loadEarthModel(modelPath, scene, scale, earthParent);
 
@@ -231,15 +263,59 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   }, [connections, entities, earthRadius, maxConnectionAmount]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      style={{
-        width: '100%',
-        height: '100%',
-        display: 'block',
-        outline: 'none',
-      }}
-    />
+    <>
+      <canvas
+        ref={canvasRef}
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'block',
+          outline: 'none',
+        }}
+      />
+      {selectedEntity && (
+        <div
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            background: 'rgba(0, 0, 0, 0.85)',
+            color: 'white',
+            padding: '20px',
+            borderRadius: '8px',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
+            zIndex: 1000,
+            minWidth: '250px',
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+            <h3 style={{ margin: 0, fontSize: '16px', fontWeight: 'bold' }}>Entity Details</h3>
+            <button
+              onClick={() => setSelectedEntity(null)}
+              style={{
+                background: 'transparent',
+                border: 'none',
+                color: 'white',
+                fontSize: '20px',
+                cursor: 'pointer',
+                padding: 0,
+                lineHeight: 1,
+              }}
+            >
+              ✕
+            </button>
+          </div>
+          <div style={{ fontSize: '14px', lineHeight: '1.6' }}>
+            <div><strong>Name:</strong> {selectedEntity.name || 'N/A'}</div>
+            {selectedEntity.type && <div><strong>Type:</strong> {selectedEntity.type}</div>}
+            {selectedEntity.location_county && <div><strong>Country:</strong> {selectedEntity.location_county}</div>}
+            {selectedEntity.location_city && <div><strong>City:</strong> {selectedEntity.location_city}</div>}
+            <div><strong>ID:</strong> {selectedEntity.id}</div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

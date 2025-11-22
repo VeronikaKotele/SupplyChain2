@@ -47,7 +47,7 @@ export function getEntityLegendItems(): Array<{ label: string; color: string }> 
 function csvRowToEntityMarker(row: entityCSVRow): EntityMarker {
   return {
     id: row.id,
-    type: row.type as 'marker',
+    type: row.type,
     latitude: parseFloat(row.lat),
     longitude: parseFloat(row.lon),
     name: row.name,
