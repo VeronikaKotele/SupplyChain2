@@ -10,7 +10,7 @@ interface LegendFilterItem {
 interface LegendFilterProps {
   title: string;
   items: LegendFilterItem[];
-  onToggle?: (index: number) => void;
+  onToggle?: (label: string) => void;
   onEnableAll?: () => void;
   onDisableAll?: () => void;
 }
@@ -62,11 +62,11 @@ const LegendFilter: React.FC<LegendFilterProps> = ({ title, items, onToggle, onE
         )}
       </div>
       <div className="legend-items">
-        {items.map((item, index) => (
+        {items.map(item => (
           <div 
-            key={index} 
+            key={item.label} 
             className={`legend-item ${onToggle ? 'legend-item-clickable' : ''} ${item.enabled === false ? 'legend-item-disabled' : ''}`}
-            onClick={() => onToggle?.(index)}
+            onClick={() => onToggle?.(item.label)}
           >
             <div 
               className="legend-color-box" 

@@ -21,7 +21,7 @@ export interface Transaction {
 interface TransactionCSVRow {
   Product_Key: string;
   Product_Name: string;
-  'Global Business Function': string;
+  Global_Business_Function: string;
   Category: string;
   Packaging: string;
   NART_Packaging: string;
@@ -43,7 +43,7 @@ function csvRowToTransaction(row: TransactionCSVRow): Transaction {
   return {
     product_key: row.Product_Key,
     product_name: row.Product_Name,
-    global_business_function: row['Global Business Function'],
+    global_business_function: row.Global_Business_Function,
     category: row.Category,
     packaging: row.Packaging,
     nart_packaging: row.NART_Packaging,
@@ -102,7 +102,28 @@ export function getTransactionStats(transactions: Transaction[]) {
  */
 export function getTransactionCategories(transactions: Transaction[]): string[] {
   const categories = new Set(transactions.map(t => t.category));
-  return Array.from(categories).sort();
+  console.log("Categories found:", categories);
+  const result = Array.from(categories).sort();
+  if (result.length === 0) {
+    return ["product type 1", "product type 2", "product type 3", "product type 4", "product type 5"];
+  }
+  return result;
+}
+
+/**
+ * Gets all IDs of transactions with specific categories
+ * Returns a Set of indices
+ */
+export function getTransactionIdsForCategories(transactions: Transaction[], categories: Set<string>): Set<number> {
+  const transactionIds = new Set<number>();
+  
+  transactions.forEach((t, index) => {
+    if (categories.has(t.category)) {
+      transactionIds.add(index);
+    }
+  });
+  
+  return transactionIds;
 }
 
 /**
@@ -111,13 +132,13 @@ export function getTransactionCategories(transactions: Transaction[]): string[] 
  */
 export function getFlowIdsForCategories(transactions: Transaction[], categories: Set<string>): Set<string> {
   const flowIds = new Set<string>();
-  
-  transactions.forEach(t => {
-    if (categories.has(t.category)) {
-      if (t.flow_id_supplier) flowIds.add(t.flow_id_supplier);
-      if (t.flow_id_internal) flowIds.add(t.flow_id_internal);
-      if (t.flow_id_customer) flowIds.add(t.flow_id_customer);
-    }
+  const transactionIds = getTransactionIdsForCategories(transactions, categories);
+
+  transactionIds.forEach(id => {
+    const t = transactions[id];
+    if (t.flow_id_supplier) flowIds.add(t.flow_id_supplier);
+    if (t.flow_id_internal) flowIds.add(t.flow_id_internal);
+    if (t.flow_id_customer) flowIds.add(t.flow_id_customer);
   });
   
   return flowIds;

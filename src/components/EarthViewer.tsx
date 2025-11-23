@@ -68,7 +68,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     // Create scene
     const scene = new Scene(engine);
-    scene.clearColor = new Color4(0.6, 0.6, 0.8, 1);
+    scene.clearColor = new Color4(0, 0, 0, 0.1);
     sceneRef.current = scene;
 
     // Camera
@@ -106,7 +106,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
         new Vector3(-1, -2, -1),
         scene
     );
-    light2.intensity = 1.5;
+    light2.intensity = 5;
 
     // Create parent node for Earth and all its children (entities, connections)
     const earthParent = new TransformNode('earthParent', scene);
@@ -321,7 +321,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
   }, [connections, entities, earthRadius, maxConnectionAmount]);
 
   return (
-    <>
+    <div style={{ position: 'relative', width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
       <canvas
         ref={canvasRef}
         style={{
@@ -337,11 +337,11 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
             position: 'absolute',
             top: '20px',
             left: '20px',
-            background: 'rgba(0, 0, 0, 0.85)',
+            background: 'rgba(0, 0, 0, 0.05)',
             color: 'white',
             padding: '16px',
             borderRadius: '8px',
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.01)',
             zIndex: 1000,
             minWidth: '250px',
             maxWidth: '350px',
@@ -373,7 +373,7 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

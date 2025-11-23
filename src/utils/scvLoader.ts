@@ -19,7 +19,9 @@ function parseCSV(csvText: string): any[] {
 
 export async function loadRowsFromCSV(csvPath: string): Promise<any[]> {
   try {
-    const response = await fetch(csvPath);
+    const fullPath = import.meta.env.VITE_DATASOURCE + csvPath;
+    const response = await fetch(fullPath);
+    console.log(`Loading CSV from: ${fullPath}`);
     
     if (!response.ok) {
       throw new Error(`Failed to load CSV: ${response.statusText}`);

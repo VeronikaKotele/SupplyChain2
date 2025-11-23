@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     // Load entities and connections from CSV files
-    loadEntitiesFromCSV('/data/entities.csv').then((loadedEntities) => {
+    loadEntitiesFromCSV('/entities.csv').then((loadedEntities) => {
       setAllEntities(loadedEntities);
       setEntities(loadedEntities);
       
@@ -49,7 +49,7 @@ function App() {
       setSelectedEntityNames(new Set(entityNames));
     });
     
-    loadConnectionsFromCSV('/data/connections.csv').then((conns) => {
+    loadConnectionsFromCSV('/connections.csv').then((conns) => {
       setAllConnections(conns);
       setConnections(conns);
       
@@ -67,7 +67,7 @@ function App() {
     });
 
     // Load transactions
-    loadTransactionsFromCSV('/data/transactions.csv').then((loadedTransactions) => {
+    loadTransactionsFromCSV('/transactions.csv').then((loadedTransactions) => {
       setTransactions(loadedTransactions);
       console.log('Transactions loaded:', loadedTransactions.length);
       console.log('Transaction stats:', getTransactionStats(loadedTransactions));
@@ -142,11 +142,7 @@ function App() {
     setConnections(filteredConnections);
   }, [entityFilters, connectionFilters, categoryFilters, selectedEntityNames, allEntityNames, allEntities, allConnections, transactions]);
 
-  const handleEntityToggle = (index: number) => {
-    // Find the original type name from the loader
-    const entityTypes = Array.from(new Set(allEntities.map(e => e.type)));
-    const originalType = entityTypes[index];
-    
+  const handleEntityToggle = (entityType: string) => {
     setEntityFilters(prev => {
       const newFilters = new Map(prev);
       // Check if all are currently enabled
@@ -155,10 +151,10 @@ function App() {
       if (allEnabled) {
         // If all enabled, make only this one enabled
         newFilters.forEach((_, key) => newFilters.set(key, false));
-        newFilters.set(originalType || '', true);
+        newFilters.set(entityType, true);
       } else {
         // Otherwise, toggle this one
-        newFilters.set(originalType || '', !prev.get(originalType || ''));
+        newFilters.set(entityType, !prev.get(entityType));
       }
       return newFilters;
     });
@@ -180,65 +176,15 @@ function App() {
     });
   };
 
-  const handleConnectionToggle = (index: number) => {
-    // Find the original step_type from connections
-    const stepTypes = Array.from(new Set(allConnections.map(c => c.step_type)));
-    const originalType = stepTypes[index];
-    
-    setConnectionFilters(prev => {
-      const newFilters = new Map(prev);
-      // Check if all are currently enabled
-      const allEnabled = Array.from(prev.values()).every(enabled => enabled);
-      
-      if (allEnabled) {
-        // If all enabled, make only this one enabled
-        newFilters.forEach((_, key) => newFilters.set(key, false));
-        newFilters.set(originalType, true);
-      } else {
-        // Otherwise, toggle this one
-        newFilters.set(originalType, !prev.get(originalType));
-      }
-      return newFilters;
-    });
-  };
-
-  const handleConnectionEnableAll = () => {
-    setConnectionFilters(prev => {
-      const newFilters = new Map(prev);
-      newFilters.forEach((_, key) => newFilters.set(key, true));
-      return newFilters;
-    });
-  };
-
-  const handleConnectionDisableAll = () => {
-    setConnectionFilters(prev => {
-      const newFilters = new Map(prev);
-      newFilters.forEach((_, key) => newFilters.set(key, false));
-      return newFilters;
-    });
-  };
-
   const getEntityLegendItemsWithState = () => {
     const items = getEntityLegendItems();
-    const entityTypes = Array.from(new Set(allEntities.map(e => e.type)));
-    return items.map((item, index) => ({
+    return items.map(item => ({
       ...item,
-      enabled: entityFilters.get(entityTypes[index] || '') !== false
+      enabled: entityFilters.get(item.label) !== false
     }));
   };
 
-  const getConnectionLegendItemsWithState = () => {
-    const items = getConnectionLegendItems();
-    const stepTypes = Array.from(new Set(allConnections.map(c => c.step_type)));
-    return items.map((item, index) => ({
-      ...item,
-      enabled: connectionFilters.get(stepTypes[index]) !== false
-    }));
-  };
-
-  const handleCategoryToggle = (index: number) => {
-    const category = transactionCategories[index];
-    
+  const handleCategoryToggle = (category: string) => {    
     setCategoryFilters(prev => {
       const newFilters = new Map(prev);
       // Check if all are currently enabled
@@ -272,26 +218,117 @@ function App() {
     });
   };
 
-  const getCategoryLegendItemsWithState = () => {
-    return transactionCategories.map(category => ({
-      label: category,
-      color: '#999999', // Gray color for categories
-      enabled: categoryFilters.get(category) !== false
-    }));
-  };
+  // const getCategoryLegendItemsWithState = () => {
+  //   return transactionCategories.map(category => ({
+  //     label: category,
+  //     color: '#999999', // Gray color for categories
+  //     enabled: categoryFilters.get(category) !== false
+  //   }));
+  // };
 
   return (
     <div className="app-container">
       <header>
-        <h1>Supply Chain Visualization</h1>
+        <h1>Supply Chain Performance Visualization</h1>
       </header>
       <div className="content-container">
+        <div className="filters-container">
+          <LegendFilter 
+            title="Company Type" 
+            items={getEntityLegendItemsWithState()} 
+            onToggle={handleEntityToggle}
+            onEnableAll={handleEntityEnableAll}
+            onDisableAll={handleEntityDisableAll}
+          />
+          <DropdownFilter
+            title="Company Names"
+            items={allEntityNames}
+            selectedItems={selectedEntityNames}
+            onToggle={(name) => {
+              setSelectedEntityNames(prev => {
+                const newSet = new Set(prev);
+                // Check if all are currently selected
+                const allSelected = prev.size === allEntityNames.length;
+                
+                if (allSelected) {
+                  // If all selected, make only this one selected
+                  return new Set([name]);
+                } else {
+                  // Otherwise, toggle this one
+                  if (newSet.has(name)) {
+                    newSet.delete(name);
+                  } else {
+                    newSet.add(name);
+                  }
+                  return newSet;
+                }
+              });
+            }}
+            onEnableAll={() => setSelectedEntityNames(new Set(allEntityNames))}
+            onDisableAll={() => setSelectedEntityNames(new Set())}
+            placeholder="Search entity names..."
+          />
+          <DropdownFilter
+            title="Product Category" 
+            items={transactionCategories} 
+            selectedItems={new Set(transactionCategories.filter(cat => categoryFilters.get(cat) !== false))}
+            onToggle={handleCategoryToggle}
+            onEnableAll={handleCategoryEnableAll}
+            onDisableAll={handleCategoryDisableAll}
+          />
+          <DropdownFilter
+            title="Time Period"
+            items={["2020", "2021", "2022", "2023", "2024", "2025", "2026"]}
+            selectedItems={new Set(["2020", "2021", "2022", "2023", "2024", "2025", "2026"])}
+            onToggle={(year) => {console.log("Year toggled:", year); }}
+            onEnableAll={() => {console.log("All years enabled"); }}
+            onDisableAll={() => {console.log("All years disabled"); }}
+            placeholder="Search entity names..."
+          />
+          <DropdownFilter
+            title="Sender Region"
+            items={["DE", "US", "CN", "IN", "FR", "GB", "JP", "KR", "BR", "CA"]}
+            selectedItems={new Set(["DE", "US", "CN", "IN", "FR", "GB", "JP", "KR", "BR", "CA"])}
+            onToggle={(region) => {console.log("Region toggled:", region); }}
+            onEnableAll={() => {console.log("All regions enabled"); }}
+            onDisableAll={() => {console.log("All regions disabled"); }}
+            placeholder="Search entity names..."
+          />
+          <DropdownFilter
+            title="Receiver Region"
+            items={["DE", "US", "CN", "IN", "FR", "GB", "JP", "KR", "BR", "CA"]}
+            selectedItems={new Set(["DE", "US", "CN", "IN", "FR", "GB", "JP", "KR", "BR", "CA"])}
+            onToggle={(region) => {console.log("Region toggled:", region); }}
+            onEnableAll={() => {console.log("All regions enabled"); }}
+            onDisableAll={() => {console.log("All regions disabled"); }}
+            placeholder="Search entity names..."
+          />
+        </div>
         <div className="dashboard-container">
           <ErrorBoundary
             fallback={
-              <div style={{ padding: '20px', color: '#ff6b6b' }}>
-                <h2>Failed to load Power BI Dashboard</h2>
-                <p>Please check your embed URL configuration in the .env file.</p>
+              <div style={{ 
+                position: 'relative',
+                width: '100%',
+                height: '100%',
+                backgroundImage: 'url(/PowerBI_clean_dashboard.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'top',
+                backgroundRepeat: 'no-repeat',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <div style={{
+                  padding: '20px',
+                  color: '#ff6b6b',
+                  backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                  borderRadius: '8px',
+                  textAlign: 'center'
+                }}>
+                  <h2 style={{ margin: '0 0 10px 0' }}>Failed to load Power BI Dashboard</h2>
+                  <p style={{ margin: 0 }}>Please check your embed URL configuration in the .env file.</p>
+                </div>
               </div>
             }
           >
@@ -301,8 +338,6 @@ function App() {
           </ErrorBoundary>
         </div>
         <div className="viewer-container">
-          <h2>Interactive 3D Earth Viewer</h2>
-          <p>Use mouse to rotate, scroll to zoom</p>
           <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             <EarthViewer 
               modelPath="/models/earth/Earth.obj" 
@@ -314,59 +349,6 @@ function App() {
               maxConnectionAmount={maxAmount}
               earthRadius={1} // Adjust if markers don't align with model surface
             />
-            <div style={{ position: 'absolute', top: '20px', left: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <DropdownFilter
-                title="Entity Names"
-                items={allEntityNames}
-                selectedItems={selectedEntityNames}
-                onToggle={(name) => {
-                  setSelectedEntityNames(prev => {
-                    const newSet = new Set(prev);
-                    // Check if all are currently selected
-                    const allSelected = prev.size === allEntityNames.length;
-                    
-                    if (allSelected) {
-                      // If all selected, make only this one selected
-                      return new Set([name]);
-                    } else {
-                      // Otherwise, toggle this one
-                      if (newSet.has(name)) {
-                        newSet.delete(name);
-                      } else {
-                        newSet.add(name);
-                      }
-                      return newSet;
-                    }
-                  });
-                }}
-                onEnableAll={() => setSelectedEntityNames(new Set(allEntityNames))}
-                onDisableAll={() => setSelectedEntityNames(new Set())}
-                placeholder="Search entity names..."
-              />
-            </div>
-            <div style={{ position: 'absolute', top: '20px', right: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <LegendFilter 
-                title="Entities" 
-                items={getEntityLegendItemsWithState()} 
-                onToggle={handleEntityToggle}
-                onEnableAll={handleEntityEnableAll}
-                onDisableAll={handleEntityDisableAll}
-              />
-              <LegendFilter 
-                title="Connections" 
-                items={getConnectionLegendItemsWithState()} 
-                onToggle={handleConnectionToggle}
-                onEnableAll={handleConnectionEnableAll}
-                onDisableAll={handleConnectionDisableAll}
-              />
-              <LegendFilter 
-                title="Categories" 
-                items={getCategoryLegendItemsWithState()} 
-                onToggle={handleCategoryToggle}
-                onEnableAll={handleCategoryEnableAll}
-                onDisableAll={handleCategoryDisableAll}
-              />
-            </div>
           </div>
         </div>
       </div>
