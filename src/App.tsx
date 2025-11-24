@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import EarthViewer from './components/EarthViewer'
-import PowerBIDashboard from './components/PowerBIDashboard'
-import ErrorBoundary from './components/ErrorBoundary'
-import LegendFilter from './components/LegendFilter'
-import DropdownFilter from './components/DropdownFilter'
-import type { EntityMarker } from './components/EntityMarker'
-import type { ConnectionMarker } from './components/ConnectionMarker'
-import { loadEntitiesFromCSV, getEntityLegendItems } from './utils/entitiesLoader'
-import { loadConnectionsFromCSV, getConnectionLegendItems } from './utils/connectionLoader'
-import { loadTransactionsFromCSV, getTransactionStats, getTransactionCategories, getFlowIdsForCategories, type Transaction } from './utils/transactionsLoader'
+import EarthViewer from './components/earthView/EarthViewer'
+import PowerBIDashboard from './components/dashboard/PowerBIDashboard'
+import ErrorBoundary from './utils/ErrorBoundary'
+import LegendFilter from './components/filters/LegendFilter'
+import DropdownFilter from './components/filters/DropdownFilter'
+import type { EntityMarker } from './components/earthView/interfaces/EntityMarker'
+import type { ConnectionMarker } from './components/earthView/interfaces/ConnectionMarker'
+import { loadEntitiesFromCSV, getEntityLegendItems } from './utils/dataLoad/entitiesLoader'
+import { loadConnectionsFromCSV } from './utils/dataLoad/connectionLoader'
+import { loadTransactionsFromCSV, getTransactionStats, getTransactionCategories, getFlowIdsForCategories, type Transaction } from './utils/dataLoad/transactionsLoader'
 
 function App() {
   const [entities, setEntities] = useState<EntityMarker[]>([]);
@@ -142,6 +142,37 @@ function App() {
     setConnections(filteredConnections);
   }, [entityFilters, connectionFilters, categoryFilters, selectedEntityNames, allEntityNames, allEntities, allConnections, transactions]);
 
+  // Calculate filtered transaction stats
+  const filteredTransactionStats = () => {
+    const enabledCategories = new Set<string>();
+    categoryFilters.forEach((enabled, category) => {
+      if (enabled) enabledCategories.add(category);
+    });
+
+    const enabledEntityIds = new Set<string>(selectedEntityNames);
+    selectedEntityNames.forEach((enabled, entityName) => {
+      if (enabled) {
+        const entityInfo = entities.find(e => e.name === entityName);
+        if (entityInfo?.id) {
+          enabledEntityIds.add(entityInfo.id);
+        }
+      }
+    });
+
+    const enabledEntityTypes = new Set<string>();
+    entityFilters.forEach((enabled, entityType) => {
+      if (enabled) enabledEntityTypes.add(entityType);
+    });
+
+    const filters = {
+      categories: enabledCategories.size < categoryFilters.size ? enabledCategories : undefined,
+      company_ids: enabledEntityIds.size < allEntityNames.length ? enabledEntityIds : undefined,
+      entity_types: enabledEntityTypes.size < entityFilters.size ? enabledEntityTypes : undefined,
+    };
+
+    return getTransactionStats(transactions, filters);
+  };
+
   const handleEntityToggle = (entityType: string) => {
     setEntityFilters(prev => {
       const newFilters = new Map(prev);
@@ -218,13 +249,7 @@ function App() {
     });
   };
 
-  // const getCategoryLegendItemsWithState = () => {
-  //   return transactionCategories.map(category => ({
-  //     label: category,
-  //     color: '#999999', // Gray color for categories
-  //     enabled: categoryFilters.get(category) !== false
-  //   }));
-  // };
+
 
   return (
     <div className="app-container">
@@ -306,31 +331,9 @@ function App() {
         </div>
         <div className="dashboard-container">
           <ErrorBoundary
-            fallback={
-              <div style={{ 
-                position: 'relative',
-                width: '100%',
-                height: '100%',
-                backgroundImage: 'url(/PowerBI_clean_dashboard.png)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'top',
-                backgroundRepeat: 'no-repeat',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}>
-                <div style={{
-                  padding: '20px',
-                  color: '#ff6b6b',
-                  backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                  borderRadius: '8px',
-                  textAlign: 'center'
-                }}>
-                  <h2 style={{ margin: '0 0 10px 0' }}>Failed to load Power BI Dashboard</h2>
-                  <p style={{ margin: 0 }}>Please check your embed URL configuration in the .env file.</p>
-                </div>
-              </div>
-            }
+            backgroundImageUrl='/PowerBI_clean_dashboard.png'
+            title='Failed to load Power BI Dashboard'
+            message='Please check your embed URL configuration in the .env file'
           >
             <PowerBIDashboard
               embedUrl={import.meta.env.VITE_POWERBI_EMBED_URL}
@@ -338,7 +341,7 @@ function App() {
           </ErrorBoundary>
         </div>
         <div className="viewer-container">
-          <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+          <div style={{ position: 'relative', width: '100%', height: '70%' }}>
             <EarthViewer 
               modelPath="/models/earth/Earth.obj" 
               materialPath="/models/earth/Earth.mtl"
@@ -349,6 +352,43 @@ function App() {
               maxConnectionAmount={maxAmount}
               earthRadius={1} // Adjust if markers don't align with model surface
             />
+          </div>
+          <div style={{ position: 'relative', width: '100%', height: '30%', padding: '20px', overflowY: 'auto' }}>
+            {(() => {
+              const stats = filteredTransactionStats();
+              return (
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px'}}>
+                  <div>
+                    <div style={{ fontSize: '12px', opacity: 0.7, marginBottom: '4px' }}>Total Transactions</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold' }}>{stats.totalTransactions.toLocaleString()}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '12px', opacity: 0.7, marginBottom: '4px' }}>Total Companies</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold' }}>{stats.company_ids.toLocaleString()}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '12px', opacity: 0.7, marginBottom: '4px' }}>Total Connections</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold' }}>{stats.flow_ids.toLocaleString()}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '12px', opacity: 0.7, marginBottom: '4px' }}>Order Quantity</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold' }}>{stats.totalOrderQty.toLocaleString()}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '12px', opacity: 0.7, marginBottom: '4px' }}>Actual Quantity</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold' }}>{stats.totalActualQty.toLocaleString()}</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '12px', opacity: 0.7, marginBottom: '4px' }}>Order Value</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold' }}>${(stats.totalOrderValue / 1000000).toFixed(2)}M</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '12px', opacity: 0.7, marginBottom: '4px' }}>Actual Value</div>
+                    <div style={{ fontSize: '24px', fontWeight: 'bold' }}>${(stats.totalActualValue / 1000000).toFixed(2)}M</div>
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         </div>
       </div>

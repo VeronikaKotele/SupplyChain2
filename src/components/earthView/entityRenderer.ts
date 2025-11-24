@@ -8,8 +8,8 @@ import {
   Vector3,
   CloudPoint,
 } from '@babylonjs/core';
-import { latLonToVector3 } from '../components/3dMathUtils';
-import type { EntityMarker } from '../components/EntityMarker';
+import { latLonToVector3 } from './utils/math3D';
+import type { EntityMarker } from './interfaces/EntityMarker';
 
 /**
  * Creates entity point markers with constant pixel size (zoom-independent)

@@ -1,5 +1,5 @@
 import { Color3 } from '@babylonjs/core';
-import type { ConnectionMarker } from '../components/ConnectionMarker';
+import type { ConnectionMarker } from '../../components/earthView/interfaces/ConnectionMarker';
 import { loadRowsFromCSV } from './scvLoader';
 
 interface ConnectionCSVRow {

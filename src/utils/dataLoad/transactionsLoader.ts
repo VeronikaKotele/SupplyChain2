@@ -36,6 +36,25 @@ interface TransactionCSVRow {
   Actual_value_Sell: string;
 }
 
+export interface TransactionFilters {
+  categories?: Set<string>;
+  product_names?: Set<string>;
+  flow_ids?: Set<string>;
+  company_ids?: Set<string>;
+}
+
+export interface TransactionStats {
+  totalTransactions: number;
+  totalOrderQty: number;
+  totalActualQty: number;
+  totalOrderValue: number;
+  totalActualValue: number;
+  categories: string[];
+  products: string[];
+  flow_ids: string[];
+  company_ids: string[];
+}
+
 /**
  * Converts CSV row to Transaction object
  */
@@ -70,7 +89,7 @@ export async function loadTransactionsFromCSV(csvPath: string): Promise<Transact
 /**
  * Gets transaction statistics for analysis
  */
-export function getTransactionStats(transactions: Transaction[]) {
+export function getTransactionStats(transactions: Transaction[], filters: TransactionFilters | null = null): TransactionStats {
   if (transactions.length === 0) {
     return {
       totalTransactions: 0,
@@ -79,21 +98,30 @@ export function getTransactionStats(transactions: Transaction[]) {
       totalOrderValue: 0,
       totalActualValue: 0,
       categories: [],
-      uniqueProducts: 0,
+      products: [],
+      flow_ids: [],
+      company_ids: [],
     };
   }
 
-  const categories = new Set(transactions.map(t => t.category));
-  const products = new Set(transactions.map(t => t.product_key));
+  const filteredTransactions = !filters ? transactions : transactions.filter(t => {
+    const categoryMatch = !filters?.categories || filters.categories.has(t.category);
+    const productMatch = !filters?.product_names || filters.product_names.has(t.product_name);
+    const flowIdMatch = !filters?.flow_ids || getFlowIdsForTransaction(t).some(id => filters.flow_ids!.has(id));
+    const companyIdMatch = !filters?.company_ids || getUniqueCompanyIdsForTransaction(t).some(id => filters.company_ids!.has(id));
+    return categoryMatch && productMatch && flowIdMatch && companyIdMatch;
+  });
 
   return {
-    totalTransactions: transactions.length,
-    totalOrderQty: transactions.reduce((sum, t) => sum + t.order_qty, 0),
-    totalActualQty: transactions.reduce((sum, t) => sum + t.actual_qty, 0),
-    totalOrderValue: transactions.reduce((sum, t) => sum + t.order_value_sell, 0),
-    totalActualValue: transactions.reduce((sum, t) => sum + t.actual_value_sell, 0),
-    categories: Array.from(categories),
-    uniqueProducts: products.size,
+    totalTransactions: filteredTransactions.length,
+    totalOrderQty: filteredTransactions.reduce((sum, t) => sum + t.order_qty, 0),
+    totalActualQty: filteredTransactions.reduce((sum, t) => sum + t.actual_qty, 0),
+    totalOrderValue: filteredTransactions.reduce((sum, t) => sum + t.order_value_sell, 0),
+    totalActualValue: filteredTransactions.reduce((sum, t) => sum + t.actual_value_sell, 0),
+    categories: filteredTransactions.map(t => t.category),
+    products: filteredTransactions.map(t => t.product_name),
+    flow_ids: filteredTransactions.flatMap(t => getFlowIdsForTransaction(t)),
+    company_ids: filteredTransactions.flatMap(t => getUniqueCompanyIdsForTransaction(t)),
   };
 }
 
@@ -142,4 +170,22 @@ export function getFlowIdsForCategories(transactions: Transaction[], categories:
   });
   
   return flowIds;
+}
+
+export function getFlowIdsForTransaction(transaction: Transaction): Array<string> {
+    return [transaction.flow_id_supplier, transaction.flow_id_internal, transaction.flow_id_customer]
+}
+
+export function getUniqueCompanyIdsForTransaction(transaction: Transaction): Array<string> {
+    const companyIds = new Set<string>();
+    getFlowIdsForTransaction(transaction).forEach(flowId => {
+        if (flowId) {
+            const companyIdsArray = flowId.split('-');
+            if (companyIdsArray.length >= 2) {
+                companyIds.add(companyIdsArray[0]);
+                companyIds.add(companyIdsArray[1]);
+            }
+        }
+    });
+    return  Array.from(companyIds);
 }

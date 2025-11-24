@@ -1,5 +1,5 @@
 import React from 'react';
-import './LegendFilter.css';
+import './Filter.css';
 
 interface LegendFilterItem {
   label: string;
@@ -17,25 +17,16 @@ interface LegendFilterProps {
 
 const LegendFilter: React.FC<LegendFilterProps> = ({ title, items, onToggle, onEnableAll, onDisableAll }) => {
   return (
-    <div className="legend-container">
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-        <h3 className="legend-title" style={{ margin: 0 }}>{title}</h3>
+    <div className="filter-container">
+      <div className="filter-header">
+        <h3 className="filter-title">{title}</h3>
         {(onEnableAll || onDisableAll) && (
-          <div style={{ display: 'flex', gap: '2px' }}>
+          <div className="filter-buttons">
             {onEnableAll && (
               <button 
                 onClick={onEnableAll}
                 title="Enable all"
-                style={{
-                  padding: '1px 4px',
-                  fontSize: '11px',
-                  cursor: 'pointer',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  borderRadius: '2px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.15)',
-                  color: 'rgba(255, 255, 255, 0.9)',
-                  lineHeight: 1
-                }}
+                className="filter-button"
               >
                 ✓
               </button>
@@ -44,16 +35,7 @@ const LegendFilter: React.FC<LegendFilterProps> = ({ title, items, onToggle, onE
               <button 
                 onClick={onDisableAll}
                 title="Disable all"
-                style={{
-                  padding: '1px 4px',
-                  fontSize: '11px',
-                  cursor: 'pointer',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  borderRadius: '2px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.15)',
-                  color: 'rgba(255, 255, 255, 0.9)',
-                  lineHeight: 1
-                }}
+                className="filter-button"
               >
                 ✕
               </button>

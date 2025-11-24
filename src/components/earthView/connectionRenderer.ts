@@ -7,9 +7,9 @@ import {
   TransformNode,
   LinesMesh,
 } from '@babylonjs/core';
-import { latLonToVector3 } from '../components/3dMathUtils';
-import type { EntityMarker } from '../components/EntityMarker';
-import type { ConnectionMarker } from '../components/ConnectionMarker';
+import { latLonToVector3 } from './utils/math3D';
+import type { EntityMarker } from './interfaces/EntityMarker';
+import type { ConnectionMarker } from './interfaces/ConnectionMarker';
 
 /**
  * Creates connection line meshes with curved arcs and progressive rendering

@@ -1,0 +1,186 @@
+/* Common filter container styles */
+.filter-container {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  font-family: system-ui, -apple-system, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  min-width: 135px;
+  position: relative;
+}
+
+/* Filter title */
+.filter-title {
+  margin: 0 0 8px 0;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Header with title and buttons */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Button group */
+.filter-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+/* Enable/Disable all buttons */
+.filter-button {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 3px 5px;
+  font-size: 8px;
+  font-weight: 500;
+  border-style: none;
+  color: black;
+}
+
+.filter-button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown toggle button */
+.dropdown-toggle {
+  width: 100%;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 9px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-toggle:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-arrow {
+  font-size: 7px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  left: 0;
+  right: 0;
+  margin-top: 3px;
+  background: rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Search input container */
+.dropdown-search {
+  padding: 8px;
+}
+
+.dropdown-search input {
+  width: 100%;
+  padding: 4px 5px;
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  font-size: 8px;
+  outline: none;
+}
+
+/* Dropdown items list */
+.dropdown-items {
+  overflow-y: auto;
+  max-height: 160px;
+  padding: 5px;
+}
+
+.dropdown-empty {
+  padding: 5px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 8px;
+}
+
+/* Dropdown item */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 5px;
+  cursor: pointer;
+  font-size: 8px;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item input[type="checkbox"] {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.dropdown-item-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+/* Legend-specific styles */
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 9px;
+  transition: opacity 0.2s ease;
+}
+
+.legend-item-clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.legend-item-clickable:hover {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 3px;
+  margin: -3px;
+}
+
+.legend-item-disabled {
+  opacity: 0.4;
+}
+
+.legend-item-disabled .legend-color-box {
+  opacity: 0.5;
+}
+
+.legend-item-disabled .legend-label {
+  text-decoration: line-through;
+}
+
+.legend-color-box {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.legend-label {
+  line-height: 1.2;
+}
+
+.legend-item:hover .legend-label {
+  opacity: 1;
+}

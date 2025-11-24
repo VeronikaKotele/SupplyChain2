@@ -12,12 +12,12 @@ import {
   Animation,
   LinesMesh,
 } from '@babylonjs/core';
-import type { EntityMarker } from './EntityMarker';
-import type { ConnectionMarker } from './earthView/interfaces/ConnectionMarker';
-import { loadEarthModel } from '../utils/dataLoad/meshLoader';
-import { createEntityMarkers, disposeEntityMarkers } from './earthView/entityRenderer';
-import { createConnectionLines, disposeConnectionLines } from './earthView/connectionRenderer';
-import { latLonToVector3 } from './earthView/utils/math3D';
+import type { EntityMarker } from './interfaces/EntityMarker';
+import type { ConnectionMarker } from './interfaces/ConnectionMarker';
+import { loadEarthModel } from './utils/meshLoader';
+import { createEntityMarkers, disposeEntityMarkers } from './entityRenderer';
+import { createConnectionLines, disposeConnectionLines } from './connectionRenderer';
+import { latLonToVector3 } from './utils/math3D';
 
 interface EarthViewerProps {
   modelPath: string;

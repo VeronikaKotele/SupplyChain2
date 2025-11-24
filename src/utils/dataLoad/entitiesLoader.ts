@@ -1,5 +1,5 @@
 import { Color3 } from '@babylonjs/core';
-import type { EntityMarker } from '../components/EntityMarker';
+import type { EntityMarker } from '../../components/earthView/interfaces/EntityMarker';
 import { loadRowsFromCSV } from './scvLoader';
 
 interface entityCSVRow {
