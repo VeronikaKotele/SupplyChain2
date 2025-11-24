@@ -1,5 +1,5 @@
 import React from 'react';
-import './Filter.css';
+import './Filters.css';
 
 interface LegendFilterItem {
   label: string;

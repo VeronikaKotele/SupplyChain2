@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import './Filter.css';
+import './Filters.css';
 
 interface DropdownFilterProps {
   title: string;
