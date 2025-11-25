@@ -35,23 +35,57 @@ import {
  * IMPORTANT: The negative X and theta offset may need adjustment based on your
  * model's orientation. If markers appear rotated or mirrored, modify these values.
  */
-const latLonToVector3 = (lat: number, lon: number, radius: number): Vector3 => {
-    // Convert latitude to phi (polar angle from North Pole)
-    // At lat=90° (North): phi=0°, at lat=0° (Equator): phi=90°, at lat=-90° (South): phi=180°
-    const phi = (90 - lat) * (Math.PI / 180);
-    
-    // Convert longitude to theta (azimuthal angle)
-    // Adding 90° to align with the model's orientation (adjust if markers still misaligned)
-    // Original formula used +180°, but model requires +90° for correct alignment
-    const theta = (lon + 180) * (Math.PI / 180);
+const latLonToVector3 = (lat: number, lon: number, radius: number,
+  modelOrientationLongitudeOffset: number = 180
+): Vector3 => {
+  // Convert latitude to phi (polar angle from North Pole)
+  // At lat=90° (North): phi=0°, at lat=0° (Equator): phi=90°, at lat=-90° (South): phi=180°
+  const phi = (90 - lat) * (Math.PI / 180);
+  
+  // Convert longitude to theta (azimuthal angle)
+  // Adding modelOrientationLongitudeOffset° to align with the model's orientation
+  const theta = (lon + modelOrientationLongitudeOffset) * (Math.PI / 180);
 
-    // Spherical to Cartesian conversion (ISO physics convention)
-    // Note: Negative X might be needed to match the model's coordinate system orientation
-    const x = radius * Math.sin(phi) * Math.cos(theta);
-    const z = radius * Math.sin(phi) * Math.sin(theta);
-    const y = radius * Math.cos(phi); // Y is vertical (North/South)
+  // Spherical to Cartesian conversion (ISO physics convention)
+  // Note: Negative X might be needed to match the model's coordinate system orientation
+  const x = radius * Math.sin(phi) * Math.cos(theta);
+  const z = radius * Math.sin(phi) * Math.sin(theta);
+  const y = radius * Math.cos(phi); // Y is vertical (North/South)
 
-    return new Vector3(x, y, z);
+  return new Vector3(x, y, z);
 };
 
-export { latLonToVector3 };
+export function selectClosestPoint(
+  pickedPoint: Vector3,
+  possibleSelections: { id: string }[],
+  positionsMap: Map<string, Vector3>,
+  treasholdDistance: number = 0.3
+): { id: string; position: Vector3 } | null{
+
+  let closestPoint: { id: string; position: Vector3 } | null = null;
+  let minDistance = Infinity;
+  possibleSelections.forEach((entity) => {
+    const entityPos = positionsMap.get(entity.id);
+    if (entityPos) {
+      const distance = Vector3.Distance(pickedPoint, entityPos);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestPoint = { id: entity.id, position: entityPos };
+      }
+    }
+  });
+  
+  // Only select if entity is reasonably close (within 0.3 units)
+  if (closestPoint && minDistance < treasholdDistance) {
+    return closestPoint;
+  } else {
+    return null;
+  }
+  // if (closestPoint && minDistance < 0.3) {
+  //   setSelectedCompany(closestPoint);
+  // } else {
+  //   setSelectedCompany(null);
+  // }
+}
+
+export { latLonToVector3};

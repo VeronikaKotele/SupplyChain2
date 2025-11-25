@@ -24,7 +24,7 @@ The primary UI component that renders all filter controls.
 #### 2. **useFilters.ts** (Custom Hook)
 Core filtering logic encapsulated in a reusable React hook.
 
-**Input (UseFiltersProps):**
+**Input (OriginalDataSet):**
 - `allEntities`: Complete list of entity markers
 - `allConnections`: Complete list of connection markers
 - `transactions`: Complete list of transactions
@@ -49,7 +49,7 @@ TypeScript type definitions for the entire filter system.
 - `FilteredData`: Structure of filtered output data
 - `FilterOptions`: Available options for each filter
 - `FilterHandlers`: Callback function signatures
-- `UseFiltersProps` & `UseFiltersReturn`: Hook interface
+- `OriginalDataSet` & `UseFiltersReturn`: Hook interface
 
 #### 4. **LegendFilter.tsx** & **DropdownFilter.tsx**
 Reusable UI components for different filter types (unchanged from original).

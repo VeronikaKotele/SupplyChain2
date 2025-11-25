@@ -61,7 +61,7 @@ export const loadEarthModel = async (
           mat.specularPower = 2;
           
           // Ambient should be subtle - too high will wash out lighting
-          mat.ambientColor = new Color3(0.2, 0.2, 0.2);
+          mat.ambientColor = new Color3(0.5, 0.5, 0.5);
           
           mat.cullBackFaces = false; // Disable back-face culling
         }

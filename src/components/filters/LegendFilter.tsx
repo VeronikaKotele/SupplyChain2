@@ -4,18 +4,18 @@ import './Filters.css';
 interface LegendFilterItem {
   label: string;
   color: string;
-  enabled?: boolean;
 }
 
 interface LegendFilterProps {
   title: string;
   items: LegendFilterItem[];
+  selectedItems: Map<string, boolean>;
   onToggle?: (label: string) => void;
   onEnableAll?: () => void;
   onDisableAll?: () => void;
 }
 
-const LegendFilter: React.FC<LegendFilterProps> = ({ title, items, onToggle, onEnableAll, onDisableAll }) => {
+const LegendFilter: React.FC<LegendFilterProps> = ({ title, items, selectedItems, onToggle, onEnableAll, onDisableAll }) => {
   return (
     <div className="filter-container">
       <div className="filter-header">
@@ -47,7 +47,7 @@ const LegendFilter: React.FC<LegendFilterProps> = ({ title, items, onToggle, onE
         {items.map(item => (
           <div 
             key={item.label} 
-            className={`legend-item ${onToggle ? 'legend-item-clickable' : ''} ${item.enabled === false ? 'legend-item-disabled' : ''}`}
+            className={`legend-item ${onToggle ? 'legend-item-clickable' : ''} ${ !selectedItems.has(item.label) ? 'legend-item-disabled' : ''}`}
             onClick={() => onToggle?.(item.label)}
           >
             <div 

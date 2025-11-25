@@ -7,9 +7,8 @@ import {
   TransformNode,
   LinesMesh,
 } from '@babylonjs/core';
-import { latLonToVector3 } from './utils/math3D';
-import type { EntityMarker } from './interfaces/EntityMarker';
-import type { ConnectionMarker } from './interfaces/ConnectionMarker';
+import type { CompanyMarker } from '../interfaces/CompanyMarker';
+import type { ConnectionMarker } from '../interfaces/ConnectionMarker';
 
 /**
  * Creates connection line meshes with curved arcs and progressive rendering
@@ -24,7 +23,7 @@ import type { ConnectionMarker } from './interfaces/ConnectionMarker';
  */
 export const createConnectionLines = (
   connections: ConnectionMarker[],
-  entities: EntityMarker[],
+  entities: CompanyMarker[],
   positionsMap: Map<string, Vector3>,
   scene: Scene,
   maxConnectionAmount: number,
@@ -113,8 +112,7 @@ export const createConnectionLines = (
       line.color = lineColor;
       
       // Vary alpha based on connection amount (0.3 to 0.9 range)
-      const normalizedAmount = connection.amount / maxConnectionAmount;
-      line.alpha = 0.3 + (normalizedAmount * 0.6); // More prominent for higher amounts
+      line.alpha = connection.alpha ?? 0.5;
 
       meshes.push(line);
     });

@@ -1,8 +1,9 @@
 import React from 'react';
 import LegendFilter from './LegendFilter';
 import DropdownFilter from './DropdownFilter';
-import type { FilterOptions, FilterState, FilterHandlers } from './types';
 import './Filters.css';
+import { DatePicker } from 'react-datepicker';
+import type { FilterOptions, FilterState, FilterHandlers } from '@app/types';
 
 interface FilterProps {
   filterState: FilterState;
@@ -20,32 +21,29 @@ const Filters: React.FC<FilterProps> = ({ filterState, filterOptions, handlers }
       {/* Company Type Filter */}
       <LegendFilter 
         title="Company Type" 
-        items={filterOptions.entityLegendItems} 
-        onToggle={handlers.onEntityTypeToggle}
-        onEnableAll={handlers.onEntityTypeEnableAll}
-        onDisableAll={handlers.onEntityTypeDisableAll}
+        items={filterOptions.companyTypesLegend}
+        selectedItems={filterState.selectedCompanyTypes}
+        onToggle={handlers.onCompanyTypeToggle}
+        onEnableAll={handlers.onCompanyTypeEnableAll}
+        onDisableAll={handlers.onCompanyTypeDisableAll}
       />
 
       {/* Company Names Filter */}
       <DropdownFilter
         title="Company Names"
-        items={filterOptions.allEntityNames}
-        selectedItems={filterState.selectedEntityNames}
-        onToggle={handlers.onEntityNameToggle}
-        onEnableAll={handlers.onEntityNameEnableAll}
-        onDisableAll={handlers.onEntityNameDisableAll}
+        items={filterOptions.companyNames}
+        selectedItems={filterState.selectedCompanyNames}
+        onToggle={handlers.onCompanyNameToggle}
+        onEnableAll={handlers.onCompanyNameEnableAll}
+        onDisableAll={handlers.onCompanyNameDisableAll}
         placeholder="Search entity names..."
       />
 
       {/* Product Category Filter */}
       <DropdownFilter
         title="Product Category" 
-        items={filterOptions.transactionCategories} 
-        selectedItems={new Set(
-          filterOptions.transactionCategories.filter(cat => 
-            filterState.categories.get(cat) !== false
-          )
-        )}
+        items={filterOptions.productCategories} 
+        selectedItems={filterState.selectedProductCategories}
         onToggle={handlers.onCategoryToggle}
         onEnableAll={handlers.onCategoryEnableAll}
         onDisableAll={handlers.onCategoryDisableAll}
@@ -53,21 +51,20 @@ const Filters: React.FC<FilterProps> = ({ filterState, filterOptions, handlers }
       />
 
       {/* Time Period Filter */}
-      <DropdownFilter
-        title="Time Period"
-        items={filterOptions.timePeriods}
-        selectedItems={filterState.timePeriods}
-        onToggle={handlers.onTimePeriodToggle}
-        onEnableAll={handlers.onTimePeriodEnableAll}
-        onDisableAll={handlers.onTimePeriodDisableAll}
-        placeholder="Search years..."
+      <DatePicker
+        selectsRange
+        startDate={filterState.selectedTimeRange.startDate}
+        endDate={filterState.selectedTimeRange.endDate}
+        onChange={handlers.onTimeRangeChange}
+        isClearable={true}
+        placeholderText="Select time range"
       />
 
       {/* Sender Region Filter */}
       <DropdownFilter
         title="Sender Region"
-        items={filterOptions.senderRegions}
-        selectedItems={filterState.senderRegions}
+        items={filterOptions.regions}
+        selectedItems={filterState.selectedSenderRegions}
         onToggle={handlers.onSenderRegionToggle}
         onEnableAll={handlers.onSenderRegionEnableAll}
         onDisableAll={handlers.onSenderRegionDisableAll}
@@ -77,8 +74,8 @@ const Filters: React.FC<FilterProps> = ({ filterState, filterOptions, handlers }
       {/* Receiver Region Filter */}
       <DropdownFilter
         title="Receiver Region"
-        items={filterOptions.receiverRegions}
-        selectedItems={filterState.receiverRegions}
+        items={filterOptions.regions}
+        selectedItems={filterState.selectedReceiverRegions}
         onToggle={handlers.onReceiverRegionToggle}
         onEnableAll={handlers.onReceiverRegionEnableAll}
         onDisableAll={handlers.onReceiverRegionDisableAll}

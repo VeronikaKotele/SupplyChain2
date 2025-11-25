@@ -53,8 +53,22 @@ header h1 {
   overflow-y: auto;
 }
 
-.viewer-container {
+.viewer-add-stats-container {
   width: 25%;
   position: relative;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.viewer-container {
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
+
+.stats-container {
+  position: relative;
+  width: 100%;
+  height: 30%;
 }

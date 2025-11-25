@@ -4,296 +4,101 @@ import {
   Scene,
   ArcRotateCamera,
   Vector3,
-  HemisphericLight,
-  Color4,
   Mesh,
-  DirectionalLight,
   TransformNode,
-  Animation,
   LinesMesh,
 } from '@babylonjs/core';
-import type { EntityMarker } from './interfaces/EntityMarker';
-import type { ConnectionMarker } from './interfaces/ConnectionMarker';
-import { loadEarthModel } from './utils/meshLoader';
-import { createEntityMarkers, disposeEntityMarkers } from './entityRenderer';
-import { createConnectionLines, disposeConnectionLines } from './connectionRenderer';
-import { latLonToVector3 } from './utils/math3D';
+import type { EarthModelProps } from './interfaces/EarthModelProps';
+import { translateToCompanyMarker, type CompanyMarker } from './interfaces/CompanyMarker';
+import { translateToConnectionMarker } from './interfaces/ConnectionMarker';
+import { createCompanyMarkers, disposeCompanyMarkers } from './sceneBuilder/companyMarkersBuilder';
+import { createConnectionLines, disposeConnectionLines } from './sceneBuilder/connectionMarkerBuilder';
+import type { Company, Connection, ColorLegendOption } from '@app/types';
+import { useScenePickerWhenNoDragging } from './inputHandler/mouseClicksController';
+import { useSceneComposer } from './sceneBuilder/sceneComposer';
+import { selectClosestPoint } from './utils/math3D';
+import SelectedCompanyInfo from './SelectedCompanyInfo';
 
 interface EarthViewerProps {
-  modelPath: string;
-  materialPath?: string;
-  scale?: number;
-  entities?: EntityMarker[];
-  allEntities?: EntityMarker[]; // All entities for building complete positions map
-  connections?: ConnectionMarker[];
-  earthRadius?: number;
-  maxConnectionAmount?: number; // Max amount for scaling line alpha
+  earthModelProps: EarthModelProps;
+  companies?: Company[];
+  connections?: Connection[];
+  companyTypeColors?: ColorLegendOption[];
 }
 
 const EarthViewer: React.FC<EarthViewerProps> = ({ 
-  modelPath, 
-  materialPath,
-  scale = 1.0,
-  entities = [],
-  allEntities = [],
+  earthModelProps,
+  companies = [],
   connections = [],
-  earthRadius = 1.0,
-  maxConnectionAmount = 100
+  companyTypeColors = [],
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const engineRef = useRef<Engine | null>(null);
   const sceneRef = useRef<Scene | null>(null);
+  const cameraRef = useRef<ArcRotateCamera | null>(null);
   const earthParentRef = useRef<TransformNode | null>(null);
-  const entityMarkersRef = useRef<Mesh[]>([]);
-  const entityPositionsRef = useRef<Map<string, Vector3>>(new Map());
-  const allEntityPositionsRef = useRef<Map<string, Vector3>>(new Map()); // Complete positions map
+  const allCompanyPositionsRef = useRef<Map<string, Vector3>>(new Map()); // Complete positions map
+  const companiesPointCloudRef = useRef<Mesh[]>([]);
   const connectionLinesRef = useRef<LinesMesh[]>([]);
   const animationRef = useRef<any>(null);
   const pauseTimeoutRef = useRef<number | null>(null);
-  const [selectedEntity, setSelectedEntity] = useState<EntityMarker | null>(null);
-  const visibleEntitiesRef = useRef<EntityMarker[]>([]);
-  const pointerDownRef = useRef<{ x: number; y: number; time: number } | null>(null);
-  const hasDraggedRef = useRef(false);
+  const [selectedCompany, setSelectedCompany] = useState<CompanyMarker | null>(null);
 
   // create the earth mesh and scene
   useEffect(() => {
-    if (!canvasRef.current) return;
-
-    // Create engine
-    const engine = new Engine(canvasRef.current, true, {
-      preserveDrawingBuffer: true,
-      stencil: true,
-    });
-    engineRef.current = engine;
-
-    // Create scene
-    const scene = new Scene(engine);
-    scene.clearColor = new Color4(0, 0, 0, 0.1);
-    sceneRef.current = scene;
-
-    // Camera
-    const camera = new ArcRotateCamera(
-        "camera",
-        -Math.PI / 2,
-        Math.PI / 4,
-        5,
-        Vector3.Zero(),
-        scene
+    useSceneComposer(
+      canvasRef,
+      engineRef,
+      sceneRef,
+      cameraRef,
+      earthParentRef,
+      animationRef,
+      pauseTimeoutRef,
+      earthModelProps
     );
-    camera.attachControl(canvasRef.current, true);
-    camera.lowerRadiusLimit = 1.1;
-    camera.upperRadiusLimit = 5;
-    camera.wheelPrecision = 50;
-    camera.panningSensibility = 0;
-    
-    // Adjust near clipping plane to allow closer zoom without clipping
-    camera.minZ = 0.01; // Default is 0.1, reducing allows closer view
-    camera.zoomOnFactor = 0.2;
-    
-    // Disable camera inertia for zoom
-    camera.inertialRadiusOffset = 0;
-    camera.useInputToRestoreState = false; // Disable animation when restoring camera state
+  }, [earthModelProps]);
 
-    const light1 = new HemisphericLight(
-        "light1",
-        new Vector3(5, 0, -5),
-        scene
-    );
-    light1.intensity = 2;
-
-    const light2 = new DirectionalLight(
-        "light2",
-        new Vector3(-1, -2, -1),
-        scene
-    );
-    light2.intensity = 5;
-
-    // Create parent node for Earth and all its children (entities, connections)
-    const earthParent = new TransformNode('earthParent', scene);
-    earthParentRef.current = earthParent;
-
-    // Set up rotation animation for the Earth
-    const animFrameRate = 30; // frames per second
-    
-    const rotationAnimation = new Animation(
-      'earthRotation',
-      'rotation.y',
-      animFrameRate,
-      Animation.ANIMATIONTYPE_FLOAT,
-      Animation.ANIMATIONLOOPMODE_CYCLE
-    );
-
-    const rotationKeys = [
-      { frame: 0, value: 0 },
-      { frame: animFrameRate * 60, value: Math.PI * 2 } // Full rotation in 60 seconds
-    ];
-
-    rotationAnimation.setKeys(rotationKeys);
-    earthParent.animations = [rotationAnimation];
-
-    // Start the animation
-    const animatable = scene.beginAnimation(earthParent, 0, animFrameRate * 60, true);
-    animationRef.current = animatable;
-
-    // Pause animation on camera interaction
-    const handleCameraInput = () => {
-        if (animationRef.current) {
-          animationRef.current.pause();
-          
-          // Clear any existing timeout
-          if (pauseTimeoutRef.current) {
-            clearTimeout(pauseTimeoutRef.current);
-          }
-          
-          // Resume animation after 5 seconds
-          pauseTimeoutRef.current = window.setTimeout(() => {
-            if (animationRef.current) {
-              animationRef.current.restart();
-            }
-          }, 5000);
-        }
-    };
-
-    camera.onViewMatrixChangedObservable.add(handleCameraInput);
-
-    // Handle clicks on the Earth to select entities
-    // Track pointer down/move/up to distinguish clicks from drags
-    scene.onPointerObservable.add((pointerInfo) => {
-      if (pointerInfo.type === 1) { // POINTERDOWN
-        pointerDownRef.current = {
-          x: scene.pointerX,
-          y: scene.pointerY,
-          time: Date.now()
-        };
-        hasDraggedRef.current = false;
-      } else if (pointerInfo.type === 4) { // POINTERMOVE
-        if (pointerDownRef.current) {
-          const dx = scene.pointerX - pointerDownRef.current.x;
-          const dy = scene.pointerY - pointerDownRef.current.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          // If moved more than 5 pixels, consider it a drag
-          if (distance > 5) {
-            hasDraggedRef.current = true;
-          }
-        }
-      } else if (pointerInfo.type === 2) { // POINTERUP
-        // Only process click if there was no drag
-        if (pointerDownRef.current && !hasDraggedRef.current) {
-          const pickResult = scene.pick(scene.pointerX, scene.pointerY);
-          
-          if (pickResult?.hit && pickResult.pickedPoint) {
-            // Find the closest entity to the clicked point (only from visible entities)
-            let closestEntity: EntityMarker | null = null;
-            let minDistance = Infinity;
-            
-            visibleEntitiesRef.current.forEach((entity) => {
-              const entityPos = entityPositionsRef.current.get(entity.id);
-              if (entityPos) {
-                const distance = Vector3.Distance(pickResult.pickedPoint!, entityPos);
-                if (distance < minDistance) {
-                  minDistance = distance;
-                  closestEntity = entity;
-                }
-              }
-            });
-            
-            // Only select if entity is reasonably close (within 0.3 units)
-            if (closestEntity && minDistance < 0.3) {
-              setSelectedEntity(closestEntity);
-            } else {
-              setSelectedEntity(null);
-            }
-          }
-        }
-        pointerDownRef.current = null;
-        hasDraggedRef.current = false;
-      }
-    });
-
-    // Load the Earth model and parent it to earthParent
-    loadEarthModel(modelPath, scene, scale, earthParent);
-
-    // Render loop
-    engine.runRenderLoop(() => {
-      // Update light direction to point FROM camera TO target (toward Earth)
-      const cameraDirection = camera.target.subtract(camera.position).normalizeToNew();
-      light1.direction = cameraDirection;
-      scene.render();
-    });
-
-    // Handle window resize
-    const handleResize = () => {
-      engine.resize();
-    };
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup
-    return () => {
-      if (pauseTimeoutRef.current) {
-        clearTimeout(pauseTimeoutRef.current);
-      }
-      window.removeEventListener('resize', handleResize);
-      disposeEntityMarkers(entityMarkersRef.current);
-      disposeConnectionLines(connectionLinesRef.current);
-      scene.dispose();
-      engine.dispose();
-    };
-  }, [modelPath, materialPath, scale]);
-
-  // Build complete positions map from all entities (not just visible ones)
-  useEffect(() => {
-    if (allEntities.length === 0) return;
-    
-    // Build positions map for ALL entities
-    const completePositionsMap = new Map<string, Vector3>();
-    allEntities.forEach((entity) => {
-      const position = latLonToVector3(
-        entity.latitude,
-        entity.longitude,
-        earthRadius * 1.07
-      );
-      completePositionsMap.set(entity.id, position);
-    });
-    allEntityPositionsRef.current = completePositionsMap;
-  }, [allEntities, earthRadius]);
-
-  // Update entity markers when entities prop changes - with progressive rendering
+  // Update companies markers when companies prop changes - with progressive rendering
   useEffect(() => {
     if (!sceneRef.current) return;
-    if (entities.length === 0) return; // Don't process empty entities array
+    if (companies.length === 0) return; // Don't process empty entities array
 
     const scene = sceneRef.current;
     const earthParent = earthParentRef.current;
 
-    // Update visible entities ref for click handling
-    visibleEntitiesRef.current = entities;
-
     // Clear existing markers
-    disposeEntityMarkers(entityMarkersRef.current);
-    entityMarkersRef.current = [];
+    disposeCompanyMarkers(companiesPointCloudRef.current);
+    companiesPointCloudRef.current = [];
+
+    // Translate companies to CompanyMarker format
+    const companyMarkers: CompanyMarker[] = [];
+    companies.forEach(companyInfo => {
+      const marker = translateToCompanyMarker(companyInfo, earthModelProps.radius, companyTypeColors);
+      companyMarkers.push(marker);
+
+      //update complete positions map
+      allCompanyPositionsRef.current.set(marker.id, marker.position);
+    });
 
     // Create new markers using the utility
-    const { meshes, positionsMap, cancel } = createEntityMarkers(
-      entities,
+    const { meshes, cancel } = createCompanyMarkers(
+      companyMarkers,
       scene,
-      earthRadius,
       earthParent || undefined
     );
     
-    entityMarkersRef.current = meshes;
-    entityPositionsRef.current = positionsMap;
+    companiesPointCloudRef.current = meshes;
 
     // Cleanup function to cancel processing if component unmounts or dependencies change
     return () => {
       cancel();
     };
-  }, [entities, earthRadius]);
+  }, [companies, earthModelProps.radius, companyTypeColors]);
 
   // Update connection lines when connections prop changes - with progressive rendering
   useEffect(() => {
     if (!sceneRef.current) return;
     if (connections.length === 0) return;
-    if (entities.length === 0) return; // Need entities to draw connections
 
     const scene = sceneRef.current;
     const earthParent = earthParentRef.current;
@@ -304,12 +109,9 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
 
     // Create new connection lines using the utility with complete positions map
     const { meshes, cancel } = createConnectionLines(
-      connections,
-      entities,
-      allEntityPositionsRef.current,
+      connections.map(c => translateToConnectionMarker(c, allCompanyPositionsRef.current)),
       scene,
-      maxConnectionAmount,
-      earthParent || undefined
+      earthParent
     );
     
     connectionLinesRef.current = meshes;
@@ -318,7 +120,14 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
     return () => {
       cancel();
     };
-  }, [connections, entities, earthRadius, maxConnectionAmount]);
+  }, [connections]);
+
+  useScenePickerWhenNoDragging(sceneRef, (pickedPoint) => {
+    setSelectedCompany(selectClosestPoint(
+      pickedPoint,
+      companies,
+      allCompanyPositionsRef.current));
+  });
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
@@ -331,47 +140,11 @@ const EarthViewer: React.FC<EarthViewerProps> = ({
           outline: 'none',
         }}
       />
-      {selectedEntity && (
-        <div
-          style={{
-            position: 'absolute',
-            top: '20px',
-            left: '20px',
-            background: 'rgba(0, 0, 0, 0.05)',
-            color: 'white',
-            padding: '16px',
-            borderRadius: '8px',
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.01)',
-            zIndex: 1000,
-            minWidth: '250px',
-            maxWidth: '350px',
-          }}
-        >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
-            <h3 style={{ margin: 0, fontSize: '16px', fontWeight: 'bold' }}>Entity Details</h3>
-            <button
-              onClick={() => setSelectedEntity(null)}
-              style={{
-                background: 'transparent',
-                border: 'none',
-                color: 'white',
-                fontSize: '20px',
-                cursor: 'pointer',
-                padding: 0,
-                lineHeight: 1,
-              }}
-            >
-              ✕
-            </button>
-          </div>
-          <div style={{ fontSize: '14px', lineHeight: '1.6' }}>
-            <div><strong>Name:</strong> {selectedEntity.name || 'N/A'}</div>
-            {selectedEntity.type && <div><strong>Type:</strong> {selectedEntity.type}</div>}
-            {selectedEntity.location_county && <div><strong>Country:</strong> {selectedEntity.location_county}</div>}
-            {selectedEntity.location_city && <div><strong>City:</strong> {selectedEntity.location_city}</div>}
-            <div><strong>ID:</strong> {selectedEntity.id}</div>
-          </div>
-        </div>
+      {selectedCompany && (
+        <SelectedCompanyInfo
+          selectedMarker={selectedCompany}
+          onClose={() => setSelectedCompany(null)}
+        />
       )}
     </div>
   );

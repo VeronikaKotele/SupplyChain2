@@ -4,7 +4,7 @@ import './Filters.css';
 interface DropdownFilterProps {
   title: string;
   items: string[];
-  selectedItems: Set<string>;
+  selectedItems: Map<string, boolean>;
   onToggle: (item: string) => void;
   onEnableAll: () => void;
   onDisableAll: () => void;
