@@ -87,7 +87,7 @@ function PowerBIDashboard({ embedUrl, onFiltersChange }: PowerBIDashboardProps) 
           id: reportToken,
           embedUrl: embedUrl,
           accessToken: reportToken,
-          tokenType: models.TokenType.Embed,
+          tokenType: models.TokenType.Aad,
           settings: {
             panes: {
               filters: {
@@ -110,13 +110,60 @@ function PowerBIDashboard({ embedUrl, onFiltersChange }: PowerBIDashboardProps) 
             }],
             ['error', (event) => { 
               console.error('❌ Power BI Error:', event?.detail); 
-            }]
+            }],
+            ['filtersApplied', (event) => {
+              console.log('🔍 Filters applied event:', event?.detail);
+            }],
+            ["dataSelected", (event) => {
+              console.log('📊 Data selected event:', event?.detail);
+            }],
+            ["buttonClicked", (event) => {
+              console.log('🔘 Button clicked event:', event?.detail);
+            }],
+            ["info", (event) => {
+              console.log('ℹ️ Info event:', event?.detail);
+            }],
+            ["pageChanged", (event) => {
+              console.log('📄 Page changed event:', event?.detail);
+            }],
+            ["commandTriggered", (event) => {
+              console.log('⚙️ Command triggered event:', event?.detail);
+            }],
+            ["swipeStart", (event) => {
+              console.log('↔️ Swipe start event:', event?.detail);
+            }],
+            ["swipeEnd", (event) => {
+              console.log('↔️ Swipe end event:', event?.detail);
+            }],
+            ["bookmarkApplied", (event) => {
+              console.log('🔖 Bookmark applied event:', event?.detail);
+            }],
+            ["dataHyperlinkClicked", (event) => {
+              console.log('🔗 Data hyperlink clicked event:', event?.detail);
+            }],
+            ["visualRendered", (event) => {
+              console.log('📊 Visual rendered event:', event?.detail);
+            }],
+            ["visualClicked", (event) => {
+              console.log('🖱️ Visual clicked event:', event?.detail);
+            }],
+            ["selectionChanged", (event) => {
+              console.log('🔄 Selection changed event:', event?.detail);
+            }],
+            ["renderingStarted", (event) => {
+              console.log('⏳ Rendering started event:', event?.detail);
+            }],
+            ["blur", (event) => {
+              console.log('🌫️ Blur event:', event?.detail);
+            }]      
           ])
         }
         cssClassName="powerbi-embed"
         getEmbeddedComponent={(embeddedReport) => {
           console.log('🎯 Power BI embedded component loaded');
           reportRef.current = embeddedReport;
+          embeddedReport.on("filtersApplied", (event) => {
+              console.log('🔍 Filters applied event:', event?.detail);});
           
           if (embeddedReport) {
             // Try to register the filtersApplied event
@@ -127,11 +174,13 @@ function PowerBIDashboard({ embedUrl, onFiltersChange }: PowerBIDashboardProps) 
               }
             });
             
-            // After 2 seconds, test the API capabilities
-            // setTimeout(() => {
-            //   console.log('🧪 Running API capability test...');
-            //   testApplyFilter();
-            // }, 2000);
+            //After 2 seconds, test the API capabilities
+            setTimeout(() => {
+              console.log('🧪 Running API capability test...');
+              testApplyFilter();
+
+              console.log('Allowed events:', embeddedReport.allowedEvents);
+            }, 2000);
           }
         }}
       />
